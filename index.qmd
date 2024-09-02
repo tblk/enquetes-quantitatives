@@ -1,7 +1,18 @@
 ---
-title: "/"
+title: "Enquêtes quantitatives"
+description: "Boîte à outils pour sciences sociales"
+sidebar: false
+about:
+  image: advent_04_211.png
+  template: trestles
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:theo.boulakia@gmail.com
 ---
 
-This is a Quarto website.
+Ce cours propose une initiation à diverses méthodes quantitatives à partir d'enquêtes de sciences sociales. Chaque séance s'organise autour de la rencontre entre une question (sociologique, anthropologique, historiographique), des données et une méthode : cartographie, réduction de la dimensionnalité, partitionnement, analyse de séquences, analyse textuelle, statistiques bayésiennes. 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+L'objectif du cours est d'acquérir une compréhension schématique de la mise en oeuvre de ces méthodes, de leurs mérites et de leurs limites. Comment représenter des données spatiales, des séquences temporelles ? Qu'apportent les statistiques bayésiennes qui manque à l'approche fréquentiste ? Comment analyser les propriétés morpho-synthaxiques d'un texte ? Comment passer d'un grand nombre de variables à un petit nombre de classes ? 
+
+Ces questions se poseront en contexte, dans une dynamique d'ajustement entre données, méthode et question de recherche (une dynamique d'enquête).

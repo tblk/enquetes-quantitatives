@@ -1,0 +1,29 @@
+---
+title: "FAQ"
+---
+
+# Quand ?
+
+Le lundi, de 15h à 18h : 16 septembre, 23 septembre, 7 octobre, 21 octobre, 4 novembre, 18 novembre, 2 décembre et 16 décembre 2024.
+
+# Où ?
+
+Dans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d'Ulm, tout en haut de l'escalier B ou C).
+
+# Comment s'inscrire ?
+
+Envoyez simplement un mail à l'adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.
+
+# Est-il possible de venir en auditeur libre ?
+
+Tout à fait. La validation n'est pas requise.
+
+# Comment valider le cours ?
+
+- Trouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.
+- Leur appliquer une ou plusieurs des méthodes vues en cours.
+- Rendre un document de 4 pages présentant les données, la problématique, les étapes de l'analyse et l'interprétation des résultats.
+
+# Une expérience en programmation est-elle requise ?
+
+Non. Vous pouvez assister au cours même si vous n'avez jamais programmé. 

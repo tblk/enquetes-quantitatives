@@ -3,12 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "/"
+  title: "Enquêtes quantitatives"
+  site-url: "https://tblk.github.io/enquetes-quantitatives/"
+  page-navigation: true
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Accueil
+      - programme.qmd
+      - faq.qmd
 
 format:
   html:
@@ -16,5 +19,5 @@ format:
     css: styles.css
     toc: true
 
-
+lang: fr
 
