@@ -7,7 +7,7 @@ website:
   site-url: "https://tblk.github.io/enquetes-quantitatives/"
   open-graph: true
   favicon: advent_04_211.png
-  page-footer: "Théo Boulakia, Enquêtes Quantitatives, 2024-2025"
+  page-footer: "Théo Boulakia, 2024-2025 --- Generative Art : [Danielle Navarro](https://djnavarro.net/) avec R"
   page-navigation: true
   navbar:
     left:
