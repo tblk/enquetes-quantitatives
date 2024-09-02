@@ -1,0 +1,8 @@
+---
+title: "Incertitude"
+date: 2024-11-18
+---
+
+Au cours de l'année 1961, dans un bâtiment de l'Université de Yale, 26 personnes, sur 40, acceptèrent d'infliger des chocs électriques d'intensité croissante à une personne cardiaque qui les suppliait d'arrêter. Les gémissements étaient pré-enregistrés, les chocs imaginaires. Il s'agissait d'une expérience, qui eût un immense retentissement. Supposons un instant que ces 40 personnes, recrutées dans le Connecticut au début des années 1960, soient représentatives d'un "être humain moyen". Quelle est la probabilité qu'une personne prise au hasard dans la rue fasse la même chose ? Les statistiques bayésiennes vous autorisent à poser ce genre de questions, et à y répondre précisément. Elles permettent aussi de prendre en compte les informations que vous pouvez avoir par ailleurs, et d'affiner vos croyances au fur et à mesure que vous recueillez davantage d'informations. Intuitive et amusante, cette approche se développe rapidement, et bénéficie d'excellentes implémentations en R, Python et Julia. Dans cette séance, on présente les principes fondamentaux des statistiques bayésiennes, et on introduit, de manière simple et accessible, les Méthodes de Monte Carlo par Chaînes de Markov (en anglais : MCMC).
+
+*Prérequis :* Des connaissances élémentaires en probabilités sont requises pour profiter pleinement de cette séance. Pour les personnes qui en sont dépourvues, il suffira de lire un ou deux chapitres de manuel en amont.

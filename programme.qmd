@@ -1,53 +1,7 @@
 ---
 title: "Programme"
+listing:
+  contents: programme
+  sort: date
+  sort-ui: false
 ---
-
-# Linéaments du territoire
-
-Mots clés : cartographie ; format vectoriel ; format raster ; projections ; traces
-
-Un jour vous voudrez faire une carte. Toute simple : la disposition d'un hameau, une scène de crime, le voyage d'un marin des Marquises à Moscou. Trois types d'outils s'offriront à vous : papier-crayon, logiciel spécialisé ou langage de *data science* généraliste. Nous explorerons cette troisième possibilité, et nous verrons que quelques lignes de code (R, Python ou Julia) suffisent à cartographier un nombre déconcertant de phénomènes. Dans la partie terre à terre du cours, on traitera des sujets suivants. Où trouver des informations géographiques structurées ? Comment les données spatiales sont-elles représentées (modèles vectoriel et raster) ? Quelles transformations peut-on leur faire subir ? Avec quels outils (langages, logiciels, *packages*) les manipuler ? Trois ouvrages, trois enquêtes, en Mongolie, en Jamaïque et en France, nous serviront de fils rouges. Ils nous poseront des questions non moins intéressantes. Comment représenter les territoires vécus ? Les fonds de cartes font-ils seulement tapisserie ? Comment cartographier l'éphémère, le clandestin ?
-
-# Couleurs du continu
-
-Mots clés : cartes choroplèthes ; palettes de couleurs ; distribution des données ; discrétisation.
-
-Vous êtes face à un taux, une proportion, un pourcentage, un ratio quelconque, qui varie spatialement. Taux d'abstention, taux de chômage, densité de population. Une carte s'impose. La couleur s'invite. Vous imaginez déjà un camaïeu de bleu, des transitions invisibles qui portent insensiblement l'œil des teintes les plus claires aux plus sombres. C'est d'ailleurs ce que par défaut votre logiciel vous propose. Et c'est une très mauvaise idée. Pour être efficace, votre carte a besoin de discontinuité. Il faudra, sans états d'âme, découper votre variable en tranches, ce qu'on appelle la discrétisation. Selon la distribution de vos données et les objectifs que vous poursuivez, vous pourrez piocher parmi une dizaine d'approches et d'algorithmes. Au cours de cette séance, on parlera également palettes de couleurs, inclusion, données manquantes et valeurs extrêmes. Deux enquêtes nous accompagneront : sur le nuage de Tchernobyl et la vie électorale française. 
-
-# Correspondances
-
-Mots clés : Analyse des Correspondances Multiples (ACM) ; Classification ascendante hiérarchique (CAH) ; K-means.
-
-Quelle surprise ! Votre questionnaire est un succès. Des milliers de personnes ont accepté de répondre à vos dizaines de questions. Maintenant les ennuis commencent, les tris croisés s'accumulent. Trop, c'est trop, vous voudriez n'avoir posé que deux questions. N'y a-t-il pas un moyen de *résumer* l'information ? Il y en a plusieurs. D'abord, vous pouvez "réduire la dimensionnalité", en construisant des variables synthétiques à partir de l'information d'origine. Et puis vous pouvez grouper vos individus, en fonction des réponses qu'ils ont données. Nous verrons comment faire successivement l'un et l'autre, comment interpréter les résultats, et comment les communiquer. Que faire des données manquantes ? Pourquoi faut-il se méfier des modalités peu fréquentes ? Combien de classes choisir pour le partitionnement ? Une enquête sur le premier confinement français animera ces questions techniques. 
-
-# Styles
-
-Mots clés : Océrisation ; *Handwriting Recognition* ; Annotation ; *Clustering*
-
-Autour de vous s'amoncellent des témoignages, des lettres, des journaux intimes. Vous croulez sous une masse d'écrits du for privé. Deux solutions s'offrent à vous : picorer dans cette masse, citer ce qui vous plaît, délaisser ce qui vous dérange ; ou prendre tout, sans distinction, et vous laisser surprendre. Cette séance part d'une enquête sur l'expérience de la Première Guerre Mondiale, à travers les correspondances de paysans, d'ouvriers, d'instituteurs et d'écrivains. La question qu'on se posera est simple : la façon d'écrire la guerre reflète-t-elle la manière de la vivre ? Le style peut-il être une fenêtre sur l'expérience ? Dans la rubrique terre à terre : comment transformer un carton de lettres en base de données ? Comment assigner automatiquement une classe grammaticale à chaque mot d'un texte ? Comment caractériser, par des indicateurs simples, le style d'un scripteur ? Comment organiser les va-et-vient entre lecture immergée et lecture à distance ? Quelles représentations graphiques inventer pour stimuler l'interprétation ?
-
-# Séquences
-
-Mots clés : Analyse de séquences ; *Optimal Matching* ; *Clustering*.
-
-R. est né en 1946. De ses 14 à ses 35 ans, il a travaillé gratuitement sur la ferme familiale. Puis il a été exploitant en titre, jusqu'à sa retraite, à 56 ans. Combien de trajectoires ressemblent à celle de R. ? Cette question est du ressort d'une famille de méthodes, l'analyse de séquences, dont le représentant le plus connu est l'appariement optimal (*Optimal Matching*). L'unité de base de cette méthode est une séquence, c'est à dire une suite d'éléments ordonnés : une carrière professionnelle, l'emploi du temps d'un jour, une phrase, une danse. Pour calculer la distance entre deux séquences, les algorithmes comptent le nombre minimum d'opérations élémentaires (insertion, suppression, substitution) nécessaires pour passer d'une séquence à l'autre. À partir de la matrice de distances obtenue, il est possible de faire des typologies de séquences. La mise en oeuvre et l'interprétation des résultats avec *R* est particulièrement simple. L'essentiel des tâtonnements se situe en amont : comment recoder mes données pour que les composantes élémentaires de chaque séquence traduisent le plus précisément possible la question que je me pose ? Quel "coût" assigner à la substitution d'une portion de séquence à une autre ? On explorera ces questions avec deux enquêtes : l'une sur les carrières professionnelles, l'autre sur les emplois du temps. 
-
-# Incertitude
-
-Mots clés : Bayes ; *Prior* ; *Likelihood* ; *Posterior* ; *Markov chain Monte Carlo* ; *Beta-Binomial model* ; *Conjugate distributions*
-
-Au cours de l'année 1961, dans un bâtiment de l'Université de Yale, 26 personnes, sur 40, acceptèrent d'infliger des chocs électriques d'intensité croissante à une personne cardiaque qui les suppliait d'arrêter. Les gémissements étaient pré-enregistrés, les chocs imaginaires. Il s'agissait d'une expérience, qui eût un immense retentissement. Supposons un instant que ces 40 personnes, recrutées dans le Connecticut au début des années 1960, soient représentatives d'un "être humain moyen". Quelle est la probabilité qu'une personne prise au hasard dans la rue fasse la même chose ? Les statistiques bayésiennes vous autorisent à poser ce genre de questions, et à y répondre précisément. Elles permettent aussi de prendre en compte les informations que vous pouvez avoir par ailleurs, et d'affiner vos croyances au fur et à mesure que vous recueillez davantage d'informations. Intuitive et amusante, cette approche se développe rapidement, et bénéficie d'excellentes implémentations en R, Python et Julia. Dans cette séance, on présente les principes fondamentaux des statistiques bayésiennes, et on introduit, de manière simple et accessible, les Méthodes de Monte Carlo par Chaînes de Markov (en anglais : MCMC). 
-
-*Prérequis :* Des connaissances élémentaires en probabilités sont requises pour profiter pleinement de cette séance. Pour les personnes qui en sont dépourvues, il suffira de lire un ou deux chapitres de manuel en amont.
-
-# Indices
-
-Mots clés : Bayes ; *Gamma-Poisson model* ; *Normal-Normal model* ; Régression ; Classification.
-
-Vous avez construit un modèle. Il est certainement faux (ils le sont tous). Mais peut-être est-il utile. L'objet de cette séance est de vous donner un certain nombre de clefs pour répondre à ces deux questions : à quel point mon modèle est-il faux ? Sert-il à quelque chose ? Par modèle, on entend ces machines plus ou moins compliquées que les statisticiens fabriquent pour faire des prédictions à partir d'un faisceau d'indices. Les sciences sociales, peu concernées par les prédictions, utilisent plus couramment les modèles pour tester l'existence d'un lien de causalité entre deux phénomènes. On s'appuiera sur la séance précédente pour présenter la version bayésienne de modèles simples, pour des tâches de régression (nombre de personnes qui voteront pour X aux prochaines élections) et de classification (probabilité que X soit élu). On montrera comment évaluer la qualité des prédictions faites par ces modèles.
-
-# Emboîtements
-
-Mots clés : Bayes ; *Hierarchichal models*.
-
-Toute boîte à outils incomplète vous fait courir un risque : transformer l'or en plomb. Au fondement des modèles statistiques couramment enseignés, il y a une hypothèse forte : vos observations sont indépendantes. Dans la pratique, il arrive fréquemment que cette condition ne se vérifie pas. Et c'est une bonne chose. Les données de panel, par exemple, qui contiennent pour chaque individu de multiples observations, sont d'une grande richesse. En les abordant avec des outils standards, non seulement vous passerez à côté de leur potentiel, mais vous obtiendrez souvent des résultats bizarres ou contre-intuitifs. Fort heureusement, il existe des modèles taillés sur mesure pour ce genre de données. On les appelle, selon les cas : *hierarchichal*, *mixed effects*, *multilevel*, ou *random effects models*. Le principe en est très simple, les avantages immédiatement visibles. On en présentera de nombreux cas d'application, et on montrera comment les mettre en oeuvre dans un cadre bayésien.

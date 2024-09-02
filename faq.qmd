@@ -24,6 +24,6 @@ Tout à fait. La validation n'est pas requise.
 - Leur appliquer une ou plusieurs des méthodes vues en cours.
 - Rendre un document de 4 pages présentant les données, la problématique, les étapes de l'analyse et l'interprétation des résultats.
 
-# Une expérience en programmation est-elle requise ?
+# Faut-il savoir coder ?
 
 Non. Vous pouvez assister au cours même si vous n'avez jamais programmé. 

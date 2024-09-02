@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Enquêtes quantitatives - Programme</title>
+<title>Enquêtes quantitatives - Emboîtements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,67 +66,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -138,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Enquêtes quantitatives</span>
     </a>
   </div>
@@ -149,15 +89,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./programme.html" aria-current="page"> 
+    <a class="nav-link" href="../programme.html"> 
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./faq.html"> 
+    <a class="nav-link" href="../faq.html"> 
 <span class="menu-text">FAQ</span></a>
   </li>  
 </ul>
@@ -179,7 +119,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programme</h1>
+<h1 class="title">Emboîtements</h1>
 </div>
 
 
@@ -187,6 +127,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16 décembre 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -196,217 +142,11 @@ window.Quarto = {
 </header>
 
 
+<p>Toute boîte à outils incomplète vous fait courir un risque : transformer l’or en plomb. Au fondement des modèles statistiques couramment enseignés, il y a une hypothèse forte : vos observations sont indépendantes. Dans la pratique, il arrive fréquemment que cette condition ne se vérifie pas. Et c’est une bonne chose. Les données de panel, par exemple, qui contiennent pour chaque individu de multiples observations, sont d’une grande richesse. En les abordant avec des outils standards, non seulement vous passerez à côté de leur potentiel, mais vous obtiendrez souvent des résultats bizarres ou contre-intuitifs. Fort heureusement, il existe des modèles taillés sur mesure pour ce genre de données. On les appelle, selon les cas : <em>hierarchichal</em>, <em>mixed effects</em>, <em>multilevel</em>, ou <em>random effects models</em>. Le principe en est très simple, les avantages immédiatement visibles. On en présentera de nombreux cas d’application, et on montrera comment les mettre en oeuvre dans un cadre bayésien.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1726437600000" data-listing-file-modified-sort="1725288969592" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="158">
-<div class="thumbnail">
-<p><a href="./programme/lineaments.html" class="no-external"></a></p><a href="./programme/lineaments.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/lineaments.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/lineaments.html" class="no-external">Linéaments du territoire</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/lineaments.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/lineaments.html" class="no-external">Un jour vous voudrez faire une carte. Toute simple : la disposition d’un hameau, une scène de crime, le voyage d’un marin des Marquises à Moscou. Trois types d’outils…<em></em><em></em></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/lineaments.html" class="no-external">
-<div class="listing-date">
-16 sept. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1725288994343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
-<div class="thumbnail">
-<p><a href="./programme/couleurs.html" class="no-external"></a></p><a href="./programme/couleurs.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/couleurs.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/couleurs.html" class="no-external">Couleurs du continu</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/couleurs.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/couleurs.html" class="no-external">Vous êtes face à un taux, une proportion, un pourcentage, un ratio quelconque, qui varie spatialement. Taux d’abstention, taux de chômage, densité de population. Une carte…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/couleurs.html" class="no-external">
-<div class="listing-date">
-23 sept. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1728252000000" data-listing-file-modified-sort="1725289012191" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
-<div class="thumbnail">
-<p><a href="./programme/correspondances.html" class="no-external"></a></p><a href="./programme/correspondances.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/correspondances.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/correspondances.html" class="no-external">Correspondances</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/correspondances.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/correspondances.html" class="no-external">Quelle surprise ! Votre questionnaire est un succès. Des milliers de personnes ont accepté de répondre à vos dizaines de questions. Maintenant les ennuis commencent, les…<em></em></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/correspondances.html" class="no-external">
-<div class="listing-date">
-7 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1729461600000" data-listing-file-modified-sort="1725289030227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162">
-<div class="thumbnail">
-<p><a href="./programme/styles.html" class="no-external"></a></p><a href="./programme/styles.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/styles.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/styles.html" class="no-external">Styles</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/styles.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/styles.html" class="no-external">Autour de vous s’amoncellent des témoignages, des lettres, des journaux intimes. Vous croulez sous une masse d’écrits du for privé. Deux solutions s’offrent à vous : picorer…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/styles.html" class="no-external">
-<div class="listing-date">
-21 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1730674800000" data-listing-file-modified-sort="1725289050086" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="215">
-<div class="thumbnail">
-<p><a href="./programme/sequences.html" class="no-external"></a></p><a href="./programme/sequences.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/sequences.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/sequences.html" class="no-external">Séquences</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/sequences.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/sequences.html" class="no-external">R. est né en 1946. De ses 14 à ses 35 ans, il a travaillé gratuitement sur la ferme familiale. Puis il a été exploitant agricole en titre, jusqu’à sa retraite, à 56 ans.…<em></em><em></em></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/sequences.html" class="no-external">
-<div class="listing-date">
-4 nov. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1731884400000" data-listing-file-modified-sort="1725289099757" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
-<div class="thumbnail">
-<p><a href="./programme/incertitude.html" class="no-external"></a></p><a href="./programme/incertitude.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/incertitude.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/incertitude.html" class="no-external">Incertitude</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/incertitude.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/incertitude.html" class="no-external">Au cours de l’année 1961, dans un bâtiment de l’Université de Yale, 26 personnes, sur 40, acceptèrent d’infliger des chocs électriques d’intensité croissante à une personne…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/incertitude.html" class="no-external">
-<div class="listing-date">
-18 nov. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1733094000000" data-listing-file-modified-sort="1725289117028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
-<div class="thumbnail">
-<p><a href="./programme/indices.html" class="no-external"></a></p><a href="./programme/indices.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/indices.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/indices.html" class="no-external">Indices</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/indices.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/indices.html" class="no-external">Vous avez construit un modèle. Il est certainement faux (ils le sont tous). Mais peut-être est-il utile. L’objet de cette séance est de vous donner un certain nombre de…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/indices.html" class="no-external">
-<div class="listing-date">
-2 déc. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1734303600000" data-listing-file-modified-sort="1725289134360" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<div class="thumbnail">
-<p><a href="./programme/emboitements.html" class="no-external"></a></p><a href="./programme/emboitements.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./programme/emboitements.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./programme/emboitements.html" class="no-external">Emboîtements</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./programme/emboitements.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./programme/emboitements.html" class="no-external">Toute boîte à outils incomplète vous fait courir un risque : transformer l’or en plomb. Au fondement des modèles statistiques couramment enseignés, il y a une hypothèse…<em></em><em></em><em></em><em></em></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./programme/emboitements.html" class="no-external">
-<div class="listing-date">
-16 déc. 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Aucun article correspondant
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
