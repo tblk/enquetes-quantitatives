@@ -5,6 +5,8 @@ project:
 website:
   title: "Enquêtes quantitatives"
   site-url: "https://tblk.github.io/enquetes-quantitatives/"
+  open-graph: true
+  favicon: advent_04_211.png
   page-navigation: true
   navbar:
     left:
