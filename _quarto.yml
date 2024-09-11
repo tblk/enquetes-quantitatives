@@ -12,7 +12,7 @@ website:
   announcement: 
     icon: info-circle
     dismissable: true
-    content: "[Inscriptions](mailto:theo.boulakia@gmail.com) ouvertes"
+    content: "**[Inscriptions](mailto:theo.boulakia@gmail.com)** ouvertes | Le cours a lieu le **mercredi** de 15h à 18h | Première séance le **18 septembre**"
     type: primary
     position: below-navbar
   navbar:
@@ -21,7 +21,6 @@ website:
         text: Accueil
       - programme.qmd
       - faq.qmd
-      - about.qmd
 
 format:
   html:

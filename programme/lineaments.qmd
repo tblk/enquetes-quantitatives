@@ -1,6 +1,6 @@
 ---
 title: "Linéaments du territoire"
-date: 2024-09-16
+date: 2024-09-18
 ---
 
 Un jour vous voudrez faire une carte. Toute simple : la disposition d'un hameau, une scène de crime, le voyage d'un marin des Marquises à Moscou. Trois types d'outils s'offriront à vous : papier-crayon, logiciel spécialisé ou langage de *data science* généraliste. Nous explorerons cette troisième possibilité, et nous verrons que quelques lignes de code (R, Python ou Julia) suffisent à cartographier un nombre déconcertant de phénomènes. Dans la partie terre à terre du cours, on traitera des sujets suivants. Où trouver des informations géographiques structurées ? Comment les données spatiales sont-elles représentées (modèles vectoriel et raster) ? Quelles transformations peut-on leur faire subir ? Avec quels outils (langages, logiciels, *packages*) les manipuler ? Trois ouvrages, trois enquêtes, en Mongolie, en Jamaïque et en France, nous serviront de fils rouges. Ils nous poseront des questions non moins intéressantes. Comment représenter les territoires vécus ? Les fonds de cartes font-ils seulement tapisserie ? Comment cartographier l'éphémère, le clandestin ?

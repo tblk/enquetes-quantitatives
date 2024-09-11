@@ -28,18 +28,11 @@
     "text": "Quelle surprise ! Votre questionnaire est un succès. Des milliers de personnes ont accepté de répondre à vos dizaines de questions. Maintenant les ennuis commencent, les tris croisés s’accumulent. Trop, c’est trop, vous voudriez n’avoir posé que deux questions. N’y a-t-il pas un moyen de résumer l’information ? Il y en a plusieurs. D’abord, vous pouvez “réduire la dimensionnalité”, en construisant des variables synthétiques à partir de l’information d’origine. Et puis vous pouvez grouper vos individus, en fonction des réponses qu’ils ont données. Nous verrons comment faire successivement l’un et l’autre, comment interpréter les résultats, et comment les communiquer. Que faire des données manquantes ? Pourquoi faut-il se méfier des modalités peu fréquentes ? Combien de classes choisir pour le partitionnement ? Une enquête sur le premier confinement français animera ces questions techniques."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "À propos",
+    "objectID": "programme.html",
+    "href": "programme.html",
+    "title": "Programme",
     "section": "",
-    "text": "Cours donné à l’École Normale Supérieure au premier semestre de l’année 2024-2025, par Théo Boulakia, dans le cadre de l’Observatoire des Humanités Numériques."
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Quand ?\nLe lundi, de 15h à 18h : 16 septembre, 23 septembre, 7 octobre, 21 octobre, 4 novembre, 18 novembre, 2 décembre et 16 décembre 2024.\n\n\nOù ?\nDans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d’Ulm, tout en haut de l’escalier B ou C).\n\n\nComment s’inscrire ?\nEnvoyez simplement un mail à l’adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.\n\n\nEst-il possible de venir en auditeur libre ?\nTout à fait. La validation n’est pas requise.\n\n\nComment valider le cours ?\n\nTrouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.\nLeur appliquer une ou plusieurs des méthodes vues en cours.\nRendre un document de 4 pages présentant les données, la problématique, les étapes de l’analyse et l’interprétation des résultats.\n\n\n\nFaut-il savoir coder ?\nNon. Vous pouvez assister au cours même si vous n’avez jamais programmé."
+    "text": "Linéaments du territoire\n\n\n\n\n\n\n\n\n\n\n\n18 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCouleurs du continu\n\n\n\n\n\n\n\n\n\n\n\n25 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCorrespondances\n\n\n\n\n\n\n\n\n\n\n\n9 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStyles\n\n\n\n\n\n\n\n\n\n\n\n23 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSéquences\n\n\n\n\n\n\n\n\n\n\n\n6 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIncertitude\n\n\n\n\n\n\n\n\n\n\n\n13 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIndices\n\n\n\n\n\n\n\n\n\n\n\n4 déc. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmboîtements\n\n\n\n\n\n\n\n\n\n\n\n18 déc. 2024\n\n\n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "index.html",
@@ -49,11 +42,11 @@
     "text": "Ce cours propose une initiation à diverses méthodes quantitatives à partir d’enquêtes de sciences sociales. Chaque séance s’organise autour de la rencontre entre une question (sociologique, anthropologique, historiographique), des données et une méthode : cartographie, réduction de la dimensionnalité, partitionnement, analyse de séquences, analyse textuelle, statistiques bayésiennes.\nL’objectif du cours est d’acquérir une compréhension schématique de la mise en oeuvre de ces méthodes, de leurs mérites et de leurs limites. Comment représenter des données spatiales, des séquences temporelles ? Qu’apportent les statistiques bayésiennes qui manque à l’approche fréquentiste ? Comment analyser les propriétés morpho-synthaxiques d’un texte ? Comment passer d’un grand nombre de variables à un petit nombre de classes ?\nCes questions se poseront en contexte, dans une dynamique d’ajustement entre données, méthode et question de recherche (une dynamique d’enquête)."
   },
   {
-    "objectID": "programme.html",
-    "href": "programme.html",
-    "title": "Programme",
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "FAQ",
     "section": "",
-    "text": "Linéaments du territoire\n\n\n\n\n\n\n\n\n\n\n\n16 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCouleurs du continu\n\n\n\n\n\n\n\n\n\n\n\n23 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCorrespondances\n\n\n\n\n\n\n\n\n\n\n\n7 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStyles\n\n\n\n\n\n\n\n\n\n\n\n21 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSéquences\n\n\n\n\n\n\n\n\n\n\n\n4 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIncertitude\n\n\n\n\n\n\n\n\n\n\n\n18 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIndices\n\n\n\n\n\n\n\n\n\n\n\n2 déc. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmboîtements\n\n\n\n\n\n\n\n\n\n\n\n16 déc. 2024\n\n\n\n\n\n\nAucun article correspondant"
+    "text": "Cours donné à l’École Normale Supérieure au premier semestre de l’année 2024-2025, par Théo Boulakia, dans le cadre de l’Observatoire des Humanités Numériques.\n\nQuand ?\nLe mercredi, de 15h à 18h : 18 septembre, 25 septembre, 9 octobre, 23 octobre, 6 novembre, 13 novembre, 4 décembre et 18 décembre 2024.\n\n\nOù ?\nDans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d’Ulm, tout en haut de l’escalier B ou C).\n\n\nComment s’inscrire ?\nEnvoyez simplement un mail à l’adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.\n\n\nEst-il possible de venir en auditeur libre ?\nTout à fait. La validation n’est pas requise.\n\n\nComment valider le cours ?\n\nTrouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.\nLeur appliquer une ou plusieurs des méthodes vues en cours.\nRendre un document de 4 pages présentant les données, la problématique, les étapes de l’analyse et l’interprétation des résultats.\n\n\n\nFaut-il savoir coder ?\nNon. Vous pouvez assister au cours même si vous n’avez jamais programmé."
   },
   {
     "objectID": "programme/lineaments.html",

@@ -1,6 +1,6 @@
 ---
 title: "Séquences"
-date: 2024-11-04
+date: 2024-11-06
 ---
 
 R. est né en 1946. De ses 14 à ses 35 ans, il a travaillé gratuitement sur la ferme familiale. Puis il a été exploitant agricole en titre, jusqu'à sa retraite, à 56 ans. Combien de trajectoires ressemblent à celle de R. ? Cette question est du ressort d'une famille de méthodes, l'analyse de séquences, dont le représentant le plus connu est l'appariement optimal (*Optimal Matching*). L'unité de base de cette méthode est une séquence, c'est à dire une suite d'éléments ordonnés : une carrière professionnelle, l'emploi du temps d'un jour, une phrase, une danse. Pour calculer la distance entre deux séquences, les algorithmes comptent le nombre minimum d'opérations élémentaires (insertion, suppression, substitution) nécessaires pour passer d'une séquence à l'autre. À partir de la matrice de distances obtenue, il est possible de faire des typologies de séquences. La mise en oeuvre et l'interprétation des résultats avec *R* est particulièrement simple. L'essentiel des tâtonnements se situe en amont : comment recoder mes données pour que les composantes élémentaires de chaque séquence traduisent le plus précisément possible la question que je me pose ? Quel "coût" assigner à la substitution d'une portion de séquence à une autre ? On explorera ces questions avec deux enquêtes : l'une sur les carrières professionnelles, l'autre sur les emplois du temps.

@@ -1,6 +1,6 @@
 ---
 title: "Indices"
-date: 2024-12-02
+date: 2024-12-04
 ---
 
 Vous avez construit un modèle. Il est certainement faux (ils le sont tous). Mais peut-être est-il utile. L'objet de cette séance est de vous donner un certain nombre de clefs pour répondre à ces deux questions : à quel point mon modèle est-il faux ? Sert-il à quelque chose ? Par modèle, on entend ces machines plus ou moins compliquées que les statisticiens fabriquent pour faire des prédictions à partir d'un faisceau d'indices. Les sciences sociales, peu concernées par les prédictions, utilisent plus couramment les modèles pour tester l'existence d'un lien de causalité entre deux phénomènes. On s'appuiera sur la séance précédente pour présenter la version bayésienne de modèles simples, pour des tâches de régression (nombre de personnes qui voteront pour X aux prochaines élections) et de classification (probabilité que X soit élu). On montrera comment évaluer la qualité des prédictions faites par ces modèles.

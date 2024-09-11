@@ -1,6 +1,6 @@
 ---
 title: "Emboîtements"
-date: 2024-12-16
+date: 2024-12-18
 ---
 
 Toute boîte à outils incomplète vous fait courir un risque : transformer l'or en plomb. Au fondement des modèles statistiques couramment enseignés, il y a une hypothèse forte : vos observations sont indépendantes. Dans la pratique, il arrive fréquemment que cette condition ne se vérifie pas. Et c'est une bonne chose. Les données de panel, par exemple, qui contiennent pour chaque individu de multiples observations, sont d'une grande richesse. En les abordant avec des outils standards, non seulement vous passerez à côté de leur potentiel, mais vous obtiendrez souvent des résultats bizarres ou contre-intuitifs. Fort heureusement, il existe des modèles taillés sur mesure pour ce genre de données. On les appelle, selon les cas : *hierarchichal*, *mixed effects*, *multilevel*, ou *random effects models*. Le principe en est très simple, les avantages immédiatement visibles. On en présentera de nombreux cas d'application, et on montrera comment les mettre en oeuvre dans un cadre bayésien.

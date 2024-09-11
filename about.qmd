@@ -1,5 +1,0 @@
----
-title: "À propos"
----
-
-Cours donné à l'[École Normale Supérieure](https://www.ens.psl.eu/) au premier semestre de l'année 2024-2025, par Théo Boulakia, dans le cadre de [l'Observatoire des Humanités Numériques](https://odhn.ens.psl.eu/). 

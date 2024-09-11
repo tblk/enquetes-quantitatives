@@ -1,6 +1,6 @@
 ---
 title: "Couleurs du continu"
-date: 2024-09-23
+date: 2024-09-25
 ---
 
 Vous êtes face à un taux, une proportion, un pourcentage, un ratio quelconque, qui varie spatialement. Taux d'abstention, taux de chômage, densité de population. Une carte s'impose. La couleur s'invite. Vous imaginez déjà un camaïeu de bleu, des transitions invisibles qui portent insensiblement l'œil des teintes les plus claires aux plus sombres. C'est d'ailleurs ce que par défaut votre logiciel vous propose. Et c'est une très mauvaise idée. Pour être efficace, votre carte a besoin de discontinuité. Il faudra, sans états d'âme, découper votre variable en tranches, ce qu'on appelle la discrétisation. Selon la distribution de vos données et les objectifs que vous poursuivez, vous pourrez piocher parmi une dizaine d'approches et d'algorithmes. Au cours de cette séance, on parlera également palettes de couleurs, inclusion, données manquantes et valeurs extrêmes. Deux enquêtes nous accompagneront : sur le nuage de Tchernobyl et la vie électorale française.

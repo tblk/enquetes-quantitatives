@@ -1,6 +1,6 @@
 ---
 title: "Correspondances"
-date: 2024-10-07
+date: 2024-10-09
 ---
 
 Quelle surprise ! Votre questionnaire est un succès. Des milliers de personnes ont accepté de répondre à vos dizaines de questions. Maintenant les ennuis commencent, les tris croisés s'accumulent. Trop, c'est trop, vous voudriez n'avoir posé que deux questions. N'y a-t-il pas un moyen de *résumer* l'information ? Il y en a plusieurs. D'abord, vous pouvez "réduire la dimensionnalité", en construisant des variables synthétiques à partir de l'information d'origine. Et puis vous pouvez grouper vos individus, en fonction des réponses qu'ils ont données. Nous verrons comment faire successivement l'un et l'autre, comment interpréter les résultats, et comment les communiquer. Que faire des données manquantes ? Pourquoi faut-il se méfier des modalités peu fréquentes ? Combien de classes choisir pour le partitionnement ? Une enquête sur le premier confinement français animera ces questions techniques.
