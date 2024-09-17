@@ -75,5 +75,663 @@
     "title": "Indices",
     "section": "",
     "text": "Vous avez construit un modèle. Il est certainement faux (ils le sont tous). Mais peut-être est-il utile. L’objet de cette séance est de vous donner un certain nombre de clefs pour répondre à ces deux questions : à quel point mon modèle est-il faux ? Sert-il à quelque chose ? Par modèle, on entend ces machines plus ou moins compliquées que les statisticiens fabriquent pour faire des prédictions à partir d’un faisceau d’indices. Les sciences sociales, peu concernées par les prédictions, utilisent plus couramment les modèles pour tester l’existence d’un lien de causalité entre deux phénomènes. On s’appuiera sur la séance précédente pour présenter la version bayésienne de modèles simples, pour des tâches de régression (nombre de personnes qui voteront pour X aux prochaines élections) et de classification (probabilité que X soit élu). On montrera comment évaluer la qualité des prédictions faites par ces modèles."
+  },
+  {
+    "objectID": "ggplot2.html#workflow",
+    "href": "ggplot2.html#workflow",
+    "title": "A Grammar of Graphics",
+    "section": "Workflow",
+    "text": "Workflow"
+  },
+  {
+    "objectID": "ggplot2.html#packages",
+    "href": "ggplot2.html#packages",
+    "title": "A Grammar of Graphics",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "ggplot2.html#import",
+    "href": "ggplot2.html#import",
+    "title": "A Grammar of Graphics",
+    "section": "Import",
+    "text": "Import\nSimple (base R)\n\ndvf = read.csv(\"data/dvf_aiglun.csv\")\n\n\nFaster (readr package)\n\ndvf = read_csv(\"data/dvf_aiglun.csv\")\n\n\n\nEven faster\n\ndvf = vroom::vroom(\"data/dvf_aiglun.csv\")\n\n\n\nFast and simple\n\ndvf = rio::import(\"data/dvf_aiglun.csv\")\n\n\n\nFast, simple and safe\n\ndvf = rio::import(here::here(\"data\", \"dvf_aiglun.csv\"))"
+  },
+  {
+    "objectID": "ggplot2.html#inspect",
+    "href": "ggplot2.html#inspect",
+    "title": "A Grammar of Graphics",
+    "section": "Inspect",
+    "text": "Inspect\n\nclass(dvf)\n\n[1] \"data.frame\"\n\n\n\ndvf\n\n    X       date        type   prix surface pieces latitude longitude\n1   1 2019-02-20      Maison 178000      80      4 44.05407  6.140493\n2   2 2019-03-08 Appartement 120000      48      2 44.05963  6.147804\n3   3 2019-05-24      Maison 320000     172      4 44.06694  6.138814\n4   4 2019-06-06      Maison 164350      76      3 44.05272  6.142440\n5   5 2019-06-07      Maison 250000      95      4 44.07036  6.133687\n6   6 2019-11-08      Maison 290000     127      4 44.05521  6.134305\n7   7 2019-11-08      Maison 306600     125      6 44.05431  6.132984\n8   8 2019-11-16 Appartement 178000      91      5 44.06010  6.148028\n9   9 2019-12-12 Appartement 139000      66      3 44.06010  6.148028\n10 10 2020-02-11      Maison  76000      88      4 44.05283  6.133513\n11 11 2020-06-18      Maison 250000     166      5 44.05407  6.140493\n12 12 2020-08-07      Maison 190000      97      4 44.04928  6.140711\n13 13 2020-07-30 Appartement 147500      91      4 44.05963  6.147804\n14 14 2020-11-13      Maison 280000     160      4 44.05181  6.146251\n15 15 2021-01-15      Maison 240000      81      4 44.05803  6.148892\n16 16 2021-06-09 Appartement  44000      26      1 44.05963  6.147804\n17 17 2021-07-02      Maison 389500     135      4 44.05583  6.147911\n18 18 2021-11-04      Maison 250000      96      4 44.05021  6.138194\n19 19 2022-03-25      Maison 180000     100      5 44.05719  6.136185\n20 20 2022-05-24      Maison  93000     131      4 44.04278  6.143266\n21 21 2022-05-30      Maison 220000     125      6 44.06630  6.140405\n22 22 2022-07-06 Appartement 160000     122      4 44.06040  6.110681\n23 23 2022-07-25 Appartement 194000      78      3 44.05952  6.147453\n24 24 2022-07-19 Appartement  91000      35      2 44.05963  6.147804\n25 25 2022-07-19      Maison 256550      99      4 44.06038  6.147991\n26 26 2022-08-20      Maison 187000     125      5 44.05235  6.145856\n27 27 2022-09-30      Maison 330000     132      4 44.05781  6.134520\n28 28 2022-12-05 Appartement 100000      86      4 44.05963  6.147804\n29 29 2022-12-19 Appartement  70000      40      2 44.05952  6.147453\n30 30 2023-03-09      Maison 257700      77      4 44.05336  6.133104\n31 31 2023-08-08      Maison  70000      50      2 44.04813  6.139726\n32 32 2023-09-15      Maison 414550     119      6 44.05078  6.140327\n33 33 2023-10-25      Maison 291300     126      5 44.06106  6.139871\n34 34 2023-12-08      Maison 263600     125      5 44.05235  6.145856"
+  },
+  {
+    "objectID": "ggplot2.html#scatterplot",
+    "href": "ggplot2.html#scatterplot",
+    "title": "A Grammar of Graphics",
+    "section": "Scatterplot",
+    "text": "Scatterplot\n\nggplot(data = dvf, mapping = aes(x = surface, y = prix)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#boxplot",
+    "href": "ggplot2.html#boxplot",
+    "title": "A Grammar of Graphics",
+    "section": "Boxplot",
+    "text": "Boxplot\n\nggplot(data = dvf, mapping = aes(x = type, y = prix)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "ggplot2.html#size-aesthetic",
+    "href": "ggplot2.html#size-aesthetic",
+    "title": "A Grammar of Graphics",
+    "section": "Size aesthetic",
+    "text": "Size aesthetic\n\nggplot(data = dvf, mapping = aes(x = surface, y = prix,\n                                 size = pieces)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#lets-break-it-down",
+    "href": "ggplot2.html#lets-break-it-down",
+    "title": "A Grammar of Graphics",
+    "section": "Let’s break it down",
+    "text": "Let’s break it down\n\n\nCode\nggplot(data = dvf,\n       mapping = aes(x = surface, y = prix, size = pieces, colour = type)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#import-1",
+    "href": "ggplot2.html#import-1",
+    "title": "A Grammar of Graphics",
+    "section": "Import",
+    "text": "Import\n\ndeputes = readr::read_csv(\"data/deputes.csv\")"
+  },
+  {
+    "objectID": "ggplot2.html#inspect-1",
+    "href": "ggplot2.html#inspect-1",
+    "title": "A Grammar of Graphics",
+    "section": "Inspect",
+    "text": "Inspect\n\nclass(deputes)\n\n[1] \"spec_tbl_df\" \"tbl_df\"      \"tbl\"         \"data.frame\" \n\n\n\ndeputes\n\n# A tibble: 577 × 7\n   nom        prenom departement circonscription profession groupe groupe_abrege\n   &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;        \n 1 K/Bidi     Émeli… Réunion                   4 Avocate    Gauch… GDR          \n 2 Bénard     Édoua… Seine-Mari…               3 Collabora… Gauch… GDR          \n 3 Le Feur    Sandr… Finistère                 4 Agriculte… Ensem… EPR          \n 4 Tesson     Thier… Nord                     17 (74) - An… Rasse… RN           \n 5 Villedieu  Antoi… Haute-Saône               1 Policier   Rasse… RN           \n 6 Gernigon   Franç… Maine-et-L…               1 Ancien ca… Horiz… HOR          \n 7 Sas        Eva    Paris                     8 Cadre sup… Écolo… EcoS         \n 8 Auzanot    Bénéd… Vaucluse                  2 (85) - Pe… Rasse… RN           \n 9 Tavernier  Boris  Rhône                     2 (37) - Ca… Écolo… EcoS         \n10 Christoph… Paul   Drôme                     1 (37) - Ca… Socia… SOC          \n# ℹ 567 more rows"
+  },
+  {
+    "objectID": "ggplot2.html#barplot",
+    "href": "ggplot2.html#barplot",
+    "title": "A Grammar of Graphics",
+    "section": "Barplot",
+    "text": "Barplot\n\nggplot(deputes, aes(x = groupe_abrege)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "ggplot2.html#import-2",
+    "href": "ggplot2.html#import-2",
+    "title": "A Grammar of Graphics",
+    "section": "Import",
+    "text": "Import\n\nips = arrow::read_parquet(\"data/ips_colleges.parquet\")"
+  },
+  {
+    "objectID": "ggplot2.html#inspect-2",
+    "href": "ggplot2.html#inspect-2",
+    "title": "A Grammar of Graphics",
+    "section": "Inspect",
+    "text": "Inspect\n\nclass(ips)\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\nips\n\n# A tibble: 6,962 × 8\n   nom_etablissement       academie   ips sd_ips secteur departement nom_commune\n   &lt;chr&gt;                   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      \n 1 college hutinel         creteil  105.    34.8 public  seine-et-m… gretz arma…\n 2 college de l europe     creteil  107.    31.8 public  seine-et-m… dammartin …\n 3 college marie laurencin creteil  112.    34.4 public  seine-et-m… ozoir la f…\n 4 college marie curie     creteil   86.9   30.3 public  seine-et-m… provins    \n 5 college victor schoelc… creteil  115.    33   public  seine-et-m… torcy      \n 6 college les bles d or   creteil  130.    31   public  seine-et-m… bailly rom…\n 7 college erik satie      creteil  104.    34   public  seine-et-m… mitry mory \n 8 college lucie aubrac    creteil  111.    39.2 public  seine-et-m… montevrain \n 9 college colonel arnaud… creteil  127.    34.6 public  seine-et-m… vulaines s…\n10 college flora tristan   versail…  86.9   32.6 public  yvelines    carrieres …\n# ℹ 6,952 more rows\n# ℹ 1 more variable: code_commune &lt;chr&gt;"
+  },
+  {
+    "objectID": "ggplot2.html#boxplot-1",
+    "href": "ggplot2.html#boxplot-1",
+    "title": "A Grammar of Graphics",
+    "section": "Boxplot",
+    "text": "Boxplot\n\n\nCode\nggplot(ips, aes(x = secteur, y = ips)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "ggplot2.html#scatterplot-1",
+    "href": "ggplot2.html#scatterplot-1",
+    "title": "A Grammar of Graphics",
+    "section": "Scatterplot",
+    "text": "Scatterplot\n\n\nCode\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#density-2d",
+    "href": "ggplot2.html#density-2d",
+    "title": "A Grammar of Graphics",
+    "section": "Density 2D",
+    "text": "Density 2D\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_density2d()"
+  },
+  {
+    "objectID": "ggplot2.html#aesthetics",
+    "href": "ggplot2.html#aesthetics",
+    "title": "A Grammar of Graphics",
+    "section": "Aesthetics",
+    "text": "Aesthetics"
+  },
+  {
+    "objectID": "ggplot2.html#mapping-vs-setting",
+    "href": "ggplot2.html#mapping-vs-setting",
+    "title": "A Grammar of Graphics",
+    "section": "Mapping vs setting",
+    "text": "Mapping vs setting\nMapping\n\nggplot(data, aes(x = Var1, y = Var2, size = Var3, colour = Var4))\n\n\nSetting\n\nggplot(data, colour = \"red\", alpha = 0.1, size = 4)"
+  },
+  {
+    "objectID": "ggplot2.html#raw-scatterplot",
+    "href": "ggplot2.html#raw-scatterplot",
+    "title": "A Grammar of Graphics",
+    "section": "Raw scatterplot",
+    "text": "Raw scatterplot\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#setting-alpha",
+    "href": "ggplot2.html#setting-alpha",
+    "title": "A Grammar of Graphics",
+    "section": "Setting alpha",
+    "text": "Setting alpha\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point(alpha = 0.3)"
+  },
+  {
+    "objectID": "ggplot2.html#setting-size",
+    "href": "ggplot2.html#setting-size",
+    "title": "A Grammar of Graphics",
+    "section": "Setting size",
+    "text": "Setting size\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point(size = 0.5)"
+  },
+  {
+    "objectID": "ggplot2.html#setting-color",
+    "href": "ggplot2.html#setting-color",
+    "title": "A Grammar of Graphics",
+    "section": "Setting color",
+    "text": "Setting color\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point(color = \"indianred\")"
+  },
+  {
+    "objectID": "ggplot2.html#setting-shape",
+    "href": "ggplot2.html#setting-shape",
+    "title": "A Grammar of Graphics",
+    "section": "Setting shape",
+    "text": "Setting shape\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point(shape = 3)"
+  },
+  {
+    "objectID": "ggplot2.html#mapping-color",
+    "href": "ggplot2.html#mapping-color",
+    "title": "A Grammar of Graphics",
+    "section": "Mapping color",
+    "text": "Mapping color\n\nggplot(ips, aes(x = ips, y = sd_ips, colour = secteur)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#maping-shape",
+    "href": "ggplot2.html#maping-shape",
+    "title": "A Grammar of Graphics",
+    "section": "Maping shape",
+    "text": "Maping shape\n\nggplot(dvf, aes(x = surface, y = prix)) +\n  geom_point(aes(shape = type))"
+  },
+  {
+    "objectID": "ggplot2.html#mapping-and-setting",
+    "href": "ggplot2.html#mapping-and-setting",
+    "title": "A Grammar of Graphics",
+    "section": "Mapping and setting",
+    "text": "Mapping and setting\n\nggplot(dvf, aes(x = surface, y = prix)) +\n  geom_point(aes(shape = type), size = 3)"
+  },
+  {
+    "objectID": "ggplot2.html#components",
+    "href": "ggplot2.html#components",
+    "title": "A Grammar of Graphics",
+    "section": "Components",
+    "text": "Components\n\n\ngeom\n\nhistogram\nviolin\nrug\nline\npoint\ntile\nsmooth\nraster\nand more…\n\n\nstat\n\ncount\ndensity\nsum\nidentity\nunique\nsummary\nfunction\nand more…\n\n\nposition\n\ndodge\njitter\nstack\nidentity\nand more…"
+  },
+  {
+    "objectID": "ggplot2.html#geom_x",
+    "href": "ggplot2.html#geom_x",
+    "title": "A Grammar of Graphics",
+    "section": "geom_X()",
+    "text": "geom_X()\n\nggplot(deputes, aes(x = groupe_abrege)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "ggplot2.html#stat_x",
+    "href": "ggplot2.html#stat_x",
+    "title": "A Grammar of Graphics",
+    "section": "stat_X()",
+    "text": "stat_X()\n\nggplot(deputes, aes(x = groupe_abrege)) +\n  stat_count()"
+  },
+  {
+    "objectID": "ggplot2.html#layer",
+    "href": "ggplot2.html#layer",
+    "title": "A Grammar of Graphics",
+    "section": "layer()",
+    "text": "layer()\n\nggplot(deputes, aes(x = groupe_abrege)) +\n  layer(geom = \"bar\", stat = \"count\", position = \"identity\")"
+  },
+  {
+    "objectID": "ggplot2.html#exploring-combinations",
+    "href": "ggplot2.html#exploring-combinations",
+    "title": "A Grammar of Graphics",
+    "section": "Exploring combinations",
+    "text": "Exploring combinations\n\nggplot(deputes, aes(x = groupe_abrege)) +\n  layer(geom = \"point\", stat = \"count\", position = \"identity\")"
+  },
+  {
+    "objectID": "ggplot2.html#point",
+    "href": "ggplot2.html#point",
+    "title": "A Grammar of Graphics",
+    "section": "point",
+    "text": "point\n\nggplot(dvf, aes(x = surface, y = prix)) +\n  geom_point()"
+  },
+  {
+    "objectID": "ggplot2.html#point-smooth",
+    "href": "ggplot2.html#point-smooth",
+    "title": "A Grammar of Graphics",
+    "section": "point + smooth",
+    "text": "point + smooth\n\nggplot(dvf, aes(x = surface, y = prix)) +\n  geom_point() + geom_smooth()"
+  },
+  {
+    "objectID": "ggplot2.html#point-smooth-rug",
+    "href": "ggplot2.html#point-smooth-rug",
+    "title": "A Grammar of Graphics",
+    "section": "point + smooth + rug",
+    "text": "point + smooth + rug\n\nggplot(dvf, aes(x = surface, y = prix)) +\n  geom_point() + geom_smooth() + geom_rug()"
+  },
+  {
+    "objectID": "ggplot2.html#color-aesthetic",
+    "href": "ggplot2.html#color-aesthetic",
+    "title": "A Grammar of Graphics",
+    "section": "Color aesthetic",
+    "text": "Color aesthetic\n\nggplot(data = dvf, mapping = aes(x = surface, y = prix,\n                                 colour = type)) +\n  geom_point(size = 3)"
+  },
+  {
+    "objectID": "ggplot2.html#scale-color-manual",
+    "href": "ggplot2.html#scale-color-manual",
+    "title": "A Grammar of Graphics",
+    "section": "Scale color manual",
+    "text": "Scale color manual\n\nggplot(data = dvf, mapping = aes(x = surface, y = prix, colour = type)) +\n  geom_point(size = 3) +\n  scale_color_manual(values = c(\"Maison\" = \"red\", \"Appartement\" = \"darkblue\"))"
+  },
+  {
+    "objectID": "ggplot2.html#scale-color-viridis",
+    "href": "ggplot2.html#scale-color-viridis",
+    "title": "A Grammar of Graphics",
+    "section": "Scale color viridis",
+    "text": "Scale color viridis\n\nggplot(data = dvf, mapping = aes(x = surface, y = prix, colour = type)) +\n  geom_point(size = 3) +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "ggplot2.html#cartesian-coordinates",
+    "href": "ggplot2.html#cartesian-coordinates",
+    "title": "A Grammar of Graphics",
+    "section": "Cartesian coordinates",
+    "text": "Cartesian coordinates\n\nggplot(ips, aes(x = \"write anything\", fill = secteur)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "ggplot2.html#polar-coordinates",
+    "href": "ggplot2.html#polar-coordinates",
+    "title": "A Grammar of Graphics",
+    "section": "Polar coordinates",
+    "text": "Polar coordinates\n\nggplot(ips, aes(y = \"write anything\", fill = secteur)) +\n  geom_bar() +\n  coord_polar()"
+  },
+  {
+    "objectID": "ggplot2.html#spatial-data",
+    "href": "ggplot2.html#spatial-data",
+    "title": "A Grammar of Graphics",
+    "section": "Spatial data",
+    "text": "Spatial data\n\n\nSimple feature collection with 257 features and 1 field\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -180 ymin: -89.9 xmax: 180 ymax: 83.65187\nGeodetic CRS:  WGS 84\nFirst 10 features:\n                      CNTR_NAME                       geometry\n1      الإمارات العربية المتحدة MULTIPOLYGON (((56.35462 25...\n2           افغانستان-افغانستان MULTIPOLYGON (((74.7055 37....\n3           Antigua and Barbuda MULTIPOLYGON (((-61.80237 1...\n4                      Anguilla MULTIPOLYGON (((-63.05444 1...\n5                     Shqipëria MULTIPOLYGON (((19.831 42.4...\n6                      Հայաստան MULTIPOLYGON (((46.45984 39...\n7                        Angola MULTIPOLYGON (((23.83831 -1...\n8                     Argentina MULTIPOLYGON (((-62.87957 -...\n9  American Samoa-Sāmoa Amelika MULTIPOLYGON (((-169.3966 -...\n10                   Österreich MULTIPOLYGON (((16.88365 48..."
+  },
+  {
+    "objectID": "ggplot2.html#cartographic-coordinates",
+    "href": "ggplot2.html#cartographic-coordinates",
+    "title": "A Grammar of Graphics",
+    "section": "Cartographic coordinates",
+    "text": "Cartographic coordinates\n\nggplot(countries) +\n  geom_sf(fill = \"black\") +\n  coord_sf(crs = \"ESRI:54030\")"
+  },
+  {
+    "objectID": "ggplot2.html#another-one",
+    "href": "ggplot2.html#another-one",
+    "title": "A Grammar of Graphics",
+    "section": "Another one",
+    "text": "Another one\n\nggplot(countries) +\n  geom_sf(fill = \"black\") +\n  coord_sf(crs = \"+proj=bonne +lat_1=10\")"
+  },
+  {
+    "objectID": "ggplot2.html#first-example",
+    "href": "ggplot2.html#first-example",
+    "title": "A Grammar of Graphics",
+    "section": "First example",
+    "text": "First example\n\nggplot(ips, aes(x = ips, y = sd_ips)) +\n  geom_point() +\n  facet_wrap(~secteur)"
+  },
+  {
+    "objectID": "ggplot2.html#meaningful-example",
+    "href": "ggplot2.html#meaningful-example",
+    "title": "A Grammar of Graphics",
+    "section": "Meaningful example",
+    "text": "Meaningful example\n\n\nCode\nd = fs::path_home(\"these\", \"data\", \"eec\") |&gt; \n  arrow::open_dataset() |&gt; \n  filter(rgi == 1,\n         !is.na(acteu)) |&gt; \n  select(sexe, ag, acteu, csp, csa, santgen) |&gt; \n  mutate(cs = coalesce(csp, csa),\n         cs = if_else(cs %in% c(\"10\", \"11\", \"12\", \"13\"), \"10\", cs)) |&gt;\n  collect()\n\nd |&gt; \n  filter(between(ag, 20, 80)) |&gt; \n  group_by(ag, cs, santgen) |&gt; \n  summarise(n = n()) |&gt; \n  mutate(pct = n / sum(n)) |&gt; \n  ungroup() |&gt; \n  pivot_wider(names_from = santgen, values_from = c(pct, n), values_fill = 0) |&gt; \n  mutate(good = pct_1 + pct_2) |&gt; \n  select(ag, cs, good) |&gt; \n  ggplot() +\n  geom_smooth(aes(x = ag, y = good)) +\n  facet_wrap(~cs) +\n  labs(x = \"\",\n       y = \"Proportion de personnes en bonne santé\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "ggplot2.html#a-plot-to-dress-up",
+    "href": "ggplot2.html#a-plot-to-dress-up",
+    "title": "A Grammar of Graphics",
+    "section": "A plot to dress up",
+    "text": "A plot to dress up\n\n\nCode\nggplot(ips, aes(y = forcats::fct_reorder(str_to_title(academie), ips),\n                    x = ips)) +\n  stat_summary(fun = \"median\", geom = \"point\") +\n  coord_cartesian(xlim = c(60, NA))"
+  },
+  {
+    "objectID": "ggplot2.html#labs",
+    "href": "ggplot2.html#labs",
+    "title": "A Grammar of Graphics",
+    "section": "labs()",
+    "text": "labs()\n\n\nCode\nggplot(ips, aes(y = forcats::fct_reorder(str_to_title(academie), ips),\n                    x = ips)) +\n  stat_summary(fun = \"median\", geom = \"point\") +\n  coord_cartesian(xlim = c(60, NA)) +\n  labs(x = \"Indice de position sociale\",\n       y = \"\",\n       title = \"Position sociale des académies\",\n       subtitle = \"Pour la rentrée 2021-2022\",\n       caption = \"Données : Indice de position sociale des collèges\")"
+  },
+  {
+    "objectID": "ggplot2.html#save-typing",
+    "href": "ggplot2.html#save-typing",
+    "title": "A Grammar of Graphics",
+    "section": "Save typing",
+    "text": "Save typing\n\np = ggplot(ips, \n           aes(y = forcats::fct_reorder(str_to_title(academie), ips),\n               x = ips)) +\n  stat_summary(fun = \"median\", geom = \"point\") +\n  coord_cartesian(xlim = c(60, NA)) +\n  labs(x = \"Indice de position sociale\",\n       y = \"\",\n       title = \"Position sociale des académies\",\n       subtitle = \"Pour la rentrée 2021-2022\",\n       caption = \"Données : Indice de position sociale des collèges\")"
+  },
+  {
+    "objectID": "ggplot2.html#grey-default",
+    "href": "ggplot2.html#grey-default",
+    "title": "A Grammar of Graphics",
+    "section": "Grey (default)",
+    "text": "Grey (default)\n\np + theme_grey()"
+  },
+  {
+    "objectID": "ggplot2.html#classic",
+    "href": "ggplot2.html#classic",
+    "title": "A Grammar of Graphics",
+    "section": "Classic",
+    "text": "Classic\n\np + theme_classic()"
+  },
+  {
+    "objectID": "ggplot2.html#minimal",
+    "href": "ggplot2.html#minimal",
+    "title": "A Grammar of Graphics",
+    "section": "Minimal",
+    "text": "Minimal\n\np + theme_minimal()"
+  },
+  {
+    "objectID": "ggplot2.html#wsj",
+    "href": "ggplot2.html#wsj",
+    "title": "A Grammar of Graphics",
+    "section": "WSJ",
+    "text": "WSJ\n\np + ggthemes::theme_wsj()"
+  },
+  {
+    "objectID": "ggplot2.html#recap",
+    "href": "ggplot2.html#recap",
+    "title": "A Grammar of Graphics",
+    "section": "Recap",
+    "text": "Recap\n\n\nData\nAesthetics\nScales\nCoordinate systems\nThemes"
+  },
+  {
+    "objectID": "ggplot2.html#advantages",
+    "href": "ggplot2.html#advantages",
+    "title": "A Grammar of Graphics",
+    "section": "Advantages",
+    "text": "Advantages\n\nReproducibility\nNot just a collection of special cases\nGraphs built incrementally\nSame tool for exploratory analysis and communication\nHigh level of control\nEncourages custom-made graphics\nEasy to extend"
+  },
+  {
+    "objectID": "geographic-data-science.html#packages",
+    "href": "geographic-data-science.html#packages",
+    "title": "Geographic Data Science",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(sf)\n\nLinking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.3.1; sf_use_s2() is TRUE\n\nlibrary(stars)\n\nLe chargement a nécessité le package : abind\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "geographic-data-science.html#vector-data-model",
+    "href": "geographic-data-science.html#vector-data-model",
+    "title": "Geographic Data Science",
+    "section": "Vector data model",
+    "text": "Vector data model"
+  },
+  {
+    "objectID": "geographic-data-science.html#simple-features-standard",
+    "href": "geographic-data-science.html#simple-features-standard",
+    "title": "Geographic Data Science",
+    "section": "Simple features standard",
+    "text": "Simple features standard\n\n\nAn open standard created by the Open Geopspatial Consortium (OGC)\nA feature = a thing\nFeatures = geometry + attributes\nGeometries = points.\nPoints = coordinates\nGeometry types : POINT, LINESTRING, POLYGON, MULTIPOINT, MULTILINESTRING, MULTIPOLYGON, GEOMETRYCOLLECTION."
+  },
+  {
+    "objectID": "geographic-data-science.html#read",
+    "href": "geographic-data-science.html#read",
+    "title": "Geographic Data Science",
+    "section": "Read",
+    "text": "Read\n\nvelibs = sf::st_read(\"data/velibs.geojson\", quiet = TRUE)"
+  },
+  {
+    "objectID": "geographic-data-science.html#inspect",
+    "href": "geographic-data-science.html#inspect",
+    "title": "Geographic Data Science",
+    "section": "Inspect",
+    "text": "Inspect\n\nclass(velibs)\n\n[1] \"sf\"         \"data.frame\"\n\n\n\nvelibs\n\nSimple feature collection with 1499 features and 2 fields\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 2.165597 ymin: 48.76462 xmax: 2.538242 ymax: 48.95757\nGeodetic CRS:  WGS 84\nFirst 10 features:\n                                      name capacity                  geometry\n1                           Artois - Berri       23 POINT (2.306426 48.87394)\n2             Félix Ziem - Armand Gauthier       25  POINT (2.333394 48.8895)\n3                         Boudreau - Auber       14 POINT (2.329423 48.87219)\n4                         Pereire - Ternes       48 POINT (2.288012 48.87974)\n5               Claude Decaen - Cannebière       27 POINT (2.397254 48.83761)\n6  Institut du Monde Arabe - Saint-Germain       40 POINT (2.355809 48.84906)\n7        Notre-Dame-des-Champs - Stanislas       19  POINT (2.329338 48.8448)\n8                  Cimetière de Montmartre       43  POINT (2.33289 48.88647)\n9               Victor Hugo - Jeanne Jugan       28 POINT (2.415081 48.84395)\n10                Conservatoire de Musique       25 POINT (2.403401 48.77094)"
+  },
+  {
+    "objectID": "geographic-data-science.html#plot",
+    "href": "geographic-data-science.html#plot",
+    "title": "Geographic Data Science",
+    "section": "Plot",
+    "text": "Plot\n\nggplot(velibs) +\n  geom_sf()"
+  },
+  {
+    "objectID": "geographic-data-science.html#sf-object",
+    "href": "geographic-data-science.html#sf-object",
+    "title": "Geographic Data Science",
+    "section": "sf object",
+    "text": "sf object\n\n\n\n\nnamecapacitygeometry\n\nArtois - Berri23c(2.30642583221197, 48.8739352124082)\n\nSénat - Condé33c(2.33793944120407, 48.8495422778846)\n\nChateau22c(2.3135878035462, 48.774661399959)\n\nCadix - Hameau37c(2.28951618075371, 48.8340107632249)\n\nCentquatre42c(2.37078543752432, 48.8893335384554)\n\nMairie d'Issy41c(2.2723111510277, 48.823767792468)\n\nMusée d'Orsay65c(2.3258604481816, 48.859726157909)\n\nPlace Violet30c(2.29057565331459, 48.844878938365)\n\nQuai de Valmy26c(2.36818604171276, 48.8812695157943)"
+  },
+  {
+    "objectID": "geographic-data-science.html#feature",
+    "href": "geographic-data-science.html#feature",
+    "title": "Geographic Data Science",
+    "section": "Feature",
+    "text": "Feature\n\n\n\n\nnamecapacitygeometry\n\nArtois - Berri23c(2.30642583221197, 48.8739352124082)\n\nSénat - Condé33c(2.33793944120407, 48.8495422778846)\n\nChateau22c(2.3135878035462, 48.774661399959)\n\nCadix - Hameau37c(2.28951618075371, 48.8340107632249)\n\nCentquatre42c(2.37078543752432, 48.8893335384554)\n\nMairie d'Issy41c(2.2723111510277, 48.823767792468)\n\nMusée d'Orsay65c(2.3258604481816, 48.859726157909)\n\nPlace Violet30c(2.29057565331459, 48.844878938365)\n\nQuai de Valmy26c(2.36818604171276, 48.8812695157943)"
+  },
+  {
+    "objectID": "geographic-data-science.html#attributs",
+    "href": "geographic-data-science.html#attributs",
+    "title": "Geographic Data Science",
+    "section": "Attributs",
+    "text": "Attributs\n\n\n\n\nnamecapacitygeometry\n\nArtois - Berri23c(2.30642583221197, 48.8739352124082)\n\nSénat - Condé33c(2.33793944120407, 48.8495422778846)\n\nChateau22c(2.3135878035462, 48.774661399959)\n\nCadix - Hameau37c(2.28951618075371, 48.8340107632249)\n\nCentquatre42c(2.37078543752432, 48.8893335384554)\n\nMairie d'Issy41c(2.2723111510277, 48.823767792468)\n\nMusée d'Orsay65c(2.3258604481816, 48.859726157909)\n\nPlace Violet30c(2.29057565331459, 48.844878938365)\n\nQuai de Valmy26c(2.36818604171276, 48.8812695157943)"
+  },
+  {
+    "objectID": "geographic-data-science.html#geometries",
+    "href": "geographic-data-science.html#geometries",
+    "title": "Geographic Data Science",
+    "section": "Geometries",
+    "text": "Geometries\n\n\n\n\nnamecapacitygeometry\n\nArtois - Berri23c(2.30642583221197, 48.8739352124082)\n\nSénat - Condé33c(2.33793944120407, 48.8495422778846)\n\nChateau22c(2.3135878035462, 48.774661399959)\n\nCadix - Hameau37c(2.28951618075371, 48.8340107632249)\n\nCentquatre42c(2.37078543752432, 48.8893335384554)\n\nMairie d'Issy41c(2.2723111510277, 48.823767792468)\n\nMusée d'Orsay65c(2.3258604481816, 48.859726157909)\n\nPlace Violet30c(2.29057565331459, 48.844878938365)\n\nQuai de Valmy26c(2.36818604171276, 48.8812695157943)"
+  },
+  {
+    "objectID": "geographic-data-science.html#points",
+    "href": "geographic-data-science.html#points",
+    "title": "Geographic Data Science",
+    "section": "Points",
+    "text": "Points\n\n\n\n\nnamecapacitygeometry\n\nArtois - Berri23c(2.30642583221197, 48.8739352124082)\n\nSénat - Condé33c(2.33793944120407, 48.8495422778846)\n\nChateau22c(2.3135878035462, 48.774661399959)\n\nCadix - Hameau37c(2.28951618075371, 48.8340107632249)\n\nCentquatre42c(2.37078543752432, 48.8893335384554)\n\nMairie d'Issy41c(2.2723111510277, 48.823767792468)\n\nMusée d'Orsay65c(2.3258604481816, 48.859726157909)\n\nPlace Violet30c(2.29057565331459, 48.844878938365)\n\nQuai de Valmy26c(2.36818604171276, 48.8812695157943)"
+  },
+  {
+    "objectID": "geographic-data-science.html#la-bd-topo",
+    "href": "geographic-data-science.html#la-bd-topo",
+    "title": "Geographic Data Science",
+    "section": "La BD Topo",
+    "text": "La BD Topo\n\nst_layers(\"data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg\")\n\nDriver: GPKG \nAvailable layers:\n                        layer_name     geometry_type features fields\n1                 troncon_de_route    3D Line String   196898     83\n2        route_numerotee_ou_nommee Multi Line String      767     12\n3                 itineraire_autre Multi Line String       15      9\n4           troncon_de_voie_ferree    3D Line String      539     21\n5          equipement_de_transport  3D Multi Polygon     1040     20\n6                piste_d_aerodrome  3D Multi Polygon       13     14\n7                        aerodrome     Multi Polygon        6     19\n8                  point_de_repere             Point     7695     19\n9                non_communication             Point       83      7\n10                 point_du_reseau          3D Point     2671     17\n11              voie_ferree_nommee Multi Line String        2      9\n12             toponymie_transport             Point      535      8\n13                        batiment  3D Multi Polygon   481047     28\n14                       cimetiere  3D Multi Polygon      444     17\n15           construction_lineaire    3D Line String     6858     17\n16         construction_ponctuelle          3D Point     6104     18\n17         construction_surfacique  3D Multi Polygon      122     17\n18                       reservoir  3D Multi Polygon      731     20\n19              ligne_orographique    3D Line String    13503     15\n20                          pylone          3D Point     2104     13\n21                terrain_de_sport  3D Multi Polygon     1241     14\n22                  toponymie_bati             Point      113      8\n23                     cours_d_eau Multi Line String     2832     15\n24          troncon_hydrographique    3D Line String    48408     40\n25    bassin_versant_topographique     Multi Polygon       99     20\n26                      plan_d_eau     Multi Polygon      384     22\n27          surface_hydrographique  3D Multi Polygon    24544     29\n28            noeud_hydrographique          3D Point     2839     22\n29           detail_hydrographique             Point      544     17\n30          toponymie_hydrographie             Point     1225      8\n31               zone_d_habitation     Multi Polygon    34831     17\n32             lieu_dit_non_habite             Point      801     14\n33             detail_orographique             Point       74     15\n34          toponymie_lieux_nommes             Point    38769      8\n35                    canalisation    3D Line String      107     14\n36                ligne_electrique    3D Line String      109     13\n37         poste_de_transformation  3D Multi Polygon       35     15\n38                             erp             Point     7621     34\n39    zone_d_activite_ou_d_interet     Multi Polygon     5068     19\n40 toponymie_services_et_activites             Point     2895      8\n41                     voie_nommee Multi Line String    32628     16\n42                 parc_ou_reserve     Multi Polygon       27     15\n43                  foret_publique     Multi Polygon       23     13\n44    toponymie_zones_reglementees             Point       51      8\n45                            haie       Line String   595670     11\n46              zone_de_vegetation     Multi Polygon   326671     10\n47                  arrondissement     Multi Polygon       12     10\n48    commune_associee_ou_deleguee     Multi Polygon       94     14\n49                         commune     Multi Polygon      379     25\n50                            epci     Multi Polygon       26      9\n51       collectivite_territoriale     Multi Polygon        7     10\n52                     departement     Multi Polygon        7     10\n53                          region     Multi Polygon        3      9\n54                     adresse_ban             Point   223365     20\n55        batiment_rnb_lien_bdtopo             Point   481643      5\n56        lien_adresse_vers_bdtopo       Line String   221568     15\n57     section_de_points_de_repere       Line String     1234     11\n58                info_metadonnees                NA        1      6\n59                 metadonnees_lot                NA        1     31\n60               metadonnees_theme                NA        9      3\n61                    layer_styles                NA       64     12\n                crs_name\n1  RGF93 v1 / Lambert-93\n2  RGF93 v1 / Lambert-93\n3  RGF93 v1 / Lambert-93\n4  RGF93 v1 / Lambert-93\n5  RGF93 v1 / Lambert-93\n6  RGF93 v1 / Lambert-93\n7  RGF93 v1 / Lambert-93\n8  RGF93 v1 / Lambert-93\n9  RGF93 v1 / Lambert-93\n10 RGF93 v1 / Lambert-93\n11 RGF93 v1 / Lambert-93\n12 RGF93 v1 / Lambert-93\n13 RGF93 v1 / Lambert-93\n14 RGF93 v1 / Lambert-93\n15 RGF93 v1 / Lambert-93\n16 RGF93 v1 / Lambert-93\n17 RGF93 v1 / Lambert-93\n18 RGF93 v1 / Lambert-93\n19 RGF93 v1 / Lambert-93\n20 RGF93 v1 / Lambert-93\n21 RGF93 v1 / Lambert-93\n22 RGF93 v1 / Lambert-93\n23 RGF93 v1 / Lambert-93\n24 RGF93 v1 / Lambert-93\n25 RGF93 v1 / Lambert-93\n26 RGF93 v1 / Lambert-93\n27 RGF93 v1 / Lambert-93\n28 RGF93 v1 / Lambert-93\n29 RGF93 v1 / Lambert-93\n30 RGF93 v1 / Lambert-93\n31 RGF93 v1 / Lambert-93\n32 RGF93 v1 / Lambert-93\n33 RGF93 v1 / Lambert-93\n34 RGF93 v1 / Lambert-93\n35 RGF93 v1 / Lambert-93\n36 RGF93 v1 / Lambert-93\n37 RGF93 v1 / Lambert-93\n38 RGF93 v1 / Lambert-93\n39 RGF93 v1 / Lambert-93\n40 RGF93 v1 / Lambert-93\n41 RGF93 v1 / Lambert-93\n42 RGF93 v1 / Lambert-93\n43 RGF93 v1 / Lambert-93\n44 RGF93 v1 / Lambert-93\n45 RGF93 v1 / Lambert-93\n46 RGF93 v1 / Lambert-93\n47 RGF93 v1 / Lambert-93\n48 RGF93 v1 / Lambert-93\n49 RGF93 v1 / Lambert-93\n50 RGF93 v1 / Lambert-93\n51 RGF93 v1 / Lambert-93\n52 RGF93 v1 / Lambert-93\n53 RGF93 v1 / Lambert-93\n54 RGF93 v1 / Lambert-93\n55 RGF93 v1 / Lambert-93\n56 RGF93 v1 / Lambert-93\n57 RGF93 v1 / Lambert-93\n58                  &lt;NA&gt;\n59                  &lt;NA&gt;\n60                  &lt;NA&gt;\n61                  &lt;NA&gt;"
+  },
+  {
+    "objectID": "geographic-data-science.html#cours-deau",
+    "href": "geographic-data-science.html#cours-deau",
+    "title": "Geographic Data Science",
+    "section": "Cours d’eau",
+    "text": "Cours d’eau\n\ncours_d_eau = st_read(\"data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg\",\n                      layer = \"cours_d_eau\")\n\nReading layer `cours_d_eau' from data source \n  `/home/theo/enquetes-quantitatives/data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg' \n  using driver `GPKG'\nSimple feature collection with 2832 features and 15 fields\nGeometry type: MULTILINESTRING\nDimension:     XY\nBounding box:  xmin: 295216.4 ymin: 6716245 xmax: 517921.6 ymax: 6854598\nProjected CRS: RGF93 v1 / Lambert-93"
+  },
+  {
+    "objectID": "geographic-data-science.html#forêts-publiques",
+    "href": "geographic-data-science.html#forêts-publiques",
+    "title": "Geographic Data Science",
+    "section": "Forêts publiques",
+    "text": "Forêts publiques\n\nforet_publique = st_read(dsn = \"data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg\",\n                         layer = \"foret_publique\")\n\nReading layer `foret_publique' from data source \n  `/home/theo/enquetes-quantitatives/data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg' \n  using driver `GPKG'\nSimple feature collection with 23 features and 13 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 389284 ymin: 6742285 xmax: 489008.5 ymax: 6843152\nProjected CRS: RGF93 v1 / Lambert-93"
+  },
+  {
+    "objectID": "geographic-data-science.html#pylônes",
+    "href": "geographic-data-science.html#pylônes",
+    "title": "Geographic Data Science",
+    "section": "Pylônes",
+    "text": "Pylônes\n\npylone = st_read(dsn = \"data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg\",\n                 layer = \"pylone\")\n\nReading layer `pylone' from data source \n  `/home/theo/enquetes-quantitatives/data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg' \n  using driver `GPKG'\nSimple feature collection with 2104 features and 13 fields\nGeometry type: POINT\nDimension:     XYZ\nBounding box:  xmin: 381627.9 ymin: 6738667 xmax: 479014.9 ymax: 6835443\nz_range:       zmin: 43 zmax: 314.4\nProjected CRS: RGF93 v1 / Lambert-93"
+  },
+  {
+    "objectID": "geographic-data-science.html#carte-des-cours-deau",
+    "href": "geographic-data-science.html#carte-des-cours-deau",
+    "title": "Geographic Data Science",
+    "section": "Carte des cours d’eau",
+    "text": "Carte des cours d’eau\n\nggplot() +\n  geom_sf(data = cours_d_eau, color = \"blue\")"
+  },
+  {
+    "objectID": "geographic-data-science.html#ajouter-les-forêts-publiques",
+    "href": "geographic-data-science.html#ajouter-les-forêts-publiques",
+    "title": "Geographic Data Science",
+    "section": "Ajouter les forêts publiques",
+    "text": "Ajouter les forêts publiques\n\nggplot() +\n  geom_sf(data = cours_d_eau, color = \"blue\") +\n  geom_sf(data = foret_publique, fill = \"darkgreen\")"
+  },
+  {
+    "objectID": "geographic-data-science.html#ajouter-les-pylônes",
+    "href": "geographic-data-science.html#ajouter-les-pylônes",
+    "title": "Geographic Data Science",
+    "section": "Ajouter les pylônes",
+    "text": "Ajouter les pylônes\n\nggplot() +\n  geom_sf(data = cours_d_eau, color = \"blue\") +\n  geom_sf(data = foret_publique, fill = \"darkgreen\") +\n  geom_sf(data = pylone, color = \"brown\")"
+  },
+  {
+    "objectID": "geographic-data-science.html#raster-data-model",
+    "href": "geographic-data-science.html#raster-data-model",
+    "title": "Geographic Data Science",
+    "section": "Raster data model",
+    "text": "Raster data model"
+  },
+  {
+    "objectID": "geographic-data-science.html#résolution",
+    "href": "geographic-data-science.html#résolution",
+    "title": "Geographic Data Science",
+    "section": "Résolution",
+    "text": "Résolution"
+  },
+  {
+    "objectID": "geographic-data-science.html#lumières-nocturnes",
+    "href": "geographic-data-science.html#lumières-nocturnes",
+    "title": "Geographic Data Science",
+    "section": "Lumières nocturnes",
+    "text": "Lumières nocturnes"
+  },
+  {
+    "objectID": "geographic-data-science.html#relief",
+    "href": "geographic-data-science.html#relief",
+    "title": "Geographic Data Science",
+    "section": "Relief",
+    "text": "Relief\n\nfs::file_size(\"data/GRAY_HR_SR.tif\")\n\n223M\n\nrelief = read_stars(\"data/GRAY_HR_SR.tif\", proxy = TRUE)"
+  },
+  {
+    "objectID": "geographic-data-science.html#plotting-rasters",
+    "href": "geographic-data-science.html#plotting-rasters",
+    "title": "Geographic Data Science",
+    "section": "Plotting rasters",
+    "text": "Plotting rasters\n\nggplot() +\n  geom_stars(data = relief, downsample = 6) +\n  theme_void()"
+  },
+  {
+    "objectID": "geographic-data-science.html#géoïdes",
+    "href": "geographic-data-science.html#géoïdes",
+    "title": "Geographic Data Science",
+    "section": "Géoïdes",
+    "text": "Géoïdes"
+  },
+  {
+    "objectID": "geographic-data-science.html#ellipsoïdes",
+    "href": "geographic-data-science.html#ellipsoïdes",
+    "title": "Geographic Data Science",
+    "section": "Ellipsoïdes",
+    "text": "Ellipsoïdes"
+  },
+  {
+    "objectID": "geographic-data-science.html#familles-de-projections",
+    "href": "geographic-data-science.html#familles-de-projections",
+    "title": "Geographic Data Science",
+    "section": "Familles de projections",
+    "text": "Familles de projections"
+  },
+  {
+    "objectID": "geographic-data-science.html#country-borders",
+    "href": "geographic-data-science.html#country-borders",
+    "title": "Geographic Data Science",
+    "section": "Country borders",
+    "text": "Country borders\n\n\nSimple feature collection with 257 features and 1 field\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -180 ymin: -89.9 xmax: 180 ymax: 83.65187\nGeodetic CRS:  WGS 84\nFirst 10 features:\n                      CNTR_NAME                       geometry\n1      الإمارات العربية المتحدة MULTIPOLYGON (((56.35462 25...\n2           افغانستان-افغانستان MULTIPOLYGON (((74.7055 37....\n3           Antigua and Barbuda MULTIPOLYGON (((-61.80237 1...\n4                      Anguilla MULTIPOLYGON (((-63.05444 1...\n5                     Shqipëria MULTIPOLYGON (((19.831 42.4...\n6                      Հայաստան MULTIPOLYGON (((46.45984 39...\n7                        Angola MULTIPOLYGON (((23.83831 -1...\n8                     Argentina MULTIPOLYGON (((-62.87957 -...\n9  American Samoa-Sāmoa Amelika MULTIPOLYGON (((-169.3966 -...\n10                   Österreich MULTIPOLYGON (((16.88365 48..."
+  },
+  {
+    "objectID": "geographic-data-science.html#querying-a-crs",
+    "href": "geographic-data-science.html#querying-a-crs",
+    "title": "Geographic Data Science",
+    "section": "Querying a CRS",
+    "text": "Querying a CRS\n\nst_crs(countries)\n\nCoordinate Reference System:\n  User input: EPSG:4326 \n  wkt:\nGEOGCRS[\"WGS 84\",\n    DATUM[\"World Geodetic System 1984\",\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"unknown\"],\n        AREA[\"World\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]"
+  },
+  {
+    "objectID": "geographic-data-science.html#spécifier-un-crs",
+    "href": "geographic-data-science.html#spécifier-un-crs",
+    "title": "Geographic Data Science",
+    "section": "Spécifier un CRS",
+    "text": "Spécifier un CRS\nEPSG or ESRI codes\n\nst_transform(countries, crs = \"ESRI:54012\")\n\n\nPROJ4 string\n\nst_transform(countries, crs = \"+proj=laea +lon_0=100 +lat_0=45\")"
+  },
+  {
+    "objectID": "geographic-data-science.html#sites-utiles",
+    "href": "geographic-data-science.html#sites-utiles",
+    "title": "Geographic Data Science",
+    "section": "Sites utiles",
+    "text": "Sites utiles\n\nhttps://spatialreference.org/\nhttps://proj.org/en/9.4/operations/projections/\nhttps://epsg.io/"
+  },
+  {
+    "objectID": "geographic-data-science.html#wgs84",
+    "href": "geographic-data-science.html#wgs84",
+    "title": "Geographic Data Science",
+    "section": "WGS84",
+    "text": "WGS84\n\n\nCode\nggplot(countries) +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#robinson",
+    "href": "geographic-data-science.html#robinson",
+    "title": "Geographic Data Science",
+    "section": "Robinson",
+    "text": "Robinson\n\n\nCode\nst_transform(countries, \"ESRI:54030\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#eckert-4",
+    "href": "geographic-data-science.html#eckert-4",
+    "title": "Geographic Data Science",
+    "section": "Eckert 4",
+    "text": "Eckert 4\n\n\nCode\nst_transform(countries, \"+proj=eck4\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#bonne",
+    "href": "geographic-data-science.html#bonne",
+    "title": "Geographic Data Science",
+    "section": "Bonne",
+    "text": "Bonne\n\n\nCode\nst_transform(countries, \"+proj=bonne +lat_1=10\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#lambert-azimuthal-equal-area",
+    "href": "geographic-data-science.html#lambert-azimuthal-equal-area",
+    "title": "Geographic Data Science",
+    "section": "Lambert azimuthal equal-area",
+    "text": "Lambert azimuthal equal-area\n\n\nCode\nst_transform(countries, \"+proj=laea\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#laea-asie",
+    "href": "geographic-data-science.html#laea-asie",
+    "title": "Geographic Data Science",
+    "section": "LAEA Asie",
+    "text": "LAEA Asie\n\n\nCode\nst_transform(countries, \"+proj=laea +lon_0=100 +lat_0=45\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#laea-amérique-du-nord",
+    "href": "geographic-data-science.html#laea-amérique-du-nord",
+    "title": "Geographic Data Science",
+    "section": "LAEA Amérique du Nord",
+    "text": "LAEA Amérique du Nord\n\n\nCode\nst_transform(countries, \"+proj=laea +lon_0=-95 +lat_0=45\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#laea-amérique-du-sud",
+    "href": "geographic-data-science.html#laea-amérique-du-sud",
+    "title": "Geographic Data Science",
+    "section": "LAEA Amérique du Sud",
+    "text": "LAEA Amérique du Sud\n\n\nCode\nst_transform(countries, \"+proj=laea +lon_0=-61 +lat_0=-21\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#laea-afrique",
+    "href": "geographic-data-science.html#laea-afrique",
+    "title": "Geographic Data Science",
+    "section": "LAEA Afrique",
+    "text": "LAEA Afrique\n\n\nCode\nst_transform(countries, \"+proj=laea +lon_0=18 +lat_0=0\") |&gt; \n  ggplot() +\n  geom_sf(fill = \"black\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "geographic-data-science.html#crs-usuels",
+    "href": "geographic-data-science.html#crs-usuels",
+    "title": "Geographic Data Science",
+    "section": "CRS usuels",
+    "text": "CRS usuels\n\n\nMonde : Eckert 4 : ESRI:54012 ou +proj=eck4\nEurope : European Centric Lambert azimuthal equal-area : EPSG:3035\nFrance : RGF93 / Lambert-93 : EPSG-2154"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Grammaire des graphiques\nDonnées spatiales"
   }
 ]
