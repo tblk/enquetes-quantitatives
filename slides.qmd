@@ -1,0 +1,8 @@
+---
+title: "Slides"
+---
+
+[Grammaire des graphiques](ggplot2.qmd)
+
+
+[Données spatiales](geographic-data-science.qmd)

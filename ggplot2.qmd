@@ -1,0 +1,564 @@
+---
+title: "A Grammar of Graphics"
+subtitle: "Introduction to ggplot2"
+author: "Théo Boulakia"
+date: 2024-09-18
+date-format: long
+format: revealjs
+lang: fr
+execute: 
+  echo: true
+---
+
+# Get started
+
+## Workflow
+
+![](images/data-science-workflow.png)
+
+## Packages
+
+```{r}
+#| message: true
+library(tidyverse)
+```
+
+# Demandes de valeurs foncières
+
+## Import 
+
+Simple (base R)
+```{r}
+dvf = read.csv("data/dvf_aiglun.csv")
+```
+
+. . . 
+
+Faster (`readr` package)
+```{r}
+#| eval: false
+dvf = read_csv("data/dvf_aiglun.csv")
+```
+
+. . . 
+
+Even faster
+```{r}
+#| eval: false
+dvf = vroom::vroom("data/dvf_aiglun.csv")
+```
+
+. . . 
+
+Fast and simple
+```{r}
+#| eval: false
+dvf = rio::import("data/dvf_aiglun.csv")
+```
+
+. . . 
+
+Fast, simple and safe
+```{r}
+#| eval: false
+dvf = rio::import(here::here("data", "dvf_aiglun.csv"))
+```
+
+## Inspect {.smaller}
+
+```{r}
+class(dvf)
+```
+
+```{r}
+dvf
+```
+
+## Scatterplot
+
+```{r}
+ggplot(data = dvf, mapping = aes(x = surface, y = prix)) +
+  geom_point()
+```
+
+## Boxplot
+
+```{r}
+ggplot(data = dvf, mapping = aes(x = type, y = prix)) +
+  geom_boxplot()
+```
+
+## Size aesthetic
+
+```{r}
+#| code-line-numbers: "|2"
+ggplot(data = dvf, mapping = aes(x = surface, y = prix,
+                                 size = pieces)) +
+  geom_point()
+```
+
+## Let's break it down
+
+```{r}
+#| code-fold: true
+#| code-line-numbers: "|1|2|3"
+ggplot(data = dvf,
+       mapping = aes(x = surface, y = prix, size = pieces, colour = type)) +
+  geom_point()
+```
+
+# Députés
+
+## Import
+
+```{r}
+deputes = readr::read_csv("data/deputes.csv")
+```
+
+## Inspect {.smaller}
+
+```{r}
+class(deputes)
+```
+
+```{r}
+deputes
+```
+
+## Barplot 
+
+```{r}
+ggplot(deputes, aes(x = groupe_abrege)) +
+  geom_bar()
+```
+
+# Indice de position sociale des collèges
+
+## Import
+
+```{r}
+ips = arrow::read_parquet("data/ips_colleges.parquet")
+```
+
+## Inspect {.smaller}
+
+```{r}
+class(ips)
+```
+
+```{r}
+ips
+```
+
+## Boxplot
+
+```{r}
+#| code-fold: true
+ggplot(ips, aes(x = secteur, y = ips)) +
+  geom_boxplot()
+```
+
+## Scatterplot
+
+```{r}
+#| code-fold: true
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point()
+```
+
+## Density 2D
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_density2d()
+```
+
+# Aesthetic mappings
+
+## Aesthetics
+
+![](images/commonly-used-aesthetics.png)
+
+## Mapping vs setting
+
+Mapping
+```{r}
+#| eval: false
+ggplot(data, aes(x = Var1, y = Var2, size = Var3, colour = Var4))
+```
+
+. . . 
+
+Setting
+```{r}
+#| eval: false
+ggplot(data, colour = "red", alpha = 0.1, size = 4)
+```
+
+
+## Raw scatterplot
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point()
+```
+
+## Setting alpha
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point(alpha = 0.3)
+```
+
+## Setting size
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point(size = 0.5)
+```
+
+## Setting color
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point(color = "indianred")
+```
+
+## Setting shape
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point(shape = 3)
+```
+
+## Mapping color
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips, colour = secteur)) +
+  geom_point()
+```
+
+## Maping shape
+
+```{r}
+ggplot(dvf, aes(x = surface, y = prix)) +
+  geom_point(aes(shape = type))
+```
+
+## Mapping and setting
+
+```{r}
+ggplot(dvf, aes(x = surface, y = prix)) +
+  geom_point(aes(shape = type), size = 3)
+```
+
+# Layers
+
+## Components {.smaller}
+
+:::: {.columns}
+
+::: {.column width="33%"}
+### geom
+
+- histogram
+- violin
+- rug
+- line
+- point
+- tile
+- smooth
+- raster
+- and more...
+:::
+
+::: {.column width="33%"}
+### stat
+
+- count
+- density
+- sum
+- identity
+- unique
+- summary
+- function
+- and more...
+:::
+
+::: {.column width="33%"}
+### position
+
+- dodge
+- jitter
+- stack
+- identity
+- and more...
+:::
+
+::::
+
+## geom_X()
+
+```{r}
+#| code-line-numbers: "2"
+ggplot(deputes, aes(x = groupe_abrege)) +
+  geom_bar()
+```
+
+## stat_X()
+
+```{r}
+#| code-line-numbers: "2"
+ggplot(deputes, aes(x = groupe_abrege)) +
+  stat_count()
+```
+
+## layer()
+
+```{r}
+#| code-line-numbers: "2"
+ggplot(deputes, aes(x = groupe_abrege)) +
+  layer(geom = "bar", stat = "count", position = "identity")
+```
+
+## Exploring combinations
+
+```{r}
+#| code-line-numbers: "2"
+ggplot(deputes, aes(x = groupe_abrege)) +
+  layer(geom = "point", stat = "count", position = "identity")
+```
+
+# Adding layers
+
+## point
+
+```{r}
+ggplot(dvf, aes(x = surface, y = prix)) +
+  geom_point()
+```
+
+## point + smooth
+
+```{r}
+ggplot(dvf, aes(x = surface, y = prix)) +
+  geom_point() + geom_smooth()
+```
+
+## point + smooth + rug
+
+```{r}
+ggplot(dvf, aes(x = surface, y = prix)) +
+  geom_point() + geom_smooth() + geom_rug()
+```
+
+# Scales
+
+## Color aesthetic
+
+```{r}
+ggplot(data = dvf, mapping = aes(x = surface, y = prix,
+                                 colour = type)) +
+  geom_point(size = 3)
+```
+
+## Scale color manual
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(data = dvf, mapping = aes(x = surface, y = prix, colour = type)) +
+  geom_point(size = 3) +
+  scale_color_manual(values = c("Maison" = "red", "Appartement" = "darkblue"))
+```
+
+## Scale color viridis
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(data = dvf, mapping = aes(x = surface, y = prix, colour = type)) +
+  geom_point(size = 3) +
+  scale_color_viridis_d()
+```
+
+# Coordinate systems
+
+## Cartesian coordinates
+
+```{r}
+ggplot(ips, aes(x = "write anything", fill = secteur)) +
+  geom_bar()
+```
+
+## Polar coordinates
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(ips, aes(y = "write anything", fill = secteur)) +
+  geom_bar() +
+  coord_polar()
+```
+
+## Spatial data
+
+```{r}
+#| echo: false
+library(sf)
+countries = giscoR::gisco_get_countries(year = "2016", epsg = "4326") |> 
+  dplyr::select(CNTR_NAME)
+countries
+```
+
+## Cartographic coordinates
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(countries) +
+  geom_sf(fill = "black") +
+  coord_sf(crs = "ESRI:54030")
+```
+
+## Another one
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(countries) +
+  geom_sf(fill = "black") +
+  coord_sf(crs = "+proj=bonne +lat_1=10")
+```
+
+# Faceting
+
+## First example
+
+```{r}
+ggplot(ips, aes(x = ips, y = sd_ips)) +
+  geom_point() +
+  facet_wrap(~secteur)
+```
+
+## Meaningful example
+
+```{r eec_santgen}
+#| code-fold: true
+d = fs::path_home("these", "data", "eec") |> 
+  arrow::open_dataset() |> 
+  filter(rgi == 1,
+         !is.na(acteu)) |> 
+  select(sexe, ag, acteu, csp, csa, santgen) |> 
+  mutate(cs = coalesce(csp, csa),
+         cs = if_else(cs %in% c("10", "11", "12", "13"), "10", cs)) |>
+  collect()
+
+d |> 
+  filter(between(ag, 20, 80)) |> 
+  group_by(ag, cs, santgen) |> 
+  summarise(n = n()) |> 
+  mutate(pct = n / sum(n)) |> 
+  ungroup() |> 
+  pivot_wider(names_from = santgen, values_from = c(pct, n), values_fill = 0) |> 
+  mutate(good = pct_1 + pct_2) |> 
+  select(ag, cs, good) |> 
+  ggplot() +
+  geom_smooth(aes(x = ag, y = good)) +
+  facet_wrap(~cs) +
+  labs(x = "",
+       y = "Proportion de personnes en bonne santé") +
+  theme_bw() 
+```
+
+# Labels
+
+## A plot to dress up
+
+```{r}
+#| code-fold: true
+ggplot(ips, aes(y = forcats::fct_reorder(str_to_title(academie), ips),
+                    x = ips)) +
+  stat_summary(fun = "median", geom = "point") +
+  coord_cartesian(xlim = c(60, NA))
+```
+
+## labs()
+
+```{r}
+#| code-line-numbers: "5-8"
+#| code-fold: true
+ggplot(ips, aes(y = forcats::fct_reorder(str_to_title(academie), ips),
+                    x = ips)) +
+  stat_summary(fun = "median", geom = "point") +
+  coord_cartesian(xlim = c(60, NA)) +
+  labs(x = "Indice de position sociale",
+       y = "",
+       title = "Position sociale des académies",
+       subtitle = "Pour la rentrée 2021-2022",
+       caption = "Données : Indice de position sociale des collèges")
+```
+
+# Themes
+
+## Save typing
+
+```{r}
+p = ggplot(ips, 
+           aes(y = forcats::fct_reorder(str_to_title(academie), ips),
+               x = ips)) +
+  stat_summary(fun = "median", geom = "point") +
+  coord_cartesian(xlim = c(60, NA)) +
+  labs(x = "Indice de position sociale",
+       y = "",
+       title = "Position sociale des académies",
+       subtitle = "Pour la rentrée 2021-2022",
+       caption = "Données : Indice de position sociale des collèges")
+```
+
+## Grey (default)
+
+```{r}
+p + theme_grey()
+```
+
+## Classic
+
+```{r}
+p + theme_classic()
+```
+
+## Minimal
+
+```{r}
+p + theme_minimal()
+```
+
+## WSJ
+
+```{r}
+p + ggthemes::theme_wsj()
+```
+
+# Conclusion
+
+## Recap
+
+::: {.incremental}
+- Data
+- Aesthetics
+- Scales
+- Coordinate systems
+- Themes
+:::
+
+## Advantages {.smaller}
+
+- Reproducibility
+
+- Not just a collection of special cases
+
+- Graphs built incrementally
+
+- Same tool for exploratory analysis and communication
+
+- High level of control
+
+- Encourages custom-made graphics
+
+- Easy to **[extend](https://exts.ggplot2.tidyverse.org/gallery/)**

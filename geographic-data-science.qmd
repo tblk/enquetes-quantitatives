@@ -1,0 +1,362 @@
+---
+title: "Geographic Data Science"
+author: "Théo Boulakia"
+date: 2024-09-18
+date-format: long
+format: 
+  revealjs:
+    theme: serif
+lang: fr
+execute: 
+  echo: true
+---
+
+## Packages
+
+```{r packages}
+#| message: true
+library(sf)
+library(stars)
+library(tidyverse)
+```
+
+# Geographic Tables
+
+## Vector data model
+
+![](images/points-lines-polygons-vector-data-types.png)
+
+## Simple features standard
+
+::: {.incremental}
+- An open **standard** created by the Open Geopspatial Consortium (OGC)
+
+- A **feature** = a thing
+
+- Features = **geometry** + **attributes**
+
+- Geometries = **points**.
+
+- Points = **coordinates**
+
+- Geometry types : `POINT`, `LINESTRING`, `POLYGON`, `MULTIPOINT`, `MULTILINESTRING`, `MULTIPOLYGON`, `GEOMETRYCOLLECTION`.
+
+:::
+
+## Read
+
+```{r}
+velibs = sf::st_read("data/velibs.geojson", quiet = TRUE)
+```
+
+## Inspect
+
+```{r}
+class(velibs)
+```
+
+```{r}
+velibs
+```
+
+## Plot
+
+```{r}
+ggplot(velibs) +
+  geom_sf()
+```
+
+## sf object {.smaller}
+
+```{r}
+#| echo: false
+velibs |> 
+  filter(str_length(name) < 15) |> 
+  slice_head(n = 9) |> 
+  huxtable::hux() |>
+  huxtable::theme_green()
+```
+
+## Feature {.smaller}
+
+```{r}
+#| echo: false
+velibs |> 
+  filter(str_length(name) < 15) |>  
+  slice_head(n = 9) |> 
+  huxtable::hux() |>
+  huxtable::theme_green() |> 
+  huxtable::set_background_color(row = 2, value = "darkred")
+```
+
+## Attributs {.smaller}
+
+```{r}
+#| echo: false
+velibs |> 
+  filter(str_length(name) < 15) |> 
+  slice_head(n = 9) |> 
+  huxtable::hux() |>
+  huxtable::theme_green() |> 
+  huxtable::set_background_color(col = 1:2, value = "darkred")
+```
+
+## Geometries {.smaller}
+
+```{r}
+#| echo: false
+velibs |> 
+  filter(str_length(name) < 15) |>  
+  slice_head(n = 9) |> 
+  huxtable::hux() |>
+  huxtable::theme_green() |> 
+  huxtable::set_background_color(col = 3, value = "darkred")
+```
+
+## Points {.smaller}
+
+```{r}
+#| echo: false
+velibs |> 
+  filter(str_length(name) < 15) |>  
+  slice_head(n = 9) |> 
+  huxtable::hux() |>
+  huxtable::theme_green() |> 
+  huxtable::set_background_color(row = 2, col = 3, value = "darkred")
+```
+
+# Plotting vector data
+
+## La BD Topo
+
+```{r}
+st_layers("data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg")
+```
+
+## Cours d'eau
+
+```{r}
+cours_d_eau = st_read("data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg",
+                      layer = "cours_d_eau")
+```
+
+## Forêts publiques
+
+```{r}
+foret_publique = st_read(dsn = "data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg",
+                         layer = "foret_publique")
+```
+
+## Pylônes
+
+```{r}
+pylone = st_read(dsn = "data/BDT_3-4_GPKG_LAMB93_D053-ED2024-06-15.gpkg",
+                 layer = "pylone")
+```
+
+## Carte des cours d'eau
+
+```{r}
+ggplot() +
+  geom_sf(data = cours_d_eau, color = "blue")
+```
+
+## Ajouter les forêts publiques
+
+```{r}
+#| code-line-numbers: "3"
+ggplot() +
+  geom_sf(data = cours_d_eau, color = "blue") +
+  geom_sf(data = foret_publique, fill = "darkgreen")
+```
+
+## Ajouter les pylônes
+
+```{r}
+#| code-line-numbers: "4"
+ggplot() +
+  geom_sf(data = cours_d_eau, color = "blue") +
+  geom_sf(data = foret_publique, fill = "darkgreen") +
+  geom_sf(data = pylone, color = "brown")
+```
+
+# Surfaces
+
+## Raster data model
+
+![](images/raster_concept.png)
+
+## Résolution
+
+![](images/raster_resolution.png)
+
+## Lumières nocturnes
+
+![](images/light_levels_syria.png)
+
+## Relief
+
+```{r}
+fs::file_size("data/GRAY_HR_SR.tif")
+relief = read_stars("data/GRAY_HR_SR.tif", proxy = TRUE)
+```
+
+## Plotting rasters
+
+```{r}
+ggplot() +
+  geom_stars(data = relief, downsample = 6) +
+  theme_void()
+```
+
+# Coordinate Reference Systems
+
+## Géoïdes {background-image="images/Geoide_de_la_Terre_GOCE.jpg"}
+
+## Ellipsoïdes {background-color="white"}
+
+![](images/ellipsoid-fitting-geoid.jpg)
+
+## Familles de projections
+
+![](images/projection_families.png)
+
+##  {background-iframe="https://www.geo-projections.com/" background-interactive="true"}
+
+# CRS with R
+
+## Country borders
+
+```{r}
+#| echo: false
+countries = giscoR::gisco_get_countries(year = "2016", epsg = "4326") |> 
+  dplyr::select(CNTR_NAME)
+countries
+```
+
+## Querying a CRS
+
+```{r}
+st_crs(countries)
+```
+
+## Spécifier un CRS
+
+EPSG or ESRI codes
+```{r}
+#| eval: false
+st_transform(countries, crs = "ESRI:54012")
+```
+
+. . . 
+
+PROJ4 string
+```{r}
+#| eval: false
+st_transform(countries, crs = "+proj=laea +lon_0=100 +lat_0=45")
+```
+
+## Sites utiles
+
+- [https://spatialreference.org/](https://spatialreference.org/)
+- [https://proj.org/en/9.4/operations/projections/](https://proj.org/en/9.4/operations/projections/)
+- [https://epsg.io/](https://epsg.io/)
+
+## WGS84
+
+```{r}
+#| code-fold: true
+ggplot(countries) +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## Robinson
+
+```{r}
+#| code-fold: true
+st_transform(countries, "ESRI:54030") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## Eckert 4
+
+```{r}
+#| code-fold: true
+st_transform(countries, "+proj=eck4") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## Bonne
+
+```{r}
+#| code-fold: true
+st_transform(countries, "+proj=bonne +lat_1=10") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## Lambert azimuthal equal-area
+
+```{r}
+#| code-fold: true
+st_transform(countries, "+proj=laea") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## LAEA Asie
+
+```{r }
+#| code-fold: true
+st_transform(countries, "+proj=laea +lon_0=100 +lat_0=45") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## LAEA Amérique du Nord
+
+```{r}
+#| code-fold: true
+st_transform(countries, "+proj=laea +lon_0=-95 +lat_0=45") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## LAEA Amérique du Sud
+
+```{r}
+#| code-fold: true
+st_transform(countries, "+proj=laea +lon_0=-61 +lat_0=-21") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## LAEA Afrique
+
+```{r}
+#| code-fold: true
+st_transform(countries, "+proj=laea +lon_0=18 +lat_0=0") |> 
+  ggplot() +
+  geom_sf(fill = "black") +
+  theme_bw()
+```
+
+## CRS usuels
+
+:::{.incremental}
+- Monde : Eckert 4 : `ESRI:54012` ou `+proj=eck4`
+
+- Europe : European Centric Lambert azimuthal equal-area : `EPSG:3035`
+
+- France : RGF93 / Lambert-93 : `EPSG-2154`
+:::
