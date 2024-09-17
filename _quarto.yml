@@ -20,6 +20,7 @@ website:
       - href: index.qmd
         text: Accueil
       - programme.qmd
+      - slides.qmd
       - faq.qmd
 
 format:

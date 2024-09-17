@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/styles.html</loc>
-    <lastmod>2024-09-11T14:03:08.656Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/emboitements.html</loc>
-    <lastmod>2024-09-11T14:04:27.109Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/couleurs.html</loc>
-    <lastmod>2024-09-11T14:02:36.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/correspondances.html</loc>
-    <lastmod>2024-09-11T14:02:58.179Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme.html</loc>
-    <lastmod>2024-09-02T15:01:10.189Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/index.html</loc>
-    <lastmod>2024-09-02T14:03:30.423Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/faq.html</loc>
-    <lastmod>2024-09-11T14:11:02.381Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/lineaments.html</loc>
-    <lastmod>2024-09-11T14:02:29.086Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/sequences.html</loc>
-    <lastmod>2024-09-11T14:03:27.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/incertitude.html</loc>
-    <lastmod>2024-09-11T14:04:02.304Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/slides.html</loc>
+    <lastmod>2024-09-17T10:24:32.282Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/programme/indices.html</loc>
     <lastmod>2024-09-11T14:04:18.533Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/ggplot2.html</loc>
-    <lastmod>2024-09-17T09:18:05.107Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/incertitude.html</loc>
+    <lastmod>2024-09-11T14:04:02.304Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/sequences.html</loc>
+    <lastmod>2024-09-11T14:03:27.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/lineaments.html</loc>
+    <lastmod>2024-09-11T14:02:29.086Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme.html</loc>
+    <lastmod>2024-09-02T15:01:10.189Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/faq.html</loc>
+    <lastmod>2024-09-11T14:11:02.381Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/index.html</loc>
+    <lastmod>2024-09-02T14:03:30.423Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/geographic-data-science.html</loc>
     <lastmod>2024-09-17T09:34:57.592Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/slides.html</loc>
-    <lastmod>2024-09-17T10:24:32.282Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/ggplot2.html</loc>
+    <lastmod>2024-09-17T09:18:05.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/correspondances.html</loc>
+    <lastmod>2024-09-11T14:02:58.179Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/couleurs.html</loc>
+    <lastmod>2024-09-11T14:02:36.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/emboitements.html</loc>
+    <lastmod>2024-09-11T14:04:27.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/styles.html</loc>
+    <lastmod>2024-09-11T14:03:08.656Z</lastmod>
   </url>
 </urlset>
