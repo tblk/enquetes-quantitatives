@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/slides.html</loc>
-    <lastmod>2024-09-17T10:24:32.282Z</lastmod>
+    <lastmod>2024-09-25T09:31:59.936Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/programme/indices.html</loc>
@@ -21,20 +21,24 @@
     <lastmod>2024-09-11T14:02:29.086Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme.html</loc>
-    <lastmod>2024-09-02T15:01:10.189Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/choropleth-maps.html</loc>
+    <lastmod>2024-09-25T09:17:55.935Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/faq.html</loc>
-    <lastmod>2024-09-11T14:11:02.381Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/geographic-data-science.html</loc>
+    <lastmod>2024-09-17T09:34:57.592Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/index.html</loc>
     <lastmod>2024-09-02T14:03:30.423Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/geographic-data-science.html</loc>
-    <lastmod>2024-09-17T09:34:57.592Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/faq.html</loc>
+    <lastmod>2024-09-11T14:11:02.381Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme.html</loc>
+    <lastmod>2024-09-02T15:01:10.189Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/ggplot2.html</loc>

@@ -1,0 +1,626 @@
+---
+title: "Choropleth maps"
+author: "Théo Boulakia"
+date: 2024-09-25
+date-format: long
+format: revealjs
+lang: fr
+execute: 
+  echo: true
+---
+
+# Get started
+
+## Packages
+
+```{r}
+library(tidyverse)
+library(sf)
+library(classInt)
+library(rcartocolor)
+library(colorBlindness)
+library(ggspatial)
+```
+
+## Data
+
+Verbalisations pour non respect du confinement
+```{r}
+verbalisations = read_csv("data/verbalisations_departement.csv")
+```
+
+. . . 
+
+Population adulte et population totale
+```{r}
+population = read_csv("data/population_departement.csv")
+```
+
+. . . 
+
+Policiers municipaux en 2020
+```{r}
+policiers = read_csv("data/policiers_municipaux_departements.csv")
+```
+
+. . . 
+
+Voisins vigilants en mai 2020
+```{r}
+vigilants = read_csv("data/vigilants_departements.csv")
+```
+
+. . . 
+
+Contours des départements
+```{r}
+departements_sf = st_read("data/departements.gpkg", quiet = TRUE)
+```
+
+## Sources
+
+- [Verbalisations](http://blog.alphoenix.net/2021/07/21/confinement-plus-damendes-dans-les-alpes-maritimes-et-a-paris/)
+- [Population](https://www.insee.fr/fr/statistiques/1893198)
+- [Policiers municipaux](https://www.data.gouv.fr/fr/datasets/police-municipale-effectifs-par-commune/)
+- [Voisins vigilants](https://web.archive.org/web/20200509134558/https://www.voisinsvigilants.org/communautes-de-france)
+- [Contours des départements](https://antuki.github.io/CARTElette/articles/CARTElette.html)
+
+# Join
+
+## Fines
+
+```{r}
+verbalisations
+```
+
+## Population
+
+```{r}
+population
+```
+
+## How to merge ? {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+verbalisations |> 
+  slice_head(n = 9) |> 
+  huxtable::hux() |> 
+  huxtable::set_number_format(NA) |> 
+  huxtable::theme_green()
+```
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+population |> 
+  slice_head(n = 9) |> 
+  huxtable::hux() |> 
+  huxtable::set_number_format(NA) |> 
+  huxtable::theme_green()
+```
+
+:::
+
+::::
+
+## A common key {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+verbalisations |> 
+  slice_head(n = 9) |> 
+  huxtable::hux() |> 
+  huxtable::set_number_format(NA) |>
+  huxtable::theme_green() |> 
+  huxtable::set_background_color(col = 1, value = "darkred")
+```
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+population |> 
+  slice_head(n = 9) |> 
+  huxtable::hux() |> 
+  huxtable::set_number_format(NA) |>
+  huxtable::theme_green() |> 
+  huxtable::set_background_color(col = 1, value = "darkred")
+```
+
+:::
+
+::::
+
+## Syntax {.smaller}
+
+```{r}
+left_join(verbalisations, population, by = "code")
+```
+
+## Principle {background-color="white"}
+
+![](images/left-join.gif)
+
+## Polygons
+
+```{r}
+departements_sf
+```
+
+## Map
+
+```{r}
+ggplot(departements_sf) +
+  geom_sf()
+```
+
+## Same principle
+
+```{r}
+left_join(departements_sf, verbalisations, by = "code")
+```
+
+## Mutate
+
+```{r}
+departements = left_join(departements_sf, verbalisations, by = "code") |> 
+  left_join(population, by = "code") |> 
+  mutate(verbalisations_pmla = verbalisations / pop_adulte * 1000)
+```
+
+## Inspect {.smaller}
+
+```{r}
+departements
+```
+
+# Explore
+
+## Summary
+
+```{r}
+summary(departements$verbalisations_pmla)
+```
+
+## Boxplot
+
+```{r}
+ggplot(departements, aes(y = verbalisations_pmla)) +
+  geom_boxplot()
+```
+
+## Histogram
+
+```{r}
+ggplot(departements, aes(x = verbalisations_pmla)) +
+  geom_histogram()
+```
+
+## Density
+
+```{r}
+ggplot(departements, aes(x = verbalisations_pmla)) +
+  geom_density()
+```
+
+## Bar
+
+```{r}
+ggplot(departements, aes(x = nom, y = verbalisations_pmla))+
+  geom_bar(stat = "identity")
+```
+
+## Better bar
+
+```{r}
+#| echo: false
+departements |> 
+  slice_max(order_by = verbalisations_pmla, n = 10) |> 
+  mutate(nom = fct_reorder(nom, verbalisations_pmla)) |>
+  ggplot(aes(x = verbalisations_pmla, y = nom)) +
+  geom_bar(stat = "identity", fill = "#E12634") +
+  labs(x = "Verbalisations pour 1000 adultes",
+       y = "",
+       title = "Palmarès des départements les plus verbalisés") +
+  theme_minimal()
+```
+
+## sf
+
+```{r}
+ggplot(departements, aes(fill = verbalisations_pmla)) +
+  geom_sf()
+```
+
+# Color
+
+## Color names
+
+```{r}
+colors()
+length(colors())
+```
+
+## aquamarine4
+
+```{r}
+ggplot(departements_sf) +
+  geom_sf(fill = "aquamarine4")
+```
+
+## #FF6347
+
+```{r}
+ggplot(departements_sf) +
+  geom_sf(fill = "#FF6347")
+```
+
+## Color codes
+
+:::{.incremental}
+- Hexadecimal symbols : 0:9, A:F.
+- White : #FFFFFF
+- Black : #000000
+- Red : #FF0000
+- Green : #00FF00
+- Blue : #0000FF
+- Brown : #A52A2A
+:::
+
+# Palettes
+
+## Sequential
+
+```{r}
+#| echo: false
+display_carto_pal(name = "Burg", n = 6)
+```
+
+## Discrete
+
+```{r}
+#| echo: false
+display_carto_pal(name = "Vivid", n = 6)
+```
+
+## Diverging
+
+```{r}
+#| echo: false
+display_carto_pal(name = "Earth", n = 6)
+```
+
+## R packages
+
+:::{.incremental}
+- [rcartocolor](https://jakubnowosad.com/rcartocolor/)
+- [viridis](https://sjmgarnier.github.io/viridis/)
+- [scico](https://github.com/thomasp85/scico)
+- [wesanderson](https://github.com/karthik/wesanderson)
+- [rtist](https://github.com/tomasokal/rtist)
+:::
+
+# Color blindness
+
+## Rainbow
+
+```{r}
+colorBlindness::displayAllColors(rainbow(6))
+```
+
+## Viridis
+
+```{r}
+colorBlindness::displayAllColors(viridis::viridis(6))
+```
+
+## Antique
+
+```{r}
+displayAllColors(rcartocolor::carto_pal(n = 6, name = "Antique"))
+```
+
+# Color scales
+
+## Save typing
+
+```{r}
+default = ggplot(departements,
+                 aes(fill = verbalisations_pmla)) +
+  geom_sf() +
+  theme_void()
+```
+
+## Default
+
+```{r}
+default
+```
+
+## Fill continuous
+
+```{r}
+default + scale_fill_continuous()
+```
+
+## Gradient
+
+```{r}
+default + scale_fill_gradient(low = "#132B43", high = "#56B1F7")
+```
+
+## Red Gradient
+
+```{r}
+default + scale_fill_gradient(low = "#43000D", high = "#F76A6A")
+```
+
+## Viridis
+
+```{r}
+default + scale_fill_viridis_c()
+```
+
+## Viridis magma 
+
+```{r}
+default + scale_fill_viridis_c(option = "magma")
+```
+
+## Viridis inferno
+
+```{r}
+default + scale_fill_viridis_c(option = "inferno")
+```
+
+## Rcartocolor 
+
+```{r}
+default + scale_fill_carto_c(palette = "SunsetDark")
+```
+
+# Binned scales
+
+## Continuous inferno
+
+```{r}
+default + scale_fill_viridis_c(option = "inferno")
+```
+
+## Binned inferno
+
+```{r}
+default + scale_fill_viridis_b(option = "inferno")
+```
+
+# ClassInt package
+
+## Equal intervals
+
+```{r}
+equal = classIntervals(departements$verbalisations_pmla,
+                       n = 4, 
+                       style = "equal")
+equal$brks
+```
+
+## Quantiles
+
+```{r}
+quantile = classIntervals(departements$verbalisations_pmla,
+                          n = 4,
+                          style = "quantile")
+quantile$brks
+```
+
+## Boxplot
+
+```{r}
+box = classIntervals(departements$verbalisations_pmla,
+                     style = "box")
+box$brks
+```
+
+# Visualize classification
+
+## Tools
+
+```{r}
+#| code-fold: true
+htmp = ggplot(departements, 
+              aes(x = fct_reorder(nom, verbalisations_pmla),
+                  y = 1,
+                  fill = verbalisations_pmla)) +
+  geom_raster() +
+  guides(fill = "none") +
+  theme_void() +
+  theme(aspect.ratio = 4/10)
+```
+
+```{r}
+#| code-fold: true
+points = ggplot(departements, aes(x = verbalisations_pmla,
+                                  y = 0)) +
+  geom_point(size = 4,
+             aes(
+               # alpha = verbalisations_pmla,
+               colour = verbalisations_pmla)) +
+  guides(colour = "none",
+         # alpha = "none"
+  ) +
+  ggrepel::geom_text_repel(aes(label = nom)) +
+  theme_void() +
+  theme(aspect.ratio = 4/10,
+        axis.line.x = element_line(),
+        axis.ticks.x = element_line(),
+        axis.text.x = element_text(),
+        axis.title.x = element_text())
+```
+
+## Continuous
+
+```{r}
+points + scale_colour_viridis_c()
+```
+
+## Equal intervals
+
+```{r}
+points + scale_colour_viridis_b(breaks = equal$brk)
+```
+
+## Quantiles
+
+```{r}
+points + scale_colour_viridis_b(breaks = quantile$brk)
+```
+
+## Boxplot
+
+```{r}
+points + scale_colour_viridis_b(breaks = box$brk)
+```
+
+# Corresponding Maps
+
+## Equal intervals
+
+```{r}
+default + scale_fill_viridis_b(breaks = equal$brk)
+```
+
+## Quantiles
+
+```{r}
+default + scale_fill_viridis_b(breaks = quantile$brk)
+```
+
+## Boxplot
+
+```{r}
+default + scale_fill_viridis_b(breaks = box$brk)
+```
+
+# Heavy tailed distributions
+
+## Problem
+
+```{r}
+ggplot(departements, aes(x = verbalisations_pmla)) +
+  geom_density()
+```
+
+## Head/Tail breaks algorithm
+
+Jiang, Bin. 2013. "Head/Tail Breaks: A New Classification Scheme for Data with a Heavy-Tailed Distribution." *The Professional Geographer* 65 (3): 482–94.
+
+:::{.incremental}
+1. Compute mu = mean(var).
+2. Break var into the tail (as var < mu) and the head (as var > mu).
+3. Assess if the proportion of head over var is lower or equal than a given threshold (i.e. length(head)/length(var) <= thr)
+4. If 3 is TRUE, repeat 1 to 3 until the condition is FALSE or no more partitions are possible (i.e. head has less than two elements expressed as length(head) < 2).
+:::
+
+## Implementation in ClassInt
+
+```{r}
+headtails = classIntervals(departements$verbalisations_pmla,
+                           style = "headtails")
+headtails$brks
+```
+
+## Visualize
+
+```{r}
+points + scale_colour_viridis_b(breaks = headtails$brk)
+```
+
+## Map
+
+```{r}
+default + scale_fill_viridis_b(breaks = headtails$brk)
+```
+
+# Polishing
+
+## Legend
+
+```{r}
+#| code-fold: true
+default + scale_fill_viridis_b(breaks = headtails$brk,
+                               labels = round) +
+  labs(fill = "Verbalisations\npour\n1000 adultes")
+```
+
+## Title
+
+```{r}
+#| code-fold: true
+default + scale_fill_viridis_b(breaks = headtails$brk,
+                               labels = round) +
+  labs(title = "Verbalisations pour non-respect du confinement",
+       subtitle = "Entre le 17 mars et le 10 mai 2020",
+       fill = "Verbalisations\npour\n1000 adultes",
+       caption = "Source : ANTAI")
+```
+
+## North arrow
+
+```{r}
+#| code-fold: true
+default + scale_fill_viridis_b(breaks = headtails$brk,
+                               labels = round) +
+  labs(title = "Verbalisations pour non-respect du confinement",
+       subtitle = "Entre le 17 mars et le 10 mai 2020",
+       fill = "Verbalisations\npour\n1000 adultes",
+       caption = "Source : ANTAI") +
+  annotation_north_arrow(style = north_arrow_nautical(),
+                         location = "tl")
+```
+
+## Scale bar
+
+```{r}
+#| code-fold: true
+default + scale_fill_viridis_b(breaks = headtails$brk,
+                               labels = round) +
+  labs(title = "Verbalisations pour non-respect du confinement",
+       subtitle = "Entre le 17 mars et le 10 mai 2020",
+       fill = "Verbalisations\npour\n1000 adultes",
+       caption = "Source : ANTAI") +
+  annotation_north_arrow(style = north_arrow_nautical(),
+                         location = "tl") +
+  annotation_scale(location = "br")
+```
+
+---
+
+```{r}
+#| echo: false
+ggplot(departements, aes(fill = verbalisations_pmla)) +
+  ggfx::with_shadow(geom_sf(color = NA)) +
+  scale_fill_viridis_b(breaks = headtails$brks, labels = round) +
+  labs(title = "1.2 millions de verbalisations",
+       subtitle = "Du 17 mars au 10 mai 2020",
+       fill = "Pour 1000 adultes",
+       caption = "Source : ANTAI") +
+  theme_void() +
+  theme(text = element_text(family = "Arial Narrow"),
+        plot.margin = margin(t = -10, r = -60, b = -25, l = -50),
+        plot.caption = element_text(vjust = 20),
+        plot.title = element_text(size = 16, face = "bold",
+                                  hjust = 0.5, vjust = -3),
+        plot.subtitle = element_text(size = 12,
+                                     hjust = 0.5, vjust = -4))
+```
+

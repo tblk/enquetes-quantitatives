@@ -4,7 +4,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Grammaire des graphiques\nDonnées spatiales"
+    "text": "Linéaments du territoire\nGrammaire des graphiques\nDonnées spatiales\n\n\nCouleurs du continu\nCartes Choroplèthes"
   },
   {
     "objectID": "programme/indices.html",
@@ -35,25 +35,445 @@
     "text": "Un jour vous voudrez faire une carte. Toute simple : la disposition d’un hameau, une scène de crime, le voyage d’un marin des Marquises à Moscou. Trois types d’outils s’offriront à vous : papier-crayon, logiciel spécialisé ou langage de data science généraliste. Nous explorerons cette troisième possibilité, et nous verrons que quelques lignes de code (R, Python ou Julia) suffisent à cartographier un nombre déconcertant de phénomènes. Dans la partie terre à terre du cours, on traitera des sujets suivants. Où trouver des informations géographiques structurées ? Comment les données spatiales sont-elles représentées (modèles vectoriel et raster) ? Quelles transformations peut-on leur faire subir ? Avec quels outils (langages, logiciels, packages) les manipuler ? Trois ouvrages, trois enquêtes, en Mongolie, en Jamaïque et en France, nous serviront de fils rouges. Ils nous poseront des questions non moins intéressantes. Comment représenter les territoires vécus ? Les fonds de cartes font-ils seulement tapisserie ? Comment cartographier l’éphémère, le clandestin ?"
   },
   {
-    "objectID": "programme.html",
-    "href": "programme.html",
-    "title": "Programme",
-    "section": "",
-    "text": "Linéaments du territoire\n\n\n\n\n\n\n\n\n\n\n\n18 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCouleurs du continu\n\n\n\n\n\n\n\n\n\n\n\n25 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCorrespondances\n\n\n\n\n\n\n\n\n\n\n\n9 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStyles\n\n\n\n\n\n\n\n\n\n\n\n23 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSéquences\n\n\n\n\n\n\n\n\n\n\n\n6 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIncertitude\n\n\n\n\n\n\n\n\n\n\n\n13 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIndices\n\n\n\n\n\n\n\n\n\n\n\n4 déc. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmboîtements\n\n\n\n\n\n\n\n\n\n\n\n18 déc. 2024\n\n\n\n\n\n\nAucun article correspondant"
+    "objectID": "choropleth-maps.html#packages",
+    "href": "choropleth-maps.html#packages",
+    "title": "Choropleth maps",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(classInt)\nlibrary(rcartocolor)\nlibrary(colorBlindness)\nlibrary(ggspatial)"
   },
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Cours donné à l’École Normale Supérieure au premier semestre de l’année 2024-2025, par Théo Boulakia, dans le cadre de l’Observatoire des Humanités Numériques.\n\nQuand ?\nLe mercredi, de 15h à 18h : 18 septembre, 25 septembre, 9 octobre, 23 octobre, 6 novembre, 13 novembre, 4 décembre et 18 décembre 2024.\n\n\nOù ?\nDans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d’Ulm, tout en haut de l’escalier B ou C).\n\n\nComment s’inscrire ?\nEnvoyez simplement un mail à l’adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.\n\n\nEst-il possible de venir en auditeur libre ?\nTout à fait. La validation n’est pas requise.\n\n\nComment valider le cours ?\n\nTrouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.\nLeur appliquer une ou plusieurs des méthodes vues en cours.\nRendre un document de 4 pages présentant les données, la problématique, les étapes de l’analyse et l’interprétation des résultats.\n\n\n\nFaut-il savoir coder ?\nNon. Vous pouvez assister au cours même si vous n’avez jamais programmé."
+    "objectID": "choropleth-maps.html#data",
+    "href": "choropleth-maps.html#data",
+    "title": "Choropleth maps",
+    "section": "Data",
+    "text": "Data\nVerbalisations pour non respect du confinement\n\nverbalisations = read_csv(\"data/verbalisations_departement.csv\")\n\n\nPopulation adulte et population totale\n\npopulation = read_csv(\"data/population_departement.csv\")\n\n\n\nPoliciers municipaux en 2020\n\npoliciers = read_csv(\"data/policiers_municipaux_departements.csv\")\n\n\n\nVoisins vigilants en mai 2020\n\nvigilants = read_csv(\"data/vigilants_departements.csv\")\n\n\n\nContours des départements\n\ndepartements_sf = st_read(\"data/departements.gpkg\", quiet = TRUE)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Enquêtes quantitatives",
-    "section": "",
-    "text": "Ce cours propose une initiation à diverses méthodes quantitatives à partir d’enquêtes de sciences sociales. Chaque séance s’organise autour de la rencontre entre une question (sociologique, anthropologique, historiographique), des données et une méthode : cartographie, réduction de la dimensionnalité, partitionnement, analyse de séquences, analyse textuelle, statistiques bayésiennes.\nL’objectif du cours est d’acquérir une compréhension schématique de la mise en oeuvre de ces méthodes, de leurs mérites et de leurs limites. Comment représenter des données spatiales, des séquences temporelles ? Qu’apportent les statistiques bayésiennes qui manque à l’approche fréquentiste ? Comment analyser les propriétés morpho-synthaxiques d’un texte ? Comment passer d’un grand nombre de variables à un petit nombre de classes ?\nCes questions se poseront en contexte, dans une dynamique d’ajustement entre données, méthode et question de recherche (une dynamique d’enquête)."
+    "objectID": "choropleth-maps.html#sources",
+    "href": "choropleth-maps.html#sources",
+    "title": "Choropleth maps",
+    "section": "Sources",
+    "text": "Sources\n\nVerbalisations\nPopulation\nPoliciers municipaux\nVoisins vigilants\nContours des départements"
+  },
+  {
+    "objectID": "choropleth-maps.html#fines",
+    "href": "choropleth-maps.html#fines",
+    "title": "Choropleth maps",
+    "section": "Fines",
+    "text": "Fines\n\nverbalisations\n\n# A tibble: 101 × 2\n   code  verbalisations\n   &lt;chr&gt;          &lt;dbl&gt;\n 1 01              8036\n 2 02             11532\n 3 03              3820\n 4 04              2341\n 5 05              1974\n 6 06             40480\n 7 07              3939\n 8 08              4032\n 9 09              2468\n10 10              5212\n# ℹ 91 more rows"
+  },
+  {
+    "objectID": "choropleth-maps.html#population",
+    "href": "choropleth-maps.html#population",
+    "title": "Choropleth maps",
+    "section": "Population",
+    "text": "Population\n\npopulation\n\n# A tibble: 101 × 3\n   code  pop_adulte pop_totale\n   &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1 01        528411     657856\n 2 02        431728     529374\n 3 03        285728     335628\n 4 04        139754     165451\n 5 05        118744     140605\n 6 06        925569    1097410\n 7 07        275785     329325\n 8 08        222569     269701\n 9 09        130458     153954\n10 10        255060     311435\n# ℹ 91 more rows"
+  },
+  {
+    "objectID": "choropleth-maps.html#how-to-merge",
+    "href": "choropleth-maps.html#how-to-merge",
+    "title": "Choropleth maps",
+    "section": "How to merge ?",
+    "text": "How to merge ?\n\n\n\n\n\n\ncodeverbalisations\n\n018036\n\n0211532\n\n033820\n\n042341\n\n051974\n\n0640480\n\n073939\n\n084032\n\n092468\n\n\n\n\n\n\n\n\n\ncodepop_adultepop_totale\n\n01528411657856\n\n02431728529374\n\n03285728335628\n\n04139754165451\n\n05118744140605\n\n069255691097410\n\n07275785329325\n\n08222569269701\n\n09130458153954"
+  },
+  {
+    "objectID": "choropleth-maps.html#a-common-key",
+    "href": "choropleth-maps.html#a-common-key",
+    "title": "Choropleth maps",
+    "section": "A common key",
+    "text": "A common key\n\n\n\n\n\n\ncodeverbalisations\n\n018036\n\n0211532\n\n033820\n\n042341\n\n051974\n\n0640480\n\n073939\n\n084032\n\n092468\n\n\n\n\n\n\n\n\n\ncodepop_adultepop_totale\n\n01528411657856\n\n02431728529374\n\n03285728335628\n\n04139754165451\n\n05118744140605\n\n069255691097410\n\n07275785329325\n\n08222569269701\n\n09130458153954"
+  },
+  {
+    "objectID": "choropleth-maps.html#syntax",
+    "href": "choropleth-maps.html#syntax",
+    "title": "Choropleth maps",
+    "section": "Syntax",
+    "text": "Syntax\n\nleft_join(verbalisations, population, by = \"code\")\n\n# A tibble: 101 × 4\n   code  verbalisations pop_adulte pop_totale\n   &lt;chr&gt;          &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1 01              8036     528411     657856\n 2 02             11532     431728     529374\n 3 03              3820     285728     335628\n 4 04              2341     139754     165451\n 5 05              1974     118744     140605\n 6 06             40480     925569    1097410\n 7 07              3939     275785     329325\n 8 08              4032     222569     269701\n 9 09              2468     130458     153954\n10 10              5212     255060     311435\n# ℹ 91 more rows"
+  },
+  {
+    "objectID": "choropleth-maps.html#principle",
+    "href": "choropleth-maps.html#principle",
+    "title": "Choropleth maps",
+    "section": "Principle",
+    "text": "Principle"
+  },
+  {
+    "objectID": "choropleth-maps.html#polygons",
+    "href": "choropleth-maps.html#polygons",
+    "title": "Choropleth maps",
+    "section": "Polygons",
+    "text": "Polygons\n\ndepartements_sf\n\nSimple feature collection with 101 features and 2 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -5.141277 ymin: 40.28472 xmax: 9.559956 ymax: 51.08899\nGeodetic CRS:  WGS 84\nFirst 10 features:\n   code                     nom                           geom\n1    01                     Ain MULTIPOLYGON (((5.897201 46...\n2    02                   Aisne MULTIPOLYGON (((3.687477 49...\n3    03                  Allier MULTIPOLYGON (((2.385871 46...\n4    04 Alpes-de-Haute-Provence MULTIPOLYGON (((6.66765 43....\n5    05            Hautes-Alpes MULTIPOLYGON (((6.641667 44...\n6    06         Alpes-Maritimes MULTIPOLYGON (((7.329573 43...\n7    07                 Ardèche MULTIPOLYGON (((4.288497 44...\n8    08                Ardennes MULTIPOLYGON (((5.308547 49...\n9    09                  Ariège MULTIPOLYGON (((1.493896 42...\n10   10                    Aube MULTIPOLYGON (((3.650654 48..."
+  },
+  {
+    "objectID": "choropleth-maps.html#map",
+    "href": "choropleth-maps.html#map",
+    "title": "Choropleth maps",
+    "section": "Map",
+    "text": "Map\n\nggplot(departements_sf) +\n  geom_sf()"
+  },
+  {
+    "objectID": "choropleth-maps.html#same-principle",
+    "href": "choropleth-maps.html#same-principle",
+    "title": "Choropleth maps",
+    "section": "Same principle",
+    "text": "Same principle\n\nleft_join(departements_sf, verbalisations, by = \"code\")\n\nSimple feature collection with 101 features and 3 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -5.141277 ymin: 40.28472 xmax: 9.559956 ymax: 51.08899\nGeodetic CRS:  WGS 84\nFirst 10 features:\n   code                     nom verbalisations                           geom\n1    01                     Ain           8036 MULTIPOLYGON (((5.897201 46...\n2    02                   Aisne          11532 MULTIPOLYGON (((3.687477 49...\n3    03                  Allier           3820 MULTIPOLYGON (((2.385871 46...\n4    04 Alpes-de-Haute-Provence           2341 MULTIPOLYGON (((6.66765 43....\n5    05            Hautes-Alpes           1974 MULTIPOLYGON (((6.641667 44...\n6    06         Alpes-Maritimes          40480 MULTIPOLYGON (((7.329573 43...\n7    07                 Ardèche           3939 MULTIPOLYGON (((4.288497 44...\n8    08                Ardennes           4032 MULTIPOLYGON (((5.308547 49...\n9    09                  Ariège           2468 MULTIPOLYGON (((1.493896 42...\n10   10                    Aube           5212 MULTIPOLYGON (((3.650654 48..."
+  },
+  {
+    "objectID": "choropleth-maps.html#mutate",
+    "href": "choropleth-maps.html#mutate",
+    "title": "Choropleth maps",
+    "section": "Mutate",
+    "text": "Mutate\n\ndepartements = left_join(departements_sf, verbalisations, by = \"code\") |&gt; \n  left_join(population, by = \"code\") |&gt; \n  mutate(verbalisations_pmla = verbalisations / pop_adulte * 1000)"
+  },
+  {
+    "objectID": "choropleth-maps.html#inspect",
+    "href": "choropleth-maps.html#inspect",
+    "title": "Choropleth maps",
+    "section": "Inspect",
+    "text": "Inspect\n\ndepartements\n\nSimple feature collection with 101 features and 6 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -5.141277 ymin: 40.28472 xmax: 9.559956 ymax: 51.08899\nGeodetic CRS:  WGS 84\nFirst 10 features:\n   code                     nom verbalisations pop_adulte pop_totale\n1    01                     Ain           8036     528411     657856\n2    02                   Aisne          11532     431728     529374\n3    03                  Allier           3820     285728     335628\n4    04 Alpes-de-Haute-Provence           2341     139754     165451\n5    05            Hautes-Alpes           1974     118744     140605\n6    06         Alpes-Maritimes          40480     925569    1097410\n7    07                 Ardèche           3939     275785     329325\n8    08                Ardennes           4032     222569     269701\n9    09                  Ariège           2468     130458     153954\n10   10                    Aube           5212     255060     311435\n                             geom verbalisations_pmla\n1  MULTIPOLYGON (((5.897201 46...            15.20786\n2  MULTIPOLYGON (((3.687477 49...            26.71126\n3  MULTIPOLYGON (((2.385871 46...            13.36936\n4  MULTIPOLYGON (((6.66765 43....            16.75086\n5  MULTIPOLYGON (((6.641667 44...            16.62400\n6  MULTIPOLYGON (((7.329573 43...            43.73526\n7  MULTIPOLYGON (((4.288497 44...            14.28287\n8  MULTIPOLYGON (((5.308547 49...            18.11573\n9  MULTIPOLYGON (((1.493896 42...            18.91797\n10 MULTIPOLYGON (((3.650654 48...            20.43441"
+  },
+  {
+    "objectID": "choropleth-maps.html#summary",
+    "href": "choropleth-maps.html#summary",
+    "title": "Choropleth maps",
+    "section": "Summary",
+    "text": "Summary\n\nsummary(departements$verbalisations_pmla)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  9.346  13.860  17.707  19.152  21.355  54.600"
+  },
+  {
+    "objectID": "choropleth-maps.html#boxplot",
+    "href": "choropleth-maps.html#boxplot",
+    "title": "Choropleth maps",
+    "section": "Boxplot",
+    "text": "Boxplot\n\nggplot(departements, aes(y = verbalisations_pmla)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "choropleth-maps.html#histogram",
+    "href": "choropleth-maps.html#histogram",
+    "title": "Choropleth maps",
+    "section": "Histogram",
+    "text": "Histogram\n\nggplot(departements, aes(x = verbalisations_pmla)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "choropleth-maps.html#density",
+    "href": "choropleth-maps.html#density",
+    "title": "Choropleth maps",
+    "section": "Density",
+    "text": "Density\n\nggplot(departements, aes(x = verbalisations_pmla)) +\n  geom_density()"
+  },
+  {
+    "objectID": "choropleth-maps.html#bar",
+    "href": "choropleth-maps.html#bar",
+    "title": "Choropleth maps",
+    "section": "Bar",
+    "text": "Bar\n\nggplot(departements, aes(x = nom, y = verbalisations_pmla))+\n  geom_bar(stat = \"identity\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#better-bar",
+    "href": "choropleth-maps.html#better-bar",
+    "title": "Choropleth maps",
+    "section": "Better bar",
+    "text": "Better bar"
+  },
+  {
+    "objectID": "choropleth-maps.html#sf",
+    "href": "choropleth-maps.html#sf",
+    "title": "Choropleth maps",
+    "section": "sf",
+    "text": "sf\n\nggplot(departements, aes(fill = verbalisations_pmla)) +\n  geom_sf()"
+  },
+  {
+    "objectID": "choropleth-maps.html#color-names",
+    "href": "choropleth-maps.html#color-names",
+    "title": "Choropleth maps",
+    "section": "Color names",
+    "text": "Color names\n\ncolors()\n\n  [1] \"white\"                \"aliceblue\"            \"antiquewhite\"        \n  [4] \"antiquewhite1\"        \"antiquewhite2\"        \"antiquewhite3\"       \n  [7] \"antiquewhite4\"        \"aquamarine\"           \"aquamarine1\"         \n [10] \"aquamarine2\"          \"aquamarine3\"          \"aquamarine4\"         \n [13] \"azure\"                \"azure1\"               \"azure2\"              \n [16] \"azure3\"               \"azure4\"               \"beige\"               \n [19] \"bisque\"               \"bisque1\"              \"bisque2\"             \n [22] \"bisque3\"              \"bisque4\"              \"black\"               \n [25] \"blanchedalmond\"       \"blue\"                 \"blue1\"               \n [28] \"blue2\"                \"blue3\"                \"blue4\"               \n [31] \"blueviolet\"           \"brown\"                \"brown1\"              \n [34] \"brown2\"               \"brown3\"               \"brown4\"              \n [37] \"burlywood\"            \"burlywood1\"           \"burlywood2\"          \n [40] \"burlywood3\"           \"burlywood4\"           \"cadetblue\"           \n [43] \"cadetblue1\"           \"cadetblue2\"           \"cadetblue3\"          \n [46] \"cadetblue4\"           \"chartreuse\"           \"chartreuse1\"         \n [49] \"chartreuse2\"          \"chartreuse3\"          \"chartreuse4\"         \n [52] \"chocolate\"            \"chocolate1\"           \"chocolate2\"          \n [55] \"chocolate3\"           \"chocolate4\"           \"coral\"               \n [58] \"coral1\"               \"coral2\"               \"coral3\"              \n [61] \"coral4\"               \"cornflowerblue\"       \"cornsilk\"            \n [64] \"cornsilk1\"            \"cornsilk2\"            \"cornsilk3\"           \n [67] \"cornsilk4\"            \"cyan\"                 \"cyan1\"               \n [70] \"cyan2\"                \"cyan3\"                \"cyan4\"               \n [73] \"darkblue\"             \"darkcyan\"             \"darkgoldenrod\"       \n [76] \"darkgoldenrod1\"       \"darkgoldenrod2\"       \"darkgoldenrod3\"      \n [79] \"darkgoldenrod4\"       \"darkgray\"             \"darkgreen\"           \n [82] \"darkgrey\"             \"darkkhaki\"            \"darkmagenta\"         \n [85] \"darkolivegreen\"       \"darkolivegreen1\"      \"darkolivegreen2\"     \n [88] \"darkolivegreen3\"      \"darkolivegreen4\"      \"darkorange\"          \n [91] \"darkorange1\"          \"darkorange2\"          \"darkorange3\"         \n [94] \"darkorange4\"          \"darkorchid\"           \"darkorchid1\"         \n [97] \"darkorchid2\"          \"darkorchid3\"          \"darkorchid4\"         \n[100] \"darkred\"              \"darksalmon\"           \"darkseagreen\"        \n[103] \"darkseagreen1\"        \"darkseagreen2\"        \"darkseagreen3\"       \n[106] \"darkseagreen4\"        \"darkslateblue\"        \"darkslategray\"       \n[109] \"darkslategray1\"       \"darkslategray2\"       \"darkslategray3\"      \n[112] \"darkslategray4\"       \"darkslategrey\"        \"darkturquoise\"       \n[115] \"darkviolet\"           \"deeppink\"             \"deeppink1\"           \n[118] \"deeppink2\"            \"deeppink3\"            \"deeppink4\"           \n[121] \"deepskyblue\"          \"deepskyblue1\"         \"deepskyblue2\"        \n[124] \"deepskyblue3\"         \"deepskyblue4\"         \"dimgray\"             \n[127] \"dimgrey\"              \"dodgerblue\"           \"dodgerblue1\"         \n[130] \"dodgerblue2\"          \"dodgerblue3\"          \"dodgerblue4\"         \n[133] \"firebrick\"            \"firebrick1\"           \"firebrick2\"          \n[136] \"firebrick3\"           \"firebrick4\"           \"floralwhite\"         \n[139] \"forestgreen\"          \"gainsboro\"            \"ghostwhite\"          \n[142] \"gold\"                 \"gold1\"                \"gold2\"               \n[145] \"gold3\"                \"gold4\"                \"goldenrod\"           \n[148] \"goldenrod1\"           \"goldenrod2\"           \"goldenrod3\"          \n[151] \"goldenrod4\"           \"gray\"                 \"gray0\"               \n[154] \"gray1\"                \"gray2\"                \"gray3\"               \n[157] \"gray4\"                \"gray5\"                \"gray6\"               \n[160] \"gray7\"                \"gray8\"                \"gray9\"               \n[163] \"gray10\"               \"gray11\"               \"gray12\"              \n[166] \"gray13\"               \"gray14\"               \"gray15\"              \n[169] \"gray16\"               \"gray17\"               \"gray18\"              \n[172] \"gray19\"               \"gray20\"               \"gray21\"              \n[175] \"gray22\"               \"gray23\"               \"gray24\"              \n[178] \"gray25\"               \"gray26\"               \"gray27\"              \n[181] \"gray28\"               \"gray29\"               \"gray30\"              \n[184] \"gray31\"               \"gray32\"               \"gray33\"              \n[187] \"gray34\"               \"gray35\"               \"gray36\"              \n[190] \"gray37\"               \"gray38\"               \"gray39\"              \n[193] \"gray40\"               \"gray41\"               \"gray42\"              \n[196] \"gray43\"               \"gray44\"               \"gray45\"              \n[199] \"gray46\"               \"gray47\"               \"gray48\"              \n[202] \"gray49\"               \"gray50\"               \"gray51\"              \n[205] \"gray52\"               \"gray53\"               \"gray54\"              \n[208] \"gray55\"               \"gray56\"               \"gray57\"              \n[211] \"gray58\"               \"gray59\"               \"gray60\"              \n[214] \"gray61\"               \"gray62\"               \"gray63\"              \n[217] \"gray64\"               \"gray65\"               \"gray66\"              \n[220] \"gray67\"               \"gray68\"               \"gray69\"              \n[223] \"gray70\"               \"gray71\"               \"gray72\"              \n[226] \"gray73\"               \"gray74\"               \"gray75\"              \n[229] \"gray76\"               \"gray77\"               \"gray78\"              \n[232] \"gray79\"               \"gray80\"               \"gray81\"              \n[235] \"gray82\"               \"gray83\"               \"gray84\"              \n[238] \"gray85\"               \"gray86\"               \"gray87\"              \n[241] \"gray88\"               \"gray89\"               \"gray90\"              \n[244] \"gray91\"               \"gray92\"               \"gray93\"              \n[247] \"gray94\"               \"gray95\"               \"gray96\"              \n[250] \"gray97\"               \"gray98\"               \"gray99\"              \n[253] \"gray100\"              \"green\"                \"green1\"              \n[256] \"green2\"               \"green3\"               \"green4\"              \n[259] \"greenyellow\"          \"grey\"                 \"grey0\"               \n[262] \"grey1\"                \"grey2\"                \"grey3\"               \n[265] \"grey4\"                \"grey5\"                \"grey6\"               \n[268] \"grey7\"                \"grey8\"                \"grey9\"               \n[271] \"grey10\"               \"grey11\"               \"grey12\"              \n[274] \"grey13\"               \"grey14\"               \"grey15\"              \n[277] \"grey16\"               \"grey17\"               \"grey18\"              \n[280] \"grey19\"               \"grey20\"               \"grey21\"              \n[283] \"grey22\"               \"grey23\"               \"grey24\"              \n[286] \"grey25\"               \"grey26\"               \"grey27\"              \n[289] \"grey28\"               \"grey29\"               \"grey30\"              \n[292] \"grey31\"               \"grey32\"               \"grey33\"              \n[295] \"grey34\"               \"grey35\"               \"grey36\"              \n[298] \"grey37\"               \"grey38\"               \"grey39\"              \n[301] \"grey40\"               \"grey41\"               \"grey42\"              \n[304] \"grey43\"               \"grey44\"               \"grey45\"              \n[307] \"grey46\"               \"grey47\"               \"grey48\"              \n[310] \"grey49\"               \"grey50\"               \"grey51\"              \n[313] \"grey52\"               \"grey53\"               \"grey54\"              \n[316] \"grey55\"               \"grey56\"               \"grey57\"              \n[319] \"grey58\"               \"grey59\"               \"grey60\"              \n[322] \"grey61\"               \"grey62\"               \"grey63\"              \n[325] \"grey64\"               \"grey65\"               \"grey66\"              \n[328] \"grey67\"               \"grey68\"               \"grey69\"              \n[331] \"grey70\"               \"grey71\"               \"grey72\"              \n[334] \"grey73\"               \"grey74\"               \"grey75\"              \n[337] \"grey76\"               \"grey77\"               \"grey78\"              \n[340] \"grey79\"               \"grey80\"               \"grey81\"              \n[343] \"grey82\"               \"grey83\"               \"grey84\"              \n[346] \"grey85\"               \"grey86\"               \"grey87\"              \n[349] \"grey88\"               \"grey89\"               \"grey90\"              \n[352] \"grey91\"               \"grey92\"               \"grey93\"              \n[355] \"grey94\"               \"grey95\"               \"grey96\"              \n[358] \"grey97\"               \"grey98\"               \"grey99\"              \n[361] \"grey100\"              \"honeydew\"             \"honeydew1\"           \n[364] \"honeydew2\"            \"honeydew3\"            \"honeydew4\"           \n[367] \"hotpink\"              \"hotpink1\"             \"hotpink2\"            \n[370] \"hotpink3\"             \"hotpink4\"             \"indianred\"           \n[373] \"indianred1\"           \"indianred2\"           \"indianred3\"          \n[376] \"indianred4\"           \"ivory\"                \"ivory1\"              \n[379] \"ivory2\"               \"ivory3\"               \"ivory4\"              \n[382] \"khaki\"                \"khaki1\"               \"khaki2\"              \n[385] \"khaki3\"               \"khaki4\"               \"lavender\"            \n[388] \"lavenderblush\"        \"lavenderblush1\"       \"lavenderblush2\"      \n[391] \"lavenderblush3\"       \"lavenderblush4\"       \"lawngreen\"           \n[394] \"lemonchiffon\"         \"lemonchiffon1\"        \"lemonchiffon2\"       \n[397] \"lemonchiffon3\"        \"lemonchiffon4\"        \"lightblue\"           \n[400] \"lightblue1\"           \"lightblue2\"           \"lightblue3\"          \n[403] \"lightblue4\"           \"lightcoral\"           \"lightcyan\"           \n[406] \"lightcyan1\"           \"lightcyan2\"           \"lightcyan3\"          \n[409] \"lightcyan4\"           \"lightgoldenrod\"       \"lightgoldenrod1\"     \n[412] \"lightgoldenrod2\"      \"lightgoldenrod3\"      \"lightgoldenrod4\"     \n[415] \"lightgoldenrodyellow\" \"lightgray\"            \"lightgreen\"          \n[418] \"lightgrey\"            \"lightpink\"            \"lightpink1\"          \n[421] \"lightpink2\"           \"lightpink3\"           \"lightpink4\"          \n[424] \"lightsalmon\"          \"lightsalmon1\"         \"lightsalmon2\"        \n[427] \"lightsalmon3\"         \"lightsalmon4\"         \"lightseagreen\"       \n[430] \"lightskyblue\"         \"lightskyblue1\"        \"lightskyblue2\"       \n[433] \"lightskyblue3\"        \"lightskyblue4\"        \"lightslateblue\"      \n[436] \"lightslategray\"       \"lightslategrey\"       \"lightsteelblue\"      \n[439] \"lightsteelblue1\"      \"lightsteelblue2\"      \"lightsteelblue3\"     \n[442] \"lightsteelblue4\"      \"lightyellow\"          \"lightyellow1\"        \n[445] \"lightyellow2\"         \"lightyellow3\"         \"lightyellow4\"        \n[448] \"limegreen\"            \"linen\"                \"magenta\"             \n[451] \"magenta1\"             \"magenta2\"             \"magenta3\"            \n[454] \"magenta4\"             \"maroon\"               \"maroon1\"             \n[457] \"maroon2\"              \"maroon3\"              \"maroon4\"             \n[460] \"mediumaquamarine\"     \"mediumblue\"           \"mediumorchid\"        \n[463] \"mediumorchid1\"        \"mediumorchid2\"        \"mediumorchid3\"       \n[466] \"mediumorchid4\"        \"mediumpurple\"         \"mediumpurple1\"       \n[469] \"mediumpurple2\"        \"mediumpurple3\"        \"mediumpurple4\"       \n[472] \"mediumseagreen\"       \"mediumslateblue\"      \"mediumspringgreen\"   \n[475] \"mediumturquoise\"      \"mediumvioletred\"      \"midnightblue\"        \n[478] \"mintcream\"            \"mistyrose\"            \"mistyrose1\"          \n[481] \"mistyrose2\"           \"mistyrose3\"           \"mistyrose4\"          \n[484] \"moccasin\"             \"navajowhite\"          \"navajowhite1\"        \n[487] \"navajowhite2\"         \"navajowhite3\"         \"navajowhite4\"        \n[490] \"navy\"                 \"navyblue\"             \"oldlace\"             \n[493] \"olivedrab\"            \"olivedrab1\"           \"olivedrab2\"          \n[496] \"olivedrab3\"           \"olivedrab4\"           \"orange\"              \n[499] \"orange1\"              \"orange2\"              \"orange3\"             \n[502] \"orange4\"              \"orangered\"            \"orangered1\"          \n[505] \"orangered2\"           \"orangered3\"           \"orangered4\"          \n[508] \"orchid\"               \"orchid1\"              \"orchid2\"             \n[511] \"orchid3\"              \"orchid4\"              \"palegoldenrod\"       \n[514] \"palegreen\"            \"palegreen1\"           \"palegreen2\"          \n[517] \"palegreen3\"           \"palegreen4\"           \"paleturquoise\"       \n[520] \"paleturquoise1\"       \"paleturquoise2\"       \"paleturquoise3\"      \n[523] \"paleturquoise4\"       \"palevioletred\"        \"palevioletred1\"      \n[526] \"palevioletred2\"       \"palevioletred3\"       \"palevioletred4\"      \n[529] \"papayawhip\"           \"peachpuff\"            \"peachpuff1\"          \n[532] \"peachpuff2\"           \"peachpuff3\"           \"peachpuff4\"          \n[535] \"peru\"                 \"pink\"                 \"pink1\"               \n[538] \"pink2\"                \"pink3\"                \"pink4\"               \n[541] \"plum\"                 \"plum1\"                \"plum2\"               \n[544] \"plum3\"                \"plum4\"                \"powderblue\"          \n[547] \"purple\"               \"purple1\"              \"purple2\"             \n[550] \"purple3\"              \"purple4\"              \"red\"                 \n[553] \"red1\"                 \"red2\"                 \"red3\"                \n[556] \"red4\"                 \"rosybrown\"            \"rosybrown1\"          \n[559] \"rosybrown2\"           \"rosybrown3\"           \"rosybrown4\"          \n[562] \"royalblue\"            \"royalblue1\"           \"royalblue2\"          \n[565] \"royalblue3\"           \"royalblue4\"           \"saddlebrown\"         \n[568] \"salmon\"               \"salmon1\"              \"salmon2\"             \n[571] \"salmon3\"              \"salmon4\"              \"sandybrown\"          \n[574] \"seagreen\"             \"seagreen1\"            \"seagreen2\"           \n[577] \"seagreen3\"            \"seagreen4\"            \"seashell\"            \n[580] \"seashell1\"            \"seashell2\"            \"seashell3\"           \n[583] \"seashell4\"            \"sienna\"               \"sienna1\"             \n[586] \"sienna2\"              \"sienna3\"              \"sienna4\"             \n[589] \"skyblue\"              \"skyblue1\"             \"skyblue2\"            \n[592] \"skyblue3\"             \"skyblue4\"             \"slateblue\"           \n[595] \"slateblue1\"           \"slateblue2\"           \"slateblue3\"          \n[598] \"slateblue4\"           \"slategray\"            \"slategray1\"          \n[601] \"slategray2\"           \"slategray3\"           \"slategray4\"          \n[604] \"slategrey\"            \"snow\"                 \"snow1\"               \n[607] \"snow2\"                \"snow3\"                \"snow4\"               \n[610] \"springgreen\"          \"springgreen1\"         \"springgreen2\"        \n[613] \"springgreen3\"         \"springgreen4\"         \"steelblue\"           \n[616] \"steelblue1\"           \"steelblue2\"           \"steelblue3\"          \n[619] \"steelblue4\"           \"tan\"                  \"tan1\"                \n[622] \"tan2\"                 \"tan3\"                 \"tan4\"                \n[625] \"thistle\"              \"thistle1\"             \"thistle2\"            \n[628] \"thistle3\"             \"thistle4\"             \"tomato\"              \n[631] \"tomato1\"              \"tomato2\"              \"tomato3\"             \n[634] \"tomato4\"              \"turquoise\"            \"turquoise1\"          \n[637] \"turquoise2\"           \"turquoise3\"           \"turquoise4\"          \n[640] \"violet\"               \"violetred\"            \"violetred1\"          \n[643] \"violetred2\"           \"violetred3\"           \"violetred4\"          \n[646] \"wheat\"                \"wheat1\"               \"wheat2\"              \n[649] \"wheat3\"               \"wheat4\"               \"whitesmoke\"          \n[652] \"yellow\"               \"yellow1\"              \"yellow2\"             \n[655] \"yellow3\"              \"yellow4\"              \"yellowgreen\"         \n\nlength(colors())\n\n[1] 657"
+  },
+  {
+    "objectID": "choropleth-maps.html#aquamarine4",
+    "href": "choropleth-maps.html#aquamarine4",
+    "title": "Choropleth maps",
+    "section": "aquamarine4",
+    "text": "aquamarine4\n\nggplot(departements_sf) +\n  geom_sf(fill = \"aquamarine4\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#ff6347",
+    "href": "choropleth-maps.html#ff6347",
+    "title": "Choropleth maps",
+    "section": "#FF6347",
+    "text": "#FF6347\n\nggplot(departements_sf) +\n  geom_sf(fill = \"#FF6347\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#color-codes",
+    "href": "choropleth-maps.html#color-codes",
+    "title": "Choropleth maps",
+    "section": "Color codes",
+    "text": "Color codes\n\n\nHexadecimal symbols : 0:9, A:F.\nWhite : #FFFFFF\nBlack : #000000\nRed : #FF0000\nGreen : #00FF00\nBlue : #0000FF\nBrown : #A52A2A"
+  },
+  {
+    "objectID": "choropleth-maps.html#sequential",
+    "href": "choropleth-maps.html#sequential",
+    "title": "Choropleth maps",
+    "section": "Sequential",
+    "text": "Sequential"
+  },
+  {
+    "objectID": "choropleth-maps.html#discrete",
+    "href": "choropleth-maps.html#discrete",
+    "title": "Choropleth maps",
+    "section": "Discrete",
+    "text": "Discrete"
+  },
+  {
+    "objectID": "choropleth-maps.html#diverging",
+    "href": "choropleth-maps.html#diverging",
+    "title": "Choropleth maps",
+    "section": "Diverging",
+    "text": "Diverging"
+  },
+  {
+    "objectID": "choropleth-maps.html#r-packages",
+    "href": "choropleth-maps.html#r-packages",
+    "title": "Choropleth maps",
+    "section": "R packages",
+    "text": "R packages\n\n\nrcartocolor\nviridis\nscico\nwesanderson\nrtist"
+  },
+  {
+    "objectID": "choropleth-maps.html#rainbow",
+    "href": "choropleth-maps.html#rainbow",
+    "title": "Choropleth maps",
+    "section": "Rainbow",
+    "text": "Rainbow\n\ncolorBlindness::displayAllColors(rainbow(6))"
+  },
+  {
+    "objectID": "choropleth-maps.html#viridis",
+    "href": "choropleth-maps.html#viridis",
+    "title": "Choropleth maps",
+    "section": "Viridis",
+    "text": "Viridis\n\ncolorBlindness::displayAllColors(viridis::viridis(6))"
+  },
+  {
+    "objectID": "choropleth-maps.html#antique",
+    "href": "choropleth-maps.html#antique",
+    "title": "Choropleth maps",
+    "section": "Antique",
+    "text": "Antique\n\ndisplayAllColors(rcartocolor::carto_pal(n = 6, name = \"Antique\"))"
+  },
+  {
+    "objectID": "choropleth-maps.html#save-typing",
+    "href": "choropleth-maps.html#save-typing",
+    "title": "Choropleth maps",
+    "section": "Save typing",
+    "text": "Save typing\n\ndefault = ggplot(departements,\n                 aes(fill = verbalisations_pmla)) +\n  geom_sf() +\n  theme_void()"
+  },
+  {
+    "objectID": "choropleth-maps.html#default",
+    "href": "choropleth-maps.html#default",
+    "title": "Choropleth maps",
+    "section": "Default",
+    "text": "Default\n\ndefault"
+  },
+  {
+    "objectID": "choropleth-maps.html#fill-continuous",
+    "href": "choropleth-maps.html#fill-continuous",
+    "title": "Choropleth maps",
+    "section": "Fill continuous",
+    "text": "Fill continuous\n\ndefault + scale_fill_continuous()"
+  },
+  {
+    "objectID": "choropleth-maps.html#gradient",
+    "href": "choropleth-maps.html#gradient",
+    "title": "Choropleth maps",
+    "section": "Gradient",
+    "text": "Gradient\n\ndefault + scale_fill_gradient(low = \"#132B43\", high = \"#56B1F7\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#red-gradient",
+    "href": "choropleth-maps.html#red-gradient",
+    "title": "Choropleth maps",
+    "section": "Red Gradient",
+    "text": "Red Gradient\n\ndefault + scale_fill_gradient(low = \"#43000D\", high = \"#F76A6A\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#viridis-1",
+    "href": "choropleth-maps.html#viridis-1",
+    "title": "Choropleth maps",
+    "section": "Viridis",
+    "text": "Viridis\n\ndefault + scale_fill_viridis_c()"
+  },
+  {
+    "objectID": "choropleth-maps.html#viridis-magma",
+    "href": "choropleth-maps.html#viridis-magma",
+    "title": "Choropleth maps",
+    "section": "Viridis magma",
+    "text": "Viridis magma\n\ndefault + scale_fill_viridis_c(option = \"magma\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#viridis-inferno",
+    "href": "choropleth-maps.html#viridis-inferno",
+    "title": "Choropleth maps",
+    "section": "Viridis inferno",
+    "text": "Viridis inferno\n\ndefault + scale_fill_viridis_c(option = \"inferno\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#rcartocolor",
+    "href": "choropleth-maps.html#rcartocolor",
+    "title": "Choropleth maps",
+    "section": "Rcartocolor",
+    "text": "Rcartocolor\n\ndefault + scale_fill_carto_c(palette = \"SunsetDark\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#continuous-inferno",
+    "href": "choropleth-maps.html#continuous-inferno",
+    "title": "Choropleth maps",
+    "section": "Continuous inferno",
+    "text": "Continuous inferno\n\ndefault + scale_fill_viridis_c(option = \"inferno\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#binned-inferno",
+    "href": "choropleth-maps.html#binned-inferno",
+    "title": "Choropleth maps",
+    "section": "Binned inferno",
+    "text": "Binned inferno\n\ndefault + scale_fill_viridis_b(option = \"inferno\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#equal-intervals",
+    "href": "choropleth-maps.html#equal-intervals",
+    "title": "Choropleth maps",
+    "section": "Equal intervals",
+    "text": "Equal intervals\n\nequal = classIntervals(departements$verbalisations_pmla,\n                       n = 4, \n                       style = \"equal\")\nequal$brks\n\n[1]  9.346372 20.659784 31.973197 43.286609 54.600022"
+  },
+  {
+    "objectID": "choropleth-maps.html#quantiles",
+    "href": "choropleth-maps.html#quantiles",
+    "title": "Choropleth maps",
+    "section": "Quantiles",
+    "text": "Quantiles\n\nquantile = classIntervals(departements$verbalisations_pmla,\n                          n = 4,\n                          style = \"quantile\")\nquantile$brks\n\n[1]  9.346372 13.859919 17.707087 21.354589 54.600022"
+  },
+  {
+    "objectID": "choropleth-maps.html#boxplot-1",
+    "href": "choropleth-maps.html#boxplot-1",
+    "title": "Choropleth maps",
+    "section": "Boxplot",
+    "text": "Boxplot\n\nbox = classIntervals(departements$verbalisations_pmla,\n                     style = \"box\")\nbox$brks\n\n[1]      -Inf  2.617913 13.859919 17.707087 21.354589 32.596594 54.600022"
+  },
+  {
+    "objectID": "choropleth-maps.html#tools",
+    "href": "choropleth-maps.html#tools",
+    "title": "Choropleth maps",
+    "section": "Tools",
+    "text": "Tools\n\n\nCode\nhtmp = ggplot(departements, \n              aes(x = fct_reorder(nom, verbalisations_pmla),\n                  y = 1,\n                  fill = verbalisations_pmla)) +\n  geom_raster() +\n  guides(fill = \"none\") +\n  theme_void() +\n  theme(aspect.ratio = 4/10)\n\n\n\n\nCode\npoints = ggplot(departements, aes(x = verbalisations_pmla,\n                                  y = 0)) +\n  geom_point(size = 4,\n             aes(\n               # alpha = verbalisations_pmla,\n               colour = verbalisations_pmla)) +\n  guides(colour = \"none\",\n         # alpha = \"none\"\n  ) +\n  ggrepel::geom_text_repel(aes(label = nom)) +\n  theme_void() +\n  theme(aspect.ratio = 4/10,\n        axis.line.x = element_line(),\n        axis.ticks.x = element_line(),\n        axis.text.x = element_text(),\n        axis.title.x = element_text())"
+  },
+  {
+    "objectID": "choropleth-maps.html#continuous",
+    "href": "choropleth-maps.html#continuous",
+    "title": "Choropleth maps",
+    "section": "Continuous",
+    "text": "Continuous\n\npoints + scale_colour_viridis_c()"
+  },
+  {
+    "objectID": "choropleth-maps.html#equal-intervals-1",
+    "href": "choropleth-maps.html#equal-intervals-1",
+    "title": "Choropleth maps",
+    "section": "Equal intervals",
+    "text": "Equal intervals\n\npoints + scale_colour_viridis_b(breaks = equal$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#quantiles-1",
+    "href": "choropleth-maps.html#quantiles-1",
+    "title": "Choropleth maps",
+    "section": "Quantiles",
+    "text": "Quantiles\n\npoints + scale_colour_viridis_b(breaks = quantile$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#boxplot-2",
+    "href": "choropleth-maps.html#boxplot-2",
+    "title": "Choropleth maps",
+    "section": "Boxplot",
+    "text": "Boxplot\n\npoints + scale_colour_viridis_b(breaks = box$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#equal-intervals-2",
+    "href": "choropleth-maps.html#equal-intervals-2",
+    "title": "Choropleth maps",
+    "section": "Equal intervals",
+    "text": "Equal intervals\n\ndefault + scale_fill_viridis_b(breaks = equal$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#quantiles-2",
+    "href": "choropleth-maps.html#quantiles-2",
+    "title": "Choropleth maps",
+    "section": "Quantiles",
+    "text": "Quantiles\n\ndefault + scale_fill_viridis_b(breaks = quantile$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#boxplot-3",
+    "href": "choropleth-maps.html#boxplot-3",
+    "title": "Choropleth maps",
+    "section": "Boxplot",
+    "text": "Boxplot\n\ndefault + scale_fill_viridis_b(breaks = box$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#problem",
+    "href": "choropleth-maps.html#problem",
+    "title": "Choropleth maps",
+    "section": "Problem",
+    "text": "Problem\n\nggplot(departements, aes(x = verbalisations_pmla)) +\n  geom_density()"
+  },
+  {
+    "objectID": "choropleth-maps.html#headtail-breaks-algorithm",
+    "href": "choropleth-maps.html#headtail-breaks-algorithm",
+    "title": "Choropleth maps",
+    "section": "Head/Tail breaks algorithm",
+    "text": "Head/Tail breaks algorithm\nJiang, Bin. 2013. “Head/Tail Breaks: A New Classification Scheme for Data with a Heavy-Tailed Distribution.” The Professional Geographer 65 (3): 482–94.\n\n\nCompute mu = mean(var).\nBreak var into the tail (as var &lt; mu) and the head (as var &gt; mu).\nAssess if the proportion of head over var is lower or equal than a given threshold (i.e. length(head)/length(var) &lt;= thr)\nIf 3 is TRUE, repeat 1 to 3 until the condition is FALSE or no more partitions are possible (i.e. head has less than two elements expressed as length(head) &lt; 2)."
+  },
+  {
+    "objectID": "choropleth-maps.html#implementation-in-classint",
+    "href": "choropleth-maps.html#implementation-in-classint",
+    "title": "Choropleth maps",
+    "section": "Implementation in ClassInt",
+    "text": "Implementation in ClassInt\n\nheadtails = classIntervals(departements$verbalisations_pmla,\n                           style = \"headtails\")\nheadtails$brks\n\n[1]  9.346372 19.152204 26.291928 54.600022"
+  },
+  {
+    "objectID": "choropleth-maps.html#visualize",
+    "href": "choropleth-maps.html#visualize",
+    "title": "Choropleth maps",
+    "section": "Visualize",
+    "text": "Visualize\n\npoints + scale_colour_viridis_b(breaks = headtails$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#map-1",
+    "href": "choropleth-maps.html#map-1",
+    "title": "Choropleth maps",
+    "section": "Map",
+    "text": "Map\n\ndefault + scale_fill_viridis_b(breaks = headtails$brk)"
+  },
+  {
+    "objectID": "choropleth-maps.html#legend",
+    "href": "choropleth-maps.html#legend",
+    "title": "Choropleth maps",
+    "section": "Legend",
+    "text": "Legend\n\n\nCode\ndefault + scale_fill_viridis_b(breaks = headtails$brk,\n                               labels = round) +\n  labs(fill = \"Verbalisations\\npour\\n1000 adultes\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#title",
+    "href": "choropleth-maps.html#title",
+    "title": "Choropleth maps",
+    "section": "Title",
+    "text": "Title\n\n\nCode\ndefault + scale_fill_viridis_b(breaks = headtails$brk,\n                               labels = round) +\n  labs(title = \"Verbalisations pour non-respect du confinement\",\n       subtitle = \"Entre le 17 mars et le 10 mai 2020\",\n       fill = \"Verbalisations\\npour\\n1000 adultes\",\n       caption = \"Source : ANTAI\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#north-arrow",
+    "href": "choropleth-maps.html#north-arrow",
+    "title": "Choropleth maps",
+    "section": "North arrow",
+    "text": "North arrow\n\n\nCode\ndefault + scale_fill_viridis_b(breaks = headtails$brk,\n                               labels = round) +\n  labs(title = \"Verbalisations pour non-respect du confinement\",\n       subtitle = \"Entre le 17 mars et le 10 mai 2020\",\n       fill = \"Verbalisations\\npour\\n1000 adultes\",\n       caption = \"Source : ANTAI\") +\n  annotation_north_arrow(style = north_arrow_nautical(),\n                         location = \"tl\")"
+  },
+  {
+    "objectID": "choropleth-maps.html#scale-bar",
+    "href": "choropleth-maps.html#scale-bar",
+    "title": "Choropleth maps",
+    "section": "Scale bar",
+    "text": "Scale bar\n\n\nCode\ndefault + scale_fill_viridis_b(breaks = headtails$brk,\n                               labels = round) +\n  labs(title = \"Verbalisations pour non-respect du confinement\",\n       subtitle = \"Entre le 17 mars et le 10 mai 2020\",\n       fill = \"Verbalisations\\npour\\n1000 adultes\",\n       caption = \"Source : ANTAI\") +\n  annotation_north_arrow(style = north_arrow_nautical(),\n                         location = \"tl\") +\n  annotation_scale(location = \"br\")"
   },
   {
     "objectID": "geographic-data-science.html#packages",
@@ -334,6 +754,27 @@
     "title": "Geographic Data Science",
     "section": "CRS usuels",
     "text": "CRS usuels\n\n\nMonde : Eckert 4 : ESRI:54012 ou +proj=eck4\nEurope : European Centric Lambert azimuthal equal-area : EPSG:3035\nFrance : RGF93 / Lambert-93 : EPSG-2154"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Enquêtes quantitatives",
+    "section": "",
+    "text": "Ce cours propose une initiation à diverses méthodes quantitatives à partir d’enquêtes de sciences sociales. Chaque séance s’organise autour de la rencontre entre une question (sociologique, anthropologique, historiographique), des données et une méthode : cartographie, réduction de la dimensionnalité, partitionnement, analyse de séquences, analyse textuelle, statistiques bayésiennes.\nL’objectif du cours est d’acquérir une compréhension schématique de la mise en oeuvre de ces méthodes, de leurs mérites et de leurs limites. Comment représenter des données spatiales, des séquences temporelles ? Qu’apportent les statistiques bayésiennes qui manque à l’approche fréquentiste ? Comment analyser les propriétés morpho-synthaxiques d’un texte ? Comment passer d’un grand nombre de variables à un petit nombre de classes ?\nCes questions se poseront en contexte, dans une dynamique d’ajustement entre données, méthode et question de recherche (une dynamique d’enquête)."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Cours donné à l’École Normale Supérieure au premier semestre de l’année 2024-2025, par Théo Boulakia, dans le cadre de l’Observatoire des Humanités Numériques.\n\nQuand ?\nLe mercredi, de 15h à 18h : 18 septembre, 25 septembre, 9 octobre, 23 octobre, 6 novembre, 13 novembre, 4 décembre et 18 décembre 2024.\n\n\nOù ?\nDans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d’Ulm, tout en haut de l’escalier B ou C).\n\n\nComment s’inscrire ?\nEnvoyez simplement un mail à l’adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.\n\n\nEst-il possible de venir en auditeur libre ?\nTout à fait. La validation n’est pas requise.\n\n\nComment valider le cours ?\n\nTrouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.\nLeur appliquer une ou plusieurs des méthodes vues en cours.\nRendre un document de 4 pages présentant les données, la problématique, les étapes de l’analyse et l’interprétation des résultats.\n\n\n\nFaut-il savoir coder ?\nNon. Vous pouvez assister au cours même si vous n’avez jamais programmé."
+  },
+  {
+    "objectID": "programme.html",
+    "href": "programme.html",
+    "title": "Programme",
+    "section": "",
+    "text": "Linéaments du territoire\n\n\n\n\n\n\n\n\n\n\n\n18 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCouleurs du continu\n\n\n\n\n\n\n\n\n\n\n\n25 sept. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCorrespondances\n\n\n\n\n\n\n\n\n\n\n\n9 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStyles\n\n\n\n\n\n\n\n\n\n\n\n23 oct. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSéquences\n\n\n\n\n\n\n\n\n\n\n\n6 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIncertitude\n\n\n\n\n\n\n\n\n\n\n\n13 nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIndices\n\n\n\n\n\n\n\n\n\n\n\n4 déc. 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmboîtements\n\n\n\n\n\n\n\n\n\n\n\n18 déc. 2024\n\n\n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "ggplot2.html#workflow",

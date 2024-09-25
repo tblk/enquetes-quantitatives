@@ -2,7 +2,13 @@
 title: "Slides"
 ---
 
+# Linéaments du territoire
+
 [Grammaire des graphiques](ggplot2.qmd)
 
 
 [Données spatiales](geographic-data-science.qmd)
+
+# Couleurs du continu
+
+[Cartes Choroplèthes](choropleth-maps.qmd)
