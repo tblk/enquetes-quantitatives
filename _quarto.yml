@@ -21,6 +21,7 @@ website:
         text: Accueil
       - programme.qmd
       - slides.qmd
+      - exercices.qmd
       - faq.qmd
 
 format:

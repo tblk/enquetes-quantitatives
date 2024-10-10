@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/exercices.html",
+    "items": [
+      "/exercices/data-manipulation.html"
+    ]
+  },
+  {
     "listing": "/programme.html",
     "items": [
       "/programme/lineaments.html",

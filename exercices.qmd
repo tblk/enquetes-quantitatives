@@ -1,0 +1,7 @@
+---
+title: "Exercices"
+listing:
+  contents: exercices
+  sort: date
+  sort-ui: false
+---

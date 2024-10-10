@@ -1,0 +1,48 @@
+---
+title: "Manipulation de données"
+description: "Se familiariser avec les verbes de dplyr. Enchaîner avec un exercice de cartographie avancé."
+date: 2024-10-23
+---
+
+# Exercice 1 : filter
+
+- Créer un dossier à la racine de votre ordinateur, puis un projet R correspondant à ce dossier.
+- Rendez-vous sur [cette page](https://www.google.com/covid19/mobility/) et lisez la documentation.
+- Téléchargez le [CSV pour le monde entier](https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv) dans le dossier que vous venez de créer.
+- Ouvrez un nouveau script.
+- Importez le package [tidyverse](https://www.tidyverse.org/packages/).
+- Importez les données à l'aide de la fonction `vroom` du [package du même nom](https://vroom.r-lib.org/), avec la syntaxe `vroom::vroom`. Assignez les à un objet nommé google.
+- Regardez ce qu'elles contiennent à l'aide de la fonction `glimpse`.
+- À l'aide de la fonction `filter` du package [dplyr](https://dplyr.tidyverse.org/), sélectionnez uniquement :
+  + les observations au niveau national, et non infranational.
+  + les pays suivants : Allemagne, Pays-Bas, France, Danemark, Italie, Espagne.
+  + les observations situées entre le 1er mars 2020 et le 1er juin 2020.
+- Assignez le résultat à un objet nommé europe_subset.
+- À l'aide du package [ggplot2](https://ggplot2.tidyverse.org/) et en particulier de la fonction `geom_line`, visualisez l'évolution temporelle de la fréquentation des espaces verts (variable parks...) et du temps passé chez soi (residential...) dans les 6 pays sélectionnés Vous pourrez utiliser la fonction `facet_wrap` afin de créer un graphique distinct pour chaque pays.
+
+# Exercice 2 : summarise
+
+- Repartez de l'objet google.
+- Sélectionnez uniquement : 
+  + les observations au niveau national, et non infranational.
+  + les observations situées entre le 1er mars 2020 et le 1er juin 2020.
+- En utilisant successivement les fonctions `group_by` et `summarise`, calculez l'évolution moyenne de la fréquentation des espaces verts (variable parks...) pour chaque pays.
+- À l'issue de cette opération, vous obtenez normalement un tableau contenant deux variables, et autant de lignes qu'il y a de pays. Assignez ce résultat à un objet nommé google_countries.
+
+# Exercice 3 : cartographie
+
+- À l'aide du package [giscor](https://ropengov.github.io/giscoR/), obtenez un objet sf représentant les frontières de l'ensemble des pays du monde.
+- Reprojetez le en Eckert 4 à l'aide de la fonction `st_transform` du package [sf](https://r-spatial.github.io/sf/).
+- Assignez le résultat à un objet nommé countries.
+- À l'aide de la fonction `left_join`, combinez le dataframe/objet sf countries et le dataframe google_countries.
+- Choisissez une discrétisation adaptée à l'aide de la fonction `classInt::classIntervals`. 
+- Cartographiez l'évolution de la fréquentation des espaces verts dans le monde au printemps 2020 en utilisant les 3 fonctions suivantes : `ggplot`, `geom_sf`, `scale_fill_viridis_b`. 
+
+# Obtenir de l'aide
+
+- Pour obtenir de l'aide sur une fonction directement depuis R, tapez `?` suivi du nom de la fonction. Il se peut qu'un même nom renvoie à des fonctions différentes, appartenant à des packages différents. Par exemple, `?filter` renvoie deux résultats. Pour éviter toute ambiguïté, vous pouvez utiliser la syntaxe `package::function`, par exemple : `?dplyr::filter`. 
+- Les sites des packages contiennent de très nombreux exemples. Il est vivement conseillé de les consulter.
+- Deux livres en accès libre sont particulièrement précieux lorsqu'on débute (et même au-delà) : [Introduction à R et au tidyverse](https://juba.github.io/tidyverse/) de Julien Barnier et **[R for Data Science](https://r4ds.hadley.nz/)** de Hadley Wickham (auteur du package tidyverse).
+- En particulier, le chapitre [Les Verbes de dplyr](https://juba.github.io/tidyverse/10-dplyr.html) est une lecture utile.
+- Pour celles et ceux qui étaient absents à la séance 3, il sera utile de lire la section [Tests et comparaisons](https://juba.github.io/tidyverse/09-recodages.html#sec-tests) de [Introduction à R et au tidyverse](https://juba.github.io/tidyverse/).
+- De même, pour celles et ceux qui auraient du mal avec le pipe ( `|>` ou `%>%`), il est utile de lire la [section correspondante](https://juba.github.io/tidyverse/10-dplyr.html#sec-pipe).
