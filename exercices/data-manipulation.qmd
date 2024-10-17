@@ -4,15 +4,24 @@ description: "Se familiariser avec les verbes de dplyr. Enchaîner avec un exerc
 date: 2024-10-23
 ---
 
-# Exercice 1 : filter
+# Préparation
 
 - Créer un dossier à la racine de votre ordinateur, puis un projet R correspondant à ce dossier.
+- - Ouvrez un nouveau script que vous nommerez `google.R`.
+- Importez le package [tidyverse](https://www.tidyverse.org/packages/).
 - Rendez-vous sur [cette page](https://www.google.com/covid19/mobility/) et lisez la documentation.
 - Téléchargez le [CSV pour le monde entier](https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv) dans le dossier que vous venez de créer.
-- Ouvrez un nouveau script.
-- Importez le package [tidyverse](https://www.tidyverse.org/packages/).
-- Importez les données à l'aide de la fonction `vroom` du [package du même nom](https://vroom.r-lib.org/), avec la syntaxe `vroom::vroom`. Assignez les à un objet nommé google.
+
+# Importation
+
+Importez les données à l'aide de la fonction `vroom` du [package du même nom](https://vroom.r-lib.org/), avec la syntaxe `vroom::vroom`. Assignez les à un objet nommé google.
+
+# Inspection
+
 - Regardez ce qu'elles contiennent à l'aide de la fonction `glimpse`.
+
+# filter
+
 - À l'aide de la fonction `filter` du package [dplyr](https://dplyr.tidyverse.org/), sélectionnez uniquement :
   + les observations au niveau national, et non infranational.
   + les pays suivants : Allemagne, Pays-Bas, France, Danemark, Italie, Espagne.
@@ -20,7 +29,7 @@ date: 2024-10-23
 - Assignez le résultat à un objet nommé europe_subset.
 - À l'aide du package [ggplot2](https://ggplot2.tidyverse.org/) et en particulier de la fonction `geom_line`, visualisez l'évolution temporelle de la fréquentation des espaces verts (variable parks...) et du temps passé chez soi (residential...) dans les 6 pays sélectionnés Vous pourrez utiliser la fonction `facet_wrap` afin de créer un graphique distinct pour chaque pays.
 
-# Exercice 2 : summarise
+# summarise
 
 - Repartez de l'objet google.
 - Sélectionnez uniquement : 
@@ -29,7 +38,7 @@ date: 2024-10-23
 - En utilisant successivement les fonctions `group_by` et `summarise`, calculez l'évolution moyenne de la fréquentation des espaces verts (variable parks...) pour chaque pays.
 - À l'issue de cette opération, vous obtenez normalement un tableau contenant deux variables, et autant de lignes qu'il y a de pays. Assignez ce résultat à un objet nommé google_countries.
 
-# Exercice 3 : cartographie
+# Cartographie
 
 - À l'aide du package [giscor](https://ropengov.github.io/giscoR/), obtenez un objet sf représentant les frontières de l'ensemble des pays du monde.
 - Reprojetez le en Eckert 4 à l'aide de la fonction `st_transform` du package [sf](https://r-spatial.github.io/sf/).
