@@ -1,0 +1,70 @@
+---
+title: "Excès de mortalité"
+date: 2024-10-23
+---
+
+# Préparation
+
+- Dans un projet R, ouvrez un nouveau script, que vous nommerez `excess_mortality.R`.
+
+- Chargez le package `tidyverse`.
+
+# Importation
+
+- Rendez-vous sur [cette page](https://ourworldindata.org/excess-mortality-covid#) et parcourez l'article pour comprendre la problématique.
+
+- Les données de l'exercice sont en ligne à cette adresse :
+
+```{r}
+#| eval: false
+"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/excess_mortality/excess_mortality.csv"
+```
+
+Importez les directement depuis cette url, sans les télécharger, à l'aide de la fonction `read_csv`.
+
+# select
+
+À l'aide de la fonction `select`, sélectionnez les variables suivantes :
+
+- location
+- date
+- time_unit
+- projected_deaths_since_2020_all_ages
+- p_scores_all_ages
+- deaths_since_2020_all_ages
+
+# mutate
+
+Calculez le p-score à l'aide de la formule donnée dans [l'article](https://ourworldindata.org/excess-mortality-covid#) cité plus haut, sachant que la mortalité observée est donnée par la variable `deaths_since_2020_all_ages`, et la mortalité attendue par `projected_deaths_since_2020_all_ages`. Vérifiez que ce que vous avez calculé correspond bien à la variable p_scores_all_ages.
+
+# geom_line
+
+À l'aide du package `ggplot` et de sa fonction `geom_line`, visualisez, pour 4 pays de votre choix : 
+
+- l'évolution de la mortalité brute
+- l'évolution des p-scores
+
+# filter
+
+À l'aide de la fonction `filter`, sélectionnez uniquement les observations qui se situent entre le 1er mars et le 1er juin 2020.
+
+# summarise
+
+Sur le dataframe auquel vous venez d'appliquer la fonction `filter`, utilisez les fonctions `group_by` et `summarise` pour créer les variables suivantes, pour chaque pays :
+
+- la somme des décès escomptés sur la période
+- la somme des décès effectivement observés
+- le p-score pour la période
+
+# geom_bar
+
+À l'aide du package `ggplot` et de la fonction `geom_bar`, visualisez la distribution des p-score pour les différents différents pays.
+
+# geom_sf
+
+- À l'aide du package [giscor](https://ropengov.github.io/giscoR/), obtenez un objet sf représentant les frontières de l'ensemble des pays du monde.
+- Reprojetez le en Eckert 4 à l'aide de la fonction `st_transform` du package [sf](https://r-spatial.github.io/sf/).
+- Assignez le résultat à un objet nommé countries.
+- À l'aide de la fonction `left_join`, combinez le dataframe/objet sf countries et le dataframe que vous venez de créer avec la fonction `summarise`.
+- Choisissez une discrétisation adaptée à l'aide de la fonction `classInt::classIntervals`. 
+- Cartographiez la distribution des p-scores au printemps 2020 avec les trois fonctions suivantes : `ggplot`, `geom_sf`, `scale_fill_viridis_b`.
