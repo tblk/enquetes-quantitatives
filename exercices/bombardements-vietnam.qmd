@@ -42,3 +42,19 @@ Cartographiez les bombardements en utilisant le package `ggplot`. Vous pourrez j
 
 # Grille
 
+L'objectif de cette partie de l'exercice est de produire une carte plus synthétique, où l'intensité des bombardements apparaît dans les couleurs attribuées aux cellules d'une grille hexagonale.
+
+- Créez une grille régulière correspondant à l'emprise spatiale du Cambodge, du Vietnam et du Laos. Vous pourrez utiliser la fonction `sf::st_make_grid`. Visualisez la avec `ggplot`.
+- Créez un nouvel objet sf, par l'intersection de cette grille et des polygones des pays. Vous pourrez utiliser la fonction `sf::st_intersection`. Visualisez avec `ggplot` l'objet ainsi obtenu.
+- Réalisez une *jointure spatiale* entre l'objet sf contenant les bombardements et l'objet sf que vous venez de créer. L'objectif est que chaque bombardement appartienne désormais à une cellule de la grille.
+- Créez un nouveau dataframe/objet sf contenant une ligne par cellule, et une nouvelle variable donnant le nombre de bombardements dans l'emprise de cette cellule.
+- Cartographiez cette nouvelle manière de présenter l'information à l'aide de `ggplot`.
+
+# Tâtonnements
+
+Pour améliorer la carte précédente, jouez sur les aspects suivants :
+
+- Nombre de cellules de la grille
+- Cellules carrées ou hexagonales
+- Palette de couleurs
+- Discrétisation (avec le package `classInt`) 
