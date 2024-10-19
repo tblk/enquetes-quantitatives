@@ -1,0 +1,7 @@
+---
+title: "Corrections"
+listing:
+  contents: corrections
+  sort: date
+  sort-ui: false
+---

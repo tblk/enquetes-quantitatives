@@ -22,6 +22,7 @@ website:
       - programme.qmd
       - slides.qmd
       - exercices.qmd
+      - corrections.qmd
       - faq.qmd
 
 format:
