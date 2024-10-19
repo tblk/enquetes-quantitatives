@@ -1,5 +1,7 @@
 ---
 title: "Élections législatives"
+description: "Cartographier l'absention au premier tour des élections législatives anticipées de 2024"
+date: 2024-10-23
 ---
 
 # Préparation
@@ -65,7 +67,7 @@ Vous pourrez utiliser la fonction `geom_point` et jouer avec les *scales* suivan
 # Discrétisation
 
 - Vue la distribution de la variable du pourcentage d'absentions, quelle distribution vous semble la plus adaptée ? 
-À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
+- À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
 
 # Cartographie
 

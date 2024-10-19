@@ -1,5 +1,6 @@
 ---
 title: "Excès de mortalité"
+description: "Identifier les pays les plus touchés par la pandémie"
 date: 2024-10-23
 ---
 

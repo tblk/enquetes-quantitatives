@@ -1,6 +1,6 @@
 ---
-title: "Manipulation de données"
-description: "Se familiariser avec les verbes de dplyr. Enchaîner avec un exercice de cartographie avancé."
+title: "Google Mobility"
+description: "Cartographier l'évolution de la mobilité durant la pandémie"
 date: 2024-10-23
 ---
 
