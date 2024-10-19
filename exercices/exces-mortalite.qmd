@@ -7,7 +7,7 @@ date: 2024-10-23
 # Préparation
 
 - Rendez-vous sur [cette page](https://ourworldindata.org/excess-mortality-covid#) et parcourez l'article pour comprendre la problématique.
-- Chargez le package tidyverse.
+- Chargez les packages `tidyverse` et [](https://r-spatial.github.io/sf/).
 - Les données de l'exercice sont en ligne à cette adresse :
 
 ```{r}
