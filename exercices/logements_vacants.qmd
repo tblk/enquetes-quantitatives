@@ -1,0 +1,47 @@
+---
+title: "Logements vacants"
+---
+
+# Préparation
+
+- Téléchargez les données sur les logements vacants, **par EPCI**, sur le site de l'Observatoire des Territoires.
+- Vous obtenez un fichier `.xlsx` que vous pouvez importer avec la fonction `read_excel` du package [readxl](https://readxl.tidyverse.org/).
+- Y a-t-il un problème à l'importation ? Vous pourrez jouer sur l'argument `skip` de la fonction `read_excel`. 
+
+# Couche géographique
+
+- À l'aide du package [CARTElette](https://antuki.github.io/CARTElette/articles/CARTElette.html), téléchargez les contours des EPCI pour l'année 2024. Faites en sorte que les fichiers correspondants soient enregistrés dans un sous-dossier `data` de votre projet R.
+
+:::{.callout-tip}
+Vous utiliserez pour cela la fonction `charger_carte`, et trois de ses arguments : `destfile`, `COG` et `nivsupra`. 
+:::
+
+- Importez cette couche géographique à l'aide de la fonction st_read du package sf.
+
+# Jointure
+
+L'objectif est de réaliser une jointure entre le dataframe des logements vacants, et le dataframe/objet sf contenant les contours des EPCI. C'est le préalable à la cartographie. 
+
+- Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
+- Y a-t-il des EPCI qui apparaissent dans l'un des deux dataframes et pas dans l'autre ? Vous pourrez utiliser la fonction `anti_join` pour le savoir.
+- Réaliser la jointure avec la fonction `left_join`. 
+
+# Distribution
+
+Vous désirez étudier le pourcentage de logements vacants par commune. 
+- Utilisez la fonction `summary` pour avoir une première idée de la distribution de cette variable. 
+- Représentez sa distribution à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
+
+# Discrétisation
+
+- Vue la distribution de la variable, quelle distribution vous semble la plus adaptée ? 
+- À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
+
+# Cartographie
+
+- Cartographiez la distribution du pourcentage de logements vacants en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
+
+:::{.callout-caution}
+# M'appeler à ce stade
+Pour discuter des améliorations esthétiques à apporter.
+:::
