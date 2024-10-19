@@ -6,14 +6,8 @@ date: 2024-10-23
 
 # Préparation
 
-- Dans un projet R, ouvrez un nouveau script, que vous nommerez `excess_mortality.R`.
-
-- Chargez le package `tidyverse`.
-
-# Importation
-
 - Rendez-vous sur [cette page](https://ourworldindata.org/excess-mortality-covid#) et parcourez l'article pour comprendre la problématique.
-
+- Chargez le package tidyverse.
 - Les données de l'exercice sont en ligne à cette adresse :
 
 ```{r}
