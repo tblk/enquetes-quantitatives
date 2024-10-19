@@ -1,0 +1,77 @@
+---
+title: "Élections législatives"
+---
+
+# Préparation
+
+- Téléchargez les [résultats](https://www.data.gouv.fr/fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour/) du premier tour des élections législatives anticipées de 2024, par commune.
+- Chargez les packages `tidyverse` et [sf](https://r-spatial.github.io/sf/). 
+- À l'aide du package [readxl](https://readxl.tidyverse.org/), importez les données téléchargées.
+
+# Recodages 
+
+- Combien d'observations et de variables contient cette base de données ? Pourquoi y a-t-il autant de variables ?
+- Sélectionnez les variables donnant les informations générales (nombre d'inscrits, de votants, de votes nuls, blancs, d'absentions et pourcentages correspondants). Vous pourrez utiliser la fonction `select`.
+- Quel est le type des variables exprimées en pourcentage ? 
+- Convertissez toutes ces variables dans un type plus adapté. Vous pourrez utiliser la fonction `parse_number` du package [readr](https://readr.tidyverse.org/).
+
+# Inspection
+
+- À l'aide de la fonction `skim` du package [skimr](https://docs.ropensci.org/skimr/), inspectez rapidement l'ensemble de vos variables et tout particulièrement le nombre de **valeurs manquantes** pour chacune d'entre elles. 
+- Si vous constatez qu'une variable contient des valeurs manquantes, isolez les observations concernées dans un nouveau dataframe à l'aide des fonctions `filter` et `is.na`. Que remarquez-vous ?
+
+:::{.callout-caution}
+# M'appeler à ce stade
+Pour que je vous explique le problème et vous donne la solution.
+:::
+
+# Couche géographique
+
+- À l'aide du package [CARTElette](https://antuki.github.io/CARTElette/articles/CARTElette.html), téléchargez les contours des communes pour l'année 2024. Faites en sorte que les fichiers correspondants soient enregistrés dans un sous-dossier `data` de votre projet R. 
+
+:::{.callout-tip}
+Vous utiliserez pour cela la fonction `charger_carte`, et trois de ses arguments : `destfile`, `COG` et `nivsupra`. 
+:::
+
+- Importez cette couche géographique à l'aide de la fonction st_read du package sf.
+- Sélectionnez les variables correspondant au code de la commune et du département, au nom de la commune et à sa population. 
+- Triez les observations par code géographique croissant. Vous pourrez utiliser la fonction `arrange`. 
+
+# Jointure
+
+L'objectif est de réaliser une jointure entre le dataframe des résultats électoraux, et le dataframe/objet sf contenant les contours des communes, afin de pouvoir cartographier les résultats. 
+
+- Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
+- Recodez la variable que vous avez choisie comme clef commune de manière à ce qu'elle soit absolument identique dans les deux dataframes.
+
+:::{.callout-caution}
+# M'appeler à ce stade
+Pour que je vous indique les fonctions dont vous aurez besoin.
+:::
+- Une fois que la variable commune est rigoureusement identique dans les deux dataframes, identifiez les observations (les communes) éventuellement présentes dans l'un, mais pas dans l'autre, à l'aide de la fonction `anti_join`. Y a-t-il une logique dans ces absences ?
+- Réalisez la jointure à l'aide de la fonction `left_join`. 
+
+# Absention
+
+Vous désirez étudier le pourcentage d'abstention par commune. 
+- Utilisez la fonction `summary` pour avoir une première idée de la distribution de cette variable. 
+- Représentez sa distribution à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
+- Représentez, sur un même graphe, le pourcentage de votes blancs, de votes nuls et d'absentions. Que remarquez-vous ?
+
+:::{.callout-tip}
+Vous pourrez utiliser la fonction `geom_point` et jouer avec les *scales* suivantes : `x`, `y`, `fill`.
+:::
+
+# Discrétisation
+
+- Vue la distribution de la variable du pourcentage d'absentions, quelle distribution vous semble la plus adaptée ? 
+À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
+
+# Cartographie
+
+- Cartographiez la distribution de l'absention en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
+
+:::{.callout-caution}
+# M'appeler à ce stade
+Pour discuter des améliorations esthétiques à apporter.
+:::
