@@ -15,7 +15,7 @@ date: 2024-10-23
 "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/excess_mortality/excess_mortality.csv"
 ```
 
-Importez les directement depuis cette url, sans les télécharger, à l'aide de la fonction `read_csv`.
+- Importez les directement depuis cette url, sans les télécharger, à l'aide de la fonction `read_csv`. 
 
 # select
 
@@ -34,10 +34,12 @@ Calculez le p-score à l'aide de la formule donnée dans [l'article](https://our
 
 # geom_line
 
-À l'aide du package `ggplot` et de sa fonction `geom_line`, visualisez, pour 4 pays de votre choix : 
-
-- l'évolution de la mortalité brute
-- l'évolution des p-scores
+- À l'aide du package `ggplot` et de sa fonction `geom_line`, visualisez, pour 6 pays de votre choix : 
+   + l'évolution de la mortalité brute
+   + l'évolution des p-scores
+- Choisissez celle de ces deux représentations qui vous semble la plus lisible, et distinguez les pays par la couleur de la courbe qui leur correspond, ou le type de trait (`linetype`).
+- De même, créez un mini-graphique séparé pour chaque pays. Vous pourrez utiliser la fonction `facet_wrap`.
+- Quelle représentation vous semble la plus lisible ?
 
 # filter
 
@@ -51,15 +53,36 @@ Sur le dataframe auquel vous venez d'appliquer la fonction `filter`, utilisez le
 - la somme des décès effectivement observés
 - le p-score pour la période
 
-# geom_bar
+Sauf précision, les étapes ultérieures de l'exercice s'appliquent à ce nouveau dataframe.
 
-À l'aide du package `ggplot` et de la fonction `geom_bar`, visualisez la distribution des p-score pour les différents différents pays.
+# Distribution
 
-# geom_sf
+Vous désirez étudiez la distribution de la variable `p-score` que vous venez de calculer. 
+
+- Utilisez la fonction `summary` pour en avoir une première idée.
+- Représentez la graphiquement à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
+
+# Couche cartographique
 
 - À l'aide du package [giscor](https://ropengov.github.io/giscoR/), obtenez un objet sf représentant les frontières de l'ensemble des pays du monde.
 - Reprojetez le en Eckert 4 à l'aide de la fonction `st_transform` du package [sf](https://r-spatial.github.io/sf/).
 - Assignez le résultat à un objet nommé countries.
-- À l'aide de la fonction `left_join`, combinez le dataframe/objet sf countries et le dataframe que vous venez de créer avec la fonction `summarise`.
-- Choisissez une discrétisation adaptée à l'aide de la fonction `classInt::classIntervals`. 
+
+# Jointure
+
+Vous voulez combiner le dataframe/objet sf countries et le dataframe créé avec la fonction `summarise`.
+- Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
+- Y a-t-il des observations (pays) qui apparaissent dans l'un des deux dataframes et pas dans l'autre ? Vous pourrez utiliser la fonction `anti_join` pour le savoir.
+- Réalisez la jointure avec la fonction `left_join`.
+
+# Discrétisation
+
+Vous souhaitez discrétiser la variable `p-score` afin d'en faire une représentation cartographique lisible. 
+
+- Vue la distribution de la variable, quelle distribution vous semble la plus adaptée ?
+- À l'aide de la fonction `classInt::classIntervals`, procédez à la 
+discrétisation.
+
+# Cartographie
+
 - Cartographiez la distribution des p-scores au printemps 2020 avec les trois fonctions suivantes : `ggplot`, `geom_sf`, `scale_fill_viridis_b`.
