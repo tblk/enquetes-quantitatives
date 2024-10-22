@@ -12,7 +12,7 @@ website:
   announcement: 
     icon: info-circle
     dismissable: true
-    content: "**[Inscriptions](mailto:theo.boulakia@gmail.com)** ouvertes | Le cours a lieu le **mercredi** de 15h à 18h | Première séance le **18 septembre**"
+    content: "**[Inscriptions](mailto:theo.boulakia@gmail.com)** ouvertes | Prochain cours le mercredi 23 octobre de **14 à 17 h**"
     type: primary
     position: below-navbar
   navbar:

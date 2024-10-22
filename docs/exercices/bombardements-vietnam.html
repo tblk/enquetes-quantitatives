@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Cartographier les bombardements américains pendant la guerre du Vietnam.">
 
-<title>Exercices – Enquêtes quantitatives</title>
+<title>Bombardements – Enquêtes quantitatives</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./advent_04_211.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../advent_04_211.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,68 +68,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Exercices – Enquêtes quantitatives">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Bombardements – Enquêtes quantitatives">
+<meta property="og:description" content="Cartographier les bombardements américains pendant la guerre du Vietnam.">
 <meta property="og:site_name" content="Enquêtes quantitatives">
 </head>
 
@@ -141,7 +83,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Enquêtes quantitatives</span>
     </a>
   </div>
@@ -152,27 +94,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./programme.html"> 
+    <a class="nav-link" href="../programme.html"> 
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides.html"> 
+    <a class="nav-link" href="../slides.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./exercices.html" aria-current="page"> 
+    <a class="nav-link" href="../exercices.html"> 
 <span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./corrections.html"> 
+    <a class="nav-link" href="../corrections.html"> 
 <span class="menu-text">Corrections</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./faq.html"> 
+    <a class="nav-link" href="../faq.html"> 
 <span class="menu-text">FAQ</span></a>
   </li>  
 </ul>
@@ -181,8 +123,8 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="0d8b3430d682f09a6deb2d3cf22f7b10" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong><a href="mailto:theo.boulakia@gmail.com">Inscriptions</a></strong> ouvertes | Prochain cours le mercredi 23 octobre de <strong>14 à 17 h</strong></p>
+  <div id="quarto-announcement" data-announcement-id="ceda79e627cb60584d15a7c32ad2a897" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong><a href="mailto:theo.boulakia@gmail.com">Inscriptions</a></strong> ouvertes | Le cours a lieu le <strong>mercredi</strong> de 15h à 18h | Première séance le <strong>18 septembre</strong></p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -190,21 +132,47 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Niveau 1">Niveau 1 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Niveau 2">Niveau 2 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Niveau 3">Niveau 3 <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#préparation" id="toc-préparation" class="nav-link active" data-scroll-target="#préparation">Préparation</a></li>
+  <li><a href="#frontière-des-pays" id="toc-frontière-des-pays" class="nav-link" data-scroll-target="#frontière-des-pays">Frontière des pays</a></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">filter</a></li>
+  <li><a href="#convertir-en-objet-sf" id="toc-convertir-en-objet-sf" class="nav-link" data-scroll-target="#convertir-en-objet-sf">Convertir en objet sf</a></li>
+  <li><a href="#semis-de-points" id="toc-semis-de-points" class="nav-link" data-scroll-target="#semis-de-points">Semis de points</a></li>
+  <li><a href="#grille" id="toc-grille" class="nav-link" data-scroll-target="#grille">Grille</a></li>
+  <li><a href="#tâtonnements" id="toc-tâtonnements" class="nav-link" data-scroll-target="#tâtonnements">Tâtonnements</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercices</h1>
-</div>
+<h1 class="title">Bombardements</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Niveau 3</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Cartographier les bombardements américains pendant la guerre du Vietnam.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Date de rendu</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">23 octobre 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -214,210 +182,71 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>L’exercice à faire avant le cours du 23 octobre est <a href="./exercices/google-mobility.html">Google Mobility</a></p>
-</div>
-</div>
+<section id="préparation" class="level1">
+<h1>Préparation</h1>
+<ul>
+<li>Chargez les packages suivants :
+<ul>
+<li><code>tidyverse</code></li>
+<li><a href="https://r-spatial.github.io/sf/">sf</a></li>
+<li><a href="https://spatstat.org/">spatstat</a></li>
+</ul></li>
+<li>Téléchargez la base “Vietnam War THOR Data” (1.5 GB) sur le site <a href="https://data.world/datamil/vietnam-war-thor-data">data.world</a>. Il faut préalabement créer un compte.</li>
+<li>Parcourez rapidement la documentation.</li>
+<li>Pour gagner du temps et de l’espace disque, convertissez le fichier csv en un fichier parquet (vous pourrez utiliser successivement les packages <code>vroom</code> et <a href="https://nanoparquet.r-lib.org/">nanoparquet</a>).</li>
+</ul>
+</section>
+<section id="frontière-des-pays" class="level1">
+<h1>Frontière des pays</h1>
+<p>À l’aide du package <a href="https://ropengov.github.io/giscoR/">giscoR</a>, importez les polygones correspondant aux frontières du Laos, du Vietnam et du Cambodge dans un objet sf.</p>
+</section>
+<section id="filter" class="level1">
+<h1>filter</h1>
+<p>La base THOR contient de nombreuses missions aériennes, en plus des bombardements, qui seuls nous intéressent. Pour sélectionner les missions de bombardement, on se servira des informations suivantes :</p>
+<ul>
+<li><code>numweaponsdelivered</code> non nul</li>
+<li><code>mfunc_desc_class</code> différent de NONKINETIC</li>
+<li><code>tgtlatdd_ddd_wgs84</code> renseignée</li>
+</ul>
+<p>Afin d’accélérer les calculs ultérieurs, sélectionnez un échantillon aléatoire de 100 000 lignes. Vous pourrez utiliser la fonction <code>slice_sample</code>.</p>
+</section>
+<section id="convertir-en-objet-sf" class="level1">
+<h1>Convertir en objet sf</h1>
+<ul>
+<li><p>Convertissez le dataframe de 100 000 lignes obtenu en objet sf. Pour cela, vous pourrez utiliser la fonction <code>st_as_sf</code> du package <code>sf</code>, après avoir remarqué que la latitude et la longitude sont respectivement encodées dans les variables <code>tgtlatdd_ddd_wgs84</code> et <code>tgtlonddd_ddd_wgs84</code>.</p></li>
+<li><p>Assurez vous que le <em>Coordinate Reference System</em> (CRS) de l’objet sf obtenu est le même que celui des polygones des pays.</p></li>
+<li><p>Conservez uniquement les bombardements dont la localisation est incluse dans les frontières des trois pays. Vous pourrez utiliser la fonction <code>st_intersection</code>.</p></li>
+</ul>
+</section>
+<section id="semis-de-points" class="level1">
+<h1>Semis de points</h1>
+<p>Cartographiez les bombardements en utilisant le package <code>ggplot</code>. Vous pourrez jouer sur la taille et la transparence des points pour obtenir une carte lisible.</p>
+</section>
+<section id="grille" class="level1">
+<h1>Grille</h1>
+<p>L’objectif de cette partie de l’exercice est de produire une carte plus synthétique, où l’intensité des bombardements apparaît dans les couleurs attribuées aux cellules d’une grille hexagonale.</p>
+<ul>
+<li>Créez une grille régulière correspondant à l’emprise spatiale du Cambodge, du Vietnam et du Laos. Vous pourrez utiliser la fonction <code>sf::st_make_grid</code>. Visualisez la avec <code>ggplot</code>.</li>
+<li>Créez un nouvel objet sf, par l’intersection de cette grille et des polygones des pays. Vous pourrez utiliser la fonction <code>sf::st_intersection</code>. Visualisez avec <code>ggplot</code> l’objet ainsi obtenu.</li>
+<li>Réalisez une <em>jointure spatiale</em> entre l’objet sf contenant les bombardements et l’objet sf que vous venez de créer. L’objectif est que chaque bombardement appartienne désormais à une cellule de la grille.</li>
+<li>Créez un nouveau dataframe/objet sf contenant une ligne par cellule, et une nouvelle variable donnant le nombre de bombardements dans l’emprise de cette cellule.</li>
+<li>Cartographiez cette nouvelle manière de présenter l’information à l’aide de <code>ggplot</code>.</li>
+</ul>
+</section>
+<section id="tâtonnements" class="level1">
+<h1>Tâtonnements</h1>
+<p>Pour améliorer la carte précédente, jouez sur les aspects suivants :</p>
+<ul>
+<li>Nombre de cellules de la grille</li>
+<li>Cellules carrées ou hexagonales</li>
+<li>Palette de couleurs</li>
+<li>Discrétisation (avec le package <code>classInt</code>)</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Niveau 2" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729614829087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="506">
-<div class="thumbnail">
-<p><a href="./exercices/exces-mortalite.html" class="no-external"></a></p><a href="./exercices/exces-mortalite.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/exces-mortalite.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/exces-mortalite.html" class="no-external">Excès de mortalité</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/exces-mortalite.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/exces-mortalite.html" class="no-external">Identifier les pays les plus touchés par la pandémie</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/exces-mortalite.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Niveau 1" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603303190" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
-<div class="thumbnail">
-<p><a href="./exercices/logements_vacants.html" class="no-external"></a></p><a href="./exercices/logements_vacants.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/logements_vacants.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/logements_vacants.html" class="no-external">Logements vacants</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/logements_vacants.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 1'); return false;">
-Niveau 1
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/logements_vacants.html" class="no-external">Cartographier les logements vides en France</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/logements_vacants.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Niveau 3" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729613635544" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="554">
-<div class="thumbnail">
-<p><a href="./exercices/elections-legislatives.html" class="no-external"></a></p><a href="./exercices/elections-legislatives.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/elections-legislatives.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/elections-legislatives.html" class="no-external">Élections législatives</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/elections-legislatives.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 3'); return false;">
-Niveau 3
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/elections-legislatives.html" class="no-external">Cartographier l’absention au premier tour des élections législatives anticipées de 2024</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/elections-legislatives.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Niveau 3" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603350309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="440">
-<div class="thumbnail">
-<p><a href="./exercices/bombardements-vietnam.html" class="no-external"></a></p><a href="./exercices/bombardements-vietnam.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/bombardements-vietnam.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">Bombardements</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/bombardements-vietnam.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 3'); return false;">
-Niveau 3
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">Cartographier les bombardements américains pendant la guerre du Vietnam.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Niveau 2" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603316920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="550">
-<div class="thumbnail">
-<p><a href="./exercices/google-mobility.html" class="no-external"></a></p><a href="./exercices/google-mobility.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/google-mobility.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/google-mobility.html" class="no-external">Google Mobility</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/google-mobility.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/google-mobility.html" class="no-external">Cartographier l’évolution de la mobilité durant la pandémie</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/google-mobility.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Niveau 1" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729614938075" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="551">
-<div class="thumbnail">
-<p><a href="./exercices/voisins-vigilants.html" class="no-external"></a></p><a href="./exercices/voisins-vigilants.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/voisins-vigilants.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/voisins-vigilants.html" class="no-external">Voisins vigilants</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/voisins-vigilants.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 1'); return false;">
-Niveau 1
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/voisins-vigilants.html" class="no-external">Cartographier la distribution des communautés de voisins vigilants en France</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/voisins-vigilants.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Aucun article correspondant
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -132,9 +132,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#exercice-1-filter" id="toc-exercice-1-filter" class="nav-link active" data-scroll-target="#exercice-1-filter">Exercice 1 : filter</a></li>
-  <li><a href="#exercice-2-summarise" id="toc-exercice-2-summarise" class="nav-link" data-scroll-target="#exercice-2-summarise">Exercice 2 : summarise</a></li>
-  <li><a href="#exercice-3-cartographie" id="toc-exercice-3-cartographie" class="nav-link" data-scroll-target="#exercice-3-cartographie">Exercice 3 : cartographie</a></li>
+  <li><a href="#préparation" id="toc-préparation" class="nav-link active" data-scroll-target="#préparation">Préparation</a></li>
+  <li><a href="#importation" id="toc-importation" class="nav-link" data-scroll-target="#importation">Importation</a></li>
+  <li><a href="#inspection" id="toc-inspection" class="nav-link" data-scroll-target="#inspection">Inspection</a></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">filter</a></li>
+  <li><a href="#summarise" id="toc-summarise" class="nav-link" data-scroll-target="#summarise">summarise</a></li>
+  <li><a href="#cartographie" id="toc-cartographie" class="nav-link" data-scroll-target="#cartographie">Cartographie</a></li>
   <li><a href="#obtenir-de-laide" id="toc-obtenir-de-laide" class="nav-link" data-scroll-target="#obtenir-de-laide">Obtenir de l’aide</a></li>
   </ul>
 </nav>
@@ -172,16 +175,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercice-1-filter" class="level1">
-<h1>Exercice 1 : filter</h1>
+<section id="préparation" class="level1">
+<h1>Préparation</h1>
 <ul>
 <li>Créer un dossier à la racine de votre ordinateur, puis un projet R correspondant à ce dossier.</li>
+<li><ul>
+<li>Ouvrez un nouveau script que vous nommerez <code>google.R</code>.</li>
+</ul></li>
+<li>Importez le package <a href="https://www.tidyverse.org/packages/">tidyverse</a>.</li>
 <li>Rendez-vous sur <a href="https://www.google.com/covid19/mobility/">cette page</a> et lisez la documentation.</li>
 <li>Téléchargez le <a href="https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv">CSV pour le monde entier</a> dans le dossier que vous venez de créer.</li>
-<li>Ouvrez un nouveau script.</li>
-<li>Importez le package <a href="https://www.tidyverse.org/packages/">tidyverse</a>.</li>
-<li>Importez les données à l’aide de la fonction <code>vroom</code> du <a href="https://vroom.r-lib.org/">package du même nom</a>, avec la syntaxe <code>vroom::vroom</code>. Assignez les à un objet nommé google.</li>
+</ul>
+</section>
+<section id="importation" class="level1">
+<h1>Importation</h1>
+<p>Importez les données à l’aide de la fonction <code>vroom</code> du <a href="https://vroom.r-lib.org/">package du même nom</a>, avec la syntaxe <code>vroom::vroom</code>. Assignez les à un objet nommé google.</p>
+</section>
+<section id="inspection" class="level1">
+<h1>Inspection</h1>
+<ul>
 <li>Regardez ce qu’elles contiennent à l’aide de la fonction <code>glimpse</code>.</li>
+</ul>
+</section>
+<section id="filter" class="level1">
+<h1>filter</h1>
+<ul>
 <li>À l’aide de la fonction <code>filter</code> du package <a href="https://dplyr.tidyverse.org/">dplyr</a>, sélectionnez uniquement :
 <ul>
 <li>les observations au niveau national, et non infranational.</li>
@@ -192,8 +210,8 @@ ul.task-list li input[type="checkbox"] {
 <li>À l’aide du package <a href="https://ggplot2.tidyverse.org/">ggplot2</a> et en particulier de la fonction <code>geom_line</code>, visualisez l’évolution temporelle de la fréquentation des espaces verts (variable parks…) et du temps passé chez soi (residential…) dans les 6 pays sélectionnés Vous pourrez utiliser la fonction <code>facet_wrap</code> afin de créer un graphique distinct pour chaque pays.</li>
 </ul>
 </section>
-<section id="exercice-2-summarise" class="level1">
-<h1>Exercice 2 : summarise</h1>
+<section id="summarise" class="level1">
+<h1>summarise</h1>
 <ul>
 <li>Repartez de l’objet google.</li>
 <li>Sélectionnez uniquement :
@@ -205,8 +223,8 @@ ul.task-list li input[type="checkbox"] {
 <li>À l’issue de cette opération, vous obtenez normalement un tableau contenant deux variables, et autant de lignes qu’il y a de pays. Assignez ce résultat à un objet nommé google_countries.</li>
 </ul>
 </section>
-<section id="exercice-3-cartographie" class="level1">
-<h1>Exercice 3 : cartographie</h1>
+<section id="cartographie" class="level1">
+<h1>Cartographie</h1>
 <ul>
 <li>À l’aide du package <a href="https://ropengov.github.io/giscoR/">giscor</a>, obtenez un objet sf représentant les frontières de l’ensemble des pays du monde.</li>
 <li>Reprojetez le en Eckert 4 à l’aide de la fonction <code>st_transform</code> du package <a href="https://r-spatial.github.io/sf/">sf</a>.</li>

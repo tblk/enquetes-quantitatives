@@ -2,6 +2,7 @@
 title: "Bombardements"
 description: "Cartographier les bombardements américains pendant la guerre du Vietnam."
 date: 2024-10-23
+categories: "Niveau 3"
 ---
 
 # Préparation

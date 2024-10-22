@@ -2,6 +2,7 @@
 title: "Élections législatives"
 description: "Cartographier l'absention au premier tour des élections législatives anticipées de 2024"
 date: 2024-10-23
+categories: "Niveau 3"
 ---
 
 # Préparation
@@ -70,6 +71,8 @@ Vous pourrez utiliser la fonction `geom_point` et jouer avec les *scales* suivan
 - À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
 
 # Cartographie
+
+- Cartographiez le pourcentage de logements vacants en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
 
 - Cartographiez la distribution de l'absention en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
 

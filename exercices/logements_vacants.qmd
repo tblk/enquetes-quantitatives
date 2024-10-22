@@ -2,6 +2,8 @@
 title: "Logements vacants"
 description: "Cartographier les logements vides en France"
 date: 2024-10-23
+categories:
+  - "Niveau 1"
 ---
 
 # Préparation

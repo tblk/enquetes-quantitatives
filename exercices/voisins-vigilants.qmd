@@ -1,0 +1,76 @@
+---
+title: "Voisins vigilants"
+date: 2024-10-23
+description: "Cartographier la distribution des communautés de voisins vigilants en France"
+categories:
+  - "Niveau 1"
+---
+
+# Contexte
+
+Les données sur les communautés de voisins vigilants ont été archivées grâce à la [Wayback Machine](https://web.archive.org/web/20200509134558/https://www.voisinsvigilants.org/communautes-de-france) et récoltées grâce au package [rvest](https://rvest.tidyverse.org/), dédié au webscraping. 
+
+:::{.callout-caution}
+# Incident
+Suite à une cyberattaque, la Wayback Machine est indisponible pour une durée indéterminée.
+:::
+
+:::{.callout-note}
+# Bibliographie
+Deux références, pour les personnes intéressées : Elguezabal Eleonora, « Mon voisin est-il vigilant ou l’ami des gendarmes ? Participation citoyenne et extension du domaine sécuritaire », *Monde commun*, 25 février 2020, N° 4, nᵒ 1, p. 54‑71 & Gardenier Matthijs, « La communauté au service de la surveillance : capital social, lien social et figure de l’ennemi. Essai de typologie des “Voisins vigilants” », *Revue européenne des sciences sociales*, 2020, vol. 58‑2, nᵒ 2, p. 189‑216.
+
+
+:::
+
+Le fichier contenant les contours des départements a été récupéré grâce au package {{< var cartelette >}} et à sa fonction `charger_carte`, puis nettoyé. 
+
+Les données sur la population départementale sont issues des [estimations](https://www.insee.fr/fr/statistiques/1893198) de population au premier janvier par sexe et âge, réalisées par l'INSEE. Elles ont également été nettoyées. 
+
+# Import
+
+- Assurez vous d'avoir téléchargé les trois fichiers dans un sous-dossier `data`, que vous aurez créé à la racine du dossier correspondant à votre projet R. 
+- Chargez les packages `tidyverse` et {{< var sf >}}
+- Importez les données sur la population de chaque département, avec la fonction `read_csv`. 
+- Importez de même les données sur le nombre de communautés de voisins vigilants par département. 
+- Importez les données géographiques à l'aide de la fonction `st_read`. 
+- Quel est le nombre et le type des variables contenues dans chaque jeu de données ? Quel est le nombre d'observations ?
+
+:::{.callout-tip}
+# Conseil
+Assurez vous d'assigner les trois jeux de données importés à des objets aux noms **explicites**, mais **courts**. 
+:::
+
+# Jointure
+
+L'objectif est de réunir ces trois sources d'informations dans un jeu de données unique.
+
+- Cherchez s'il existe une variable présente dans les 3 jeux de données, qui pourrait servir de clé. Porte-elle partout le même nom ? Est-elle exactement identique d'un jeu de données à l'autre ?
+- En tapant `?left_join` dans la console, consultez l'aide de la fonction `left_join` du package {{< var dplyr >}}. Utilisez cette fonction pour réaliser la jointure.
+
+# Recodage
+
+On souhaite calculer la prévalence de la vigilance, pour chaque département.
+
+- Consultez l'aide de la fonction `mutate` du package {{< var dplyr >}}.
+- Utilisez cette fonction pour ajouter à votre jeu de données une nouvelle variable, donnant le nombre de communautés de voisins vigilants pour 100 000 habitants adultes. C'est cette variable qui va désormais nous intéresser.
+
+# Distribution
+
+- Quelle est la moyenne, la médiane de votre nouvelle variable ? Quels sont les premier et troisième quartiles ? Son minimum et son maximum ? Vous pourrez utiliser la fonction `summary`.
+- Utiliser les fonction `geom_boxplot`, `geom_histogram` et `geom_density` pour visualiser la distribution de la variable. 
+- Utilisez la fonction `geom_sf` pour obtenir une première cartographie.
+- Qu'est-il arrivé à la Corse ?
+- Changez la palette de couleurs.
+
+# Discrétisation
+
+Pour faire des cartes lisibles et efficaces, il est nécessaire de découper en tranches vos variables quantitatives.
+
+- [Étant donné](https://www.larousse.fr/dictionnaires/francais/%C3%A9tant_donn%C3%A9/31312) la distribution de votre variable, quel type de discrétisation vous semble a priori le plus adapté ?
+- À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
+
+# Cartographie
+
+- Cartographiez le nombre de voisins vigilants par département, pour 100 000 habitants adultes,  en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
+- Variez les discrétisations.
+- Essayez différentes palettes de couleurs.

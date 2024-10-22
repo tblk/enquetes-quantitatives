@@ -2,7 +2,12 @@
   {
     "listing": "/exercices.html",
     "items": [
-      "/exercices/data-manipulation.html"
+      "/exercices/exces-mortalite.html",
+      "/exercices/logements_vacants.html",
+      "/exercices/elections-legislatives.html",
+      "/exercices/bombardements-vietnam.html",
+      "/exercices/google-mobility.html",
+      "/exercices/voisins-vigilants.html"
     ]
   },
   {
@@ -17,5 +22,9 @@
       "/programme/indices.html",
       "/programme/emboitements.html"
     ]
+  },
+  {
+    "listing": "/corrections.html",
+    "items": []
   }
 ]

@@ -2,6 +2,7 @@
 title: "Google Mobility"
 description: "Cartographier l'évolution de la mobilité durant la pandémie"
 date: 2024-10-23
+categories: "Niveau 2"
 ---
 
 # Préparation
