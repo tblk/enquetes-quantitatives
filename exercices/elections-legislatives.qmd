@@ -67,7 +67,7 @@ Vous pourrez utiliser la fonction `geom_point` et jouer avec les *scales* suivan
 
 # Discrétisation
 
-- Vue la distribution de la variable du pourcentage d'absentions, quelle distribution vous semble la plus adaptée ? 
+- Vu la distribution de la variable du pourcentage d'absentions, quelle distribution vous semble la plus adaptée ? 
 - À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
 
 # Cartographie

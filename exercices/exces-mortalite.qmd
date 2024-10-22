@@ -88,7 +88,7 @@ Vous voulez combiner le dataframe/objet sf countries et le dataframe créé avec
 
 Vous souhaitez discrétiser la variable `p-score` afin d'en faire une représentation cartographique lisible. 
 
-- Vue la distribution de la variable, quelle distribution vous semble la plus adaptée ?
+- Vu la distribution de la variable, quelle distribution vous semble la plus adaptée ?
 - À l'aide de la fonction `classInt::classIntervals`, procédez à la 
 discrétisation.
 

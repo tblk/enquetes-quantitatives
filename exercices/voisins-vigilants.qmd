@@ -66,7 +66,7 @@ On souhaite calculer la prévalence de la vigilance, pour chaque département.
 
 Pour faire des cartes lisibles et efficaces, il est nécessaire de découper en tranches vos variables quantitatives.
 
-- [Étant donné](https://www.larousse.fr/dictionnaires/francais/%C3%A9tant_donn%C3%A9/31312) la distribution de votre variable, quel type de discrétisation vous semble a priori le plus adapté ?
+- Étant donné la distribution de votre variable, quel type de discrétisation vous semble a priori le plus adapté ?
 - À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
 
 # Cartographie
