@@ -79,6 +79,7 @@ Vous désirez étudiez la distribution de la variable `p-score` que vous venez d
 # Jointure
 
 Vous voulez combiner le dataframe/objet sf countries et le dataframe créé avec la fonction `summarise`.
+
 - Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
 - Y a-t-il des observations (pays) qui apparaissent dans l'un des deux dataframes et pas dans l'autre ? Vous pourrez utiliser la fonction `anti_join` pour le savoir.
 - Réalisez la jointure avec la fonction `left_join`.
