@@ -11,6 +11,10 @@
     ]
   },
   {
+    "listing": "/corrections.html",
+    "items": []
+  },
+  {
     "listing": "/programme.html",
     "items": [
       "/programme/lineaments.html",
@@ -22,9 +26,5 @@
       "/programme/indices.html",
       "/programme/emboitements.html"
     ]
-  },
-  {
-    "listing": "/corrections.html",
-    "items": []
   }
 ]
