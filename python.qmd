@@ -1,0 +1,29 @@
+---
+title: "Python"
+---
+
+# Python
+
+- Créer un nouveau repo github
+- Le cloner
+```{bash}
+#| eval: false
+git clone https://github.com/username/reponame.git
+```
+- Créer les sous-dossiers suivants : `data`, `src`, `notebooks`
+- Créer un [environnement virtuel](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#upgrading-packages) `.venv`, à la racine du dossier.
+- Activer l'environnement virtuel, installer les packages nécessaires. 
+- Créer un fichier `requirements.txt`
+```{bash}
+#| eval: false
+pip freeze > requirements.txt
+```
+- Créer un fichier `.gitignore`, ignorer `data/` et `.venv/`. 
+```{bash}
+#| eval: false
+touch .gitignore
+git add .gitignore
+git commit "add gitignore file"
+```
+
+- add, commit & push
