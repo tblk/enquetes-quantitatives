@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Cet exercice permet de réviser la manipulation de données avec les verbes de {dplyr} et la visualisation avec {ggplot2}. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.">
 
-<title>Exercices – Enquêtes quantitatives</title>
+<title>Contrôles et verbalisations – Enquêtes quantitatives</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +21,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./advent_04_211.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../advent_04_211.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,68 +102,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Exercices – Enquêtes quantitatives">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Contrôles et verbalisations – Enquêtes quantitatives">
+<meta property="og:description" content="Cet exercice permet de réviser la manipulation de données avec les verbes de {dplyr} et la visualisation avec {ggplot2}. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.">
 <meta property="og:site_name" content="Enquêtes quantitatives">
 </head>
 
@@ -141,7 +117,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Enquêtes quantitatives</span>
     </a>
   </div>
@@ -152,27 +128,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./programme.html"> 
+    <a class="nav-link" href="../programme.html"> 
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides.html"> 
+    <a class="nav-link" href="../slides.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./exercices.html" aria-current="page"> 
+    <a class="nav-link" href="../exercices.html"> 
 <span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./corrections.html"> 
+    <a class="nav-link" href="../corrections.html"> 
 <span class="menu-text">Corrections</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./faq.html"> 
+    <a class="nav-link" href="../faq.html"> 
 <span class="menu-text">FAQ</span></a>
   </li>  
 </ul>
@@ -187,21 +163,50 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Clustering">Clustering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Niveau 1">Niveau 1 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Niveau 2">Niveau 2 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Niveau 3">Niveau 3 <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#contexte" id="toc-contexte" class="nav-link active" data-scroll-target="#contexte">Contexte</a></li>
+  <li><a href="#préparation" id="toc-préparation" class="nav-link" data-scroll-target="#préparation">Préparation</a></li>
+  <li><a href="#recodages" id="toc-recodages" class="nav-link" data-scroll-target="#recodages">Recodages</a></li>
+  <li><a href="#graphique" id="toc-graphique" class="nav-link" data-scroll-target="#graphique">Graphique</a></li>
+  <li><a href="#distances" id="toc-distances" class="nav-link" data-scroll-target="#distances">Distances</a></li>
+  <li><a href="#classification-ascendante-hiérarchique" id="toc-classification-ascendante-hiérarchique" class="nav-link" data-scroll-target="#classification-ascendante-hiérarchique">Classification ascendante hiérarchique</a></li>
+  <li><a href="#comprendre-cosine" id="toc-comprendre-cosine" class="nav-link" data-scroll-target="#comprendre-cosine">Comprendre cosine</a></li>
+  <li><a href="#méthodes-daggrégation" id="toc-méthodes-daggrégation" class="nav-link" data-scroll-target="#méthodes-daggrégation">Méthodes d’aggrégation</a></li>
+  <li><a href="#représentation-graphique-1" id="toc-représentation-graphique-1" class="nav-link" data-scroll-target="#représentation-graphique-1">Représentation graphique</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercices</h1>
-</div>
+<h1 class="title">Contrôles et verbalisations</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Niveau 2</div>
+    <div class="quarto-category">Clustering</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Cet exercice permet de réviser la manipulation de données avec les verbes de <code>{dplyr}</code> et la visualisation avec <code>{ggplot2}</code>. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Date de rendu</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">13 novembre 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -211,243 +216,111 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="contexte" class="level1">
+<h1>Contexte</h1>
+<p>Vous disposez de données sur le nombre de contrôles et de verbalisations réalisées par les forces de l’ordre dans différents départements français, lors du premier confinement du printemps 2020. Le but est de classer les départements selon ces deux variables.</p>
+<p>Les variables <code>date_debut</code> et <code>date_fin</code> donnet les bornes entre lesquelles les chiffres des contrôles et verbalisations ont été récoltés.</p>
+</section>
+<section id="préparation" class="level1">
+<h1>Préparation</h1>
+<ul>
+<li>Charger le package <code>{tidyverse}</code> et le package <code>{proxy}</code></li>
+<li>Téléchargez les données, et placez les dans un sous-dossier <code>data</code>.</li>
+<li>Importez les.</li>
+<li>Importez également les données sur la population de chaque département.</li>
+</ul>
+</section>
+<section id="recodages" class="level1">
+<h1>Recodages</h1>
+<ul>
+<li>Gardez uniquement les observations pour lesquelles le nombre de contrôles <strong>et</strong> de verbalisations est renseigné.</li>
+<li>Pour certains départements, on a plusieurs observations. Gardez uniquement celles qui correspondent au <strong>plus grand nombre de jours</strong>.</li>
+<li>Gardez uniquement les départements pour lesquels le nombre de jours d’observation est supérieur ou égal à 20.</li>
+<li>Créez une nouvelle variable donnant le nombre de verbalisations et de contrôles sur 55 jours (la durée du confinement), en supposant que leur rythme journalier est constant sur la période.</li>
+<li>Joignez le dataframe obtenu avec les données de population, et calculez la prévalence des verbalisations et contrôles (nombre de contrôles et verbalisations pour 1000 habitants adultes.)</li>
+</ul>
+</section>
+<section id="graphique" class="level1">
+<h1>Graphique</h1>
+<p>À l’aide de <code>{ggplot2}</code> et de la fonction <code>geom_point</code>, représentez la prévalence des contrôles et des verbalisations dans chaque département : - En abscisses, les contrôles - En ordonnées, les verbalisations - Les noms des départements doivent apparaître sur le graphe</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>L’exercice à faire avant le cours du 23 octobre est <a href="./exercices/google-mobility.html">Google Mobility</a></p>
+<p>Vous pourrez utiliser le package <a href="https://ggrepel.slowkow.com/">ggrepel</a> pour ajuster la position des étiquettes des départements.</p>
 </div>
 </div>
+</section>
+<section id="distances" class="level1">
+<h1>Distances</h1>
+<ul>
+<li>À l’aide de la fonction <code>dist</code>, calculez la distance <strong>euclidienne</strong> entre vos observations.</li>
+<li>À l’aide de la fonction <code>dist</code> du package <code>{proxy}</code> (soit <code>proxy::dist</code>), calculez la distance <strong>cosine</strong> entre les observations.</li>
+<li>En quoi ces deux distances diffèrent-elles ? Quels phénomènes distincts capturent-elles ?</li>
+</ul>
+</section>
+<section id="classification-ascendante-hiérarchique" class="level1">
+<h1>Classification ascendante hiérarchique</h1>
+<ul>
+<li>À l’aide de la fonction <code>hclust</code>, réalisez deux classification ascendantes hiérarchiques de vos observations :
+<ul>
+<li>à partir de la matrice de distance <strong>euclidienne</strong></li>
+<li>à partir de la matrice de distance <strong>cosine</strong></li>
+</ul></li>
+<li>Comparez ces deux classifications.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Représentation graphique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour représenter graphiquement le résultat de votre classification par un <strong>arbre</strong>, vous pourrez appliquer directement la fonction <code>plot</code> au résultat de <code>hclust</code>, ou passer d’abord par la fonction <code>as.dendrogram</code>, soit :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hclust</span>() <span class="sc">|&gt;</span> <span class="fu">as.dendrogram</span>() <span class="sc">|&gt;</span> <span class="fu">plot</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comprendre-cosine" class="level1">
+<h1>Comprendre cosine</h1>
+<p>À partir de vos données initiales, calculez le <strong>taux de verbalisation</strong> pour chaque département (rapport des verbalisations sur les contrôles, multiplié par 100). Calculez la distance entre départements selon cet unique variable, et réalisez une classification ascendante hiérarchique avec hclust. Comparez le résultat avec celui de la CAH sur matrice de distance cosine. Que constatez vous ?</p>
+</section>
+<section id="méthodes-daggrégation" class="level1">
+<h1>Méthodes d’aggrégation</h1>
+<ul>
+<li>Reprenez la classification obtenue à partir de la matrice de distances <strong>euclidiennes</strong>, et essayer les quatre méthodes suivantes pour l’argument <code>method</code> de <code>hclust</code> :
+<ul>
+<li>complete</li>
+<li>single</li>
+<li>average</li>
+<li>ward.D2</li>
+</ul></li>
+</ul>
+<p>Lesquelles vous semblent à éviter ?</p>
+</section>
+<section id="représentation-graphique-1" class="level1">
+<h1>Représentation graphique</h1>
+<ul>
+<li>Revenez à la CAH sur matrice de distances <strong>cosine </strong>. Regardez l’arbre et choisissez un nombre k de classes qui vous semble pertinent. “Coupez” votre arbre en k classes, grâce à la fonction <code>cutree</code>.</li>
+<li>Ajoutez cette partition à votre dataframe initial, sous la forme d’une nouvelle variable appelée <code>clust</code>.</li>
+<li>Reprenez le <code>ggplot</code> que vous avez construit plus haut, et colorez les points en fonction du groupe auquel ils appartiennent, c’est à dire en fonction de <code>clust</code>.</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Niveau 2" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616381458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="506">
-<div class="thumbnail">
-<p><a href="./exercices/exces-mortalite.html" class="no-external"></a></p><a href="./exercices/exces-mortalite.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/exces-mortalite.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/exces-mortalite.html" class="no-external">Excès de mortalité</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/exces-mortalite.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/exces-mortalite.html" class="no-external">Identifier les pays les plus touchés par la pandémie</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/exces-mortalite.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Niveau 1" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616469871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
-<div class="thumbnail">
-<p><a href="./exercices/logements_vacants.html" class="no-external"></a></p><a href="./exercices/logements_vacants.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/logements_vacants.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/logements_vacants.html" class="no-external">Logements vacants</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/logements_vacants.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 1'); return false;">
-Niveau 1
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/logements_vacants.html" class="no-external">Cartographier les logements vides en France</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/logements_vacants.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Niveau 3" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616436754" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="554">
-<div class="thumbnail">
-<p><a href="./exercices/elections-legislatives.html" class="no-external"></a></p><a href="./exercices/elections-legislatives.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/elections-legislatives.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/elections-legislatives.html" class="no-external">Élections législatives</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/elections-legislatives.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 3'); return false;">
-Niveau 3
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/elections-legislatives.html" class="no-external">Cartographier l’absention au premier tour des élections législatives anticipées de 2024</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/elections-legislatives.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Niveau 3" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603350309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="440">
-<div class="thumbnail">
-<p><a href="./exercices/bombardements-vietnam.html" class="no-external"></a></p><a href="./exercices/bombardements-vietnam.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/bombardements-vietnam.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">Bombardements</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/bombardements-vietnam.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 3'); return false;">
-Niveau 3
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">Cartographier les bombardements américains pendant la guerre du Vietnam.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Niveau 2" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603316920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="550">
-<div class="thumbnail">
-<p><a href="./exercices/google-mobility.html" class="no-external"></a></p><a href="./exercices/google-mobility.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/google-mobility.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/google-mobility.html" class="no-external">Google Mobility</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/google-mobility.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/google-mobility.html" class="no-external">Cartographier l’évolution de la mobilité durant la pandémie</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/google-mobility.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Niveau 1" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616404521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="551">
-<div class="thumbnail">
-<p><a href="./exercices/voisins-vigilants.html" class="no-external"></a></p><a href="./exercices/voisins-vigilants.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/voisins-vigilants.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/voisins-vigilants.html" class="no-external">Voisins vigilants</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/voisins-vigilants.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 1'); return false;">
-Niveau 1
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/voisins-vigilants.html" class="no-external">Cartographier la distribution des communautés de voisins vigilants en France</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/voisins-vigilants.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Niveau 2,Clustering" data-listing-date-sort="1731452400000" data-listing-file-modified-sort="1731079883251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="565">
-<div class="thumbnail">
-<p><a href="./exercices/controles-et-verbalisations.html" class="no-external"></a></p><a href="./exercices/controles-et-verbalisations.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/controles-et-verbalisations.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external">Contrôles et verbalisations</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Clustering'); return false;">
-Clustering
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external">Cet exercice permet de réviser la manipulation de données avec les verbes de <code>{dplyr}</code> et la visualisation avec <code>{ggplot2}</code>. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external">
-<div class="listing-date">
-13 nov. 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Aucun article correspondant
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

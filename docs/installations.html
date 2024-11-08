@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercices – Enquêtes quantitatives</title>
+<title>Installations – Enquêtes quantitatives</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +65,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./advent_04_211.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,68 +101,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Exercices – Enquêtes quantitatives">
+<meta property="og:title" content="Installations – Enquêtes quantitatives">
 <meta property="og:site_name" content="Enquêtes quantitatives">
 </head>
 
@@ -164,7 +138,7 @@ window.Quarto = {
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./exercices.html" aria-current="page"> 
+    <a class="nav-link" href="./exercices.html"> 
 <span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
@@ -187,14 +161,21 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Clustering">Clustering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Niveau 1">Niveau 1 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Niveau 2">Niveau 2 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Niveau 3">Niveau 3 <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r">R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercices</h1>
+<h1 class="title">Installations</h1>
 </div>
 
 
@@ -211,243 +192,49 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="r" class="level1">
+<h1>R</h1>
+<ul>
+<li>Créez un dossier <code>datascience</code> sur votre Desktop/Bureau.</li>
+<li>Créez les sous-dossiers suivants : <code>data</code>, <code>scripts</code>.</li>
+<li>Créez un projet R à partir de ce dossier.</li>
+<li>Installez les packages suivants (si ce n’est pas déjà fait) : tidyverse, here, nanoparquet, sf, pdftools, udpipe.</li>
+</ul>
+</section>
+<section id="python" class="level1">
+<h1>Python</h1>
+<ul>
+<li>Créer un nouveau repo github</li>
+<li>Le cloner</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/reponame.git</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-Note
+<ul>
+<li>Créer les sous-dossiers suivants : <code>data</code>, <code>src</code>, <code>notebooks</code></li>
+<li>Créer un <a href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#upgrading-packages">environnement virtuel</a> <code>.venv</code>, à la racine du dossier.</li>
+<li>Activer l’environnement virtuel, installer les packages nécessaires.</li>
+<li>Créer un fichier <code>requirements.txt</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>Créer un fichier <code>.gitignore</code>, ignorer <code>data/</code> et <code>.venv/</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .gitignore</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="st">"add gitignore file"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-body-container callout-body">
-<p>L’exercice à faire avant le cours du 23 octobre est <a href="./exercices/google-mobility.html">Google Mobility</a></p>
-</div>
-</div>
+<ul>
+<li>add, commit &amp; push</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Niveau 2" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616381458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="506">
-<div class="thumbnail">
-<p><a href="./exercices/exces-mortalite.html" class="no-external"></a></p><a href="./exercices/exces-mortalite.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/exces-mortalite.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/exces-mortalite.html" class="no-external">Excès de mortalité</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/exces-mortalite.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/exces-mortalite.html" class="no-external">Identifier les pays les plus touchés par la pandémie</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/exces-mortalite.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Niveau 1" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616469871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
-<div class="thumbnail">
-<p><a href="./exercices/logements_vacants.html" class="no-external"></a></p><a href="./exercices/logements_vacants.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/logements_vacants.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/logements_vacants.html" class="no-external">Logements vacants</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/logements_vacants.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 1'); return false;">
-Niveau 1
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/logements_vacants.html" class="no-external">Cartographier les logements vides en France</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/logements_vacants.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Niveau 3" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616436754" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="554">
-<div class="thumbnail">
-<p><a href="./exercices/elections-legislatives.html" class="no-external"></a></p><a href="./exercices/elections-legislatives.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/elections-legislatives.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/elections-legislatives.html" class="no-external">Élections législatives</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/elections-legislatives.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 3'); return false;">
-Niveau 3
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/elections-legislatives.html" class="no-external">Cartographier l’absention au premier tour des élections législatives anticipées de 2024</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/elections-legislatives.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Niveau 3" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603350309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="440">
-<div class="thumbnail">
-<p><a href="./exercices/bombardements-vietnam.html" class="no-external"></a></p><a href="./exercices/bombardements-vietnam.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/bombardements-vietnam.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">Bombardements</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/bombardements-vietnam.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 3'); return false;">
-Niveau 3
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">Cartographier les bombardements américains pendant la guerre du Vietnam.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/bombardements-vietnam.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Niveau 2" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729603316920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="550">
-<div class="thumbnail">
-<p><a href="./exercices/google-mobility.html" class="no-external"></a></p><a href="./exercices/google-mobility.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/google-mobility.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/google-mobility.html" class="no-external">Google Mobility</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/google-mobility.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/google-mobility.html" class="no-external">Cartographier l’évolution de la mobilité durant la pandémie</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/google-mobility.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Niveau 1" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1729616404521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="551">
-<div class="thumbnail">
-<p><a href="./exercices/voisins-vigilants.html" class="no-external"></a></p><a href="./exercices/voisins-vigilants.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/voisins-vigilants.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/voisins-vigilants.html" class="no-external">Voisins vigilants</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/voisins-vigilants.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 1'); return false;">
-Niveau 1
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/voisins-vigilants.html" class="no-external">Cartographier la distribution des communautés de voisins vigilants en France</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/voisins-vigilants.html" class="no-external">
-<div class="listing-date">
-23 oct. 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Niveau 2,Clustering" data-listing-date-sort="1731452400000" data-listing-file-modified-sort="1731079883251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="565">
-<div class="thumbnail">
-<p><a href="./exercices/controles-et-verbalisations.html" class="no-external"></a></p><a href="./exercices/controles-et-verbalisations.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./exercices/controles-et-verbalisations.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external">Contrôles et verbalisations</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Niveau 2'); return false;">
-Niveau 2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Clustering'); return false;">
-Clustering
-</div>
-</div>
-<div class="listing-description">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external">Cet exercice permet de réviser la manipulation de données avec les verbes de <code>{dplyr}</code> et la visualisation avec <code>{ggplot2}</code>. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./exercices/controles-et-verbalisations.html" class="no-external">
-<div class="listing-date">
-13 nov. 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Aucun article correspondant
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
