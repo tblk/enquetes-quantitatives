@@ -71,7 +71,7 @@ hclust() |> as.dendrogram() |> plot()
    + average
    + ward.D2
    
-Lesquelles vous semblent à éviter ?
+- Que constatez vous lorsque vous représentez l'arbre ?
 
 # Représentation graphique
 

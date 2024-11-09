@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Cet exercice permet de réviser la manipulation de données avec les verbes de {dplyr} et la visualisation avec {ggplot2}. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.">
+<meta name="description" content="À partir d’un jeu de données contenant des variables catégorielles, ordonnées et non ordonnées, produire une matrice de distances avec la métrique de Gower. Puis mettre en œuvre les méthodes de réduction de la dimensionnalité et de clustering suivantes : (Metric) Multidimensionnal Scaling (MDS), k-medoids, Agglomerative Hierarchical Clustering.">
 
-<title>Contrôles et verbalisations – Enquêtes quantitatives</title>
+<title>La Vie en Confinement – Enquêtes quantitatives</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,8 +105,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Contrôles et verbalisations – Enquêtes quantitatives">
-<meta property="og:description" content="Cet exercice permet de réviser la manipulation de données avec les verbes de {dplyr} et la visualisation avec {ggplot2}. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.">
+<meta property="og:title" content="La Vie en Confinement – Enquêtes quantitatives">
+<meta property="og:description" content="À partir d’un jeu de données contenant des variables catégorielles, ordonnées et non ordonnées, produire une matrice de distances avec la métrique de Gower. Puis mettre en œuvre les méthodes de réduction de la dimensionnalité et de clustering suivantes : (Metric) Multidimensionnal Scaling (MDS), k-medoids, Agglomerative Hierarchical Clustering.">
 <meta property="og:site_name" content="Enquêtes quantitatives">
 </head>
 
@@ -170,12 +170,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#contexte" id="toc-contexte" class="nav-link active" data-scroll-target="#contexte">Contexte</a></li>
   <li><a href="#préparation" id="toc-préparation" class="nav-link" data-scroll-target="#préparation">Préparation</a></li>
   <li><a href="#recodages" id="toc-recodages" class="nav-link" data-scroll-target="#recodages">Recodages</a></li>
-  <li><a href="#graphique" id="toc-graphique" class="nav-link" data-scroll-target="#graphique">Graphique</a></li>
-  <li><a href="#distances" id="toc-distances" class="nav-link" data-scroll-target="#distances">Distances</a></li>
-  <li><a href="#classification-ascendante-hiérarchique" id="toc-classification-ascendante-hiérarchique" class="nav-link" data-scroll-target="#classification-ascendante-hiérarchique">Classification ascendante hiérarchique</a></li>
-  <li><a href="#comprendre-cosine" id="toc-comprendre-cosine" class="nav-link" data-scroll-target="#comprendre-cosine">Comprendre cosine</a></li>
-  <li><a href="#méthodes-daggrégation" id="toc-méthodes-daggrégation" class="nav-link" data-scroll-target="#méthodes-daggrégation">Méthodes d’aggrégation</a></li>
-  <li><a href="#représentation-graphique-1" id="toc-représentation-graphique-1" class="nav-link" data-scroll-target="#représentation-graphique-1">Représentation graphique</a></li>
+  <li><a href="#matrice-de-distance" id="toc-matrice-de-distance" class="nav-link" data-scroll-target="#matrice-de-distance">Matrice de distance</a></li>
+  <li><a href="#multidimensionnal-scaling" id="toc-multidimensionnal-scaling" class="nav-link" data-scroll-target="#multidimensionnal-scaling">Multidimensionnal Scaling</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">Clustering</a></li>
   </ul>
 </nav>
     </div>
@@ -184,16 +181,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contrôles et verbalisations</h1>
+<h1 class="title">La Vie en Confinement</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Niveau 2</div>
+    <div class="quarto-category">Niveau 3</div>
+    <div class="quarto-category">Distances</div>
     <div class="quarto-category">Clustering</div>
+    <div class="quarto-category">Dimension reduction</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Cet exercice permet de réviser la manipulation de données avec les verbes de <code>{dplyr}</code> et la visualisation avec <code>{ggplot2}</code>. Dans la seconde partie, on se familiarise avec la classification ascendante hiérarchique et quelques métriques de distance.
+    À partir d’un jeu de données contenant des variables catégorielles, ordonnées et non ordonnées, produire une matrice de distances avec la métrique de Gower. Puis mettre en œuvre les méthodes de réduction de la dimensionnalité et de clustering suivantes : <em>(Metric) Multidimensionnal Scaling</em> (MDS), <em>k-medoids</em>, <em>Agglomerative Hierarchical Clustering</em>.
   </div>
 </div>
 
@@ -218,31 +217,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="contexte" class="level1">
 <h1>Contexte</h1>
-<p>Vous disposez de données sur le nombre de contrôles et de verbalisations réalisées par les forces de l’ordre dans différents départements français, lors du premier confinement du printemps 2020. Le but est de classer les départements selon ces deux variables.</p>
-<p>Les variables <code>date_debut</code> et <code>date_fin</code> donnet les bornes entre lesquelles les chiffres des contrôles et verbalisations ont été récoltés.</p>
+<p>Les données suivantes sont issues de l’enquête <em>La Vie en Confinement</em>. L’échantillon sur lequel vous allez travailler est parfaitement anonymisé et ne contient aucune information socio-démographique, seulement un ensemble de 15 pratiques. Le but est de réaliser une classification de ces pratiques, <em>sans</em> passer par la combinaison de méthodes standard qui consiste à : 1) réduire la dimensionnalité du jeu de données avec une Analyse des Correspondances Multiples 2) Réaliser une classification ascendante hiérarchique sur les composantes principales obtenues.</p>
 </section>
 <section id="préparation" class="level1">
 <h1>Préparation</h1>
 <ul>
-<li>Charger le package <code>{tidyverse}</code> et le package <code>{proxy}</code></li>
-<li>Téléchargez les données, et placez les dans un sous-dossier <code>data</code>.</li>
-<li>Importez les.</li>
-<li>Importez également les données sur la population de chaque département.</li>
+<li>Chargez les packages <code>{tidyverse}</code> et <code>{cluster}</code></li>
+<li>Importez les données.</li>
+<li>Quel est le type des différentes variables ? Vous pourrez utiliser la fonction <code>glimpse</code> de <code>{dplyr}</code>.</li>
 </ul>
 </section>
 <section id="recodages" class="level1">
 <h1>Recodages</h1>
-<ul>
-<li>Gardez uniquement les observations pour lesquelles le nombre de contrôles <strong>et</strong> de verbalisations est renseigné.</li>
-<li>Pour certains départements, on a plusieurs observations. Gardez uniquement celles qui correspondent au <strong>plus grand nombre de jours</strong>.</li>
-<li>Gardez uniquement les départements pour lesquels le nombre de jours d’observation est supérieur ou égal à 20.</li>
-<li>Créez une nouvelle variable donnant le nombre de verbalisations et de contrôles sur 55 jours (la durée du confinement), en supposant que leur rythme journalier est constant sur la période.</li>
-<li>Joignez le dataframe obtenu avec les données de population, et calculez la prévalence des verbalisations et contrôles (nombre de contrôles et verbalisations pour 1000 habitants adultes.)</li>
-</ul>
-</section>
-<section id="graphique" class="level1">
-<h1>Graphique</h1>
-<p>À l’aide de <code>{ggplot2}</code> et de la fonction <code>geom_point</code>, représentez la prévalence des contrôles et des verbalisations dans chaque département : - En abscisses, les contrôles - En ordonnées, les verbalisations - Les noms des départements doivent apparaître sur le graphe</p>
+<p>Le but de ces recodages est de changer le type des variables de manière à tirer pleinement parti des options qu’offre la méthode de Gower. - Un certain nombre des variables du jeu de données sont <strong>ordonnées</strong>. Lesquelles ? - Convertissez ces variables en <em>ordered factor</em>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -253,69 +240,40 @@ Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Vous pourrez utiliser le package <a href="https://ggrepel.slowkow.com/">ggrepel</a> pour ajuster la position des étiquettes des départements.</p>
-</div>
-</div>
-</section>
-<section id="distances" class="level1">
-<h1>Distances</h1>
-<ul>
-<li>À l’aide de la fonction <code>dist</code>, calculez la distance <strong>euclidienne</strong> entre vos observations.</li>
-<li>À l’aide de la fonction <code>dist</code> du package <code>{proxy}</code> (soit <code>proxy::dist</code>), calculez la distance <strong>cosine</strong> entre les observations.</li>
-<li>En quoi ces deux distances diffèrent-elles ? Quels phénomènes distincts capturent-elles ?</li>
-</ul>
-</section>
-<section id="classification-ascendante-hiérarchique" class="level1">
-<h1>Classification ascendante hiérarchique</h1>
-<ul>
-<li>À l’aide de la fonction <code>hclust</code>, réalisez deux classification ascendantes hiérarchiques de vos observations :
-<ul>
-<li>à partir de la matrice de distance <strong>euclidienne</strong></li>
-<li>à partir de la matrice de distance <strong>cosine</strong></li>
-</ul></li>
-<li>Comparez ces deux classifications.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Représentation graphique
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Pour représenter graphiquement le résultat de votre classification par un <strong>arbre</strong>, vous pourrez appliquer directement la fonction <code>plot</code> au résultat de <code>hclust</code>, ou passer d’abord par la fonction <code>as.dendrogram</code>, soit :</p>
+<p>Pour cela, vous pourrez utiliser la fonction factor, et deux de ses arguments. Mettons par exemple que vous ayez une variable (un vecteur) de ce type :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hclust</span>() <span class="sc">|&gt;</span> <span class="fu">as.dendrogram</span>() <span class="sc">|&gt;</span> <span class="fu">plot</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Bon"</span>, <span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Très bon"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Il y a un ordre naturel dans les modalités de cette variable. Pour l’expliciter, vous pouvez utiliser la fonction <code>factor</code> ainsi :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">factor</span>(v,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Bon"</span>, <span class="st">"Très bon"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="comprendre-cosine" class="level1">
-<h1>Comprendre cosine</h1>
-<p>À partir de vos données initiales, calculez le <strong>taux de verbalisation</strong> pour chaque département (rapport des verbalisations sur les contrôles, multiplié par 100). Calculez la distance entre départements selon cet unique variable, et réalisez une classification ascendante hiérarchique avec hclust. Comparez le résultat avec celui de la CAH sur matrice de distance cosine. Que constatez vous ?</p>
-</section>
-<section id="méthodes-daggrégation" class="level1">
-<h1>Méthodes d’aggrégation</h1>
 <ul>
-<li>Reprenez la classification obtenue à partir de la matrice de distances <strong>euclidiennes</strong>, et essayer les quatre méthodes suivantes pour l’argument <code>method</code> de <code>hclust</code> :
-<ul>
-<li>complete</li>
-<li>single</li>
-<li>average</li>
-<li>ward.D2</li>
-</ul></li>
-<li>Que constatez vous lorsque vous représentez l’arbre ?</li>
+<li>D’autres variables du jeu de données sont binaires. Laissez les ainsi.</li>
+<li>Enfin, d’autres variables ont des modalités incommensurables. Vous pouvez simplement les recoder en facteurs (avec la fonction <code>factor</code>).</li>
 </ul>
 </section>
-<section id="représentation-graphique-1" class="level1">
-<h1>Représentation graphique</h1>
-<ul>
-<li>Revenez à la CAH sur matrice de distances <strong>cosine </strong>. Regardez l’arbre et choisissez un nombre k de classes qui vous semble pertinent. “Coupez” votre arbre en k classes, grâce à la fonction <code>cutree</code>.</li>
-<li>Ajoutez cette partition à votre dataframe initial, sous la forme d’une nouvelle variable appelée <code>clust</code>.</li>
-<li>Reprenez le <code>ggplot</code> que vous avez construit plus haut, et colorez les points en fonction du groupe auquel ils appartiennent, c’est à dire en fonction de <code>clust</code>.</li>
-</ul>
+<section id="matrice-de-distance" class="level1">
+<h1>Matrice de distance</h1>
+<p>À l’aide de la fonction <code>daisy</code> du package <code>{cluster}</code>, calculez la matrice de distances correspondant à vos données (autrement dit, l’ensemble des distances entre chacun des individus). Vous veillerez à bien spécifier le <strong>type</strong> des différentes variables.</p>
+</section>
+<section id="multidimensionnal-scaling" class="level1">
+<h1>Multidimensionnal Scaling</h1>
+<p>Afin de visualiser les distances entre individus dans un espace de dimensions réduites, vous utilisez la technique dite (en anglais) : <em>Multidimensionnal Scaling</em>. Vous utiliserez pour cela la fonction <code>cmdscale</code> de R base, en précisant que vous désirez retenir deux dimensions seulement.</p>
+<p>À partir du résultat retourné par <code>cmdscale</code>, représentez graphiquement vos données sous la forme d’un nuage de points, avec <code>{ggplot2}</code>.</p>
+</section>
+<section id="clustering" class="level1">
+<h1>Clustering</h1>
+<p>Réalisez deux partitions de vos données en k groupes (où il vous appartient de déterminer le nombre k optimal, par exemple en regardant le nuage de points obtenu dans la section précédente).</p>
+<ol type="1">
+<li>Avec l’algorithme <em>k-medoids</em> implémenté dans la fonction <code>pam</code> du package <code>{cluster}</code>.</li>
+<li>Avec une classification ascendante hiérarchique (fonction hclust).</li>
+</ol>
+<p>Entre autres choses, les deux fonctions renvoient un vecteur contenant la classe assignée à chaque individu. Ajoutez ces deux variables au jeu de données initial sous les noms <code>group_pam</code> et <code>group_hclust</code>.</p>
 
 
 </section>
