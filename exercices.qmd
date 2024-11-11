@@ -6,7 +6,3 @@ listing:
   sort-ui: false
   categories: true
 ---
-
-:::{.callout-note}
-L'exercice à faire avant le cours du 23 octobre est [Google Mobility](exercices/google-mobility.qmd)
-:::
