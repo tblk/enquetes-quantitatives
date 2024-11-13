@@ -1489,5 +1489,131 @@
     "title": "Embranchements",
     "section": "k-medoids",
     "text": "k-medoids\n\nAu lieu de centroïdes on a des médoïdes.\nCentroïdes : dans chaque dimension, leur coordonnée est celle de la moyenne des points de leur groupe. Ce sont des points abstraits/fictifs, ils ne correspondent pas à des individus réels du jeu de données.\nMédoïdes : les individus tels que la somme des carrés des distances aux points du groupe est minimale. Des individus “représentatifs”. Ce sont des individus réels, existant dans le jeu de données.\nAvantages :\n\nRobustesse face aux valeurs extrêmes.\nOn peut partir d’une matrice de distances.\n\nInconvénients : les calculs sont beaucoup plus lourds/lents que pour les k-means.\nImplémentation : fonction pam de {cluster}."
+  },
+  {
+    "objectID": "kmeans.html#wikipédia",
+    "href": "kmeans.html#wikipédia",
+    "title": "k-means",
+    "section": "Wikipédia",
+    "text": "Wikipédia\n\nÉtant donné un ensemble de points et un entier k, le problème est de trouver une partition de ces points en k groupes minimisant la variance à l’intérieur de chaque groupe. Plus précisément, il s’agit de minimiser la somme des carrés des distances de chaque point à la moyenne des points de son groupe."
+  },
+  {
+    "objectID": "kmeans.html#problème",
+    "href": "kmeans.html#problème",
+    "title": "k-means",
+    "section": "Problème",
+    "text": "Problème\nLe nombre de partitions possibles d’un ensemble de n éléments croît exponentiellement avec n.\n\n\n\n\n\n\nExemple\n\n\nIl y a 580 606 446 partitions possibles de 20 éléments en 3 classes."
+  },
+  {
+    "objectID": "kmeans.html#heuristique",
+    "href": "kmeans.html#heuristique",
+    "title": "k-means",
+    "section": "Heuristique",
+    "text": "Heuristique\nAvec Allison Horst"
+  },
+  {
+    "objectID": "kmeans.html#données",
+    "href": "kmeans.html#données",
+    "title": "k-means",
+    "section": "Données",
+    "text": "Données"
+  },
+  {
+    "objectID": "kmeans.html#groupes",
+    "href": "kmeans.html#groupes",
+    "title": "k-means",
+    "section": "Groupes",
+    "text": "Groupes"
+  },
+  {
+    "objectID": "kmeans.html#centroïdes-aléatoires",
+    "href": "kmeans.html#centroïdes-aléatoires",
+    "title": "k-means",
+    "section": "Centroïdes aléatoires",
+    "text": "Centroïdes aléatoires"
+  },
+  {
+    "objectID": "kmeans.html#allouer-les-points",
+    "href": "kmeans.html#allouer-les-points",
+    "title": "k-means",
+    "section": "Allouer les points",
+    "text": "Allouer les points"
+  },
+  {
+    "objectID": "kmeans.html#recalculer-les-centroïdes",
+    "href": "kmeans.html#recalculer-les-centroïdes",
+    "title": "k-means",
+    "section": "Recalculer les centroïdes",
+    "text": "Recalculer les centroïdes"
+  },
+  {
+    "objectID": "kmeans.html#allouer-les-points-1",
+    "href": "kmeans.html#allouer-les-points-1",
+    "title": "k-means",
+    "section": "Allouer les points",
+    "text": "Allouer les points"
+  },
+  {
+    "objectID": "kmeans.html#recalculer-les-centroïdes-1",
+    "href": "kmeans.html#recalculer-les-centroïdes-1",
+    "title": "k-means",
+    "section": "Recalculer les centroïdes",
+    "text": "Recalculer les centroïdes"
+  },
+  {
+    "objectID": "kmeans.html#allouer-les-points-2",
+    "href": "kmeans.html#allouer-les-points-2",
+    "title": "k-means",
+    "section": "Allouer les points",
+    "text": "Allouer les points"
+  },
+  {
+    "objectID": "kmeans.html#recalculer-les-centroïdes-2",
+    "href": "kmeans.html#recalculer-les-centroïdes-2",
+    "title": "k-means",
+    "section": "Recalculer les centroïdes",
+    "text": "Recalculer les centroïdes"
+  },
+  {
+    "objectID": "kmeans.html#allouer-les-points-3",
+    "href": "kmeans.html#allouer-les-points-3",
+    "title": "k-means",
+    "section": "Allouer les points",
+    "text": "Allouer les points"
+  },
+  {
+    "objectID": "kmeans.html#recalculer-les-centroïdes-3",
+    "href": "kmeans.html#recalculer-les-centroïdes-3",
+    "title": "k-means",
+    "section": "Recalculer les centroïdes",
+    "text": "Recalculer les centroïdes"
+  },
+  {
+    "objectID": "kmeans.html#allouer-les-points-4",
+    "href": "kmeans.html#allouer-les-points-4",
+    "title": "k-means",
+    "section": "Allouer les points",
+    "text": "Allouer les points"
+  },
+  {
+    "objectID": "kmeans.html#recalculer-les-centroïdes-4",
+    "href": "kmeans.html#recalculer-les-centroïdes-4",
+    "title": "k-means",
+    "section": "Recalculer les centroïdes",
+    "text": "Recalculer les centroïdes"
+  },
+  {
+    "objectID": "kmeans.html#allouer-les-points-5",
+    "href": "kmeans.html#allouer-les-points-5",
+    "title": "k-means",
+    "section": "Allouer les points",
+    "text": "Allouer les points"
+  },
+  {
+    "objectID": "kmeans.html#recalculer-les-centroïdes-5",
+    "href": "kmeans.html#recalculer-les-centroïdes-5",
+    "title": "k-means",
+    "section": "Recalculer les centroïdes",
+    "text": "Recalculer les centroïdes"
   }
 ]

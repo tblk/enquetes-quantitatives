@@ -164,6 +164,8 @@ Calculez manuellement la distance entre les individus 1 et 2. Si ce que vous ave
 
 # Principal Components Analysis {.smaller}
 
+## Principe
+
 - Réduire la dimension d'un jeu de données contenant n (= trop de) variables **numériques**.
 - En remplaçant les n variables par un nombre réduit (généralement 2 ou 3, mais cela peut être plus) de "super-variables".
 - Celles-ci sont des **combinaisons linéaires** des variables de départ.
@@ -242,6 +244,8 @@ viz_individuals(r, extra_quali = sommets$sexe)
 - Sensible aux valeurs extrêmes/individus singuliers/outliers.
 
 # Multidimensional scaling {.smaller}
+
+## Principe
 
 - Projette les observations dans un espace (généralement à deux dimensions) tel que les distances initiales soient au maximum préservées.
 - Fonctions : `cmdscale` ou `dimensio::pcoa`

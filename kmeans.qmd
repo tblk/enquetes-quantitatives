@@ -1,7 +1,7 @@
 ---
 title: "k-means"
 author: "Théo Boulakia"
-date: 2024-11-06
+date: 2024-11-13
 date-format: long
 format: revealjs
 lang: fr
@@ -49,7 +49,7 @@ kmi = kmeans_iterations(df,
 
 > Étant donné un ensemble de points et un entier k, le problème est de trouver une partition de ces points en k groupes minimisant la variance à l'intérieur de chaque groupe. Plus précisément, il s'agit de minimiser la somme des carrés des distances de chaque point à la moyenne des points de son groupe. 
 
-# Problème
+## Problème
 
 Le nombre de partitions possibles d'un ensemble de n éléments croît exponentiellement avec n.
 
