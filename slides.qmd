@@ -12,3 +12,10 @@ title: "Slides"
 # Couleurs du continu
 
 [Cartes Choroplèthes](choropleth-maps.qmd)
+
+# Embranchements
+
+[Embranchements](embranchements.qmd)
+
+
+[k-means](kmeans.qmd)

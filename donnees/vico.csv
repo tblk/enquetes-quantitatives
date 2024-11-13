@@ -1,0 +1,1001 @@
+att,atttype,attheure,dist,sortie,sortiequi,protecdom_1,protecdom_2,protecdom_4,protecdom_6,protecdom_8,confin_1,confin_2,confin_7,vote
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,C'est variable,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Jamais,Souvent,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Rarement,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Jamais ou presque jamais,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Toujours,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Toujours,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Le plus souvent,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Le plus souvent,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Le plus souvent,Souvent,Une fois par jour au plus,Avec personnes de l'extérieur,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Toujours,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Le plus souvent,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Souvent,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,C'est variable,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Jamais ou presque jamais,Imprimée,Jamais,Souvent,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,C'est variable,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,C'est variable,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Rarement,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Le plus souvent,Rarement,Plusieurs fois par jour,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,C'est variable,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Jamais,Souvent,Plusieurs fois par jour,C'est variable,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,Voter
+Jamais ou presque jamais,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,C'est variable,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Rarement,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Parfois,Manuscrite,Toujours,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Le plus souvent,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,C'est variable,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Le plus souvent,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Rarement,Une fois par jour au plus,C'est variable,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,NA,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Le plus souvent,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Parfois,Imprimée,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,C'est variable,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,C'est variable,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Toujours,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,NA,Jamais,C'est variable,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Le plus souvent,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,Voter
+Jamais ou presque jamais,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Toujours,Souvent,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Le plus souvent,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,C'est variable,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,NA,Jamais,Une fois par jour au plus,Avec personnes de l'extérieur,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,NA,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Toujours,Souvent,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,C'est variable,Parfois,Je ne sais pas,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Parfois,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Numérique,Jamais,Souvent,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Manuscrite,Parfois,Je ne sais pas,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,NA,Jamais,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Parfois,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Le plus souvent,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Parfois,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Rarement,Plusieurs fois par jour,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,NA,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Parfois,Jamais,Plusieurs fois par jour,C'est variable,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Souvent,Plusieurs fois par jour,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,C'est variable,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,C'est variable,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,Voter
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec personnes de l'extérieur,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,C'est variable,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,NA
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Le plus souvent,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Parfois,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,Souvent,Plusieurs fois par jour,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,Voter
+Toujours,Imprimée,Toujours,Je ne sais pas,Plusieurs fois par jour,C'est variable,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,C'est variable,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Le plus souvent,Imprimée,Toujours,Souvent,Plusieurs fois par jour,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,Voter
+Le plus souvent,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,C'est variable,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,Voter
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Je ne sais pas,Plusieurs fois par jour,Seul(e),FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Le plus souvent,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,Voter
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Le plus souvent,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,NA,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Souvent,Plusieurs fois par jour,Avec cohabitant(s),TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Le plus souvent,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Le plus souvent,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,NA,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Le plus souvent,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,C'est variable,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+NA,NA,NA,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec personnes de l'extérieur,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,NA,NA,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,C'est variable,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,C'est variable,Le plus souvent,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,C'est variable,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Toujours,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Jamais ou presque jamais,Imprimée,Jamais,Souvent,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Parfois,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Le plus souvent,Numérique,Toujours,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Le plus souvent,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,C'est variable,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,Voter
+Le plus souvent,Numérique,Toujours,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Jamais,Souvent,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Le plus souvent,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,Voter
+Toujours,Numérique,Toujours,Parfois,Une fois par jour au plus,C'est variable,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,Voter
+Le plus souvent,Numérique,Parfois,NA,Jamais,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Toujours,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Le plus souvent,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+NA,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,NA,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Rarement,Plusieurs fois par jour,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Parfois,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Le plus souvent,Numérique,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Toujours,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Le plus souvent,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Manuscrite,Jamais,Souvent,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+NA,NA,NA,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Le plus souvent,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Parfois,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Le plus souvent,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,Voter
+Parfois,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,NA,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Le plus souvent,Imprimée,Jamais,Parfois,Plusieurs fois par jour,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,NA,Jamais,C'est variable,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Avec cohabitant(s),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Jamais,Rarement,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+NA,NA,NA,NA,Jamais,NA,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Parfois,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Toujours,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,Voter
+Toujours,Numérique,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Je ne sais pas,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Parfois,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Manuscrite,Jamais,Souvent,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,Parfois,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,C'est variable,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,C'est variable,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Le plus souvent,Rarement,Plusieurs fois par jour,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Le plus souvent,Souvent,Plusieurs fois par jour,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Parfois,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Imprimée,Jamais,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Parfois,Souvent,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Plusieurs fois par jour,C'est variable,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Parfois,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Plusieurs fois par jour,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Parfois,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,C'est variable,Jamais,NA,Jamais,C'est variable,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Toujours,Jamais,Plusieurs fois par jour,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Souvent,Plusieurs fois par jour,Seul(e),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Souvent,Une fois par jour au plus,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Souvent,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+NA,NA,NA,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Toujours,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,Voter
+Toujours,Imprimée,Parfois,Souvent,Plusieurs fois par jour,Seul(e),TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Le plus souvent,Numérique,Parfois,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Manuscrite,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Manuscrite,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Jamais,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Le plus souvent,Parfois,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,Voter
+Toujours,Imprimée,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Numérique,Parfois,Jamais,Une fois par jour au plus,C'est variable,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Imprimée,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Toujours,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Imprimée,Parfois,Parfois,Une fois par jour au plus,Avec cohabitant(s),TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,Voter
+Toujours,Numérique,Parfois,Rarement,Une fois par jour au plus,Avec cohabitant(s),FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,Voter
+Toujours,Manuscrite,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Le plus souvent,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,NA,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Numérique,Toujours,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Parfois,Souvent,Une fois par jour au plus,Seul(e),TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Le plus souvent,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,Voter
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Avec cohabitant(s),TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,Jamais,Plusieurs fois par jour,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons sanitaires)
+Toujours,Imprimée,Jamais,NA,Jamais,Seul(e),TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,Voter
+Toujours,Numérique,Jamais,NA,Jamais,Avec cohabitant(s),FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,S'abstenir (raisons diverses)
+Toujours,Imprimée,Jamais,Rarement,Une fois par jour au plus,Seul(e),FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter
+Toujours,C'est variable,Jamais,Jamais,Une fois par jour au plus,Seul(e),FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,Voter

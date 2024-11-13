@@ -1,0 +1,106 @@
+---
+title: "k-means"
+author: "Théo Boulakia"
+date: 2024-11-06
+date-format: long
+format: revealjs
+lang: fr
+---
+
+```{r packages}
+library(tidyverse)
+```
+
+```{r}
+fs::path_home("cours", "scripts", "functions.R") |> 
+  source()
+```
+
+```{r theme}
+theme_set(theme_minimal(base_family = "serif"))
+```
+
+```{r seed}
+set.seed(874)
+```
+
+```{r data}
+ng = 300
+n = ng * 3
+centers = data.frame(x = c(1, 2, 3),
+                     y = c(1, 2, 1))
+df = data.frame(x = rnorm(n = n, mean = 0, sd = 0.4),
+                y = rnorm(n = n, mean = 0, sd = 0.4),
+                cx = c(rep(1, ng), rep(2, ng), rep(3, ng)),
+                cy = c(rep(1, ng), rep(2, ng), rep(1, ng))) |> 
+  dplyr::mutate(x = cx + x,
+                y = cy + y) |> 
+  dplyr::select(x, y)
+```
+
+```{r result}
+max_iter = 7
+kmi = kmeans_iterations(df,
+                        centers = 3,
+                        max_iterations = max_iter)
+```
+
+## Wikipédia
+
+> Étant donné un ensemble de points et un entier k, le problème est de trouver une partition de ces points en k groupes minimisant la variance à l'intérieur de chaque groupe. Plus précisément, il s'agit de minimiser la somme des carrés des distances de chaque point à la moyenne des points de son groupe. 
+
+# Problème
+
+Le nombre de partitions possibles d'un ensemble de n éléments croît exponentiellement avec n.
+
+:::{.callout-note}
+### Exemple
+Il y a **580 606 446** partitions possibles de 20 éléments en 3 classes.
+:::
+
+## Heuristique
+
+**[Avec Allison Horst](https://allisonhorst.com/k-means-clustering)**
+
+## Données
+
+```{r plot_raw_data}
+ggplot(df) +
+  geom_point(aes(x = x, y = y), alpha = 1) +
+  labs(x = "", y = "")
+```
+
+## Groupes
+
+```{r show_circles}
+ggplot(df) +
+  geom_point(aes(x = x, y = y), alpha = 1) +
+  ggforce::geom_circle(data = centers,
+                       aes(x0 = x, y0 = y, r = 1)) +
+  labs(x = "", y = "")
+```
+
+## Centroïdes aléatoires
+
+```{r plot_initial_centers}
+kmi$centers |> 
+  filter(iteration == 1) |> 
+  ggplot() +
+  geom_point(data = df,
+             aes(x = x, y = y),
+             alpha = 1) +
+  geom_point(aes(x = cx, y = cy),
+             color = "red", size = 4)
+```
+
+
+```{r for_loop}
+#| results: asis
+for(i in 2:max_iter) {
+  cat("\n\n## Allouer les points\n\n")
+  plot_allocation(i) |> print()
+  cat("\n\n## Recalculer les centroïdes\n\n")
+  plot_recentering(i) |> print()
+}
+```
+

@@ -1,0 +1,366 @@
+---
+title: "Embranchements"
+author: "Théo Boulakia"
+date: 2024-11-13
+date-format: long
+format: revealjs
+lang: fr
+execute: 
+  echo: true
+---
+
+# Packages
+
+```{r}
+library(tidyverse)
+library(cluster)
+library(proxy)
+library(tictoc)
+library(dimensio)
+```
+
+# Lectures
+
+## Les sommets du Palais
+
+Boelaert Julien et Ollion Étienne, « Les sommets du Palais : Analyser l’espace parlementaire avec des cartes auto-organisatrices », *Revue française de science politique*, 9 septembre 2020, vol. 70, nᵒ 3, p. 373‑398.
+
+:::{.callout-note}
+### Script et données
+Accessibles sur le [site](https://www.afsp.info/les-sommets-du-palais-analyser-lespace-parlementaire-avec-des-cartes-auto-organisatrices/) de l'Association Française de Sciences Politiques sous la forme d'un fichier zippé.
+:::
+
+## Trajectoires d'activité des immigrés
+
+Blavier Pierre et Perdoncin Anton, « Trajectoires d’activité des immigrés : une approche sociohistorique, 1968-2008 », *Population*, 25 mai 2020, vol. 75, nᵒ 1, p. 39‑70.
+
+:::{.callout-note}
+### Données
+Les auteurs utilisent les données de l'enquête TeO2, dont on pourra consulter le [site internet](https://teo1.site.ined.fr/). L'enquête [TeO2](https://teo.site.ined.fr/) a été menée en 2019 et 2020.
+:::
+
+# Distance de Gower
+
+## Caractéristiques {.smaller}
+
+- Introduite cet article : Gower, J. C. (1971) "A general coefficient of similarity and some of its properties", *Biometrics* 27, 857–874.
+- Implémentée en R dans la fonction `daisy` du package `{cluster}`.
+- Adaptée aux dataframes contenant des **données mixtes**
+- Une métrique de distance pour chaque type de variable.
+- La distance totale entre deux individus est la moyenne de ces distances.
+
+## Rappel : Types de variables en R {.smaller}
+
+- *numeric* nombres réels (c.a.d : décimaux) (ex : 3.14, 10)
+- *integer* : nombres entiers (ex: 5L)
+- *factor* : valeurs possibles limitées. Elles peuvent être **ordonnées** (ex: "Un peu", "Beaucoup", "Passionnément")
+- *character* : chaînes de charactères (ex: "Paris")
+- *date* (ne nous concerne pas ici)
+
+:::{.callout-tip}
+Quand vous importez un fichier de données dans R, des fonctions comme `read_csv` vont chercher à **deviner** le type de chaque variable. Vous pouvez aussi le spécifier manuellement.
+:::
+
+## daisy
+
+:::{.callout-note}
+Assurez-vous d'avoir bien installé et chargé le package `{cluster}`.
+:::
+
+- `daisy` prend comme argument une matrice numérique ou un dataframe.
+- Si au moins une colonne du dataframe n'est pas `numeric`, alors la métrique `gower` est automatiquement choisie. 
+- Vous pouvez aussi la spécifier explicitement avec l'argument `metric`.
+
+## Vecteurs de types différents
+
+Pour montrer comment la distance de Gower est calculée pour chaque type de variable, créons des vecteurs très simples.
+
+```{r}
+v_integer = c(1, 2, 5, 3, 2)
+
+v_symmetric = c(TRUE, FALSE, TRUE, FALSE, TRUE)
+
+v_factor = factor(c("droite", "gauche", "centre", "centre", "gauche"))
+
+v_ordratio = factor(
+  c("toujours", "parfois", "rarement", "jamais", "souvent"),
+  levels = c("jamais", "rarement", "parfois", "souvent", "toujours"),
+  ordered = T)
+```
+
+## Integer
+
+```{r}
+data.frame(v_integer)
+```
+
+```{r}
+data.frame(v_integer) |> daisy(metric = "gower",
+                                        type = list(integer = 1))
+```
+
+## Symmetric (binaire)
+
+```{r}
+data.frame(v_symmetric)
+```
+
+```{r}
+data.frame(v_symmetric) |> daisy(metric = "gower",
+                                          type = list(symm = 1))
+```
+
+## Factor
+
+```{r}
+data.frame(v_factor)
+```
+
+```{r}
+data.frame(v_factor) |> daisy(metric = "gower",
+                                       type = list(factor = 1))
+```
+
+## Ordratio
+
+```{r}
+data.frame(v_ordratio) 
+```
+
+```{r}
+data.frame(v_ordratio) |> daisy(metric = "gower",
+                                         type = list(ordratio = 1))
+```
+
+## 4 variables {.smaller}
+
+```{r}
+#| code-fold: true
+d = data.frame(v_integer,
+               v_symmetric,
+               v_factor,
+               v_ordratio)
+d
+```
+
+. . . 
+
+```{r}
+#| code-fold: true
+daisy(d, 
+      type = list(integer = 1,
+                  symm = 2,
+                  factor = 3,
+                  ordratio = 4),
+      metric = "gower")
+```
+
+. . . 
+
+:::{.callout-tip}
+### Mini-exercice
+Calculez manuellement la distance entre les individus 1 et 2. Si ce que vous avez calculé correspond à la valeur renvoyée par `daisy`, alors vous avez tout compris.
+::: 
+
+# Principal Components Analysis {.smaller}
+
+- Réduire la dimension d'un jeu de données contenant n (= trop de) variables **numériques**.
+- En remplaçant les n variables par un nombre réduit (généralement 2 ou 3, mais cela peut être plus) de "super-variables".
+- Celles-ci sont des **combinaisons linéaires** des variables de départ.
+- On les appelle "composantes principales"/*principal components*.
+- La première composante principale correspond à la direction
+qui **maximise la variance** du jeu de données.
+- La deuxième est **orthogonale** (= non corrélée) à la première, la troisième à la deuxième, etc.
+- Chaque individu reçoit de nouvelles coordonnées, sur les composantes principales.
+
+## Implémentation(s) en R
+
+- Base R : `prcomp` (à préférer à `princomp`)
+- `FactoMineR::PCA()`
+- `ade4::dudi.pca()`
+- **Fonction `pca` du package [dimensio](https://packages.tesselle.org/dimensio/)**
+
+## Retour au Palais
+
+```{r}
+sommets = read.csv("data/donnees-SOMmets.csv")
+glimpse(sommets)
+```
+
+## Tableau des données {.scrollable}
+
+```{r}
+#| echo: false
+sommets |> 
+  huxtable::as_hux() |> 
+  huxtable::set_font_size(12) |> 
+  huxtable::theme_green()
+```
+
+## pca
+
+```{r}
+tic()
+r = sommets |> select(where(is.numeric)) |> pca()
+toc()
+```
+
+## screeplot
+
+```{r}
+screeplot(r)
+```
+
+## Nouveau jeu de données
+
+```{r}
+augment(r)
+```
+
+
+## Variables
+
+```{r}
+viz_variables(r)
+```
+
+## Nuage des individus (groupe)
+
+```{r}
+viz_individuals(r, extra_quali = sommets$groupe.sigle)
+```
+
+## Nuage des individus (genre)
+
+```{r}
+viz_individuals(r, extra_quali = sommets$sexe)
+```
+
+## Limites
+
+- Peu adaptée pour les matrices/dataframe "creux" (nombreuses valeurs nulles)
+- Sensible aux valeurs extrêmes/individus singuliers/outliers.
+
+# Multidimensional scaling {.smaller}
+
+- Projette les observations dans un espace (généralement à deux dimensions) tel que les distances initiales soient au maximum préservées.
+- Fonctions : `cmdscale` ou `dimensio::pcoa`
+- Argument principal : une **matrice de distances**
+- 2e argument important : le nombre de dimensions à conserver
+- Retourne une matrice contenant les coordonnées choisies pour représenter au mieux les distances.
+- Version métrique (classique) et non-métrique
+
+:::{.callout-caution}
+Les calculs sont très lents par rapport aux autres méthodes de réduction de la dimensionnalité. En pratique, *MDS* est inutilisable dès que les données dépassent quelques milliers d'observations. 
+:::
+
+## Matrice de similarités
+
+```{r}
+#| echo: false
+load("~/Téléchargements/nations.rda")
+nations |>
+  as.matrix() |>
+  huxtable::as_hux(add_colnames = TRUE,
+                   add_rownames = " ") |> 
+  huxtable::theme_green() |> 
+  huxtable::set_font_size(value = 14)
+```
+
+## Matrice de distances
+
+```{r}
+#| echo: false
+d = (9-nations)^2 |>
+  as.matrix()
+
+d |> 
+  huxtable::as_hux(add_colnames = TRUE,
+                   add_rownames = " ") |> 
+  huxtable::theme_green() |> 
+  huxtable::set_font_size(value = 14)
+```
+
+## Calcul
+
+```{r compute_mds}
+#| echo: true
+#| code-line-numbers: "|1"
+mds = cmdscale(d, k = 2) |> 
+  as.data.frame() |> 
+  rownames_to_column(var = "country")
+mds
+```
+
+## Représentation graphique
+
+```{r plot_mds}
+#| echo: false
+mds_plot = ggplot(mds, aes(x = V1, y = V2)) +
+  geom_point() +
+  ggrepel::geom_text_repel(aes(label = country)) +
+  theme_minimal()
+mds_plot
+```
+
+## Représentation graphique
+
+```{r}
+#| echo: false
+mds_plot +
+  geom_abline(slope = 1, intercept = 0, linetype = 2)
+```
+
+## Représentation graphique
+
+```{r}
+#| echo: false
+mds_plot +
+  geom_abline(slope = -1, intercept = 0, linetype = 2)
+```
+
+# Self-organizing maps
+
+## Contexte
+
+- Introduites dans cet article : Kohonen, Teuvo (1982). "Self-Organized Formation of Topologically Correct Feature Maps". Biological Cybernetics. 43 (1): 59–69. doi:10.1007/bf00337288. S2CID 206775459
+- Au croisement de trois champs : **réseaux de neurones**, réduction de la dimensionnalité, clustering.
+- Implémentation : `{kohonen}` R package (entre autres)
+
+# Clustering
+
+## Agglomerative Hierarchical Clustering
+
+{{< video https://youtu.be/8QCBl-xdeZI?si=DPbQ8e-e30NxeOpe width="100%" height="85%" >}}
+
+## Avantages et limites
+
+- Prend en argument une matrice de distances.
+- Avantage : on n'est pas limité à des variables numériques.
+- Inconvénient : peut devenir infaisable pour les grands jeux de données.
+- La classification elle-même peut être lente et gourmande en mémoire vive quand les données deviennent volumineuses.
+- L'arbre de classification offre une aide précieuse pour choisir une partition et l'interpréter.
+
+## k-means {.smaller}
+
+- Implémenté dans la fonction `kmeans` (chargée par défaut).
+- Celle-ci prend en argument principal une matrice numérique ou un dataframe contenant uniquement des variables numériques.
+- Garantit des classes plus **homogènes** que la classification ascendante hiérarchique. 
+- Beaucoup plus rapide lorsqu'il y a relativement peu de dimensions (c'est toujours souhaitable) et beaucoup d'individus.
+- Ne nécessite pas le calcul d'une matrice de distance (calcul très lourd voir impossible pour des données massives).
+- D'où son inconvénient majeur en sciences sociales : nécessite des **données numériques**.
+
+:::{.callout-note}
+Par conséquent, la seule manière "propre" d'appliquer les k-means à des données catégorielles est de réaliser préalablement une Analyse des Correspondances Multiples (ACM).
+:::
+
+## k-medoids {.smaller}
+
+- Au lieu de **centroïdes** on a des **médoïdes**.
+- Centroïdes : dans chaque dimension, leur coordonnée est celle de la **moyenne** des points de leur groupe. Ce sont des points abstraits/fictifs, ils ne correspondent pas à des individus réels du jeu de données.
+- Médoïdes : les individus tels que la somme des carrés des distances aux points du groupe est minimale. Des individus "représentatifs". Ce sont des individus **réels**, existant dans le jeu de données.
+- Avantages :
+   + Robustesse face aux valeurs extrêmes.
+   + On peut partir d'une **matrice de distances**.
+- Inconvénients : les calculs sont **beaucoup plus lourds/lents** que pour les k-means.
+- Implémentation : fonction `pam` de `{cluster}`.

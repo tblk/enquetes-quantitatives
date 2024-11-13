@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/slides.html</loc>
-    <lastmod>2024-09-25T09:31:59.936Z</lastmod>
+    <lastmod>2024-11-13T11:56:10.511Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/programme/indices.html</loc>
@@ -111,5 +111,9 @@
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/exercices/vie-en-confinement.html</loc>
     <lastmod>2024-11-09T14:46:24.169Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/embranchements.html</loc>
+    <lastmod>2024-11-13T11:37:25.315Z</lastmod>
   </url>
 </urlset>
