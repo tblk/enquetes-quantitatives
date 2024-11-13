@@ -1369,7 +1369,7 @@
     "href": "embranchements.html#pca",
     "title": "Embranchements",
     "section": "pca",
-    "text": "pca\n\ntic()\nr = sommets |&gt; select(where(is.numeric)) |&gt; pca()\ntoc()\n\n0.015 sec elapsed"
+    "text": "pca\n\ntic()\nr = sommets |&gt; select(where(is.numeric)) |&gt; pca()\ntoc()\n\n0.02 sec elapsed"
   },
   {
     "objectID": "embranchements.html#screeplot",
@@ -1615,5 +1615,19 @@
     "title": "k-means",
     "section": "Recalculer les centroïdes",
     "text": "Recalculer les centroïdes"
+  },
+  {
+    "objectID": "embranchements.html#principe",
+    "href": "embranchements.html#principe",
+    "title": "Embranchements",
+    "section": "Principe",
+    "text": "Principe\n\nRéduire la dimension d’un jeu de données contenant n (= trop de) variables numériques.\nEn remplaçant les n variables par un nombre réduit (généralement 2 ou 3, mais cela peut être plus) de “super-variables”.\nCelles-ci sont des combinaisons linéaires des variables de départ.\nOn les appelle “composantes principales”/principal components.\nLa première composante principale correspond à la direction qui maximise la variance du jeu de données.\nLa deuxième est orthogonale (= non corrélée) à la première, la troisième à la deuxième, etc.\nChaque individu reçoit de nouvelles coordonnées, sur les composantes principales."
+  },
+  {
+    "objectID": "embranchements.html#principe-1",
+    "href": "embranchements.html#principe-1",
+    "title": "Embranchements",
+    "section": "Principe",
+    "text": "Principe\n\nProjette les observations dans un espace (généralement à deux dimensions) tel que les distances initiales soient au maximum préservées.\nFonctions : cmdscale ou dimensio::pcoa\nArgument principal : une matrice de distances\n2e argument important : le nombre de dimensions à conserver\nRetourne une matrice contenant les coordonnées choisies pour représenter au mieux les distances.\nVersion métrique (classique) et non-métrique\n\n\n\n\n\n\n\nMise en garde\n\n\nLes calculs sont très lents par rapport aux autres méthodes de réduction de la dimensionnalité. En pratique, MDS est inutilisable dès que les données dépassent quelques milliers d’observations."
   }
 ]
