@@ -7,9 +7,9 @@ categories: ["Niveau 3", "Distances", "Clustering", "Dimension reduction"]
 
 # Contexte
 
-Les données suivantes sont issues de l'enquête *La Vie en Confinement*. L'échantillon sur lequel vous allez travailler est parfaitement anonymisé et ne contient aucune information socio-démographique, seulement un ensemble de 15 pratiques. Le but est de réaliser une classification de ces pratiques, *sans* passer par la combinaison de méthodes standard qui consiste à : 1) réduire la dimensionnalité du jeu de données avec une Analyse des Correspondances Multiples 2) Réaliser une classification ascendante hiérarchique sur les composantes principales obtenues.
+Les données sont issues de l'enquête *La Vie en Confinement*. L'échantillon sur lequel vous allez travailler est parfaitement anonymisé et ne contient aucune information socio-démographique, seulement un ensemble de 15 pratiques. Le but est de réaliser une classification de ces pratiques, *sans* passer par la combinaison de méthodes standard qui consiste à : 1) réduire la dimensionnalité du jeu de données avec une Analyse des Correspondances Multiples 2) Réaliser une classification ascendante hiérarchique sur les composantes principales obtenues.
 
-Le dictionnaire des variables est disponible sur [ici](https://vico.hypotheses.org/files/2020/12/VICO-DICTIONNAIRE-PUBLIC.pdf).
+Le dictionnaire des variables est disponible [ici](https://vico.hypotheses.org/files/2020/12/VICO-DICTIONNAIRE-PUBLIC.pdf).
 
 # Préparation
 
