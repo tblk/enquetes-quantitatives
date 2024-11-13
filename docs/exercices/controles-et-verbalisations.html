@@ -225,10 +225,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Préparation</h1>
 <ul>
 <li>Charger le package <code>{tidyverse}</code> et le package <code>{proxy}</code></li>
-<li>Téléchargez les données, et placez les dans un sous-dossier <code>data</code>.</li>
-<li>Importez les.</li>
+<li>Importez les données :</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/tblk/enquetes-quantitatives/refs/heads/main/donnees/controles_medias.csv"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
 <li>Importez également les données sur la population de chaque département.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/tblk/enquetes-quantitatives/refs/heads/main/donnees/population_departement.csv"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="recodages" class="level1">
 <h1>Recodages</h1>
@@ -287,7 +294,7 @@ Représentation graphique
 <div class="callout-body-container callout-body">
 <p>Pour représenter graphiquement le résultat de votre classification par un <strong>arbre</strong>, vous pourrez appliquer directement la fonction <code>plot</code> au résultat de <code>hclust</code>, ou passer d’abord par la fonction <code>as.dendrogram</code>, soit :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hclust</span>() <span class="sc">|&gt;</span> <span class="fu">as.dendrogram</span>() <span class="sc">|&gt;</span> <span class="fu">plot</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hclust</span>() <span class="sc">|&gt;</span> <span class="fu">as.dendrogram</span>() <span class="sc">|&gt;</span> <span class="fu">plot</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>

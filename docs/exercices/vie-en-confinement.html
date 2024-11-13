@@ -218,12 +218,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="contexte" class="level1">
 <h1>Contexte</h1>
 <p>Les données suivantes sont issues de l’enquête <em>La Vie en Confinement</em>. L’échantillon sur lequel vous allez travailler est parfaitement anonymisé et ne contient aucune information socio-démographique, seulement un ensemble de 15 pratiques. Le but est de réaliser une classification de ces pratiques, <em>sans</em> passer par la combinaison de méthodes standard qui consiste à : 1) réduire la dimensionnalité du jeu de données avec une Analyse des Correspondances Multiples 2) Réaliser une classification ascendante hiérarchique sur les composantes principales obtenues.</p>
+<p>Le dictionnaire des variables est disponible sur <a href="https://vico.hypotheses.org/files/2020/12/VICO-DICTIONNAIRE-PUBLIC.pdf">ici</a>.</p>
 </section>
 <section id="préparation" class="level1">
 <h1>Préparation</h1>
 <ul>
 <li>Chargez les packages <code>{tidyverse}</code> et <code>{cluster}</code></li>
-<li>Importez les données.</li>
+<li>Importez les données :</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vico <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/tblk/enquetes-quantitatives/refs/heads/main/donnees/vico.csv"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
 <li>Quel est le type des différentes variables ? Vous pourrez utiliser la fonction <code>glimpse</code> de <code>{dplyr}</code>.</li>
 </ul>
 </section>
@@ -242,13 +248,13 @@ Astuce
 <div class="callout-body-container callout-body">
 <p>Pour cela, vous pourrez utiliser la fonction factor, et deux de ses arguments. Mettons par exemple que vous ayez une variable (un vecteur) de ce type :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Bon"</span>, <span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Très bon"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Bon"</span>, <span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Très bon"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Il y a un ordre naturel dans les modalités de cette variable. Pour l’expliciter, vous pouvez utiliser la fonction <code>factor</code> ainsi :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">factor</span>(v,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Bon"</span>, <span class="st">"Très bon"</span>),</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">factor</span>(v,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Bon"</span>, <span class="st">"Très bon"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>

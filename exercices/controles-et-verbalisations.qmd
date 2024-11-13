@@ -14,9 +14,19 @@ Les variables `date_debut` et `date_fin` donnet les bornes entre lesquelles les 
 # Préparation
 
 - Charger le package `{tidyverse}` et le package `{proxy}`
-- Téléchargez les données, et placez les dans un sous-dossier `data`.
-- Importez les.
+- Importez les données :
+```{r}
+#| eval: false
+#| echo: true
+read_csv("https://raw.githubusercontent.com/tblk/enquetes-quantitatives/refs/heads/main/donnees/controles_medias.csv")
+```
+
 - Importez également les données sur la population de chaque département.
+```{r}
+#| eval: false
+#| echo: true
+read_csv("https://raw.githubusercontent.com/tblk/enquetes-quantitatives/refs/heads/main/donnees/population_departement.csv")
+```
 
 # Recodages 
 
