@@ -4,7 +4,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Linéaments du territoire\nGrammaire des graphiques\nDonnées spatiales\n\n\nCouleurs du continu\nCartes Choroplèthes\n\n\nEmbranchements\nEmbranchements\nk-means"
+    "text": "Linéaments du territoire\nGrammaire des graphiques\nDonnées spatiales\n\n\nCouleurs du continu\nCartes Choroplèthes\n\n\nEmbranchements\nEmbranchements\nk-means\n\n\nEPGG\nEPGG"
   },
   {
     "objectID": "programme/indices.html",
@@ -1629,5 +1629,138 @@
     "title": "Embranchements",
     "section": "Principe",
     "text": "Principe\n\nProjette les observations dans un espace (généralement à deux dimensions) tel que les distances initiales soient au maximum préservées.\nFonctions : cmdscale ou dimensio::pcoa\nArgument principal : une matrice de distances\n2e argument important : le nombre de dimensions à conserver\nRetourne une matrice contenant les coordonnées choisies pour représenter au mieux les distances.\nVersion métrique (classique) et non-métrique\n\n\n\n\n\n\n\nMise en garde\n\n\nLes calculs sont très lents par rapport aux autres méthodes de réduction de la dimensionnalité. En pratique, MDS est inutilisable dès que les données dépassent quelques milliers d’observations."
+  },
+  {
+    "objectID": "recapitulatif.html#corpus",
+    "href": "recapitulatif.html#corpus",
+    "title": "Écritures populaires",
+    "section": "Corpus",
+    "text": "Corpus\n\n\n\n\nnomprenomgenredocumentclasse\n\nbesvictorinhcarnetinter\n\nmaunyemilehlettresinter\n\nmaunyleaflettresinter\n\npensuetmauricehlettresinter\n\nroumiguieresalfredhlettres et carnetsinter\n\nastierjosephhcarnetpop\n\ngastelliermauricehlettrespop\n\nlalumierejean gastonhlettrespop\n\nlesralealiceflettrespop\n\nlesralealphonsehlettrespop\n\nloubetpaulhlettrespop\n\nloubetmarieflettrespop\n\nmartinantoinehlettres et carnetspop\n\nmourlotgastonhcarnetpop\n\npapillonmartheflettrespop\n\npapillonjosephhlettrespop\n\npapillonlucienhlettrespop\n\npapillonmarcelhlettrespop\n\nplantiemadeleineflettrespop\n\nplantieleonhlettrespop\n\nsigaljosephhlettrespop\n\ncunygeorgeshlettressup\n\ncunymimiflettressup\n\ndorgelesrolandhlettressup\n\nfauconnierhenrihlettressup\n\nhertzroberthlettressup\n\nisaacjuleshlettressup\n\nisaaclaureflettressup"
+  },
+  {
+    "objectID": "recapitulatif.html#parts-of-speech",
+    "href": "recapitulatif.html#parts-of-speech",
+    "title": "Écritures populaires",
+    "section": "Parts of speech",
+    "text": "Parts of speech\n\n\n\n\n\n\nNote\n\n\nL’étiquetage morpho-syntaxique (ou part of speech tagging) a été réalisé, tout comme la tokenization, avec le package R udpipe, qui offre une précision supérieure à spacy pour le français, avec un temps d’annotation qui reste très raisonnable.\n\n\n\n\n\n\n\n\n\nAstuce\n\n\nPour des exemples des différentes classes de mots, voir universaldependancies.org"
+  },
+  {
+    "objectID": "recapitulatif.html#données",
+    "href": "recapitulatif.html#données",
+    "title": "Écritures populaires",
+    "section": "Données",
+    "text": "Données\n\n\n\n\n\n\nNote\n\n\nLes nombres ci-dessous sont des pourcentages.\n\n\n\n\n\n\n\nnameADJADVCCONJNOUNPRONVERB\n\nastier2.37.13  13.812  12.5\n\nbes4.35.32.517.78.811.1\n\ncuny Mimi4  8.12.913.712.612.2\n\ncuny georges4.110.43.213  13.712.5\n\ndorgeles5  6.72  15.39.510.4\n\nfauconnier5  8  3  13.412.311.9\n\ngastellier3.59.23.211.512.912.6\n\nhertz5.77.73.215.111.910.5\n\nisaac jules6  8  3  15.39.110.8\n\nisaac laure4.19.22.812.512.412.5\n\nlalumiere3.77  2.512.712.211.4\n\nlesrale alice5.110.43.311  15.413.9\n\nlesrale alphonse4.29.73.413.114.113.1\n\nloubet marie3.78.22.212  16.313.9\n\nloubet paul4.48.83.612.515.812  \n\nmartin4.27.93.113.410.811.3\n\nmauny emile4.19  2.313.910.411.4\n\nmauny lea3.56.52.413.511.112.7\n\nmourlot4.36.62.418.78.511.4\n\npapillon Joseph4  7.41.313.111.411.2\n\npapillon Lucien3.56.21.314.212.211.2\n\npapillon Marcel4.16.81.914.410.610.6\n\npapillon Marthe3.47  1.612.712.212.3\n\npapillon Mme Papillon3  5.62  12.912.411.6\n\npensuet4.56.53.115.49.611.3\n\nplantie leon4.111  4.110.313.912.2\n\nplantie madeleine4.110.64.310.214.813.5\n\nroumiguieres4  5.81.815.28.810.9\n\nsigal3.910.23.411.814.412.5"
+  },
+  {
+    "objectID": "recapitulatif.html#matrice-des-corrélations",
+    "href": "recapitulatif.html#matrice-des-corrélations",
+    "title": "Écritures populaires",
+    "section": "Matrice des corrélations",
+    "text": "Matrice des corrélations"
+  },
+  {
+    "objectID": "recapitulatif.html#verbes-vs-adjectifs",
+    "href": "recapitulatif.html#verbes-vs-adjectifs",
+    "title": "Écritures populaires",
+    "section": "Verbes vs adjectifs",
+    "text": "Verbes vs adjectifs"
+  },
+  {
+    "objectID": "recapitulatif.html#acp",
+    "href": "recapitulatif.html#acp",
+    "title": "Écritures populaires",
+    "section": "ACP",
+    "text": "ACP\n\n\n\n\n\n\nNote\n\n\nOn a veillé à enlever les scripteurs fragiles, soit parce que le nombre de lettres est trop restreint, soit parce que le nettoyage de la correspondance ou du carnet est encore imparfait. On retire également les variables fragiles, par exemple la ponctuation, qui peut varier en fonction de la qualité de l’océrisation et du nettoyage.\n\n\n\n\npos_pca = pos |&gt; \n  filter(!name %in% fragiles) |&gt;\n  column_to_rownames(var = \"name\") |&gt; \n  select(-PROPN, -PUNCT) |&gt; \n  dimensio::pca()"
+  },
+  {
+    "objectID": "recapitulatif.html#screeplot",
+    "href": "recapitulatif.html#screeplot",
+    "title": "Écritures populaires",
+    "section": "Screeplot",
+    "text": "Screeplot"
+  },
+  {
+    "objectID": "recapitulatif.html#composantes-principales",
+    "href": "recapitulatif.html#composantes-principales",
+    "title": "Écritures populaires",
+    "section": "Composantes principales",
+    "text": "Composantes principales"
+  },
+  {
+    "objectID": "recapitulatif.html#dist",
+    "href": "recapitulatif.html#dist",
+    "title": "Écritures populaires",
+    "section": "dist",
+    "text": "dist\n\n\n\n\n\n\nNote\n\n\nVarier le nombre de composantes principales conservées : 2 (suggéré par le screeplot) ou 3 (pour passer la barre des 70% de variance expliqués.) Il est également possible de varier la métrique de distance. Essayer avec Manhattan et cosine par exemple.\n\n\n\n\npos_dist = dimensio::tidy(pos_pca) |&gt;\n  filter(component %in% paste0(\"F\", 1:3)) |&gt; \n  select(label, component, coordinate) |&gt; \n  pivot_wider(names_from = \"component\",\n              values_from = \"coordinate\") |&gt; \n  column_to_rownames(var = \"label\") |&gt;\n  dist()"
+  },
+  {
+    "objectID": "recapitulatif.html#hclust",
+    "href": "recapitulatif.html#hclust",
+    "title": "Écritures populaires",
+    "section": "hclust",
+    "text": "hclust\n\n\n\n\n\n\nNote\n\n\nVarier les méthodes : ward.D2, complete, average. Regarder le résultat sur le dendrogramme.\n\n\n\n\npos_hclust = hclust(pos_dist, method = \"ward.D2\")"
+  },
+  {
+    "objectID": "recapitulatif.html#dendogramme",
+    "href": "recapitulatif.html#dendogramme",
+    "title": "Écritures populaires",
+    "section": "Dendogramme",
+    "text": "Dendogramme"
+  },
+  {
+    "objectID": "recapitulatif.html#couples",
+    "href": "recapitulatif.html#couples",
+    "title": "Écritures populaires",
+    "section": "Couples",
+    "text": "Couples\n\nCouples retrouvés : Plantié Léon et Madeleine\nJumeaux sociaux retrouvés : Robert Hertz et Jules Isaac\nFamilles éclatées :\nLucien Papillon rejoint Joseph Astier\nMarcel Papillon rejoint les instituteurs."
+  },
+  {
+    "objectID": "recapitulatif.html#groupes",
+    "href": "recapitulatif.html#groupes",
+    "title": "Écritures populaires",
+    "section": "Groupes",
+    "text": "Groupes\n\nPremier groupe : les paysans… et Georges Cuny.\nDeuxième groupe : féminin + les moins lettrés.\nTroisième groupe : les lettrés et les instituteurs."
+  },
+  {
+    "objectID": "recapitulatif.html#données-1",
+    "href": "recapitulatif.html#données-1",
+    "title": "Écritures populaires",
+    "section": "Données",
+    "text": "Données\n\n\n\n\n\n\nNote\n\n\nOn a, pour chaque scripteur, le nombre d’occurrences d’un certain nombre de noms, de verbes et d’adjectifs. Certains mots peuvent se ranger dans plusieurs de ces catégories, c’est pourquoi un suffixe indique de quelle part of speech il s’agit. Pour ne pas conserver de mots trop rares, on a sélectionné uniquement ceux qui apparaissent chez au moins 9 scripteurs. Ce seuil peut bien sûr être ajusté.\n\n\n\n\n\n\n\nnamesoldat_NOUNjour_NOUNfranchir_VERBcaserne_NOUNrégiment_NOUNinfanterie_NOUNavoir_VERBcourage_NOUNconsigner_VERBpage_NOUNimpression_NOUNvoyage_NOUNmêler_VERBtristesse_NOUNimage_NOUNâme_NOUNaccompagner_VERBgare_NOUNgros_ADJ\n\nbes11520414236173785997132223122432\n\nmauny emile42479084321026808741200111627\n\nmauny lea1965011028000001111001167\n\npensuet114646548189513029180001241227\n\nroumiguieres12316011246857515011510010481630\n\nastier05813243254000000000210\n\ngastellier9877101798412891706016000001813\n\nlalumiere2128101116412040400000639\n\nlesrale alphonse161232027512458223423015011462\n\nlesrale alice45082090113910021400100519\n\nloubet paul17222016140549324212000001217\n\nloubet marie21380100369390101000031423\n\nmartin152471722355281311021001925\n\nmourlot507371823947326132555129508031367126108\n\npapillon Marthe15520090171000011010061\n\npapillon Joseph240009077000040000010\n\npapillon Marcel5102022852245110000001010\n\npapillon Lucien060056191020000000012\n\npapillon Mme Papillon111001017000010000000\n\nplantie leon16208032315372504283403171227\n\nplantie madeleine81740220598160301601205528\n\nsigal3187002482217491700100471200230218\n\ncuny Mimi1123830848131310201473061117165051\n\ncuny georges2427501364299212011135413171840\n\ndorgeles29140082322106263211140431\n\nfauconnier2236126216116823313265244344131728\n\nhertz512030103815301803223115184222\n\nisaac jules7144101833681401223314191521\n\nisaac laure123001065200202100002"
+  },
+  {
+    "objectID": "recapitulatif.html#langage-commun",
+    "href": "recapitulatif.html#langage-commun",
+    "title": "Écritures populaires",
+    "section": "Langage commun ?",
+    "text": "Langage commun ?"
+  },
+  {
+    "objectID": "recapitulatif.html#dist-1",
+    "href": "recapitulatif.html#dist-1",
+    "title": "Écritures populaires",
+    "section": "dist",
+    "text": "dist\n\n\n\n\n\n\nNote\n\n\nPour calculer la distance entre scripteurs, on choisit la distance cosine. Celle-ci a plusieurs avantages. 1) Elle neutralise la longueur des textes, seule compte le nombre d’occurences relatif de chaque mot (cela revient à normaliser par la taille des textes). 2) Elle est plus adaptée aux matrices creuses, comme le sont les matrices d’occurence de mots. C’est la distance la plus couramment utilisée pour l’analyse de corpus textuels.\n\n\n\n\n\n\n\n\n\nMise en garde\n\n\nOn a retiré les scripteurs “fragiles”, c’est à dire pour lesquels le nettoyage est encore imparfait, ou le nombre de documents trop restreint.\n\n\n\n\nkeywords_dist = keywords |&gt; \n  filter(!name %in% fragiles) |&gt; \n  column_to_rownames(var = \"name\") |&gt; \n  proxy::dist(method = \"cosine\")"
+  },
+  {
+    "objectID": "recapitulatif.html#hclust-1",
+    "href": "recapitulatif.html#hclust-1",
+    "title": "Écritures populaires",
+    "section": "hclust",
+    "text": "hclust\n\n\n\n\n\n\nNote\n\n\nLa classification ascendante hiérarchique est réalisée à partir de la matrice de distance cosine, avec la méthode complete linkage.\n\n\n\n\nkeywords_hclust = hclust(keywords_dist, method = \"complete\")"
+  },
+  {
+    "objectID": "recapitulatif.html#dendrogram",
+    "href": "recapitulatif.html#dendrogram",
+    "title": "Écritures populaires",
+    "section": "dendrogram",
+    "text": "dendrogram"
+  },
+  {
+    "objectID": "recapitulatif.html#remarques",
+    "href": "recapitulatif.html#remarques",
+    "title": "Écritures populaires",
+    "section": "Remarques",
+    "text": "Remarques"
   }
 ]

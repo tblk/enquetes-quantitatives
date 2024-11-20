@@ -1,0 +1,278 @@
+---
+title: "Écritures populaires"
+author: "Théo Boulakia"
+date: 2024-11-20
+date-format: long
+format: revealjs
+lang: fr
+---
+
+```{r packages}
+library(targets)
+library(tidyverse)
+library(tidytext)
+library(huxtable)
+library(dimensio)
+```
+
+```{r theme}
+theme_set(theme_minimal(base_family = "serif"))
+```
+
+```{r data}
+#| include: false
+tar_load(c(pos, fragiles, keywords, keywords_long),
+         store = fs::path_home("poilus","_targets"))
+```
+
+```{r write_targets}
+#| eval: false
+arrow::write_parquet(pos |> select(-name),
+                     "~/dimred/data/pos.parquet")
+arrow::write_parquet(keywords |> select(-name),
+                     "~/dimred/data/keywords.parquet")
+```
+
+
+## Corpus {.smaller .scrollable}
+
+```{r corpus_data}
+#| echo: false
+library(huxtable)
+
+classe = fs::path_home("poilus", "data") |> 
+  fs::dir_ls() |> 
+  stringr::str_extract("(?<=data/).+(?=.pdf)") |> 
+  tibble::as_tibble_col() |> 
+  tidyr::drop_na() |> 
+  tidyr::separate(col = value, into = c("classe", "nom"))
+
+ind = readODS::read_ods(fs::path_home("poilus", "temoins.ods")) |>
+  select(-crid, -naissance, -deces)
+
+corpus = left_join(ind, classe, by = "nom")
+
+```
+
+```{r corpus_hux}
+#| echo: false
+corpus |> 
+  huxtable::as_hux() |> 
+  huxtable::set_number_format(NA) |> 
+  huxtable::map_text_color(
+    by_cases(
+      . == "pop" ~ "#FFAA00",
+      . == "inter" ~ "purple",
+      . == "sup" ~ "#11AAFF")
+  ) |> 
+  huxtable::map_text_color(
+    by_cases(
+      . == "lettres" ~ "black",
+      . == "carnet" ~ "darkblue",
+      . == "lettres et carnets" ~ "darkred")
+  ) |>
+  huxtable::theme_green()
+```
+
+# Classification morphologique
+
+## Parts of speech
+
+:::{.callout-note}
+L'étiquetage morpho-syntaxique (ou *part of speech tagging*) a été réalisé, tout comme la *tokenization*, avec le package R `udpipe`, qui offre une précision supérieure à `spacy` pour le français, avec un temps d'annotation qui reste très raisonnable.
+:::
+
+:::{.callout-tip}
+Pour des exemples des différentes classes de mots, voir [universaldependancies.org](https://universaldependencies.org/u/pos/index.html)
+:::
+
+## Données {.smaller .scrollable}
+
+:::{.callout-note}
+Les nombres ci-dessous sont des **pourcentages**. 
+:::
+
+```{r pos_hux}
+pos %>%
+  select(name, ADJ, ADV, CCONJ, NOUN, PRON, VERB) |> 
+  huxtable::as_huxtable() |>  
+  huxtable::theme_green()
+```
+
+## Matrice des corrélations
+
+```{r pos_cor}
+pos |> 
+  select(-name) |> 
+  cor() |> 
+  corrplot::corrplot(order = "FPC",
+                     type = "lower",
+                     diag = FALSE)
+```
+
+## Verbes vs adjectifs
+
+```{r gg_verb_adj}
+#| message: false
+pos |> 
+  separate(col = name, into = c("nom", "prenom"),
+           remove = FALSE) |> 
+  left_join(classe,
+            by = "nom") |> 
+  ggplot(aes(x = ADJ, y = VERB)) +
+  geom_point() +
+  ggrepel::geom_label_repel(aes(label = name,
+                                fill = classe))
+```
+
+## ACP
+
+:::{.callout-note}
+On a veillé à enlever les **scripteurs fragiles**, soit parce que le **nombre de lettres** est trop restreint, soit parce que le **nettoyage** de la correspondance ou du carnet est encore imparfait. On retire également les **variables fragiles**, par exemple la ponctuation, qui peut varier en fonction de la qualité de l'océrisation et du nettoyage.
+:::
+
+```{r pos_pca}
+#| echo: true
+pos_pca = pos |> 
+  filter(!name %in% fragiles) |>
+  column_to_rownames(var = "name") |> 
+  select(-PROPN, -PUNCT) |> 
+  dimensio::pca()
+```
+
+## Screeplot
+
+```{r pos_screeplot}
+dimensio::screeplot(pos_pca)
+```
+
+## Composantes principales
+
+```{r pos_viz_var}
+dimensio::viz_variables(pos_pca)
+```
+
+## dist
+
+:::{.callout-note}
+Varier le **nombre de composantes principales** conservées : 2 (suggéré par le *screeplot*) ou 3 (pour passer la barre des 70% de variance expliqués.) Il est également possible de varier la **métrique de distance**. Essayer avec `Manhattan` et `cosine` par exemple.
+:::
+
+```{r pos_dist}
+#| echo: true
+pos_dist = dimensio::tidy(pos_pca) |>
+  filter(component %in% paste0("F", 1:3)) |> 
+  select(label, component, coordinate) |> 
+  pivot_wider(names_from = "component",
+              values_from = "coordinate") |> 
+  column_to_rownames(var = "label") |>
+  dist()
+```
+
+## hclust
+
+:::{.callout-note}
+Varier les méthodes : `ward.D2`,  `complete`, `average`. Regarder le résultat sur le dendrogramme.
+:::
+
+```{r pos_hclust}
+#| echo: true
+pos_hclust = hclust(pos_dist, method = "ward.D2")
+```
+
+## Dendogramme
+
+```{r pos_dend}
+factoextra::fviz_dend(pos_hclust,
+                      k = 3,
+                      cex = 0.7,                     
+                      palette = "jco",               
+                      rect = TRUE,
+                      rect_fill = TRUE, 
+                      rect_border = "jco",
+                      main = "")
+```
+
+## Couples
+
+- Couples retrouvés : Plantié Léon et Madeleine
+- Jumeaux sociaux retrouvés : Robert Hertz et Jules Isaac
+- Familles éclatées : 
++ Lucien Papillon rejoint Joseph Astier
++ Marcel Papillon rejoint les instituteurs. 
+
+## Groupes
+
+- Premier groupe : les paysans... et Georges Cuny.
+- Deuxième groupe : féminin + les moins lettrés.
+- Troisième groupe : les lettrés et les instituteurs.
+
+# Classification thématique
+
+## Données {.smaller .scrollable}
+
+:::{.callout-note}
+On a, pour chaque scripteur, le nombre d'occurrences d'un certain nombre de **noms**, de **verbes** et **d'adjectifs**. Certains mots peuvent se ranger dans plusieurs de ces catégories, c'est pourquoi un suffixe indique de quelle *part of speech* il s'agit. Pour ne pas conserver de mots trop rares, on a sélectionné uniquement ceux qui apparaissent **chez au moins 9 scripteurs**. Ce seuil peut bien sûr être ajusté. 
+:::
+
+```{r}
+keywords |> 
+  select(1:20) |> 
+  huxtable::as_hux() |> 
+  huxtable::theme_green()
+```
+
+## Langage commun ?
+
+```{r langage_commun}
+keywords_long |>
+  count(lemma, pos, name = "n_scripteurs") |> 
+  count(n_scripteurs, name = "n_mots") |> 
+  ggplot(aes(x = n_scripteurs, y = n_mots),
+         fill = "darkblue") +
+  geom_col()
+```
+
+## dist {.smaller .scrollable}
+
+:::{.callout-note}
+Pour calculer la distance entre scripteurs, on choisit la **distance cosine**. Celle-ci a plusieurs avantages. 1) Elle **neutralise la longueur des textes**, seule compte le nombre d'occurences *relatif* de chaque mot (cela revient à normaliser par la taille des textes). 2) Elle est **plus adaptée aux matrices** creuses, comme le sont les matrices d'occurence de mots. C'est la distance la plus couramment utilisée pour l'analyse de corpus textuels.
+:::
+
+:::{.callout-caution}
+On a retiré les scripteurs "fragiles", c'est à dire pour lesquels le nettoyage est encore imparfait, ou le nombre de documents trop restreint.
+:::
+
+```{r keywords_dist}
+#| echo: true
+keywords_dist = keywords |> 
+  filter(!name %in% fragiles) |> 
+  column_to_rownames(var = "name") |> 
+  proxy::dist(method = "cosine")
+```
+
+## hclust
+
+:::{.callout-note}
+La classification ascendante hiérarchique est réalisée à partir de la matrice de distance cosine, avec la méthode *complete linkage*.
+:::
+
+```{r keywords_hclust}
+#| echo: true
+keywords_hclust = hclust(keywords_dist, method = "complete")
+```
+
+## dendrogram
+
+```{r keywords_dend}
+factoextra::fviz_dend(keywords_hclust,
+                      k = 4,
+                      cex = 0.7,                     
+                      palette = "jco",               
+                      rect = TRUE,
+                      rect_fill = TRUE, 
+                      rect_border = "jco",
+                      main = "")
+```
+
+## Remarques {.smaller}
