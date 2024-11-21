@@ -19,7 +19,3 @@ title: "Slides"
 
 
 [k-means](kmeans.qmd)
-
-# EPGG
-
-[EPGG](recapitulatif.qmd)
