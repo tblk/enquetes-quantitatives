@@ -19,3 +19,17 @@ title: "Slides"
 
 
 [k-means](kmeans.qmd)
+
+# Bayes
+
+[Distribution Zoo](https://ben18785.shinyapps.io/distribution-zoo/)
+
+[Simulation](simulation.qmd)
+
+Bechdel
+
+```{r}
+#| eval: false
+read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/bechdel/movies.csv")
+```
+

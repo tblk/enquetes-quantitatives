@@ -1762,5 +1762,82 @@
     "title": "Écritures populaires",
     "section": "Remarques",
     "text": "Remarques"
+  },
+  {
+    "objectID": "bayes-simulation.html#packages",
+    "href": "bayes-simulation.html#packages",
+    "title": "Simulation",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "bayes-simulation.html#seed",
+    "href": "bayes-simulation.html#seed",
+    "title": "Simulation",
+    "section": "Seed",
+    "text": "Seed\n\nset.seed(84735)"
+  },
+  {
+    "objectID": "bayes-simulation.html#nombre-de-simulations",
+    "href": "bayes-simulation.html#nombre-de-simulations",
+    "title": "Simulation",
+    "section": "Nombre de simulations",
+    "text": "Nombre de simulations\n\nn = 10000"
+  },
+  {
+    "objectID": "bayes-simulation.html#prior",
+    "href": "bayes-simulation.html#prior",
+    "title": "Simulation",
+    "section": "Prior",
+    "text": "Prior\n\nggplot() +\n  stat_function(fun = ~dbeta(.x, 9, 11))"
+  },
+  {
+    "objectID": "bayes-simulation.html#simulation",
+    "href": "bayes-simulation.html#simulation",
+    "title": "Simulation",
+    "section": "Simulation",
+    "text": "Simulation\n\nx = data.frame(pi = rbeta(n, 9, 11)) |&gt; \n  mutate(y = rbinom(n, size = 50, prob = pi))"
+  },
+  {
+    "objectID": "bayes-simulation.html#plot",
+    "href": "bayes-simulation.html#plot",
+    "title": "Simulation",
+    "section": "Plot",
+    "text": "Plot\n\nggplot(x) +\n  geom_point(aes(x = pi, y = y, color = (y == 30)))"
+  },
+  {
+    "objectID": "bayes-simulation.html#posterior-data",
+    "href": "bayes-simulation.html#posterior-data",
+    "title": "Simulation",
+    "section": "Posterior data",
+    "text": "Posterior data\n\nposterior = x |&gt; \n  filter(y == 30)"
+  },
+  {
+    "objectID": "bayes-simulation.html#plot-posterior",
+    "href": "bayes-simulation.html#plot-posterior",
+    "title": "Simulation",
+    "section": "Plot posterior",
+    "text": "Plot posterior\n\n\nCode\nggplot(posterior) +\n  geom_density(aes(x = pi))"
+  },
+  {
+    "objectID": "bayes-simulation.html#compare",
+    "href": "bayes-simulation.html#compare",
+    "title": "Simulation",
+    "section": "Compare",
+    "text": "Compare\n\n\nCode\nggplot(posterior) +\n  geom_density(aes(x = pi)) + \n  stat_function(fun = ~dbeta(.x, 39, 31), color = \"red\")"
+  },
+  {
+    "objectID": "bayes-simulation.html#summarise",
+    "href": "bayes-simulation.html#summarise",
+    "title": "Simulation",
+    "section": "Summarise",
+    "text": "Summarise\n\nposterior |&gt; \n  summarise(mean(pi), sqrt(var(pi)))\n\n   mean(pi) sqrt(var(pi))\n1 0.5549714    0.05779086"
+  },
+  {
+    "objectID": "bayes-simulation.html#compare-1",
+    "href": "bayes-simulation.html#compare-1",
+    "title": "Simulation",
+    "section": "Compare",
+    "text": "Compare\n\nmean = 39 / (39 + 31)\nsd = sqrt((39 * 31) / ((39 + 31) ^ 2 * (39 + 31 + 1)))\nmean\n\n[1] 0.5571429\n\nsd\n\n[1] 0.05895029"
   }
 ]

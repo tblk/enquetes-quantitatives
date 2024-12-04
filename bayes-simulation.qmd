@@ -1,0 +1,89 @@
+---
+title: "Simulation"
+author: "Théo Boulakia"
+date: 2024-12-04
+date-format: long
+format: revealjs
+lang: fr
+execute: 
+  echo: true
+---
+
+## Packages 
+
+```{r}
+library(tidyverse)
+```
+
+## Seed
+
+```{r}
+set.seed(84735)
+```
+
+## Nombre de simulations
+
+```{r}
+n = 10000
+```
+
+## Prior
+
+```{r}
+ggplot() +
+  stat_function(fun = ~dbeta(.x, 9, 11))
+```
+
+## Simulation
+
+```{r}
+x = data.frame(pi = rbeta(n, 9, 11)) |> 
+  mutate(y = rbinom(n, size = 50, prob = pi))
+```
+
+## Plot
+
+```{r}
+ggplot(x) +
+  geom_point(aes(x = pi, y = y, color = (y == 30)))
+```
+
+## Posterior data
+
+```{r}
+posterior = x |> 
+  filter(y == 30)
+```
+
+## Plot posterior
+
+```{r}
+#| code-fold: true
+ggplot(posterior) +
+  geom_density(aes(x = pi))
+```
+
+## Compare
+
+```{r}
+#| code-fold: true
+ggplot(posterior) +
+  geom_density(aes(x = pi)) + 
+  stat_function(fun = ~dbeta(.x, 39, 31), color = "red")
+```
+
+## Summarise
+
+```{r}
+posterior |> 
+  summarise(mean(pi), sqrt(var(pi)))
+```
+
+## Compare
+
+```{r}
+mean = 39 / (39 + 31)
+sd = sqrt((39 * 31) / ((39 + 31) ^ 2 * (39 + 31 + 1)))
+mean
+sd
+```
