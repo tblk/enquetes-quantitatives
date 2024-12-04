@@ -24,7 +24,7 @@ title: "Slides"
 
 [Distribution Zoo](https://ben18785.shinyapps.io/distribution-zoo/)
 
-[Simulation](simulation.qmd)
+[Simulation](bayes-simulation.qmd)
 
 Bechdel
 
