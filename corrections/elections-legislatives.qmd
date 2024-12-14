@@ -124,7 +124,7 @@ Importons cette couche géographique. Puis sélectionnons les variables correspo
 
 ```{r}
 #| message: false
-communes_sf = st_read(here::here("data", "COM_2024_CARTElette.shp")) |> 
+communes_sf = st_read(here::here("data", "COM_2024_CARTElette.shp"), quiet = TRUE) |> 
   janitor::clean_names() |> 
   select(insee_dep, insee_com, nom, population) |> 
   rename(code_commune = insee_com) |> 
@@ -159,7 +159,7 @@ legislatives_clean = legislatives_2024_t1 |>
 
 Maintenant que la variable `code_commune` est rigoureusement identique dans les deux dataframes, identifions les observations (les communes) éventuellement présentes dans l'un, mais pas dans l'autre, à l'aide de la fonction `anti_join`.
 
-D'abord, les communes qui sont dans notre fichier électoral, mais pas dans notre fichier cartographique. À part une poignée de commune métropolitaine qui ont dû apparaître dans l'intervalle entre la publication du COG 2024 et les législatives, il s'agit de collectivités d'outre-mer.
+D'abord, les communes qui sont dans notre fichier électoral, mais pas dans notre fichier cartographique. À part une poignée de communes métropolitaines qui ont dû apparaître (fusionner) dans l'intervalle entre la publication du COG 2024 et les législatives, il s'agit de communes des collectivités d'outre-mer et des communes où sont inscrits des Français de l'étranger.
 
 ```{r}
 anti_join(legislatives_clean, communes_sf)
@@ -186,27 +186,84 @@ legislatives_sf = left_join(communes_sf, legislatives_clean)
 
 # Absention
 
-Vous désirez étudier le pourcentage d'abstention par commune. 
-- Utilisez la fonction `summary` pour avoir une première idée de la distribution de cette variable. 
-- Représentez sa distribution à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
-- Représentez, sur un même graphe, le pourcentage de votes blancs, de votes nuls et d'absentions. Que remarquez-vous ?
+Vous désirez étudier le pourcentage d'abstention par commune.
+
+La fonction `summary` donne une première idée de la distribution de cette variable. 
+
+```{r}
+summary(legislatives_sf$percent_abstentions)
+```
+
+:::{callout-warning}
+Vous aurez remarqué que dans la ligne de code précédente, comme dans celle qui vont suivre, on utilise le dataframe legislatives_sf. Cela se justifie parce qu'on est en train de faire des analyses préparatoires à la cartographie. Mais cela veut dire qu'on a délibérément mis de côté toutes les communes des **collectivités d'outre-mer**, ainsi que celles où ont sont inscrits des **Français de l'étranger**.
+:::
+
+Représentons graphiquement cette distribution.
+
+```{r}
+ggplot(legislatives_sf) +
+  geom_histogram(aes(x = percent_abstentions), bins = 100)
+```
 
 :::{.callout-tip}
-Vous pourrez utiliser la fonction `geom_point` et jouer avec les *scales* suivantes : `x`, `y`, `fill`.
+N'oubliez pas de jouer sur l'argument `bins` de la fonction geom_histogram.
 :::
+
+La distribution de notre variable ressemble beaucoup à une loi normale. Il y a quand même un certain nombre de valeurs extrêmes. Plusieurs communes ont des pourcentages d'abstention compris entre 50 et 100. Comparons le nombre d'inscrits au pourcentage d'abstention, pour savoir si cela est lié à la petite taille de certaines communes. 
+
+```{r}
+ggplot(legislatives_sf) +
+  geom_point(aes(x = inscrits,
+                 y = percent_abstentions))
+```
+
+:::{.callout-tip}
+### Le logarithme à la rescousse
+C'est **totalement illisible**, parce qu'il y a des communes beaucoup plus peuplées que d'autres. Dans ce cas, on peut utiliser une échelle logarithmique pour la variable qui pose problème. Et par la même occasion "zoomer" sur les communes où plus d'un électeur sur deux s'est abstenu et les labelliser.
+:::
+
+```{r}
+communes_abstentionnistes = legislatives_sf |> 
+  filter(percent_abstentions > 50)
+
+nrow(communes_abstentionnistes)
+
+communes_abstentionnistes |> 
+  ggplot(aes(x = inscrits,
+             y = percent_abstentions)) +
+  geom_point() +
+  ggrepel::geom_text_repel(aes(label = libelle_commune)) +
+  scale_x_log10()
+```
+
+On constate que l'essentiel de ces communes très abstentionnistes appartiennent aux départements d'outre-mer.
 
 # Discrétisation
 
-- Vu la distribution de la variable du pourcentage d'absentions, quelle distribution vous semble la plus adaptée ? 
-- À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
+Il serait bon que la discrétisation choisie reflète ce résultat, et permette de souligner la situation spécifique des commune des départements d'outre-mer. Malgré la distribution presque normale, une discrétisation utilisant l'écart-type, de manière symétrique autour de la moyenne, n'est peut-être donc pas la plus adaptée. 
+
+On choisit donc une discrétisation capable de mettre en évidence cette longue "queue" de nos données, *head-tails breaks* :
+
+```{r}
+headtails = classInt::classIntervals(
+  legislatives_sf$percent_abstentions,
+  style = "headtails")
+headtails$brks
+```
 
 # Cartographie
 
-- Cartographiez le pourcentage de logements vacants en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
+```{r}
+ggplot(legislatives_sf,
+       aes(fill = percent_abstentions)) +
+  geom_sf(color = NA) +
+  scale_fill_viridis_b(breaks = headtails$brks,
+                       labels = round) +
+  labs(title = "Abstention",
+       subtitle = "Au premier tour des élections législatives de 2024",
+       fill = "%",
+       caption = "Source : Ministère de l'Intérieur") +
+  theme_void() +
+  theme(text = element_text(family = "Arial Narrow"))
+```
 
-- Cartographiez la distribution de l'absention en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
-
-:::{.callout-caution}
-# M'appeler à ce stade
-Pour discuter des améliorations esthétiques à apporter.
-:::
