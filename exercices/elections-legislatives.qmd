@@ -54,7 +54,7 @@ Pour que je vous indique les fonctions dont vous aurez besoin.
 - Une fois que la variable commune est rigoureusement identique dans les deux dataframes, identifiez les observations (les communes) éventuellement présentes dans l'un, mais pas dans l'autre, à l'aide de la fonction `anti_join`. Y a-t-il une logique dans ces absences ?
 - Réalisez la jointure à l'aide de la fonction `left_join`. 
 
-# Absention
+# Distribution de l'abstention
 
 Vous désirez étudier le pourcentage d'abstention par commune.
 

@@ -1,0 +1,65 @@
+---
+title: "La Vie en Confinement"
+date: 2024-12-18
+categories: ["Niveau 3", "Distances", "Clustering", "Dimension reduction"]
+---
+
+# Contexte
+
+Les données sont issues de l'enquête *La Vie en Confinement*. L'échantillon sur lequel vous allez travailler est parfaitement anonymisé et ne contient aucune information socio-démographique, seulement un ensemble de 15 pratiques. Le but est de réaliser une classification de ces pratiques, *sans* passer par la combinaison de méthodes standard qui consiste à : 1) réduire la dimensionnalité du jeu de données avec une Analyse des Correspondances Multiples 2) Réaliser une classification ascendante hiérarchique sur les composantes principales obtenues.
+
+Le dictionnaire des variables est disponible [ici](https://vico.hypotheses.org/files/2020/12/VICO-DICTIONNAIRE-PUBLIC.pdf).
+
+# Préparation
+
+- Chargez les packages `{tidyverse}` et `{cluster}`
+- Importez les données :
+```{r}
+#| eval: false
+#| echo: true
+vico = read_csv("https://raw.githubusercontent.com/tblk/enquetes-quantitatives/refs/heads/main/donnees/vico.csv")
+```
+
+- Quel est le type des différentes variables ? Vous pourrez utiliser la fonction `glimpse` de `{dplyr}`.
+
+# Recodages
+
+Le but de ces recodages est de changer le type des variables de manière à tirer pleinement parti des options qu'offre la méthode de Gower.
+- Un certain nombre des variables du jeu de données sont **ordonnées**. Lesquelles ?
+- Convertissez ces variables en *ordered factor*.
+
+:::{.callout-tip}
+Pour cela, vous pourrez utiliser la fonction factor, et deux de ses arguments. Mettons par exemple que vous ayez une variable (un vecteur) de ce type :
+```{r}
+#| eval: true
+v = c("Bon", "Mauvais", "Moyen", "Très bon")
+```
+Il y a un ordre naturel dans les modalités de cette variable. Pour l'expliciter, vous pouvez utiliser la fonction `factor` ainsi :
+```{r}
+v = factor(v,
+           levels = c("Mauvais", "Moyen", "Bon", "Très bon"),
+           ordered = TRUE)
+```
+:::
+- D'autres variables du jeu de données sont binaires. Laissez les ainsi.
+- Enfin, d'autres variables ont des modalités incommensurables. Vous pouvez simplement les recoder en facteurs (avec la fonction `factor`).
+
+# Matrice de distance
+
+À l'aide de la fonction `daisy` du package `{cluster}`, calculez la matrice de distances correspondant à vos données (autrement dit, l'ensemble des distances entre chacun des individus). Vous veillerez à bien spécifier le **type** des différentes variables.
+
+# Multidimensionnal Scaling
+
+Afin de visualiser les distances entre individus dans un espace de dimensions réduites, vous utilisez la technique dite (en anglais) : *Multidimensionnal Scaling*. Vous utiliserez pour cela la fonction `cmdscale` de R base, en précisant que vous désirez retenir deux dimensions seulement.
+
+À partir du résultat retourné par `cmdscale`, représentez graphiquement vos données sous la forme d'un nuage de points, avec `{ggplot2}`. 
+
+# Clustering
+
+Réalisez deux partitions de vos données en k groupes (où il vous appartient de déterminer le nombre k optimal, par exemple en regardant le nuage de points obtenu dans la section précédente). 
+
+1) Avec l'algorithme *k-medoids* implémenté dans la fonction `pam` du package `{cluster}`.
+2) Avec une classification ascendante hiérarchique (fonction hclust). 
+
+Entre autres choses, les deux fonctions renvoient un vecteur contenant la classe assignée à chaque individu. Ajoutez ces deux variables au jeu de données initial sous les noms `group_pam` et `group_hclust`. 
+

@@ -14,7 +14,9 @@
   },
   {
     "listing": "/corrections.html",
-    "items": []
+    "items": [
+      "/corrections/elections-legislatives.html"
+    ]
   },
   {
     "listing": "/programme.html",

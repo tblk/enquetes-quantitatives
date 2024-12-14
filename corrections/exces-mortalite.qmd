@@ -1,0 +1,96 @@
+---
+title: "Excès de mortalité"
+date: 2024-12-18
+categories: "Niveau 2"
+---
+
+# Contexte
+
+On souhaite identifier les pays les plus touchés par la pandémie de Covid-19, en utilisant une métrique robuste.
+
+:::{.callout-tip}
+# Conseil
+Rendez-vous sur [Our World in Data](https://ourworldindata.org/excess-mortality-covid#) et parcourez l'article pour comprendre la problématique.
+:::
+
+# Préparation
+
+- Chargez les packages `tidyverse` et {{< var sf >}}.
+- Les données de l'exercice sont en ligne sur le [repo github](https://github.com/owid/covid-19-data) de Our World in Data.
+- Importez les directement depuis l'url suivante, sans les télécharger, à l'aide de la fonction `read_csv`. 
+
+```{r}
+#| eval: false
+"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/excess_mortality/excess_mortality.csv"
+```
+
+# select
+
+À l'aide de la fonction `select`, sélectionnez les variables suivantes :
+
+- location
+- date
+- time_unit
+- projected_deaths_since_2020_all_ages
+- p_scores_all_ages
+- deaths_since_2020_all_ages
+
+# mutate
+
+Calculez le p-score à l'aide de la formule donnée dans [l'article](https://ourworldindata.org/excess-mortality-covid#) cité plus haut, sachant que la mortalité observée est donnée par la variable `deaths_since_2020_all_ages`, et la mortalité attendue par `projected_deaths_since_2020_all_ages`. Vérifiez que ce que vous avez calculé correspond bien à la variable p_scores_all_ages.
+
+# geom_line
+
+- À l'aide du package `ggplot` et de sa fonction `geom_line`, visualisez, pour 6 pays de votre choix : 
+   + l'évolution de la mortalité brute
+   + l'évolution des p-scores
+- Choisissez celle de ces deux représentations qui vous semble la plus lisible, et distinguez les pays par la couleur de la courbe qui leur correspond, ou le type de trait (`linetype`).
+- De même, créez un mini-graphique séparé pour chaque pays. Vous pourrez utiliser la fonction `facet_wrap`.
+- Quelle représentation vous semble la plus lisible ?
+
+# filter
+
+À l'aide de la fonction `filter`, sélectionnez uniquement les observations qui se situent entre le 1er mars et le 1er juin 2020.
+
+# summarise
+
+Sur le dataframe auquel vous venez d'appliquer la fonction `filter`, utilisez les fonctions `group_by` et `summarise` pour créer les variables suivantes, pour chaque pays :
+
+- la somme des décès escomptés sur la période
+- la somme des décès effectivement observés
+- le p-score pour la période
+
+Sauf précision, les étapes ultérieures de l'exercice s'appliquent à ce nouveau dataframe.
+
+# Distribution
+
+Vous désirez étudiez la distribution de la variable `p-score` que vous venez de calculer. 
+
+- Utilisez la fonction `summary` pour en avoir une première idée.
+- Représentez la graphiquement à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
+
+# Couche cartographique
+
+- À l'aide du package [giscor](https://ropengov.github.io/giscoR/), obtenez un objet sf représentant les frontières de l'ensemble des pays du monde.
+- Reprojetez le en Eckert 4 à l'aide de la fonction `st_transform` du package [sf](https://r-spatial.github.io/sf/).
+- Assignez le résultat à un objet nommé countries.
+
+# Jointure
+
+Vous voulez combiner le dataframe/objet sf countries et le dataframe créé avec la fonction `summarise`.
+
+- Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
+- Y a-t-il des observations (pays) qui apparaissent dans l'un des deux dataframes et pas dans l'autre ? Vous pourrez utiliser la fonction `anti_join` pour le savoir.
+- Réalisez la jointure avec la fonction `left_join`.
+
+# Discrétisation
+
+Vous souhaitez discrétiser la variable `p-score` afin d'en faire une représentation cartographique lisible. 
+
+- Vu la distribution de la variable, quelle distribution vous semble la plus adaptée ?
+- À l'aide de la fonction `classInt::classIntervals`, procédez à la 
+discrétisation.
+
+# Cartographie
+
+- Cartographiez la distribution des p-scores au printemps 2020 avec les trois fonctions suivantes : `ggplot`, `geom_sf`, `scale_fill_viridis_b`.

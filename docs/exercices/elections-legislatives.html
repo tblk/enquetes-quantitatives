@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Cartographier l’absention au premier tour des élections législatives anticipées de 2024">
+<meta name="description" content="Recodage relativement avancé, avec l’utilisation de across() et une jointure difficile. Attire également l’attention sur les pièges de l’importation. Permet de réviser l’étude de la distribution d’une variable, les principes de la discrétisation et la production de cartes choroplèthes.">
 
 <title>Élections législatives – Enquêtes quantitatives</title>
 <style>
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Élections législatives – Enquêtes quantitatives">
-<meta property="og:description" content="Cartographier l’absention au premier tour des élections législatives anticipées de 2024">
+<meta property="og:description" content="Recodage relativement avancé, avec l’utilisation de across() et une jointure difficile. Attire également l’attention sur les pièges de l’importation. Permet de réviser l’étude de la distribution d’une variable, les principes de la discrétisation et la production de cartes choroplèthes.">
 <meta property="og:site_name" content="Enquêtes quantitatives">
 </head>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#inspection" id="toc-inspection" class="nav-link" data-scroll-target="#inspection">Inspection</a></li>
   <li><a href="#couche-géographique" id="toc-couche-géographique" class="nav-link" data-scroll-target="#couche-géographique">Couche géographique</a></li>
   <li><a href="#jointure" id="toc-jointure" class="nav-link" data-scroll-target="#jointure">Jointure</a></li>
-  <li><a href="#absention" id="toc-absention" class="nav-link" data-scroll-target="#absention">Absention</a></li>
+  <li><a href="#distribution-de-labstention" id="toc-distribution-de-labstention" class="nav-link" data-scroll-target="#distribution-de-labstention">Distribution de l’abstention</a></li>
   <li><a href="#discrétisation" id="toc-discrétisation" class="nav-link" data-scroll-target="#discrétisation">Discrétisation</a></li>
   <li><a href="#cartographie" id="toc-cartographie" class="nav-link" data-scroll-target="#cartographie">Cartographie</a></li>
   </ul>
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Cartographier l’absention au premier tour des élections législatives anticipées de 2024
+    Recodage relativement avancé, avec l’utilisation de across() et une jointure difficile. Attire également l’attention sur les pièges de l’importation. Permet de réviser l’étude de la distribution d’une variable, les principes de la discrétisation et la production de cartes choroplèthes.
   </div>
 </div>
 
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Recodages</h1>
 <ul>
 <li>Combien d’observations et de variables contient cette base de données ? Pourquoi y a-t-il autant de variables ?</li>
-<li>Sélectionnez les variables donnant les informations générales (nombre d’inscrits, de votants, de votes nuls, blancs, d’absentions et pourcentages correspondants). Vous pourrez utiliser la fonction <code>select</code>.</li>
+<li>Sélectionnez les variables donnant les informations générales (nombre d’inscrits, de votants, de votes nuls, blancs, d’abstentions et pourcentages correspondants). Vous pourrez utiliser la fonction <code>select</code>.</li>
 <li>Quel est le type des variables exprimées en pourcentage ?</li>
 <li>Convertissez toutes ces variables dans un type plus adapté. Vous pourrez utiliser la fonction <code>parse_number</code> du package <a href="https://readr.tidyverse.org/">readr</a>.</li>
 </ul>
@@ -266,9 +266,14 @@ M’appeler à ce stade
 <li>Réalisez la jointure à l’aide de la fonction <code>left_join</code>.</li>
 </ul>
 </section>
-<section id="absention" class="level1">
-<h1>Absention</h1>
-<p>Vous désirez étudier le pourcentage d’abstention par commune. - Utilisez la fonction <code>summary</code> pour avoir une première idée de la distribution de cette variable. - Représentez sa distribution à l’aide des fonctions <code>geom_boxplot</code>, <code>geom_histogram</code> et <code>geom_density</code>. - Représentez, sur un même graphe, le pourcentage de votes blancs, de votes nuls et d’absentions. Que remarquez-vous ?</p>
+<section id="distribution-de-labstention" class="level1">
+<h1>Distribution de l’abstention</h1>
+<p>Vous désirez étudier le pourcentage d’abstention par commune.</p>
+<ul>
+<li>Utilisez la fonction <code>summary</code> pour avoir une première idée de la distribution de cette variable.</li>
+<li>Représentez sa distribution à l’aide des fonctions <code>geom_boxplot</code>, <code>geom_histogram</code> et <code>geom_density</code>.</li>
+<li>Représentez, sur un même graphe, le pourcentage de votes blancs, de votes nuls et d’absentions. Que remarquez-vous ?</li>
+</ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -286,16 +291,13 @@ Astuce
 <section id="discrétisation" class="level1">
 <h1>Discrétisation</h1>
 <ul>
-<li>Vu la distribution de la variable du pourcentage d’absentions, quelle distribution vous semble la plus adaptée ?</li>
+<li>Vu la distribution du pourcentage d’abstentions, quelle discrétisation vous semble la plus adaptée ?</li>
 <li>À l’aide de la fonction <code>classInt::classIntervals</code>, procédez à la discrétisation.</li>
 </ul>
 </section>
 <section id="cartographie" class="level1">
 <h1>Cartographie</h1>
-<ul>
-<li><p>Cartographiez le pourcentage de logements vacants en utilisant ces trois fonctions : <code>ggplot</code>, <code>geom_sf</code> et <code>scale_fill_viridis_b</code>.</p></li>
-<li><p>Cartographiez la distribution de l’absention en utilisant ces trois fonctions : <code>ggplot</code>, <code>geom_sf</code> et <code>scale_fill_viridis_b</code>.</p></li>
-</ul>
+<p>Cartographiez la distribution de l’abstention en utilisant ces trois fonctions : <code>ggplot</code>, <code>geom_sf</code> et <code>scale_fill_viridis_b</code>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

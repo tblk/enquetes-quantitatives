@@ -1,0 +1,59 @@
+---
+title: "Bombardements"
+date: 2024-12-18
+categories: "Niveau 3"
+---
+
+# Préparation
+
+- Chargez les packages suivants :
+   + `tidyverse` 
+   + [sf](https://r-spatial.github.io/sf/)
+   + [spatstat](https://spatstat.org/)
+- Téléchargez la base "Vietnam War THOR Data" (1.5 GB) sur le site [data.world](https://data.world/datamil/vietnam-war-thor-data). Il faut préalabement créer un compte. 
+- Parcourez rapidement la documentation.
+- Pour gagner du temps et de l'espace disque, convertissez le fichier csv en un fichier parquet (vous pourrez utiliser successivement les packages `vroom` et [nanoparquet](https://nanoparquet.r-lib.org/)). 
+
+# Frontière des pays
+
+À l'aide du package [giscoR](https://ropengov.github.io/giscoR/), importez les polygones correspondant aux frontières du Laos, du Vietnam et du Cambodge dans un objet sf. 
+
+# filter
+
+La base THOR contient de nombreuses missions aériennes, en plus des bombardements, qui seuls nous intéressent. Pour sélectionner les missions de bombardement, on se servira des informations suivantes :
+
+- `numweaponsdelivered` non nul
+- `mfunc_desc_class` différent de NONKINETIC
+- `tgtlatdd_ddd_wgs84` renseignée
+
+Afin d'accélérer les calculs ultérieurs, sélectionnez un échantillon aléatoire de 100 000 lignes. Vous pourrez utiliser la fonction `slice_sample`.
+
+# Convertir en objet sf
+
+- Convertissez le dataframe de 100 000 lignes obtenu en objet sf. Pour cela, vous pourrez utiliser la fonction `st_as_sf` du package `sf`, après avoir remarqué que la latitude et la longitude sont respectivement encodées dans les variables `tgtlatdd_ddd_wgs84` et `tgtlonddd_ddd_wgs84`. 
+- Assurez vous que le *Coordinate Reference System* (CRS) de l'objet sf obtenu est le même que celui des polygones des pays.
+
+- Conservez uniquement les bombardements dont la localisation est incluse dans les frontières des trois pays. Vous pourrez utiliser la fonction `st_intersection`. 
+
+# Semis de points
+
+Cartographiez les bombardements en utilisant le package `ggplot`. Vous pourrez jouer sur la taille et la transparence des points pour obtenir une carte lisible. 
+
+# Grille
+
+L'objectif de cette partie de l'exercice est de produire une carte plus synthétique, où l'intensité des bombardements apparaît dans les couleurs attribuées aux cellules d'une grille hexagonale.
+
+- Créez une grille régulière correspondant à l'emprise spatiale du Cambodge, du Vietnam et du Laos. Vous pourrez utiliser la fonction `sf::st_make_grid`. Visualisez la avec `ggplot`.
+- Créez un nouvel objet sf, par l'intersection de cette grille et des polygones des pays. Vous pourrez utiliser la fonction `sf::st_intersection`. Visualisez avec `ggplot` l'objet ainsi obtenu.
+- Réalisez une *jointure spatiale* entre l'objet sf contenant les bombardements et l'objet sf que vous venez de créer. L'objectif est que chaque bombardement appartienne désormais à une cellule de la grille.
+- Créez un nouveau dataframe/objet sf contenant une ligne par cellule, et une nouvelle variable donnant le nombre de bombardements dans l'emprise de cette cellule.
+- Cartographiez cette nouvelle manière de présenter l'information à l'aide de `ggplot`.
+
+# Tâtonnements
+
+Pour améliorer la carte précédente, jouez sur les aspects suivants :
+
+- Nombre de cellules de la grille
+- Cellules carrées ou hexagonales
+- Palette de couleurs
+- Discrétisation (avec le package `classInt`) 

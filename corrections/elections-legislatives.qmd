@@ -2,6 +2,7 @@
 title: "Élections législatives"
 date: 2024-12-18
 categories: "Niveau 3"
+draft: false
 ---
 
 # Préparation
@@ -184,7 +185,7 @@ Ces points éclaircis, réalisons la jointure à l'aide de la fonction `left_joi
 legislatives_sf = left_join(communes_sf, legislatives_clean)
 ```
 
-# Absention
+# Distribution de l'abstention
 
 Vous désirez étudier le pourcentage d'abstention par commune.
 
@@ -202,7 +203,9 @@ Représentons graphiquement cette distribution.
 
 ```{r}
 ggplot(legislatives_sf) +
-  geom_histogram(aes(x = percent_abstentions), bins = 100)
+  geom_histogram(aes(x = percent_abstentions),
+                 bins = 100,
+                 fill = "red")
 ```
 
 :::{.callout-tip}
@@ -242,22 +245,28 @@ On constate que l'essentiel de ces communes très abstentionnistes appartiennent
 
 Il serait bon que la discrétisation choisie reflète ce résultat, et permette de souligner la situation spécifique des commune des départements d'outre-mer. Malgré la distribution presque normale, une discrétisation utilisant l'écart-type, de manière symétrique autour de la moyenne, n'est peut-être donc pas la plus adaptée. 
 
-On choisit donc une discrétisation capable de mettre en évidence cette longue "queue" de nos données, *head-tails breaks* :
+On choisit donc une discrétisation capable de mettre en évidence cette longue "queue" de nos données, en l'occurence la discrétisation de style "boxplot", qui offre un bon compromis entre équilibre et détail. Vous pouvez en tester d'autres, par exemple le style "sd" ou "headtails", en utilisant la même syntaxe. 
 
 ```{r}
-headtails = classInt::classIntervals(
+sd = classInt::classIntervals(
   legislatives_sf$percent_abstentions,
-  style = "headtails")
-headtails$brks
+  n = 4,
+  style = "sd")
+sd$brks
+
+box = classInt::classIntervals(
+  legislatives_sf$percent_abstentions,
+  style = "box")
 ```
 
 # Cartographie
 
 ```{r}
+#| column: screen-inset-shaded
 ggplot(legislatives_sf,
        aes(fill = percent_abstentions)) +
   geom_sf(color = NA) +
-  scale_fill_viridis_b(breaks = headtails$brks,
+  scale_fill_viridis_b(breaks = box$brks,
                        labels = round) +
   labs(title = "Abstention",
        subtitle = "Au premier tour des élections législatives de 2024",
