@@ -1,5 +1,6 @@
 ---
 title: "Élections législatives"
+description: "Correction complète"
 date: 2024-12-18
 categories: "Niveau 3"
 draft: false
@@ -262,7 +263,7 @@ box = classInt::classIntervals(
 # Cartographie
 
 ```{r}
-#| column: screen-inset-shaded
+#| column: page
 ggplot(legislatives_sf,
        aes(fill = percent_abstentions)) +
   geom_sf(color = NA) +

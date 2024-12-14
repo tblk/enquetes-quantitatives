@@ -4,4 +4,5 @@ listing:
   contents: corrections
   sort: date
   sort-ui: false
+  categories: true
 ---
