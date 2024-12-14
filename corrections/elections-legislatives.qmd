@@ -27,7 +27,7 @@ Le jeu de données rassemble les résultats du *premier tour* des élections lé
 ```{r}
 #| message: false
 #| warning: false
-legislatives_2024_t1 = readxl::read_excel(here::here("data", "legislatives-2024-communes.xlsx")) |> 
+d0 = readxl::read_excel(here::here("data", "legislatives-2024-communes.xlsx")) |> 
   janitor::clean_names()
 ```
 
@@ -36,14 +36,14 @@ legislatives_2024_t1 = readxl::read_excel(here::here("data", "legislatives-2024-
 Notre base de données contient autant de lignes que de communes. Et de très nombreuses variables, car le jeu de données est au format *wide*. Autrement dit, pour chaque commune, il y a une colonne pour chaque attribut de chaque candidat.
 
 ```{r}
-nrow(legislatives_2024_t1)
-ncol(legislatives_2024_t1)
+nrow(d0)
+ncol(d0)
 ```
 
 Je sélectionne les variables donnant les informations générales (nombre d'inscrits, de votants, de votes nuls, blancs, d'abstentions et pourcentages correspondants). Il s'agit des 18 premières variables, et je peux donc passer à `select` l'argument `1:18`.
 
 ```{r}
-d1 = legislatives_2024_t1 |> 
+d1 = d0 |> 
   select(1:18)
 ```
 
@@ -89,31 +89,100 @@ d2 |>
 Pour gagner du temps, les fonctions dédiées à l'importation, comme `readxl::read_excel` ou `readr::read_csv` essaient de *deviner* le type des variables à partir des premières lignes qu'elles lisent. Par défaut, il s'agit des 1000 premières lignes. La plupart du temps, cela fonctionne. Mais avec les codes des communes, il y a très souvent un problème. Les 1000 premiers codes sont numériques, donc `read_excel` assigne à la variable `code_commune` le type `numeric`. Arrivée en Corse, la fonction rencontre des codes qui contiennent les symboles "A" et "B". Impossible de les lire comme `numeric`, par conséquent ces valeurs se verront assigner la valeur `NA` (pour *Not Available*). Deux solutions existent : soit expliciter le type des variables, soit augmenter le nombre de lignes que la fonction doit lire avant de déterminer le type des variables. Comme la base de données est relativement petite, on peut ici choisir la seconde option, qui correspond à l'argument `guess_max` de `read_excel`.
 :::
 
+# Rectifier
+
+On reprend ici les étapes précédentes, sauf qu'on réalise correctement l'importation.
+
+```{r}
+legislatives_2024_t1 = readxl::read_excel(here::here("data", "legislatives-2024-communes.xlsx"),
+                                          guess_max = 35000) |> 
+  janitor::clean_names() |> 
+  select(1:18) |> 
+  mutate(
+    across(
+      starts_with("percent_"),
+      ~parse_number(.x, locale = locale(decimal_mark = ","))
+      ))
+```
+
 # Couche géographique
 
-- À l'aide du package [CARTElette](https://antuki.github.io/CARTElette/articles/CARTElette.html), téléchargez les contours des communes pour l'année 2024. Faites en sorte que les fichiers correspondants soient enregistrés dans un sous-dossier `data` de votre projet R. 
+À l'aide du package [CARTElette](https://antuki.github.io/CARTElette/articles/CARTElette.html), on télécharge les contours des communes pour l'année 2024 dans un sous-dossier `data` de notre projet. 
 
-:::{.callout-tip}
-Vous utiliserez pour cela la fonction `charger_carte`, et trois de ses arguments : `destfile`, `COG` et `nivsupra`. 
+:::{.callout-caution}
+Ce ligne de code n'est évidemment à exécuter *qu'une seule fois*. N'oubliez pas de la commenter (#) pour ne pas télécharger les données à chaque fois que vous relancez votre script.
 :::
 
-- Importez cette couche géographique à l'aide de la fonction st_read du package sf.
-- Sélectionnez les variables correspondant au code de la commune et du département, au nom de la commune et à sa population. 
-- Triez les observations par code géographique croissant. Vous pourrez utiliser la fonction `arrange`. 
+```{r}
+#| eval: false
+CARTElette::charger_carte(destfile = here::here("data"),
+                          COG = 2024,
+                          nivsupra = "COM")
+```
+
+Importons cette couche géographique. Puis sélectionnons les variables correspondant au code de la commune et du département, au nom de la commune et à sa population. Trions les observations par code géographique croissant.
+
+```{r}
+#| message: false
+communes_sf = st_read(here::here("data", "COM_2024_CARTElette.shp")) |> 
+  janitor::clean_names() |> 
+  select(insee_dep, insee_com, nom, population) |> 
+  rename(code_commune = insee_com) |> 
+  arrange(code_commune)
+```
 
 # Jointure
 
 L'objectif est de réaliser une jointure entre le dataframe des résultats électoraux, et le dataframe/objet sf contenant les contours des communes, afin de pouvoir cartographier les résultats. 
 
-- Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
-- Recodez la variable que vous avez choisie comme clef commune de manière à ce qu'elle soit absolument identique dans les deux dataframes.
+La meilleure candidate pour le rôle de **clef commune** aux deux dataframe semble être la variable `code_commune`. Seulement, deux observations montrent que cela ne sera seulement pas si simple. 
 
-:::{.callout-caution}
-# M'appeler à ce stade
-Pour que je vous indique les fonctions dont vous aurez besoin.
+- D'abord, le dataframe commune_sf contient `r nrow(communes_sf)` lignes et le dataframe électoral `r nrow(legislatives_2024_t1)` lignes.
+- Ensuite, les deux variables ne sont pas *strictement* codées de la même façon. Comparez le code de L'Abergement-Clémenciat dans les deux dataframes par exemple. 
+
+On va d'abord recoder `code_commune` de manière à ce qu'elle soit absolument identique dans les deux dataframes, pour deux communes identiques.
+
+:::{.callout-tip}
+### Ajouter un zéro
+Pour cela, il faut ajouter un zéro devant les codes du dataframe électoral qui ne contiennent que 4 chiffres, de manière à ce que, par exemple, `1001` devienne `01001`. Pour cela, on utilise, à l'intérieur de la fonction `mutate` qui nous permet de recoder une variable, 3 fonctions :
+- `if_else` permet de faire du recodage *conditionnel*.
+- `stringr::str_length` donne la longueur d'une chaîne de caractères.
+- `paste0` permet de "coller" (sans espace) deux chaînes de caractères ensemble.
 :::
-- Une fois que la variable commune est rigoureusement identique dans les deux dataframes, identifiez les observations (les communes) éventuellement présentes dans l'un, mais pas dans l'autre, à l'aide de la fonction `anti_join`. Y a-t-il une logique dans ces absences ?
-- Réalisez la jointure à l'aide de la fonction `left_join`. 
+
+```{r}
+legislatives_clean = legislatives_2024_t1 |> 
+  mutate(code_commune = if_else(str_length(code_commune) < 5,
+                                paste0("0", code_commune),
+                                code_commune))
+```
+
+Maintenant que la variable `code_commune` est rigoureusement identique dans les deux dataframes, identifions les observations (les communes) éventuellement présentes dans l'un, mais pas dans l'autre, à l'aide de la fonction `anti_join`.
+
+D'abord, les communes qui sont dans notre fichier électoral, mais pas dans notre fichier cartographique. À part une poignée de commune métropolitaine qui ont dû apparaître dans l'intervalle entre la publication du COG 2024 et les législatives, il s'agit de collectivités d'outre-mer.
+
+```{r}
+anti_join(legislatives_clean, communes_sf)
+```
+
+Ensuite, les communes qui sont dans notre fichier géographique, mais pas dans notre fichier électoral. Qu'est-ce que ces communes ont de spécial ? Elles n'ont, tout simplement, pas d'habitants, mais sont conservées comme lieux de mémoire de la Première Guerre Mondiale. Voir ces deux articles de Wikipédia :
+
+```{r}
+#| eval: false
+browseURL("https://fr.wikipedia.org/wiki/Zone_rouge_(s%C3%A9quelles_de_guerre)#Contexte_historique")
+browseURL("https://fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_Premi%C3%A8re_Guerre_mondiale")
+
+```
+
+```{r}
+anti_join(communes_sf, legislatives_clean)
+```
+
+Ces points éclaircis, réalisons la jointure à l'aide de la fonction `left_join`. 
+
+```{r}
+legislatives_sf = left_join(communes_sf, legislatives_clean)
+```
 
 # Absention
 

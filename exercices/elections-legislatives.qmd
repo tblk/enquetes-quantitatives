@@ -56,7 +56,8 @@ Pour que je vous indique les fonctions dont vous aurez besoin.
 
 # Absention
 
-Vous désirez étudier le pourcentage d'abstention par commune. 
+Vous désirez étudier le pourcentage d'abstention par commune.
+
 - Utilisez la fonction `summary` pour avoir une première idée de la distribution de cette variable. 
 - Représentez sa distribution à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
 - Représentez, sur un même graphe, le pourcentage de votes blancs, de votes nuls et d'absentions. Que remarquez-vous ?
