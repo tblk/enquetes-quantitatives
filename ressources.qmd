@@ -39,3 +39,9 @@ title: "Ressources"
 [Bayes Rules!]()
 
 [Statistical Rethinking]()
+
+# Text Mining
+
+[Tidy Text Mining with R]()
+
+[Unsupervised Learning for Text Analysis in R]()
