@@ -23,6 +23,7 @@ website:
       - slides.qmd
       - exercices.qmd
       - corrections.qmd
+      - ressources.qmd
       - faq.qmd
 
 format:

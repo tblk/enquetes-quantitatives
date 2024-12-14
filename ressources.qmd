@@ -1,0 +1,41 @@
+---
+title: "Ressources"
+---
+
+# Data Science
+
+[R for Data Science]()
+
+[Python for Data Analysis]()
+
+[Julia Data Science]()
+
+[Julia for Data Analysis]()
+
+# DataViz
+
+[Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+*Data Visualization. A Practical Introduction*, Kieran Healy
+
+# Cartographie
+
+[Geocomputation with R]()
+
+[Geocomputation with Python]()
+
+[Geographic Data Science with R]()
+
+[Geographic Data Science with Python]()
+
+# Unsupervised Learning
+
+
+
+# Statistics
+
+[Statistical Modelling. A Fresh Approach]()
+
+[Bayes Rules!]()
+
+[Statistical Rethinking]()
