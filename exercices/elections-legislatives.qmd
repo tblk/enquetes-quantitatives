@@ -14,7 +14,7 @@ categories: "Niveau 3"
 # Recodages 
 
 - Combien d'observations et de variables contient cette base de données ? Pourquoi y a-t-il autant de variables ?
-- Sélectionnez les variables donnant les informations générales (nombre d'inscrits, de votants, de votes nuls, blancs, d'absentions et pourcentages correspondants). Vous pourrez utiliser la fonction `select`.
+- Sélectionnez les variables donnant les informations générales (nombre d'inscrits, de votants, de votes nuls, blancs, d'abstentions et pourcentages correspondants). Vous pourrez utiliser la fonction `select`.
 - Quel est le type des variables exprimées en pourcentage ? 
 - Convertissez toutes ces variables dans un type plus adapté. Vous pourrez utiliser la fonction `parse_number` du package [readr](https://readr.tidyverse.org/).
 

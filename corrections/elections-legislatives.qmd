@@ -1,0 +1,143 @@
+---
+title: "Élections législatives"
+date: 2024-12-18
+categories: "Niveau 3"
+---
+
+# Préparation
+
+Je charge uniquement les packages principaux.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(sf)
+```
+
+Je télécharge les données directement depuis R. La fonction `multi_download` du package `curl` est adaptée au téléchargement de fichiers lourds ou multiples. La fonction de base correspondante est `download.file`. Je les télécharge dans le sous-dossier `data` de mon projet à l'aide de la fonction `here::here`.
+
+```{r}
+#| eval: false
+curl::multi_download("https://static.data.gouv.fr/resources/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour/20240711-075030/resultats-definitifs-par-communes.xlsx",
+                     destfiles = here::here("data", "legislatives-2024-communes.xlsx"))
+```
+
+Le jeu de données rassemble les résultats du *premier tour* des élections législatives de 2024 au niveau *communal*.
+
+```{r}
+#| message: false
+#| warning: false
+legislatives_2024_t1 = readxl::read_excel(here::here("data", "legislatives-2024-communes.xlsx")) |> 
+  janitor::clean_names()
+```
+
+# Recodages 
+
+Notre base de données contient autant de lignes que de communes. Et de très nombreuses variables, car le jeu de données est au format *wide*. Autrement dit, pour chaque commune, il y a une colonne pour chaque attribut de chaque candidat.
+
+```{r}
+nrow(legislatives_2024_t1)
+ncol(legislatives_2024_t1)
+```
+
+Je sélectionne les variables donnant les informations générales (nombre d'inscrits, de votants, de votes nuls, blancs, d'abstentions et pourcentages correspondants). Il s'agit des 18 premières variables, et je peux donc passer à `select` l'argument `1:18`.
+
+```{r}
+d1 = legislatives_2024_t1 |> 
+  select(1:18)
+```
+
+Un premier problème apparaît : les variables exprimées en pourcentage sont de type `character`, car elles contiennent le symbole `%`. Pas très pratique pour faire des calculs. 
+
+```{r}
+glimpse(d1)
+```
+
+On va donc convertir toutes ces variables au format `numeric`. Ce serait fastidieux de le faire pour chacune d'entre elle, on utilise donc la fonction `across`.
+
+:::{.callout-tip}
+Testez la fonction `parse_number` sur des chaînes de caractères contenant des nombres et regardez le résultat.
+:::
+
+```{r}
+d2 = d1 |> 
+  mutate(
+    across(
+      starts_with("percent_"),
+      ~parse_number(.x, locale = locale(decimal_mark = ","))
+           )
+    )
+```
+
+# Inspection
+
+La fonction `skim` du package [skimr](https://docs.ropensci.org/skimr/) permet d'inspecter rapidement les différentes variables du jeu de données. C'est très utile pour détecter des problèmes. En l'occurrence, si l'on cherche uniquement d'éventuelles valeurs manquantes introduites lors des opérations précédentes, on peut utiliser la fonction suivante :
+
+```{r}
+questionr::freq.na(d2)
+```
+
+On constate que nos opérations sur les variables en pourcentage se sont bien déroulées, elles n'ont pas introduit de non-réponse. Par contre, il y a visiblement un problème avec deux autres variables. Isolons les lignes qui contiennent une valeur manquante pour `code_commune` et `code_departement`. Il s'avèrent que ce sont toutes des (et toutes les) communes corses.
+
+```{r}
+d2 |> 
+  filter(is.na(code_commune))
+```
+
+:::{.callout-caution}
+### Problème classique à l'importation
+Pour gagner du temps, les fonctions dédiées à l'importation, comme `readxl::read_excel` ou `readr::read_csv` essaient de *deviner* le type des variables à partir des premières lignes qu'elles lisent. Par défaut, il s'agit des 1000 premières lignes. La plupart du temps, cela fonctionne. Mais avec les codes des communes, il y a très souvent un problème. Les 1000 premiers codes sont numériques, donc `read_excel` assigne à la variable `code_commune` le type `numeric`. Arrivée en Corse, la fonction rencontre des codes qui contiennent les symboles "A" et "B". Impossible de les lire comme `numeric`, par conséquent ces valeurs se verront assigner la valeur `NA` (pour *Not Available*). Deux solutions existent : soit expliciter le type des variables, soit augmenter le nombre de lignes que la fonction doit lire avant de déterminer le type des variables. Comme la base de données est relativement petite, on peut ici choisir la seconde option, qui correspond à l'argument `guess_max` de `read_excel`.
+:::
+
+# Couche géographique
+
+- À l'aide du package [CARTElette](https://antuki.github.io/CARTElette/articles/CARTElette.html), téléchargez les contours des communes pour l'année 2024. Faites en sorte que les fichiers correspondants soient enregistrés dans un sous-dossier `data` de votre projet R. 
+
+:::{.callout-tip}
+Vous utiliserez pour cela la fonction `charger_carte`, et trois de ses arguments : `destfile`, `COG` et `nivsupra`. 
+:::
+
+- Importez cette couche géographique à l'aide de la fonction st_read du package sf.
+- Sélectionnez les variables correspondant au code de la commune et du département, au nom de la commune et à sa population. 
+- Triez les observations par code géographique croissant. Vous pourrez utiliser la fonction `arrange`. 
+
+# Jointure
+
+L'objectif est de réaliser une jointure entre le dataframe des résultats électoraux, et le dataframe/objet sf contenant les contours des communes, afin de pouvoir cartographier les résultats. 
+
+- Examinez les variables contenues dans les deux dataframes. Lesquelles pourraient faire office de *clef commune* pour la jointure ? Sont-elles *exactement* identiques ?
+- Recodez la variable que vous avez choisie comme clef commune de manière à ce qu'elle soit absolument identique dans les deux dataframes.
+
+:::{.callout-caution}
+# M'appeler à ce stade
+Pour que je vous indique les fonctions dont vous aurez besoin.
+:::
+- Une fois que la variable commune est rigoureusement identique dans les deux dataframes, identifiez les observations (les communes) éventuellement présentes dans l'un, mais pas dans l'autre, à l'aide de la fonction `anti_join`. Y a-t-il une logique dans ces absences ?
+- Réalisez la jointure à l'aide de la fonction `left_join`. 
+
+# Absention
+
+Vous désirez étudier le pourcentage d'abstention par commune. 
+- Utilisez la fonction `summary` pour avoir une première idée de la distribution de cette variable. 
+- Représentez sa distribution à l'aide des fonctions `geom_boxplot`, `geom_histogram` et `geom_density`.
+- Représentez, sur un même graphe, le pourcentage de votes blancs, de votes nuls et d'absentions. Que remarquez-vous ?
+
+:::{.callout-tip}
+Vous pourrez utiliser la fonction `geom_point` et jouer avec les *scales* suivantes : `x`, `y`, `fill`.
+:::
+
+# Discrétisation
+
+- Vu la distribution de la variable du pourcentage d'absentions, quelle distribution vous semble la plus adaptée ? 
+- À l'aide de la fonction `classInt::classIntervals`, procédez à la discrétisation.
+
+# Cartographie
+
+- Cartographiez le pourcentage de logements vacants en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
+
+- Cartographiez la distribution de l'absention en utilisant ces trois fonctions : `ggplot`, `geom_sf` et `scale_fill_viridis_b`. 
+
+:::{.callout-caution}
+# M'appeler à ce stade
+Pour discuter des améliorations esthétiques à apporter.
+:::
