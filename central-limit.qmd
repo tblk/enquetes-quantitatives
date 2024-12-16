@@ -1,0 +1,102 @@
+---
+title: "Théorème central limite"
+author: "Théo Boulakia"
+date: 2024-12-18
+date-format: long
+format: revealjs
+lang: fr
+execute: 
+  echo: true
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+```
+
+## Lois de probabilité
+
+[https://ben18785.shinyapps.io/distribution-zoo/](https://ben18785.shinyapps.io/distribution-zoo/)
+
+## Simulations
+
+```{r}
+rbinom(n = 10, size = 30, prob = 0.5)
+```
+
+. . . 
+
+```{r}
+rbinom(n = 10, size = 1, prob = 0.7)
+```
+
+. . . 
+
+```{r}
+rnorm(n = 10, mean = 2600, sd = 1000)
+```
+
+. . . 
+
+```{r}
+rpois(n = 10, lambda = 3)
+```
+
+. . . 
+
+```{r}
+rbeta(n = 10, shape1 = 7, shape2 = 3)
+```
+
+## Population
+
+```{r}
+#| code-fold: true
+#| echo: true
+population = data.frame(revenu = rnorm(n = 100000, mean = 1300, sd = 600),
+                        celibataire = rbinom(n = 100000, size = 1, prob = 0.35))
+```
+
+```{r}
+tibble::as_tibble(population)
+```
+
+## Un échantillon
+
+```{r}
+#| echo: true
+#| layout-ncol: 3
+echantillon = dplyr::slice_sample(population, n = 31)
+mean_revenu = mean(echantillon$revenu)
+proportion_celibataires = sum(echantillon$celibataire == 1) / 31
+echantillon |> as_tibble()
+mean_revenu
+proportion_celibataires
+```
+
+## 1000 échantillons
+
+```{r}
+#| echo: true
+echantillons = replicate(n = 1000, dplyr::slice_sample(population, n = 31), simplify = FALSE)
+params_echantillons = purrr::map(echantillons, ~summarise(.x, 
+                                    mean_revenu = mean(revenu),
+                                    proportion_celibataires = sum(celibataire == 1) / 31)) |> 
+  list_rbind()
+```
+
+## Distribution d'échantillonnage de la moyenne
+
+```{r}
+ggplot(params_echantillons) +
+  geom_density(aes(x = mean_revenu)) +
+  geom_rug(aes(x = mean_revenu))
+```
+
+## Distribution d'échantillonnage de la proportion
+
+```{r}
+ggplot(params_echantillons) +
+  geom_density(aes(x = proportion_celibataires))
+```
+

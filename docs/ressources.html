@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Slides – Enquêtes quantitatives</title>
+<title>Ressources – Enquêtes quantitatives</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,7 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Slides – Enquêtes quantitatives">
+<meta property="og:title" content="Ressources – Enquêtes quantitatives">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Enquêtes quantitatives">
 </head>
@@ -135,7 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./slides.html" aria-current="page"> 
+    <a class="nav-link" href="./slides.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
@@ -147,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Corrections</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ressources.html"> 
+    <a class="nav-link active" href="./ressources.html" aria-current="page"> 
 <span class="menu-text">Ressources</span></a>
   </li>  
   <li class="nav-item">
@@ -170,11 +136,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#linéaments-du-territoire" id="toc-linéaments-du-territoire" class="nav-link active" data-scroll-target="#linéaments-du-territoire">Linéaments du territoire</a></li>
-  <li><a href="#couleurs-du-continu" id="toc-couleurs-du-continu" class="nav-link" data-scroll-target="#couleurs-du-continu">Couleurs du continu</a></li>
-  <li><a href="#embranchements" id="toc-embranchements" class="nav-link" data-scroll-target="#embranchements">Embranchements</a></li>
-  <li><a href="#bayes" id="toc-bayes" class="nav-link" data-scroll-target="#bayes">Bayes</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a></li>
+  <li><a href="#dataviz" id="toc-dataviz" class="nav-link" data-scroll-target="#dataviz">DataViz</a></li>
+  <li><a href="#geographic-data-science" id="toc-geographic-data-science" class="nav-link" data-scroll-target="#geographic-data-science">Geographic Data Science</a></li>
+  <li><a href="#unsupervised-learning" id="toc-unsupervised-learning" class="nav-link" data-scroll-target="#unsupervised-learning">Unsupervised Learning</a></li>
+  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a></li>
   </ul>
 </nav>
     </div>
@@ -183,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Slides</h1>
+<h1 class="title">Ressources</h1>
 </div>
 
 
@@ -200,32 +166,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="linéaments-du-territoire" class="level1">
-<h1>Linéaments du territoire</h1>
-<p><a href="./ggplot2.html">Grammaire des graphiques</a></p>
-<p><a href="./geographic-data-science.html">Données spatiales</a></p>
+<section id="general" class="level1">
+<h1>General</h1>
+<p>Wickham Hadley, Çetinkaya-Rundel Mine et Grolemund Garrett, <em>R for data science: import, tidy, transform, visualize, and model data</em>, 2e édition., O’Reilly, 2023, 548&nbsp;p.&nbsp;<a href="https://r4ds.hadley.nz/">https://r4ds.hadley.nz/</a></p>
+<p>McKinney Wes, <em>Python for data analysis: data wrangling with pandas, NumPy, and Jupyter</em>, 3e édition., O’Reilly, 2022, 579&nbsp;p.&nbsp;<a href="https://wesmckinney.com/book/">https://wesmckinney.com/book/</a></p>
+<p>Storopoli, Huijzer and Alonso <em>Julia Data Science</em>, 2021, 260 p.&nbsp;<a href="https://juliadatascience.io">https://juliadatascience.io</a></p>
+<p>Kamiński Bogumił, <em>Julia for data analysis</em>, Manning, 2023, 443&nbsp;p.</p>
 </section>
-<section id="couleurs-du-continu" class="level1">
-<h1>Couleurs du continu</h1>
-<p><a href="./choropleth-maps.html">Cartes Choroplèthes</a></p>
+<section id="dataviz" class="level1">
+<h1>DataViz</h1>
+<p>Wilke Claus, <em>Fundamentals of data visualization: a primer on making informative and compelling figures</em>, O’Reilly, 2019, 387&nbsp;p.&nbsp;<a href="https://clauswilke.com/dataviz/">https://clauswilke.com/dataviz/</a></p>
+<p>Healy Kieran, <em>Data visualization: a practical introduction</em>, Princeton University Press, 2019, 272&nbsp;p.</p>
 </section>
-<section id="embranchements" class="level1">
-<h1>Embranchements</h1>
-<p><a href="./embranchements.html">Embranchements</a></p>
-<p><a href="./kmeans.html">k-means</a></p>
+<section id="geographic-data-science" class="level1">
+<h1>Geographic Data Science</h1>
+<p>Lovelace Robin, Nowosad Jakub et Muenchow Jannes, <em>Geocomputation with R</em>, 2e édition., Chapman &amp; Hall / CRC, 2025, 424&nbsp;p.&nbsp;<a href="https://r.geocompx.org/">https://r.geocompx.org/</a></p>
+<p>Dorman Michael, Graser Anita, Nowosad Jakub et Lovelace Robin, <em>Geocomputation with Python</em>, Chapman &amp; Hall / CRC, 2025, 344&nbsp;p.&nbsp;<a href="https://py.geocompx.org/">https://py.geocompx.org/</a></p>
+<p>Hoffimann Mendes Júlio, <em>Geospatial Data Science with Julia</em>, 2023. <a href="https://juliaearth.github.io/geospatial-data-science-with-julia/">https://juliaearth.github.io/geospatial-data-science-with-julia/</a></p>
+<p>Rey Sergio J., Arribas-Bel Daniel et Wolf Levi John, <em>Geographic data science with Python</em>, Chapman &amp; Hall / CRC, 2023, 378 p.&nbsp;<a href="https://geographicdata.science/book/">https://geographicdata.science/book/</a></p>
+<p>Pebesma Edzer J. et Bivand Roger, <em>Spatial data science: with applications in R</em>, Chapman &amp; Hall / CRC, 2023, 314 p.&nbsp;<a href="https://r-spatial.org/book/">https://r-spatial.org/book/</a></p>
 </section>
-<section id="bayes" class="level1">
-<h1>Bayes</h1>
-<p><a href="https://ben18785.shinyapps.io/distribution-zoo/">Distribution Zoo</a></p>
-<p><a href="./bayes-simulation.html">Simulation</a></p>
-<p>Bechdel</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/bechdel/movies.csv"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="unsupervised-learning" class="level1">
+<h1>Unsupervised Learning</h1>
+<p>Giordani Paolo, Ferraro Maria Brigida et Martella Francesca, <em>An Introduction to Clustering with R</em>, Springer, 2020, 340&nbsp;p.</p>
 </section>
-<section id="questions" class="level1">
-<h1>Questions</h1>
-<p><a href="./central-limit.html">Théorème central limite</a></p>
+<section id="statistics" class="level1">
+<h1>Statistics</h1>
+<p>Johnson Alicia A., Ott Miles Q. et Dogucu Mine, <em>Bayes rules! an introduction to Bayesian modeling with R</em>, Chapman &amp; Hall / CRC, 2022, 544&nbsp;p.&nbsp;<a href="https://www.bayesrulesbook.com/">https://www.bayesrulesbook.com/</a></p>
+<p>McElreath Richard, <em>Statistical rethinking: a Bayesian course with examples in R and Stan</em>, 2e édition, Chapman &amp; Hall / CRC, 2020, 612&nbsp;p.&nbsp;<a href="https://xcelab.net/rm/">https://xcelab.net/rm/</a></p>
+<p>Davidson-Pilon Cameron, <em>Bayesian methods for hackers: probabilistic programming and Bayesian inference</em>, Addison-Wesley, 2016, 256&nbsp;p.&nbsp;<a href="http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/</a></p>
+<p>Kaplan Daniel T., <em>Statistical modeling: a fresh approach</em>, 2017, 388 p.&nbsp;<a href="https://dtkaplan.github.io/SM2-bookdown/">https://dtkaplan.github.io/SM2-bookdown/</a></p>
 
 
 </section>

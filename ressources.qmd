@@ -2,46 +2,44 @@
 title: "Ressources"
 ---
 
-# Data Science
+# General
 
-[R for Data Science]()
+Wickham Hadley, Çetinkaya-Rundel Mine et Grolemund Garrett, *R for data science: import, tidy, transform, visualize, and model data*, 2e édition., O’Reilly, 2023, 548 p. [https://r4ds.hadley.nz/](https://r4ds.hadley.nz/)
 
-[Python for Data Analysis]()
+McKinney Wes, *Python for data analysis: data wrangling with pandas, NumPy, and Jupyter*, 3e édition., O’Reilly, 2022, 579 p. [https://wesmckinney.com/book/](https://wesmckinney.com/book/)
 
-[Julia Data Science]()
+Storopoli, Huijzer and Alonso *Julia Data Science*, 2021, 260 p. [https://juliadatascience.io](https://juliadatascience.io)
 
-[Julia for Data Analysis]()
+Kamiński Bogumił, *Julia for data analysis*, Manning, 2023, 443 p.
 
 # DataViz
 
-[Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+Wilke Claus, *Fundamentals of data visualization: a primer on making informative and compelling figures*, O’Reilly, 2019, 387 p. [https://clauswilke.com/dataviz/](https://clauswilke.com/dataviz/)
 
-*Data Visualization. A Practical Introduction*, Kieran Healy
+Healy Kieran, *Data visualization: a practical introduction*, Princeton University Press, 2019, 272 p.
 
-# Cartographie
+# Geographic Data Science
 
-[Geocomputation with R]()
+Lovelace Robin, Nowosad Jakub et Muenchow Jannes, *Geocomputation with R*, 2e édition., Chapman & Hall / CRC, 2025, 424 p. [https://r.geocompx.org/](https://r.geocompx.org/)
 
-[Geocomputation with Python]()
+Dorman Michael, Graser Anita, Nowosad Jakub et Lovelace Robin, *Geocomputation with Python*, Chapman & Hall / CRC, 2025, 344 p. [https://py.geocompx.org/](https://py.geocompx.org/)
 
-[Geographic Data Science with R]()
+Hoffimann Mendes Júlio, *Geospatial Data Science with Julia*, 2023. [https://juliaearth.github.io/geospatial-data-science-with-julia/](https://juliaearth.github.io/geospatial-data-science-with-julia/)
 
-[Geographic Data Science with Python]()
+Rey Sergio J., Arribas-Bel Daniel et Wolf Levi John, *Geographic data science with Python*, Chapman & Hall / CRC, 2023, 378 p. [https://geographicdata.science/book/](https://geographicdata.science/book/)
+
+Pebesma Edzer J. et Bivand Roger, *Spatial data science: with applications in R*, Chapman & Hall / CRC, 2023, 314 p. [https://r-spatial.org/book/](https://r-spatial.org/book/)
 
 # Unsupervised Learning
 
-
+Giordani Paolo, Ferraro Maria Brigida et Martella Francesca, *An Introduction to Clustering with R*, Springer, 2020, 340 p.
 
 # Statistics
 
-[Statistical Modelling. A Fresh Approach]()
+Johnson Alicia A., Ott Miles Q. et Dogucu Mine, *Bayes rules! an introduction to Bayesian modeling with R*, Chapman & Hall / CRC, 2022, 544 p. [https://www.bayesrulesbook.com/](https://www.bayesrulesbook.com/)
 
-[Bayes Rules!]()
+McElreath Richard, *Statistical rethinking: a Bayesian course with examples in R and Stan*, 2e édition, Chapman & Hall / CRC, 2020, 612 p. [https://xcelab.net/rm/](https://xcelab.net/rm/)
 
-[Statistical Rethinking]()
+Davidson-Pilon Cameron, *Bayesian methods for hackers: probabilistic programming and Bayesian inference*, Addison-Wesley, 2016, 256 p. [http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/](http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
 
-# Text Mining
-
-[Tidy Text Mining with R]()
-
-[Unsupervised Learning for Text Analysis in R]()
+Kaplan Daniel T., *Statistical modeling: a fresh approach*, 2017, 388 p. [https://dtkaplan.github.io/SM2-bookdown/](https://dtkaplan.github.io/SM2-bookdown/)

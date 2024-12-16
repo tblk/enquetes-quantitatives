@@ -33,3 +33,6 @@ Bechdel
 read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/bechdel/movies.csv")
 ```
 
+# Questions
+
+[Théorème central limite](central-limit.qmd)
