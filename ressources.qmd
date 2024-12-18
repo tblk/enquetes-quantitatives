@@ -55,3 +55,9 @@ Kaplan Daniel T., *Statistical modeling: a fresh approach*, 2017, 388 p. [https:
 :::{.callout-note}
 Cette dernière référence, contrairement aux précédentes, est *fréquentiste*. Elle est relativement concise et d'une grande clarté.  
 :::
+
+# Maths
+
+Nield Thomas, *Essential Math for Data Science*, O’Reilly, 2022, 349 p.
+
+Savov Ivan, *No Bullshit Guide to Math and Physics*, Minireference Co, 2013, 288 p.
