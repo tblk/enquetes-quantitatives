@@ -61,6 +61,9 @@ Cette dernière référence, contrairement aux précédentes, est *fréquentiste
 
 McGrayne Sharon Bertsch, *The theory that would not die: how Bayes’ rule cracked the enigma code, hunted down Russian submarines, & emerged triumphant from two centuries of controversy*, New Haven, Yale university press, 2011.
 
+Kennedy-Shaffer Lee, "Before p < 0.05 to Beyond p < 0.05: Using History to Contextualize p-Values and Significance Testing", *The American Statistician*, 2019, vol. 73, p. 82‑90.
+
+
 Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris, Éditions matériologiques, 2016.
 :::
 
