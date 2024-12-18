@@ -24,6 +24,7 @@ website:
       - exercices.qmd
       - corrections.qmd
       - ressources.qmd
+      - questionnaire.qmd
       - faq.qmd
 
 format:

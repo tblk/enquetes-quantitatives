@@ -651,11 +651,11 @@
     "text": "Compare\n\nmean = 39 / (39 + 31)\nsd = sqrt((39 * 31) / ((39 + 31) ^ 2 * (39 + 31 + 1)))\nmean\n\n[1] 0.5571429\n\nsd\n\n[1] 0.05895029"
   },
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "FAQ",
+    "objectID": "questionnaire.html",
+    "href": "questionnaire.html",
+    "title": "Questionnaire",
     "section": "",
-    "text": "Cours donné à l’École Normale Supérieure au premier semestre de l’année 2024-2025, par Théo Boulakia, dans le cadre de l’Observatoire des Humanités Numériques.\n\nQuand ?\nLe mercredi, de 15h à 18h : 18 septembre, 25 septembre, 9 octobre, 23 octobre, 6 novembre, 13 novembre, 4 décembre et 18 décembre 2024.\n\n\nOù ?\nDans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d’Ulm, tout en haut de l’escalier B ou C).\n\n\nComment s’inscrire ?\nEnvoyez simplement un mail à l’adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.\n\n\nEst-il possible de venir en auditeur libre ?\nTout à fait. La validation n’est pas requise.\n\n\nComment valider le cours ?\n\nTrouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.\nLeur appliquer une ou plusieurs des méthodes vues en cours.\nRendre un document de 4 pages présentant les données, la problématique, les étapes de l’analyse et l’interprétation des résultats.\n\n\n\nFaut-il savoir coder ?\nNon. Vous pouvez assister au cours même si vous n’avez jamais programmé."
+    "text": "Si c’était à refaire\nEst-ce que vous choisiriez à nouveau ce cours ?\n\n\nDécoupage\nMettons que j’aie découpé ce cours en 4 cours de 24 heures chacun :\n\nVisualisation de données et cartographie (uniquement à partir de bases de données parfaitement nettoyées).\nManipulation de données (y compris manipulations avancées).\nModélisation (bayésienne et fréquentiste).\nApprentissage non supervisé (couvrant les techniques de dimensionality reduction et clustering).\n\nSi c’était à refaire, auriez-vous suivi un ou plusieurs d’entre eux ?\n\n\nRecommandation\nRecommanderiez-vous ce cours à un ami :\n\nTotalement novice en programmation et statistiques ?\nAvec une expérience en programmation ?\n\n\n\nSéances “préférées”\nRappel des séances :\n\nGrammaire des graphiques & représentation de données spatiales\nConstruction de cartes choroplèthes, éléments sur la discrétisation et l’utilisation des couleurs.\nQue faire des résultats d’une partition ? Comment présenter vos résultats, pour vous-mêmes et pour les autres ? Comment l’utiliser dans l’argumentation et dans l’écriture ? Exemple à partir des données de l’enquête “La Vie en Confinement”. Exercices dans la seconde partie du cours.\nExercices de consolidation (voir les exercices datés du 23 octobre).\nText Mining : manipulation de données textuelles avec les outils généralistes de R.\nRéduction de la dimensionnalité et clustering : principales métriques de distance (dont distance de Gower), Principal Components Analysis, Multidimensional scaling, k-means, k-medoids, Agglomerative Hierarchical clustering, self organizing maps.\nStatistiques bayésiennes : application à des évènements discrets, à la modélisation d’une proportion, démonstration des propriétés de l’inférence bayésienne (convergence et mise à jour).\n(aujourd’hui) Réponse aux questions et ressources pour autodidaxie.\n\nNotez à la suite le numéro des séances que vous avez suivies, en commençant par votre “préférée” et en terminant par celle que vous avez le moins apprécié.\nPar exemple : 2 &gt; 7 &gt; 4 si vous avez assisté à trois séances, et apprécié d’abord la séance de cartographie, puis les statistiques bayésiennes, puis la séquence de consolidation.\n\n\nBayes\nAvez-vous déjà suivi un cours d’introduction aux statistiques ? Si oui, comparez le au cours d’introduction aux statistiques bayésiennes de la séance 7. Mieux ? Pire ? Plus intuitif ? Plus obscur ? Plus amusant ? Moins amusant ?\n\n\nEmpêchements\nY a-t-il des choses qui vous ont empêché de tirer pleinement partie du cours ?\n\n\nCommentaires libres\nAvez-vous des remarques, des recommandations, des suggestions ?"
   },
   {
     "objectID": "index.html",
@@ -663,6 +663,13 @@
     "title": "Enquêtes quantitatives",
     "section": "",
     "text": "Ce cours propose une initiation à diverses méthodes quantitatives à partir d’enquêtes de sciences sociales. Chaque séance s’organise autour de la rencontre entre une question (sociologique, anthropologique, historiographique), des données et une méthode : cartographie, réduction de la dimensionnalité, partitionnement, analyse de séquences, analyse textuelle, statistiques bayésiennes.\nL’objectif du cours est d’acquérir une compréhension schématique de la mise en oeuvre de ces méthodes, de leurs mérites et de leurs limites. Comment représenter des données spatiales, des séquences temporelles ? Qu’apportent les statistiques bayésiennes qui manque à l’approche fréquentiste ? Comment analyser les propriétés morpho-synthaxiques d’un texte ? Comment passer d’un grand nombre de variables à un petit nombre de classes ?\nCes questions se poseront en contexte, dans une dynamique d’ajustement entre données, méthode et question de recherche (une dynamique d’enquête)."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Cours donné à l’École Normale Supérieure au premier semestre de l’année 2024-2025, par Théo Boulakia, dans le cadre de l’Observatoire des Humanités Numériques.\n\nQuand ?\nLe mercredi, de 15h à 18h : 18 septembre, 25 septembre, 9 octobre, 23 octobre, 6 novembre, 13 novembre, 4 décembre et 18 décembre 2024.\n\n\nOù ?\nDans la salle de conférences du Centre de Sciences de données (ENS-PSL, 45 rue d’Ulm, tout en haut de l’escalier B ou C).\n\n\nComment s’inscrire ?\nEnvoyez simplement un mail à l’adresse suivante : theo.boulakia[at]gmail.com. Indiquez votre formation, précisez si vous avez déjà une expérience en programmation ou des connaissances en statistiques.\n\n\nEst-il possible de venir en auditeur libre ?\nTout à fait. La validation n’est pas requise.\n\n\nComment valider le cours ?\n\nTrouver des données qui vous intéressent. Elles peuvent correspondre à un intérêt personnel, à une recherche en cours ou à un projet de recherche futur.\nLeur appliquer une ou plusieurs des méthodes vues en cours.\nRendre un document de 4 pages présentant les données, la problématique, les étapes de l’analyse et l’interprétation des résultats.\n\n\n\nFaut-il savoir coder ?\nNon. Vous pouvez assister au cours même si vous n’avez jamais programmé."
   },
   {
     "objectID": "geographic-data-science.html#packages",
@@ -1474,21 +1481,21 @@
     "href": "central-limit.html#simulations",
     "title": "Théorème central limite",
     "section": "Simulations",
-    "text": "Simulations\n\nrbinom(n = 10, size = 30, prob = 0.5)\n\n [1] 19 13 18 16 15 11 16 14 16 15\n\n\n\n\nrbinom(n = 10, size = 1, prob = 0.7)\n\n [1] 1 0 1 0 1 1 1 0 0 1\n\n\n\n\n\nrnorm(n = 10, mean = 2600, sd = 1000)\n\n [1] 4310.7262 1055.7801 2051.1304 1051.4227 4090.9066 -773.3535 1668.4211\n [8] 3912.1262 2213.4115 3736.3611\n\n\n\n\n\nrpois(n = 10, lambda = 3)\n\n [1] 6 2 5 6 3 3 3 3 5 1\n\n\n\n\n\nrbeta(n = 10, shape1 = 7, shape2 = 3)\n\n [1] 0.5770403 0.7113744 0.8004645 0.9529622 0.8471195 0.4373412 0.8415210\n [8] 0.6130105 0.6673198 0.5942700"
+    "text": "Simulations\n\nrbinom(n = 10, size = 30, prob = 0.5)\n\n [1] 15 13 15 11 16 21 19 14 15 12\n\n\n\n\nrbinom(n = 10, size = 1, prob = 0.7)\n\n [1] 1 1 1 1 1 1 1 0 1 1\n\n\n\n\n\nrnorm(n = 10, mean = 2600, sd = 1000)\n\n [1] 2352.854 3789.456 2844.240 2103.881 3758.489 3057.468 4906.261 3556.442\n [9] 3885.535 3807.580\n\n\n\n\n\nrpois(n = 10, lambda = 3)\n\n [1] 0 8 4 3 5 3 6 2 5 4\n\n\n\n\n\nrbeta(n = 10, shape1 = 7, shape2 = 3)\n\n [1] 0.5551196 0.4152760 0.5146809 0.8318127 0.6721343 0.8759235 0.7662018\n [8] 0.4818727 0.7812606 0.5406850"
   },
   {
     "objectID": "central-limit.html#population",
     "href": "central-limit.html#population",
     "title": "Théorème central limite",
     "section": "Population",
-    "text": "Population\n\n\nCode\npopulation = data.frame(revenu = rnorm(n = 100000, mean = 1300, sd = 600),\n                        celibataire = rbinom(n = 100000, size = 1, prob = 0.35))\n\n\n\ntibble::as_tibble(population)\n\n# A tibble: 100,000 × 2\n   revenu celibataire\n    &lt;dbl&gt;       &lt;int&gt;\n 1   924.           0\n 2  1434.           0\n 3  1591.           0\n 4  1892.           1\n 5   958.           0\n 6   824.           0\n 7  1162.           0\n 8  2167.           0\n 9  1581.           1\n10  1041.           0\n# ℹ 99,990 more rows"
+    "text": "Population\n\n\nCode\npopulation = data.frame(revenu = rnorm(n = 100000, mean = 1300, sd = 600),\n                        celibataire = rbinom(n = 100000, size = 1, prob = 0.35))\n\n\n\ntibble::as_tibble(population)\n\n# A tibble: 100,000 × 2\n   revenu celibataire\n    &lt;dbl&gt;       &lt;int&gt;\n 1   865.           0\n 2   102.           0\n 3  2077.           1\n 4   252.           0\n 5   411.           0\n 6  1248.           0\n 7  1789.           0\n 8   669.           1\n 9  1078.           0\n10  1180.           0\n# ℹ 99,990 more rows"
   },
   {
     "objectID": "central-limit.html#un-échantillon",
     "href": "central-limit.html#un-échantillon",
     "title": "Théorème central limite",
     "section": "Un échantillon",
-    "text": "Un échantillon\nechantillon = dplyr::slice_sample(population, n = 31)\nmean_revenu = mean(echantillon$revenu)\nproportion_celibataires = sum(echantillon$celibataire == 1) / 31\nechantillon |&gt; as_tibble()\nmean_revenu\nproportion_celibataires\n\n\n\n# A tibble: 31 × 2\n   revenu celibataire\n    &lt;dbl&gt;       &lt;int&gt;\n 1   480.           1\n 2  2248.           0\n 3  1633.           0\n 4  1494.           1\n 5  1720.           0\n 6   880.           0\n 7  1177.           0\n 8  1553.           0\n 9   993.           0\n10  1339.           0\n# ℹ 21 more rows\n\n\n[1] 1447.562\n\n\n[1] 0.2580645"
+    "text": "Un échantillon\nechantillon = dplyr::slice_sample(population, n = 31)\nmean_revenu = mean(echantillon$revenu)\nproportion_celibataires = sum(echantillon$celibataire == 1) / 31\nechantillon |&gt; as_tibble()\nmean_revenu\nproportion_celibataires\n\n\n\n# A tibble: 31 × 2\n   revenu celibataire\n    &lt;dbl&gt;       &lt;int&gt;\n 1  1454.           0\n 2  1647.           1\n 3   747.           0\n 4  2049.           1\n 5  1362.           1\n 6  1786.           0\n 7  1124.           0\n 8   652.           0\n 9  2182.           0\n10  1380.           0\n# ℹ 21 more rows\n\n\n[1] 1384.903\n\n\n[1] 0.2258065"
   },
   {
     "objectID": "central-limit.html#échantillons",
@@ -1621,7 +1628,7 @@
     "href": "embranchements.html#pca",
     "title": "Embranchements",
     "section": "pca",
-    "text": "pca\n\ntic()\nr = sommets |&gt; select(where(is.numeric)) |&gt; pca()\ntoc()\n\n0.012 sec elapsed"
+    "text": "pca\n\ntic()\nr = sommets |&gt; select(where(is.numeric)) |&gt; pca()\ntoc()\n\n0.011 sec elapsed"
   },
   {
     "objectID": "embranchements.html#screeplot",

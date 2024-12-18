@@ -1,0 +1,56 @@
+---
+title: "Questionnaire"
+---
+
+# Si c'était à refaire
+
+Est-ce que vous choisiriez à nouveau ce cours ?
+
+# Découpage
+
+Mettons que j'aie découpé ce cours en 4 cours de 24 heures chacun :
+
+1. Visualisation de données et cartographie (uniquement à partir de bases de données parfaitement nettoyées).
+2. Manipulation de données (y compris manipulations avancées).
+3. Modélisation (bayésienne et fréquentiste).
+4. Apprentissage non supervisé (couvrant les techniques de *dimensionality reduction* et *clustering*). 
+
+Si c'était à refaire, auriez-vous suivi un ou plusieurs d'entre eux ?
+
+# Recommandation
+
+Recommanderiez-vous ce cours à un ami : 
+
+- Totalement novice en programmation et statistiques ?
+
+- Avec une expérience en programmation ?
+
+# Séances "préférées"
+
+Rappel des séances :
+
+1. Grammaire des graphiques & représentation de données spatiales
+2. Construction de cartes choroplèthes, éléments sur la discrétisation et l'utilisation des couleurs.
+3. Que faire des résultats d'une partition ? Comment présenter vos résultats, pour vous-mêmes et pour les autres ? Comment l'utiliser dans l'argumentation et dans l'écriture ? Exemple à partir des données de l'enquête "La Vie en Confinement". Exercices dans la seconde partie du cours.
+4. Exercices de consolidation (voir les exercices datés du 23 octobre). 
+5. *Text Mining* : manipulation de données textuelles avec les outils généralistes de R. 
+6. Réduction de la dimensionnalité et clustering : principales métriques de distance (dont distance de Gower), *Principal Components Analysis*, *Multidimensional scaling*, *k-means*, *k-medoids*, *Agglomerative Hierarchical clustering*, *self organizing maps*.
+7. Statistiques bayésiennes : application à des évènements discrets, à la modélisation d'une proportion, démonstration des propriétés de l'inférence bayésienne (convergence et mise à jour).
+8. (aujourd'hui) Réponse aux questions et ressources pour autodidaxie.
+
+Notez à la suite le numéro des séances que vous avez suivies, en *commençant par votre "préférée"* et en terminant par celle que vous avez le moins apprécié.
+
+Par exemple : 2 > 7 > 4 si vous avez assisté à trois séances, et apprécié d'abord la séance de cartographie, puis les statistiques bayésiennes, puis la séquence de consolidation. 
+
+# Bayes
+
+Avez-vous déjà suivi un cours d'introduction aux statistiques ? Si oui, comparez le au cours d'introduction aux statistiques bayésiennes de la séance 7. Mieux ? Pire ? Plus intuitif ? Plus obscur ? Plus amusant ? Moins amusant ?
+
+# Empêchements
+
+Y a-t-il des choses qui vous ont empêché de tirer pleinement partie du cours ?
+
+# Commentaires libres
+
+Avez-vous des remarques, des recommandations, des suggestions ?
+
