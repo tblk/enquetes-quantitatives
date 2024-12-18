@@ -38,8 +38,16 @@ Giordani Paolo, Ferraro Maria Brigida et Martella Francesca, *An Introduction to
 
 Johnson Alicia A., Ott Miles Q. et Dogucu Mine, *Bayes rules! an introduction to Bayesian modeling with R*, Chapman & Hall / CRC, 2022, 544 p. [https://www.bayesrulesbook.com/](https://www.bayesrulesbook.com/)
 
-McElreath Richard, *Statistical rethinking: a Bayesian course with examples in R and Stan*, 2e édition, Chapman & Hall / CRC, 2020, 612 p. [https://xcelab.net/rm/](https://xcelab.net/rm/)
+McElreath Richard, *Statistical rethinking: a Bayesian course with examples in R and Stan*, 2e édition, Chapman & Hall / CRC, 2020, 612 p.
 
+:::{.callout-note}
+À ma connaissance, il n'existe pas de version en libre accès de *Statistical Rethinking*. Le site suivant propose des "traductions" des exercices à partir de différentes librairies et langages de programmation : 
+[https://xcelab.net/rm/](https://xcelab.net/rm/)
+:::
 Davidson-Pilon Cameron, *Bayesian methods for hackers: probabilistic programming and Bayesian inference*, Addison-Wesley, 2016, 256 p. [http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/](http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
 
 Kaplan Daniel T., *Statistical modeling: a fresh approach*, 2017, 388 p. [https://dtkaplan.github.io/SM2-bookdown/](https://dtkaplan.github.io/SM2-bookdown/)
+
+:::{.callout-note}
+Cette dernière référence, contrairement aux précédentes, est *fréquentiste*. Elle est relativement concise et d'une grande clarté.  
+:::
