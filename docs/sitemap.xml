@@ -5,24 +5,32 @@
     <lastmod>2024-12-16T11:41:55.877Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/indices.html</loc>
-    <lastmod>2024-09-11T14:04:18.533Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/kmeans.html</loc>
+    <lastmod>2024-11-13T13:24:45.495Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/incertitude.html</loc>
-    <lastmod>2024-09-11T14:04:02.304Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/styles.html</loc>
+    <lastmod>2024-09-11T14:03:08.656Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/sequences.html</loc>
-    <lastmod>2024-09-11T14:03:27.929Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/emboitements.html</loc>
+    <lastmod>2024-09-11T14:04:27.109Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/lineaments.html</loc>
-    <lastmod>2024-09-11T14:02:29.086Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/couleurs.html</loc>
+    <lastmod>2024-09-11T14:02:36.868Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/choropleth-maps.html</loc>
-    <lastmod>2024-09-25T09:17:55.935Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/correspondances.html</loc>
+    <lastmod>2024-09-11T14:02:58.179Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/ggplot2.html</loc>
+    <lastmod>2024-09-17T09:18:05.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/ressources.html</loc>
+    <lastmod>2024-12-16T11:56:55.019Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/exercices.html</loc>
@@ -33,6 +41,10 @@
     <lastmod>2024-10-22T17:00:04.521Z</lastmod>
   </url>
   <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/exercices/controles-et-verbalisations.html</loc>
+    <lastmod>2024-11-13T13:06:37.174Z</lastmod>
+  </url>
+  <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/exercices/bombardements-vietnam.html</loc>
     <lastmod>2024-10-22T13:22:30.309Z</lastmod>
   </url>
@@ -41,16 +53,20 @@
     <lastmod>2024-10-22T17:01:09.871Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/geographic-data-science.html</loc>
-    <lastmod>2024-09-17T09:34:57.592Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/bayes-simulation.html</loc>
+    <lastmod>2024-12-04T11:08:08.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/faq.html</loc>
+    <lastmod>2024-09-11T14:11:02.381Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/index.html</loc>
     <lastmod>2024-09-02T14:03:30.423Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/faq.html</loc>
-    <lastmod>2024-09-11T14:11:02.381Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/geographic-data-science.html</loc>
+    <lastmod>2024-09-17T09:34:57.592Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/exercices/exces-mortalite.html</loc>
@@ -61,8 +77,16 @@
     <lastmod>2024-12-14T16:06:00.805Z</lastmod>
   </url>
   <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/exercices/vie-en-confinement.html</loc>
+    <lastmod>2024-11-13T13:17:25.991Z</lastmod>
+  </url>
+  <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/exercices/google-mobility.html</loc>
     <lastmod>2024-10-22T13:21:56.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/corrections/elections-legislatives.html</loc>
+    <lastmod>2024-12-14T16:27:28.012Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/corrections.html</loc>
@@ -73,71 +97,31 @@
     <lastmod>2024-09-02T15:01:10.189Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/ggplot2.html</loc>
-    <lastmod>2024-09-17T09:18:05.107Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/choropleth-maps.html</loc>
+    <lastmod>2024-09-25T09:17:55.935Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/correspondances.html</loc>
-    <lastmod>2024-09-11T14:02:58.179Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/lineaments.html</loc>
+    <lastmod>2024-09-11T14:02:29.086Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/couleurs.html</loc>
-    <lastmod>2024-09-11T14:02:36.868Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/sequences.html</loc>
+    <lastmod>2024-09-11T14:03:27.929Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/emboitements.html</loc>
-    <lastmod>2024-09-11T14:04:27.109Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/incertitude.html</loc>
+    <lastmod>2024-09-11T14:04:02.304Z</lastmod>
   </url>
   <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/programme/styles.html</loc>
-    <lastmod>2024-09-11T14:03:08.656Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/test.html</loc>
-    <lastmod>2024-10-23T12:15:20.777Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/installations.html</loc>
-    <lastmod>2024-11-02T09:26:39.883Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/exercices/controles-et-verbalisations.html</loc>
-    <lastmod>2024-11-13T13:06:37.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/python.html</loc>
-    <lastmod>2024-11-03T08:17:09.447Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/exercices/vie-en-confinement.html</loc>
-    <lastmod>2024-11-13T13:17:25.991Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/embranchements.html</loc>
-    <lastmod>2024-11-13T13:23:12.557Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/kmeans.html</loc>
-    <lastmod>2024-11-13T13:24:45.495Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/recapitulatif.html</loc>
-    <lastmod>2024-11-20T15:34:59.092Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/bayes-simulation.html</loc>
-    <lastmod>2024-12-04T11:08:08.974Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/corrections/elections-legislatives.html</loc>
-    <lastmod>2024-12-14T16:27:28.012Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tblk.github.io/enquetes-quantitatives/ressources.html</loc>
-    <lastmod>2024-12-16T11:56:55.019Z</lastmod>
+    <loc>https://tblk.github.io/enquetes-quantitatives/programme/indices.html</loc>
+    <lastmod>2024-09-11T14:04:18.533Z</lastmod>
   </url>
   <url>
     <loc>https://tblk.github.io/enquetes-quantitatives/central-limit.html</loc>
     <lastmod>2024-12-16T10:44:13.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tblk.github.io/enquetes-quantitatives/embranchements.html</loc>
+    <lastmod>2024-11-13T13:23:12.557Z</lastmod>
   </url>
 </urlset>
