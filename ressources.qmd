@@ -32,6 +32,10 @@ Pebesma Edzer J. et Bivand Roger, *Spatial data science: with applications in R*
 
 # Unsupervised Learning
 
+Waggoner Philip D., *Modern Dimension Reduction*, Cambridge University Press, 2021, 98 p. [https://arxiv.org/abs/2103.06885](https://arxiv.org/abs/2103.06885)
+
+Waggoner Philip D., *Unsupervised Machine Learning for Clustering in Political and Social Research*, Cambridge University Press, 2021, 70 p.
+
 Giordani Paolo, Ferraro Maria Brigida et Martella Francesca, *An Introduction to Clustering with R*, Springer, 2020, 340 p.
 
 # Statistics
