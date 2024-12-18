@@ -56,6 +56,14 @@ Kaplan Daniel T., *Statistical modeling: a fresh approach*, 2017, 388 p. [https:
 Cette dernière référence, contrairement aux précédentes, est *fréquentiste*. Elle est relativement concise et d'une grande clarté.  
 :::
 
+:::{.callout-tip}
+### Un peu d'histoire / philosophie
+
+McGrayne Sharon Bertsch, *The theory that would not die: how Bayes’ rule cracked the enigma code, hunted down Russian submarines, & emerged triumphant from two centuries of controversy*, New Haven, Yale university press, 2011.
+
+Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris, Éditions matériologiques, 2016.
+:::
+
 # Maths
 
 Nield Thomas, *Essential Math for Data Science*, O’Reilly, 2022, 349 p.
