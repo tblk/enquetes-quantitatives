@@ -52,9 +52,7 @@ Davidson-Pilon Cameron, *Bayesian methods for hackers: probabilistic programming
 
 Kaplan Daniel T., *Statistical modeling: a fresh approach*, 2017, 388 p. [https://dtkaplan.github.io/SM2-bookdown/](https://dtkaplan.github.io/SM2-bookdown/)
 
-:::{.callout-note}
-Cette dernière référence, contrairement aux précédentes, est *fréquentiste*. Elle est relativement concise et d'une grande clarté.  
-:::
+*Cette dernière référence, contrairement aux précédentes, est _fréquentiste_. Elle est relativement concise et d'une grande clarté.*
 
 :::{.callout-tip}
 ### Un peu d'histoire / philosophie
@@ -65,6 +63,24 @@ Kennedy-Shaffer Lee, "Before p < 0.05 to Beyond p < 0.05: Using History to Conte
 
 
 Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris, Éditions matériologiques, 2016.
+:::
+
+:::{.callout-tip}
+### Principales librairies
+
+- [Turing.jl](https://turinglang.org/) pour Julia.
+- [PyMC](https://www.pymc.io/welcome.html) pour Python.
+- [brms](http://paulbuerkner.com/brms/index.html) et [rstan](https://mc-stan.org/rstan/) pour R.
+:::
+
+# Réseaux bayésiens
+
+:::{.callout-tip}
+### Principales librairies
+
+- [bnlearn](https://www.bnlearn.com/) en R.
+- [pyagrum](https://pyagrum.readthedocs.io/en/stable/) en Python.
+- [BayesNet](https://github.com/sisl/BayesNets.jl) pour Julia.
 :::
 
 # Maths
