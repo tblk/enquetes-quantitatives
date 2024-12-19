@@ -79,7 +79,7 @@ Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris,
 ### Principales librairies
 
 - [bnlearn](https://www.bnlearn.com/) en R.
-- [pyagrum](https://pyagrum.readthedocs.io/en/stable/) en Python.
+- [pyagrum](https://pyagrum.readthedocs.io/en/stable/) [pgmpy](https://pgmpy.org), [BayesPy](https://bayespy.org/) & [pomegranate](https://pomegranate.readthedocs.io/en/stable/) (entre autres) en Python.
 - [BayesNet](https://github.com/sisl/BayesNets.jl) pour Julia.
 :::
 
