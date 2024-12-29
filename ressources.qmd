@@ -44,8 +44,11 @@ Johnson Alicia A., Ott Miles Q. et Dogucu Mine, *Bayes rules! an introduction to
 
 McElreath Richard, *Statistical rethinking: a Bayesian course with examples in R and Stan*, 2e édition, Chapman & Hall / CRC, 2020, 612 p.
 
+Gelman Andrew, Hill Jennifer et Vehtari Aki, *Regression and other stories*, Cambridge University Press, 2020, 546 p. [https://avehtari.github.io/ROS-Examples/](https://avehtari.github.io/ROS-Examples/)
+
+
 :::{.callout-note}
-À ma connaissance, il n'existe pas de version en libre accès de *Statistical Rethinking*. Le site suivant propose des "traductions" des exercices à partir de différentes librairies et langages de programmation : 
+À ma connaissance, il n'existe pas de version en libre accès de *Statistical Rethinking*. Le site suivant liste différentes "traductions" des exercices, à partir de différentes librairies et langages de programmation : 
 [https://xcelab.net/rm/](https://xcelab.net/rm/)
 :::
 Davidson-Pilon Cameron, *Bayesian methods for hackers: probabilistic programming and Bayesian inference*, Addison-Wesley, 2016, 256 p. [http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/](http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
