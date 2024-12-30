@@ -44,26 +44,24 @@ Johnson Alicia A., Ott Miles Q. et Dogucu Mine, *Bayes rules! an introduction to
 
 McElreath Richard, *Statistical rethinking: a Bayesian course with examples in R and Stan*, 2e édition, Chapman & Hall / CRC, 2020, 612 p.
 
+> À ma connaissance, il n'existe pas de version en libre accès de _Statistical Rethinking_. Le site suivant liste différentes "traductions" des exercices, à partir de différentes librairies et langages de programmation : [https://xcelab.net/rm/](https://xcelab.net/rm/) Voir notamment : [https://github.com/StatisticalRethinkingJulia](https://github.com/StatisticalRethinkingJulia)
+
 Gelman Andrew, Hill Jennifer et Vehtari Aki, *Regression and other stories*, Cambridge University Press, 2020, 546 p. [https://avehtari.github.io/ROS-Examples/](https://avehtari.github.io/ROS-Examples/)
 
+> Comme pour *Statistical Rethinking*, il y a eu une traduction en Julia, par Rob J Goedman : [https://github.com/RegressionAndOtherStoriesJulia](https://github.com/RegressionAndOtherStoriesJulia)
 
-:::{.callout-note}
-À ma connaissance, il n'existe pas de version en libre accès de *Statistical Rethinking*. Le site suivant liste différentes "traductions" des exercices, à partir de différentes librairies et langages de programmation : 
-[https://xcelab.net/rm/](https://xcelab.net/rm/)
-:::
 Davidson-Pilon Cameron, *Bayesian methods for hackers: probabilistic programming and Bayesian inference*, Addison-Wesley, 2016, 256 p. [http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/](http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
 
 Kaplan Daniel T., *Statistical modeling: a fresh approach*, 2017, 388 p. [https://dtkaplan.github.io/SM2-bookdown/](https://dtkaplan.github.io/SM2-bookdown/)
 
-*Cette dernière référence, contrairement aux précédentes, est _fréquentiste_. Elle est relativement concise et d'une grande clarté.*
+ > Cette dernière référence, contrairement aux précédentes, est fréquentiste.
 
 :::{.callout-tip}
-### Un peu d'histoire / philosophie
+### Histoire / Philosophie
 
 McGrayne Sharon Bertsch, *The theory that would not die: how Bayes’ rule cracked the enigma code, hunted down Russian submarines, & emerged triumphant from two centuries of controversy*, New Haven, Yale university press, 2011.
 
 Kennedy-Shaffer Lee, "Before p < 0.05 to Beyond p < 0.05: Using History to Contextualize p-Values and Significance Testing", *The American Statistician*, 2019, vol. 73, p. 82‑90.
-
 
 Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris, Éditions matériologiques, 2016.
 :::
@@ -76,13 +74,23 @@ Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris,
 - [brms](http://paulbuerkner.com/brms/index.html) et [rstan](https://mc-stan.org/rstan/) pour R.
 :::
 
+:::{.callout-tip}
+### Turing.jl
+
+C'est la librairie que je recommande, pour sa performance et pour sa syntaxe. Matériaux pour l'apprentissage (certains peuvent être très légèrement décalés par rapport aux fonctionnalités actuelles de Turing.jl) :
+
+- [Probabilistic Programming](https://youtube.com/playlist?list=PLhQ2JMBcfAsgU7kZ-Ee_SDrjhJIehICmR&si=Z9vu0_Id4aq7lRWx), une playlist YouTube de [doggo dot jl](https://www.youtube.com/@doggodotjl).
+- Storopoli José Eduardo, *Bayesian Statistics with Julia and Turing*, 2021. [https://storopoli.github.io/Bayesian-Julia/](https://storopoli.github.io/Bayesian-Julia/).
+- [Pluto Notebooks](https://plutojl.org/) à partir de *Statistical Rethinking* : [https://github.com/StatisticalRethinkingJulia/SR2StanPluto.jl](https://github.com/StatisticalRethinkingJulia/SR2StanPluto.jl)
+:::
+
 # Réseaux bayésiens
 
 :::{.callout-tip}
 ### Principales librairies
 
 - [bnlearn](https://www.bnlearn.com/) en R.
-- [pyagrum](https://pyagrum.readthedocs.io/en/stable/) [pgmpy](https://pgmpy.org), [BayesPy](https://bayespy.org/) & [pomegranate](https://pomegranate.readthedocs.io/en/stable/) (entre autres) en Python.
+- [pyagrum](https://pyagrum.readthedocs.io/en/stable/), [pgmpy](https://pgmpy.org), [BayesPy](https://bayespy.org/) & [pomegranate](https://pomegranate.readthedocs.io/en/stable/) (entre autres) en Python.
 - [BayesNet](https://github.com/sisl/BayesNets.jl) pour Julia.
 :::
 

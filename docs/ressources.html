@@ -202,30 +202,25 @@ ul.task-list li input[type="checkbox"] {
 <h1>Statistics</h1>
 <p>Johnson Alicia A., Ott Miles Q. et Dogucu Mine, <em>Bayes rules! an introduction to Bayesian modeling with R</em>, Chapman &amp; Hall / CRC, 2022, 544&nbsp;p.&nbsp;<a href="https://www.bayesrulesbook.com/">https://www.bayesrulesbook.com/</a></p>
 <p>McElreath Richard, <em>Statistical rethinking: a Bayesian course with examples in R and Stan</em>, 2e édition, Chapman &amp; Hall / CRC, 2020, 612&nbsp;p.</p>
+<blockquote class="blockquote">
+<p>À ma connaissance, il n’existe pas de version en libre accès de <em>Statistical Rethinking</em>. Le site suivant liste différentes “traductions” des exercices, à partir de différentes librairies et langages de programmation : <a href="https://xcelab.net/rm/">https://xcelab.net/rm/</a> Voir notamment : <a href="https://github.com/StatisticalRethinkingJulia">https://github.com/StatisticalRethinkingJulia</a></p>
+</blockquote>
 <p>Gelman Andrew, Hill Jennifer et Vehtari Aki, <em>Regression and other stories</em>, Cambridge University Press, 2020, 546 p.&nbsp;<a href="https://avehtari.github.io/ROS-Examples/">https://avehtari.github.io/ROS-Examples/</a></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>À ma connaissance, il n’existe pas de version en libre accès de <em>Statistical Rethinking</em>. Le site suivant liste différentes “traductions” des exercices, à partir de différentes librairies et langages de programmation : <a href="https://xcelab.net/rm/">https://xcelab.net/rm/</a></p>
-</div>
-</div>
+<blockquote class="blockquote">
+<p>Comme pour <em>Statistical Rethinking</em>, il y a eu une traduction en Julia, par Rob J Goedman : <a href="https://github.com/RegressionAndOtherStoriesJulia">https://github.com/RegressionAndOtherStoriesJulia</a></p>
+</blockquote>
 <p>Davidson-Pilon Cameron, <em>Bayesian methods for hackers: probabilistic programming and Bayesian inference</em>, Addison-Wesley, 2016, 256&nbsp;p.&nbsp;<a href="http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">http://dataorigami.net/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/</a></p>
 <p>Kaplan Daniel T., <em>Statistical modeling: a fresh approach</em>, 2017, 388 p.&nbsp;<a href="https://dtkaplan.github.io/SM2-bookdown/">https://dtkaplan.github.io/SM2-bookdown/</a></p>
-<p><em>Cette dernière référence, contrairement aux précédentes, est <em>fréquentiste</em>. Elle est relativement concise et d’une grande clarté.</em></p>
+<blockquote class="blockquote">
+<p>Cette dernière référence, contrairement aux précédentes, est fréquentiste.</p>
+</blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Un peu d’histoire / philosophie
+Histoire / Philosophie
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -251,6 +246,24 @@ Principales librairies
 </ul>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Turing.jl
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>C’est la librairie que je recommande, pour sa performance et pour sa syntaxe. Matériaux pour l’apprentissage (certains peuvent être très légèrement décalés par rapport aux fonctionnalités actuelles de Turing.jl) :</p>
+<ul>
+<li><a href="https://youtube.com/playlist?list=PLhQ2JMBcfAsgU7kZ-Ee_SDrjhJIehICmR&amp;si=Z9vu0_Id4aq7lRWx">Probabilistic Programming</a>, une playlist YouTube de <a href="https://www.youtube.com/@doggodotjl">doggo dot jl</a>.</li>
+<li>Storopoli José Eduardo, <em>Bayesian Statistics with Julia and Turing</em>, 2021. <a href="https://storopoli.github.io/Bayesian-Julia/">https://storopoli.github.io/Bayesian-Julia/</a>.</li>
+<li><a href="https://plutojl.org/">Pluto Notebooks</a> à partir de <em>Statistical Rethinking</em> : <a href="https://github.com/StatisticalRethinkingJulia/SR2StanPluto.jl">https://github.com/StatisticalRethinkingJulia/SR2StanPluto.jl</a></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="réseaux-bayésiens" class="level1">
 <h1>Réseaux bayésiens</h1>
@@ -266,7 +279,7 @@ Principales librairies
 <div class="callout-body-container callout-body">
 <ul>
 <li><a href="https://www.bnlearn.com/">bnlearn</a> en R.</li>
-<li><a href="https://pyagrum.readthedocs.io/en/stable/">pyagrum</a> <a href="https://pgmpy.org">pgmpy</a>, <a href="https://bayespy.org/">BayesPy</a> &amp; <a href="https://pomegranate.readthedocs.io/en/stable/">pomegranate</a> (entre autres) en Python.</li>
+<li><a href="https://pyagrum.readthedocs.io/en/stable/">pyagrum</a>, <a href="https://pgmpy.org">pgmpy</a>, <a href="https://bayespy.org/">BayesPy</a> &amp; <a href="https://pomegranate.readthedocs.io/en/stable/">pomegranate</a> (entre autres) en Python.</li>
 <li><a href="https://github.com/sisl/BayesNets.jl">BayesNet</a> pour Julia.</li>
 </ul>
 </div>
