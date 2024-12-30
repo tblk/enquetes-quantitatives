@@ -74,16 +74,6 @@ Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris,
 - [brms](http://paulbuerkner.com/brms/index.html) et [rstan](https://mc-stan.org/rstan/) pour R.
 :::
 
-:::{.callout-tip}
-### Turing.jl
-
-C'est la librairie que je recommande, pour sa performance et pour sa syntaxe. Matériaux pour l'apprentissage (certains peuvent être très légèrement décalés par rapport aux fonctionnalités actuelles de Turing.jl) :
-
-- [Probabilistic Programming](https://youtube.com/playlist?list=PLhQ2JMBcfAsgU7kZ-Ee_SDrjhJIehICmR&si=Z9vu0_Id4aq7lRWx), une playlist YouTube de [doggo dot jl](https://www.youtube.com/@doggodotjl).
-- Storopoli José Eduardo, *Bayesian Statistics with Julia and Turing*, 2021. [https://storopoli.github.io/Bayesian-Julia/](https://storopoli.github.io/Bayesian-Julia/).
-- [Pluto Notebooks](https://plutojl.org/) à partir de *Statistical Rethinking* : [https://github.com/StatisticalRethinkingJulia/SR2TuringPluto.jl](https://github.com/StatisticalRethinkingJulia/SR2TuringPluto.jl)
-:::
-
 # Réseaux bayésiens
 
 :::{.callout-tip}
