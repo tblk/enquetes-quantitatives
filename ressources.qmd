@@ -81,7 +81,7 @@ C'est la librairie que je recommande, pour sa performance et pour sa syntaxe. Ma
 
 - [Probabilistic Programming](https://youtube.com/playlist?list=PLhQ2JMBcfAsgU7kZ-Ee_SDrjhJIehICmR&si=Z9vu0_Id4aq7lRWx), une playlist YouTube de [doggo dot jl](https://www.youtube.com/@doggodotjl).
 - Storopoli José Eduardo, *Bayesian Statistics with Julia and Turing*, 2021. [https://storopoli.github.io/Bayesian-Julia/](https://storopoli.github.io/Bayesian-Julia/).
-- [Pluto Notebooks](https://plutojl.org/) à partir de *Statistical Rethinking* : [https://github.com/StatisticalRethinkingJulia/SR2StanPluto.jl](https://github.com/StatisticalRethinkingJulia/SR2StanPluto.jl)
+- [Pluto Notebooks](https://plutojl.org/) à partir de *Statistical Rethinking* : [https://github.com/StatisticalRethinkingJulia/SR2TuringPluto.jl](https://github.com/StatisticalRethinkingJulia/SR2TuringPluto.jl)
 :::
 
 # Réseaux bayésiens
