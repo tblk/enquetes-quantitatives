@@ -1,0 +1,57 @@
+---
+title: "Pivoter"
+description: "Utilisation avancée de `pivot_longer` sur les données des élections législatives de 2024, par commune"
+---
+
+# Packages
+
+```{r}
+library(tidyverse)
+library(sf)
+```
+
+# Données ----
+
+```{r}
+#| eval: true
+curl::multi_download("https://static.data.gouv.fr/resources/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour/20240711-075030/resultats-definitifs-par-communes.xlsx",
+                     destfiles = here::here("data", "resultats-definitifs-par-communes-premier-tour.xlsx"))
+```
+
+# Import
+
+:::{.callout-note}
+Voir la correction de l'exercice sur l'abstention pour l'explication de ces étapes.
+:::
+
+```{r}
+t1 = readxl::read_excel(here::here("data", "resultats-definitifs-par-communes-premier-tour.xlsx"),
+                                     guess_max = 35000) |>
+  janitor::clean_names() |>
+  mutate(
+    across(
+      starts_with("percent_"),
+      ~parse_number(.x, locale = locale(decimal_mark = ","))
+    )
+  )
+
+```
+
+# Pivot
+
+On essaiera de comprendre en particulier `".value"` et `NA`, passés à `names_to`, en conjonction avec `names_pattern`. Voir la documentation de la fonction et des arguments correspondants. 
+
+```{r}
+t1_longer = t1 |>
+  pivot_longer(cols = matches("_\\d{1,}$"),
+               names_to = c(".value", NA),
+               names_pattern = "(.*)_(\\d+)",
+               values_drop_na = TRUE)
+```
+
+# Filter
+
+```{r}
+t1_rn = t1_longer |> 
+  filter(nuance_candidat == "RN")
+```
