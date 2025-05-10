@@ -13,7 +13,7 @@ library(sf)
 # Données ----
 
 ```{r}
-#| eval: true
+#| eval: false
 curl::multi_download("https://static.data.gouv.fr/resources/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour/20240711-075030/resultats-definitifs-par-communes.xlsx",
                      destfiles = here::here("data", "resultats-definitifs-par-communes-premier-tour.xlsx"))
 ```
