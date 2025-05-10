@@ -69,7 +69,7 @@ Drouet Isabelle, *Le bayésianisme aujourd'hui: fondements et pratiques*, Paris,
 :::{.callout-tip}
 ### Principales librairies
 
-- [Turing.jl](https://turinglang.org/) et [RxInfer.jl](https://rxinfer.ml/)pour Julia.
+- [Turing.jl](https://turinglang.org/) et [RxInfer.jl](https://rxinfer.com/) pour Julia.
 - [PyMC](https://www.pymc.io/welcome.html) pour Python.
 - [brms](http://paulbuerkner.com/brms/index.html) et [rstan](https://mc-stan.org/rstan/) pour R.
 :::
